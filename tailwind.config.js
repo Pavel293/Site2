@@ -88,11 +88,14 @@ module.exports = {
 			addComponents({
 				'.btn-primary': {
 					backgroundColor: primary,
+					border: '2px solid transparent',
 					color: '#fff',
 					borderRadius: '12px',
 					transition: '.5s ease',
 					'&:hover': {
-						backgroundColor: '#ff0009',
+						border: `2px solid ${primary}`,
+						backgroundColor: 'white',
+						color: text,
 					},
 				},
 				'.text-link': {
@@ -107,10 +110,7 @@ module.exports = {
 					},
 				},
 				'.air-block': {
-					borderRadius: theme('borderRadius.layout'),
-					backgroundColor: theme('colors.white'),
-					color: theme('colors.gray.950'),
-					boxShadow: theme('boxShadow.lg'),
+					filter: 'drop-shadow(0px 4px 64px rgba(41, 47, 81, 0.08))',
 				},
 			})
 			addUtilities({

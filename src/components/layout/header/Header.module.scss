@@ -1,7 +1,9 @@
 .header {
 	@apply py-[22px] mb-[40px] flex justify-between items-center;
 	.logo {
-		@apply flex h-[30px] gap-10 items-center relative w-fit;
+		a {
+			@apply flex h-[30px] gap-10 items-center relative w-fit;
+		}
 		img {
 			@apply relative;
 		}

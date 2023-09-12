@@ -11,8 +11,10 @@ const Header: FC = () => {
 	return (
 		<header className={cn('wrapper', styles.header)}>
 			<div className={styles.logo}>
-				<Image src={LogoImage} alt="logoImage" />
-				<Image src={LogoText} alt="logotext" />
+				<Link href="/">
+					<Image src={LogoImage} alt="logoImage" />
+					<Image src={LogoText} alt="logotext" />
+				</Link>
 			</div>
 			<ul>
 				{links.map(link => (

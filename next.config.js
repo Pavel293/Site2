@@ -2,9 +2,6 @@
 const nextConfig = {
 	poweredByHeader: false,
 	reactStrictMode: false,
-	images: {
-		unoptimized: true,
-	},
 	swcMinify: true,
 }
 
