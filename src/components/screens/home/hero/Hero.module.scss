@@ -1,0 +1,39 @@
+.fuck {
+	@apply grid items-center w-fit ml-auto mb-[110px] gap-8 grid-cols-2;
+	grid-template-columns: 1fr fit-content(100%);
+	margin-right: 100px;
+	max-width: 1450px;
+}
+
+.left {
+	@apply z-1 flex flex-col h-[360px] justify-between;
+	width: 580px;
+	.head {
+		@apply flex flex-col gap-[20px];
+		h1 {
+			font-size: calc((1vw + 1vh) * 2.12164);
+			line-height: calc((1vw + 1vh) * 2.12164);
+			@apply font-bold;
+		}
+		h4 {
+			@apply text-[18px] font-semibold;
+		}
+	}
+}
+.right {
+	filter: drop-shadow(0px 4px 64px rgba(41, 47, 81, 0.08));
+	img {
+		position: absolute;
+		width: 120%;
+	}
+}
+
+.btns {
+	@apply flex gap-[32px];
+	button {
+		@apply bg-primary text-white font-semibold text-base px-[34px] py-[14px] rounded-[12px];
+		&:last-child {
+			@apply bg-transparent text-text p-0;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.header {
+	@apply py-[22px] mb-[40px] flex justify-between items-center;
+	.logo {
+		@apply flex h-[30px] gap-10 items-center relative w-fit;
+		img {
+			@apply relative;
+		}
+	}
+	ul {
+		@apply flex  gap-[40px] items-center;
+		.auth {
+			> a {
+				@apply text-primary font-semibold py-[8px] px-[24px] border leading-[24px] border-primary rounded-full;
+			}
+		}
+	}
+}
