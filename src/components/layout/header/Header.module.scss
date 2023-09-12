@@ -10,9 +10,18 @@
 	}
 	ul {
 		@apply flex  gap-[40px] items-center;
+		li {
+			a {
+				transition: 0.5s ease;
+				@apply hover:text-text;
+			}
+		}
 		.auth {
 			> a {
 				@apply text-primary font-semibold py-[8px] px-[24px] border leading-[24px] border-primary rounded-full;
+				&:hover {
+					@apply bg-primary text-white;
+				}
 			}
 		}
 	}
