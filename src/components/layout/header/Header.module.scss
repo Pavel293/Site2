@@ -9,7 +9,7 @@
 		}
 	}
 	ul {
-		@apply flex  gap-[40px] items-center;
+		@apply flex  gap-6 items-center;
 		li {
 			a {
 				transition: 0.5s ease;
@@ -18,9 +18,23 @@
 		}
 		.auth {
 			> a {
-				@apply text-primary font-semibold py-[8px] px-[24px] border leading-[24px] border-primary rounded-full;
+				@apply text-primary py-[8px] px-[24px] border leading-[24px] border-primary rounded-full;
 				&:hover {
+					@apply text-white bg-primary bg-opacity-50 border-transparent;
+				}
+				&:active {
+					@apply bg-text bg-opacity-30;
+				}
+			}
+			&.free {
+				a {
 					@apply bg-primary text-white;
+					&:hover {
+						@apply bg-primary bg-opacity-50 border-transparent;
+					}
+					&:active {
+						@apply bg-text bg-opacity-30;
+					}
 				}
 			}
 		}

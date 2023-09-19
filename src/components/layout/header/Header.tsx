@@ -6,13 +6,20 @@ import LogoImage from '../../../assets/icons/logo.svg'
 import LogoText from '../../../assets/icons/logo-text.svg'
 import { links } from '@/components/layout/header/header.data'
 import Link from 'next/link'
+import { navVariants } from '@/utils/motion'
+import { motion } from 'framer-motion'
 
 const Header: FC = () => {
 	return (
-		<header className={cn('wrapper', styles.header)}>
+		<motion.header
+			variants={navVariants}
+			initial="hidden"
+			whileInView="show"
+			className={cn('wrapper', styles.header)}
+		>
 			<div className={styles.logo}>
 				<Link href="/">
-					<Image src={LogoImage} alt="logoImage" />
+					{/*<Image src={LogoImage} alt="logoImage" />*/}
 					<Image src={LogoText} alt="logotext" />
 				</Link>
 			</div>
@@ -24,11 +31,14 @@ const Header: FC = () => {
 						</Link>
 					</li>
 				))}
+				<li className={cn(styles.auth, styles.free)}>
+					<Link href="/free">Попробовать бесплатно</Link>
+				</li>
 				<li className={styles.auth}>
 					<Link href="/auth">Войти</Link>
 				</li>
 			</ul>
-		</header>
+		</motion.header>
 	)
 }
 

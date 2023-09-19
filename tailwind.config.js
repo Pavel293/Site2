@@ -3,6 +3,7 @@ const colors = require('tailwindcss/colors')
 
 const primary = '#496FFF'
 const text = '#292F51'
+const border = '#EAEBEE'
 
 module.exports = {
 	content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
@@ -21,7 +22,7 @@ module.exports = {
 				700: '#f5c521',
 			},
 			gray: {
-				300: '#d9dae8',
+				border: border,
 				500: '#999aa5',
 				600: '#66676e',
 				700: '#39393f',
@@ -95,7 +96,7 @@ module.exports = {
 					'&:hover': {
 						border: `2px solid ${primary}`,
 						backgroundColor: 'white',
-						color: text,
+						color: primary,
 					},
 				},
 				'.text-link': {

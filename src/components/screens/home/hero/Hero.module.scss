@@ -1,5 +1,5 @@
 .fuck {
-	@apply grid items-center w-fit ml-auto mb-[110px] gap-8 grid-cols-2;
+	@apply grid items-center w-fit ml-auto gap-8 grid-cols-2;
 	grid-template-columns: 1fr fit-content(100%);
 	margin-right: 100px;
 	max-width: 1450px;
@@ -11,8 +11,8 @@
 	.head {
 		@apply flex flex-col gap-[20px];
 		h1 {
-			font-size: calc((1vw + 1vh) * 2.12164);
-			line-height: calc((1vw + 1vh) * 2.12164);
+			font-size: calc((1vw + 1vh) * 2);
+			line-height: calc((1vw + 1vh) * 2);
 			@apply font-bold;
 		}
 		h4 {
@@ -28,15 +28,16 @@
 	}
 }
 
-.btns {
-	@apply flex gap-[32px];
-	button {
-		@apply bg-primary text-white font-semibold text-base px-[34px] py-[14px] rounded-[12px];
-		&:last-child {
-			@apply bg-transparent border-none text-text p-0;
-			&:hover {
-				@apply border-none text-primary;
-			}
+.form {
+	@apply flex w-full relative gap-[32px];
+	input {
+		@apply w-full pl-6 text-lg h-[72px] border-2 border-gray-border rounded-lg opacity-50;
+		&::placeholder {
+			@apply text-lg;
 		}
+	}
+	button {
+		@apply top-1/2 right-2 absolute bg-primary text-white font-semibold text-base px-7 py-[14px] rounded-[12px];
+		transform: translateY(-50%);
 	}
 }

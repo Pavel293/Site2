@@ -4,35 +4,57 @@ import Image from 'next/image'
 import HeroImage from '../../../../assets/hero.png'
 import cn from 'classnames'
 import Button from '@/ui/button/Button'
+import { motion } from 'framer-motion'
+import { staggerContainer, slideIn, textVariant, zoomIn } from '@/utils/motion'
+import TextAnimation from '@/ui/animation/text-animation/TextAnimation'
 
 const Hero: FC = () => {
+	const texts = [
+		'телефонии',
+		'клиентской базы',
+		'маркетинга',
+		'контроля качества',
+	]
 	return (
-		<div className={cn('wrapper', styles.fuck)}>
+		<motion.div
+			variants={staggerContainer()}
+			initial="hidden"
+			whileInView="show"
+			viewport={{ once: false, amount: 0.25 }}
+			className={cn('wrapper', styles.fuck)}
+		>
 			<div className={styles.left}>
 				<div className={styles.head}>
-					<h1>
-						CRM система для
-						<br /> Вашего бизнеса
-					</h1>
-					<h4>Новый уровень взаимоотношения с клиентами</h4>
+					<motion.h1 variants={textVariant(1.1)}>
+						Запись на услуги и автоматизация
+						<TextAnimation texts={texts} />
+					</motion.h1>
+					<motion.h4 variants={textVariant(1.2)}>
+						<span className="text-primary ">TELEBON</span> - Сервис для роста
+						продаж и количества записей
+					</motion.h4>
 				</div>
-				<div className={styles.btns}>
-					<Button>Начать организовывать процессы</Button>
-					<Button>Попробовать бесплатно</Button>
-				</div>
+				<motion.form variants={textVariant(1.3)} className={styles.form}>
+					<input placeholder="Ваш адрес электронной почты" />
+					<Button>Попробовать</Button>
+				</motion.form>
 			</div>
 
-			<div className={styles.right}>
+			<motion.div
+				variants={slideIn('right', 'tween', 0.2, 1)}
+				className={styles.right}
+			>
 				<Image
 					className="relative  top-0"
 					priority
+					placeholder="blur"
 					quality={100}
 					layout="responsive"
 					src={HeroImage}
 					alt="Hero"
 				/>
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	)
 }
 

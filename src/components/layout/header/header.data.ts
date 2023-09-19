@@ -1,18 +1,18 @@
 export const links: { title: string; link: string }[] = [
 	{
-		title: 'Тарифы',
-		link: '/tariffs',
+		title: 'Возможности',
+		link: '/solution',
 	},
 	{
-		title: 'Решение',
-		link: '/solution',
+		title: 'Тарифы',
+		link: '/tariffs',
 	},
 	{
 		title: 'Партнерам',
 		link: '/partners',
 	},
 	{
-		title: 'Блог',
+		title: 'Бизнес-словарь',
 		link: '/blog',
 	},
 ]

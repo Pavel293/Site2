@@ -1,0 +1,7 @@
+.footer {
+	@apply relative py-6 bg-[#F9FBFC] mt-40;
+	a {
+		@apply absolute top-1/2 left-1/2;
+		transform: translate(-50%, -50%);
+	}
+}
