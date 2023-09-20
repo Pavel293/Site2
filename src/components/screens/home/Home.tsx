@@ -10,7 +10,7 @@ import { fadeIn, staggerContainer } from '@/utils/motion'
 const Home: FC = () => {
 	return (
 		<Meta title="Главная" description="Главная страница сайта telebon...">
-			<div className="flex flex-col gap-[160px]">
+			<div className={styles.wrapper}>
 				<Hero />
 
 				<div>

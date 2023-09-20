@@ -21,9 +21,9 @@ const Hero: FC = () => {
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: false, amount: 0.25 }}
-			className={cn('wrapper', styles.fuck)}
+			className={cn(styles.fuck, 'wrapper')}
 		>
-			<div className={styles.left}>
+			<div className={cn(styles.left)}>
 				<div className={styles.head}>
 					<motion.h1 variants={textVariant(1.1)}>
 						Запись на услуги и автоматизация

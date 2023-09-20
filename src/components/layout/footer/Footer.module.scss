@@ -5,3 +5,15 @@
 		transform: translate(-50%, -50%);
 	}
 }
+
+@media (max-width: 990px) {
+	.footer {
+		div {
+			@apply flex justify-center flex-col-reverse items-center gap-2;
+		}
+		a {
+			@apply relative top-0 left-0;
+			transform: none;
+		}
+	}
+}

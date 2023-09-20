@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import styles from './Header.module.scss'
 import cn from 'classnames'
 import Image from 'next/image'
@@ -10,6 +10,8 @@ import { navVariants } from '@/utils/motion'
 import { motion } from 'framer-motion'
 
 const Header: FC = () => {
+	const [isOpen, setIsOpen] = useState<boolean>(false)
+
 	return (
 		<motion.header
 			variants={navVariants}
@@ -23,7 +25,8 @@ const Header: FC = () => {
 					<Image src={LogoText} alt="logotext" />
 				</Link>
 			</div>
-			<ul>
+
+			<ul className={cn(isOpen && styles.active)}>
 				{links.map(link => (
 					<li key={link.title}>
 						<Link href={link.link} className="text-link">
@@ -38,6 +41,14 @@ const Header: FC = () => {
 					<Link href="/auth">Войти</Link>
 				</li>
 			</ul>
+			<button
+				onClick={() => setIsOpen(!isOpen)}
+				className={cn(isOpen && styles.activeMenu, styles.menu)}
+			>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</motion.header>
 	)
 }
