@@ -1,27 +1,42 @@
-import { FC } from 'react'
-import LogoText from '../../../assets/icons/logo-text.svg'
+import React, { FC } from 'react'
 import styles from './Footer.module.scss'
-import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { footerVariants } from '@/utils/motion'
+import LogoFooter from '../../../assets/icons/LogoFooter.svg'
+import Image from 'next/image'
+import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 
 const Footer: FC = () => {
 	return (
-		<motion.footer
-			variants={footerVariants}
-			initial="hidden"
-			whileInView="show"
-			className={styles.footer}
-		>
-			<div className="wrapper">
-				<p>© Copyright 2023. Все права защищены</p>
-				<Link href="/">
-					{/*<Image src={LogoImage} alt="logoImage" />*/}
-					<Image src={LogoText} alt="logotext" />
-				</Link>
+		<div className={styles.footer}>
+			<div className={styles.info}>
+				<div className={styles.logo}>
+					<Link href="/">
+						<Image src={LogoFooter} alt="LogoFooter" />
+					</Link>
+				</div>
+				<div className={styles.account}>
+					<h1>Вход в личный кабинет</h1>
+					<p>Создание аккаунта</p>
+					<p>Регистрация</p>
+					<p>Чат техподдержки</p>
+				</div>
+				<div className={styles.doc}>
+					<h1>Документы</h1>
+					<p>Лицензионный договор</p>
+					<p>Политика конфиденциальности</p>
+					<p>Пользовательское соглашение</p>
+				</div>
+				<div className={styles.contact}>
+					<h1>Контакты</h1>
+					<p>8 812 507 63 33</p>
+					<p>Hello@telebon.ru</p>
+					<IconInstance name={EIcons.telegram} />
+				</div>
 			</div>
-		</motion.footer>
+			<div className={styles.bottom}>
+				<p>©️ 2024 ООО ГК Белый медведь, ИНН 4345410051</p>
+			</div>
+		</div>
 	)
 }
 

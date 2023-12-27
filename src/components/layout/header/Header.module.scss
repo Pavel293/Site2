@@ -22,7 +22,7 @@ $menuItems: 7;
 		}
 		.auth {
 			> a {
-				@apply text-primary py-[8px] px-[24px] border leading-[24px] border-primary rounded-full;
+				@apply text-white py-[8px] px-[24px] border leading-[24px] border-primary rounded-full bg-primary;
 				&:hover {
 					@apply text-white bg-primary bg-opacity-50 border-transparent;
 				}
@@ -30,11 +30,13 @@ $menuItems: 7;
 					@apply bg-text bg-opacity-30;
 				}
 			}
-			&.free {
+			&.reg {
 				a {
-					@apply bg-primary text-white;
+					@apply text-black;
+					border-color: #f8f8fb;
+					background: #f8f8fb;
 					&:hover {
-						@apply bg-primary bg-opacity-50 border-transparent;
+						@apply bg-opacity-50;
 					}
 					&:active {
 						@apply bg-text bg-opacity-30;

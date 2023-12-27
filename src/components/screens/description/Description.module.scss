@@ -1,0 +1,69 @@
+.fuck {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+.styled-button {
+	align-items: center;
+	justify-content: center;
+	padding: 4px 8px;
+	border-radius: 22px;
+	gap: 8px;
+	background-color: #f8f8fb;
+	color: #496fff;
+}
+
+.styled-button.selected {
+	background-color: #496fff;
+	color: #f8f8fb;
+}
+
+.buttonContent {
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	justify-content: left;
+	flex: 0 0 45%;
+	margin: 0vh 0 5vh 0;
+	width: 666px;
+	h1 {
+		margin: 5vh 0 5vh 0;
+		font-family: Gilroy;
+		font-size: 48px;
+		font-weight: 700;
+		line-height: 52px;
+		letter-spacing: 0em;
+		text-align: left;
+
+		background: linear-gradient(174.68deg, #292f51 21.06%, #ffffff 251.63%);
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+	h4 {
+		width: 436px;
+		font-family: Gilroy;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 36px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #292f51;
+	}
+	button {
+		margin-top: 15vh;
+		width: 185px;
+		height: 40px;
+		background: #496fff;
+		color: white;
+		border-radius: 8px;
+	}
+	.icon {
+		position: absolute;
+		transform: translateX(80vh);
+	}
+}

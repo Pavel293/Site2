@@ -1,0 +1,232 @@
+.fuck {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+	flex-direction: column;
+	margin: 0 auto;
+	p {
+		font-family: Gilroy;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 40px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #9497a8;
+	}
+	h1 {
+		font-family: Gilroy;
+		font-size: 48px;
+		font-weight: 700;
+		line-height: 52px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #292f51;
+	}
+	h2 {
+		font-family: Gilroy;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 52px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #292f51;
+	}
+}
+
+.styled-button {
+	align-items: center;
+	justify-content: center;
+	padding: 4px 8px;
+	border-radius: 10px;
+	gap: 8px;
+	background-color: #f8f8fb;
+	color: #496fff;
+	min-width: 40px;
+	height: 32px;
+}
+
+.styled-button:not(:last-child) {
+	margin-right: 13px;
+}
+
+.styled-button.selected {
+	background-color: #496fff;
+	color: #f8f8fb;
+}
+
+.cards {
+	display: flex;
+	flex-direction: row;
+
+	gap: 56px;
+	margin: 5vh 0 0 auto;
+
+	.fcard {
+		height: 607px;
+		width: 359px;
+		background-color: white;
+		border-radius: 15px;
+		.top {
+			position: relative;
+			height: 200px;
+			background-color: #ff7f41;
+			border-radius: 15px 15px 0 0;
+			.price {
+				position: relative;
+				display: flex;
+				flex-direction: row;
+				h1 {
+					color: white;
+					position: absolute;
+					top: 15px;
+					left: 15px;
+					font-family: Gilroy;
+					font-size: 36px;
+					font-weight: 700;
+					line-height: 52px;
+					letter-spacing: 0em;
+					text-align: left;
+				}
+				h2 {
+					color: #292f51;
+					position: absolute;
+					top: 15px;
+					right: 15px;
+					font-family: Gilroy;
+					font-size: 48px;
+					font-weight: 700;
+					line-height: 52px;
+					letter-spacing: 0em;
+					text-align: right;
+				}
+			}
+			p {
+				font-family: Gilroy;
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 30px;
+				letter-spacing: 0em;
+				text-align: left;
+				color: white;
+				position: absolute;
+				top: 10vh;
+				left: 15px;
+			}
+		}
+		.main {
+			p {
+				margin: 20px 0 0 39px;
+				font-family: Gilroy;
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 30px;
+				letter-spacing: 0em;
+				text-align: left;
+			}
+			h1 {
+				margin-top: 73px;
+				font-family: Gilroy;
+				font-size: 24px;
+				font-weight: 500;
+				line-height: 40px;
+				letter-spacing: 0em;
+				text-align: center;
+				color: #292f51;
+				height: 81px;
+			}
+			button {
+				width: 202px;
+				height: 40px;
+				background: #496fff;
+				color: white;
+				border-radius: 8px;
+				margin: 0 0 35px 79px;
+			}
+		}
+	}
+
+	.scard {
+		height: 607px;
+		width: 359px;
+		background-color: white;
+		border-radius: 15px;
+		.top {
+			position: relative;
+			height: 200px;
+			background-color: #5089fd;
+			border-radius: 15px 15px 0 0;
+			.price {
+				position: relative;
+				display: flex;
+				flex-direction: row;
+				h1 {
+					color: white;
+					position: absolute;
+					top: 15px;
+					left: 15px;
+					font-family: Gilroy;
+					font-size: 36px;
+					font-weight: 700;
+					line-height: 52px;
+					letter-spacing: 0em;
+					text-align: left;
+				}
+				h2 {
+					color: #292f51;
+					position: absolute;
+					top: 15px;
+					right: 15px;
+					font-family: Gilroy;
+					font-size: 48px;
+					font-weight: 700;
+					line-height: 52px;
+					letter-spacing: 0em;
+					text-align: right;
+				}
+			}
+			p {
+				font-family: Gilroy;
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 30px;
+				letter-spacing: 0em;
+				text-align: left;
+				color: white;
+				position: absolute;
+				top: 10vh;
+				left: 15px;
+			}
+		}
+		.main {
+			p {
+				margin: 20px 0 0 39px;
+				font-family: Gilroy;
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 30px;
+				letter-spacing: 0em;
+				text-align: left;
+			}
+			h1 {
+				margin-top: 13px;
+				font-family: Gilroy;
+				font-size: 24px;
+				font-weight: 500;
+				line-height: 40px;
+				letter-spacing: 0em;
+				text-align: center;
+				color: #292f51;
+				height: 81px;
+			}
+			button {
+				width: 202px;
+				height: 40px;
+				background: #496fff;
+				color: white;
+				border-radius: 8px;
+				margin: 0 0 35px 79px;
+			}
+		}
+	}
+}

@@ -6,4 +6,6 @@ export type TChildren = {
 	className?: string
 	disabled?: boolean
 	placeholder?: string
+	secondary?: boolean
+	icon?: ReactNode
 }

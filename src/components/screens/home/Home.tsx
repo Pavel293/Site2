@@ -1,48 +1,52 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import Meta from '@/utils/meta/Meta'
-import Hero from '@/screens/home/hero/Hero'
+import Hero from '@/screens/hero/Hero'
 import Heading from '@/ui/heading/Heading'
 import styles from './Home.module.scss'
-import { motion } from 'framer-motion'
 import { propoData } from '@/screens/home/promo-data'
 import { fadeIn, staggerContainer } from '@/utils/motion'
+import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
+import Decription from '@/screens/description/Description'
+import Support from '@/screens/support/Support'
+import Rate from '@/screens/rate/Rate'
 
 const Home: FC = () => {
 	return (
 		<Meta title="Главная" description="Главная страница сайта telebon...">
 			<div className={styles.wrapper}>
 				<Hero />
+				<Decription />
+				<Support />
+				<Rate />
 
 				<div>
-					<Heading
-						className="flex flex-col items-center"
-						titlePart1="Управляйте бизнесом"
-						titlePart2="по-новому"
-					/>
-
-					<motion.div
-						variants={staggerContainer()}
-						initial="hidden"
-						whileInView="show"
-						viewport={{ once: false, amount: 0.25 }}
-						className={styles.grid}
-					>
-						{propoData.map((item, index) => (
-							<motion.div
-								variants={fadeIn('up', 'spring', index * 0.2, 1.35)}
-								key={index}
-								className={styles.card}
-							>
-								<div className={styles.card2}>
-									{item.icon}
+					<div className={styles.grid}>
+						{propoData.map((item, index) =>
+							index <= 5 ? (
+								<div key={index} className={styles.card}>
+									<div className={styles.iconWrapper}>
+										<div className={styles.circle}>
+											<div className={styles.icon}>{item.icon}</div>
+										</div>
+									</div>
 									<div className={styles.info}>
 										<h4>{item.title}</h4>
 										<p>{item.description}</p>
 									</div>
 								</div>
-							</motion.div>
-						))}
-					</motion.div>
+							) : (
+								<div key={index} className={styles.card}>
+									<div className={styles.iconWrapperSoon}>
+										<div className={styles.icon}>{item.icon}</div>
+									</div>
+									<div className={styles.info}>
+										<h4>{item.title}</h4>
+										<p>{item.description}</p>
+									</div>
+								</div>
+							),
+						)}
+					</div>
 				</div>
 			</div>
 		</Meta>

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+Allow:
+Host: www.telebon.hanumi.net
+Sitemap: https://telebon.hanumi.net/sitemap.xml

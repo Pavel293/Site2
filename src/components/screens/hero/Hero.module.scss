@@ -1,0 +1,126 @@
+.fuck {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.left {
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	justify-content: center;
+	flex: 0 0 50%;
+	margin: 15vh 0 15vh 0;
+
+	.head {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		max-width: 794px;
+
+		h1 {
+			font-size: calc((1vw + 1vh) * 2);
+			line-height: calc((1vw + 1vh) * 3);
+			font-weight: bold;
+			text-align: left;
+		}
+	}
+
+	.additionalText {
+		max-width: 477px;
+		margin-top: 20px;
+
+		p {
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 40px;
+			letter-spacing: 0em;
+			text-align: left;
+		}
+
+		.buttons {
+			@apply flex gap-6 items-center;
+			margin: 3vh 0 0 0;
+
+			list-style: none;
+			padding: 0;
+			.auth {
+				> a {
+					@apply flex justify-center text-white py-[8px] px-[24px] border leading-[24px] border-primary rounded-full bg-primary w-[220px] h-[40px];
+					&:hover {
+						@apply text-white bg-primary bg-opacity-50 border-transparent;
+					}
+					&:active {
+						@apply bg-text bg-opacity-30;
+					}
+				}
+				&.reg {
+					a {
+						@apply flex text-primary w-[270px] h-[40px];
+						background-color: #f8f8fb;
+						border-color: #f8f8fb;
+						&:active {
+							@apply bg-text bg-opacity-30;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.right {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	flex: 1;
+	width: 100%;
+	margin-left: auto;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		max-width: 100%;
+		position: absolute;
+	}
+}
+
+@media (max-width: 1240px) {
+	.fuck {
+		@apply overflow-x-hidden;
+	}
+}
+
+@media (max-width: 990px) {
+}
+
+@media (max-width: 768px) {
+	.fuck {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
+}
+
+@media (max-width: 400px) {
+}
+
+@media (min-width: 2300px) {
+	.left {
+		flex: 1;
+		width: 100%;
+		gap: 20px;
+
+		.head {
+			h1 {
+				font-size: 55px;
+				line-height: normal;
+				@apply font-bold w-[90%];
+			}
+		}
+	}
+}
