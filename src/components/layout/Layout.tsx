@@ -5,11 +5,20 @@ import Footer from '@/components/layout/footer/Footer'
 import styles from './Layout.module.scss'
 
 const Layout: FC<IType> = ({ children }) => {
+	const is404Page =
+		typeof window !== 'undefined' && window.location.pathname === '/404'
+
 	return (
 		<div className={styles.container}>
-			<Header />
-			{children}
-			<Footer />
+			{!is404Page ? (
+				<>
+					<Header />
+					{children}
+					<Footer />
+				</>
+			) : (
+				<>{children}</>
+			)}
 		</div>
 	)
 }

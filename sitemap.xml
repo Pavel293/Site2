@@ -2,17 +2,17 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://telebon..hanumi.net/</loc>
+        <loc>https://telebon.ru/</loc>
         <lastmod>2023-12-28T06:37:58+03:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://telebon..hanumi.net/auth</loc>
+        <loc>https://telebon.ru/auth</loc>
         <lastmod>2023-12-28T06:37:58+03:00</lastmod>
         <priority>0.90</priority>
     </url>
     <url>
-        <loc>https://telebon..hanumi.net/404</loc>
+        <loc>https://telebon.ru/404</loc>
         <lastmod>2023-12-28T06:37:58+03:00</lastmod>
         <priority>0.10</priority>
     </url>

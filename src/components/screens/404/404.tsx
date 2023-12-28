@@ -2,8 +2,7 @@ import React, { FC } from 'react'
 import styles from '@/components/screens/404/404.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
-import LogoImage from '../../../assets/icons/logo.svg'
-import LogoText from '../../../assets/icons/logo-text.svg'
+import LogoImage from '../../../assets/icons/LogoEr.svg'
 
 const Error: FC = () => {
 	return (
@@ -11,7 +10,6 @@ const Error: FC = () => {
 			<div className={styles.logo}>
 				<Link href="/">
 					<Image src={LogoImage} alt="logoImage" />
-					<Image src={LogoText} alt="logotext" />
 				</Link>
 			</div>
 			<div className={styles.text}>

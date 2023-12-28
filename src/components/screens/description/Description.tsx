@@ -38,13 +38,7 @@ const Decription = () => {
 	return (
 		<>
 			<div className={cn(styles.fuck, 'wrapper')}>
-				<div
-					style={{
-						border: '2px solid #496FFF',
-						borderRadius: '24px',
-						padding: '2px',
-					}}
-				>
+				<div className={styles.buttonBorder}>
 					<StyledButton
 						selected={selectedButton === 0}
 						onClick={() => handleButtonClick(0)}
@@ -124,7 +118,7 @@ const Decription = () => {
 				<div className={styles.buttonContent}>
 					<h1>{item.title}</h1>
 					<h4>{item.description} </h4>
-					<Link href="/auth">
+					<Link href="/404">
 						<button>Давайте попробуем</button>
 					</Link>
 					<div className={styles.icon}>{item.icon}</div>

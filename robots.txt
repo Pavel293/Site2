@@ -6,5 +6,5 @@ Disallow: /src/shared/
 Allow: /public/
 Allow: /src/components/
 Allow: /src/assets/
-Host: www.telebon.hanumi.net
-Sitemap: https://telebon.hanumi.net/sitemap.xml
+Host: www.telebon.ru
+Sitemap: https://telebon.ru/sitemap.xml

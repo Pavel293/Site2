@@ -27,10 +27,10 @@ const Header: FC = () => {
 				{/*	</li>*/}
 				{/*))}*/}
 				<li className={cn(styles.auth, styles.reg)}>
-					<Link href="/auth">Регистрация</Link>
+					<Link href="/404">Регистрация</Link>
 				</li>
 				<li className={styles.auth}>
-					<Link href="/auth">Войти</Link>
+					<Link href="/404">Войти</Link>
 				</li>
 			</ul>
 			<button
