@@ -1,5 +1,10 @@
 User-agent: *
-Disallow:
-Allow:
+Disallow: /src/config/
+Disallow: /src/utils/
+Disallow: /src/providers/
+Disallow: /src/shared/
+Allow: /public/
+Allow: /src/components/
+Allow: /src/assets/
 Host: www.telebon.hanumi.net
 Sitemap: https://telebon.hanumi.net/sitemap.xml
