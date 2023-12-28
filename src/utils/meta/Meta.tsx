@@ -30,6 +30,7 @@ const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 						property="og:description"
 						content={onlyText(description, 197)}
 					/>
+					<meta name="viewport" content="width=device-width, initial-scale=1" />
 				</Head>
 			) : (
 				<meta name="robots" content="noindex, nofollow" />

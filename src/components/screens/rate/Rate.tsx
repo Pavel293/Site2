@@ -31,7 +31,6 @@ const Rate = () => {
 
 	const handleButtonClick = (index: number) => {
 		setSelectedButton(index)
-		// Дополнительный код, который будет выполняться при нажатии на кнопку
 	}
 
 	return (

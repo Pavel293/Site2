@@ -51,7 +51,7 @@ const Hero: FC = () => {
 				</div>
 			</div>
 			<div className={styles.right}>
-				<div style={{ position: 'relative', width: '432px', height: '457px' }}>
+				<div className={styles.image}>
 					<Image src={DialogImage} alt="Dialog Image" />
 				</div>
 			</div>

@@ -1,7 +1,5 @@
-import { FC, useEffect, useState } from 'react'
+import Error from '@/screens/404/404'
 
-const ErrorPage: FC = () => {
-	return <div>123</div>
+export default function ErrorPage() {
+	return <Error />
 }
-
-export default ErrorPage

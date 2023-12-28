@@ -1,0 +1,50 @@
+.container {
+	background: url('../../../assets/404.svg') no-repeat;
+	.logo {
+		margin: 5vh 0 0 10vw;
+		a {
+			@apply flex h-[30px] gap-10 items-center relative w-fit;
+		}
+		img {
+			@apply relative;
+		}
+	}
+	.text {
+		height: 40vh;
+		width: 60vw;
+		h1 {
+			margin-top: 10vh;
+			font-family: Gilroy;
+			font-size: 96px;
+			font-weight: 700;
+			line-height: 96px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: white;
+		}
+		p {
+			margin-top: 10vh;
+			font-family: Gilroy;
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 40px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: white;
+		}
+	}
+
+	button {
+		width: 264px;
+		height: 80px;
+		background: #496fff;
+		border-radius: 20px;
+		color: #f9f9f9;
+		font-family: Gilroy;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 52px;
+		letter-spacing: 0em;
+		text-align: center;
+	}
+}

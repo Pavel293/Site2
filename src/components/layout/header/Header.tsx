@@ -5,7 +5,6 @@ import Image from 'next/image'
 import LogoImage from '../../../assets/icons/logo.svg'
 import LogoText from '../../../assets/icons/logo-text.svg'
 import Link from 'next/link'
-import { navVariants } from '@/utils/motion'
 
 const Header: FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false)

@@ -75,8 +75,8 @@
 	overflow: hidden;
 	height: 750px;
 	img {
-		width: 100%; // Устанавливаем ширину на 100%
-		object-fit: cover; // Заполняем контейнер, сохраняя пропорции и обрезая по необходимости
+		width: 100%;
+		object-fit: cover;
 	}
 }
 

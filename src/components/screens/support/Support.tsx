@@ -1,8 +1,6 @@
-import React, { FC, ReactNode, useState } from 'react'
+import React from 'react'
 import styles from './Support.module.scss'
-import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 import cn from 'classnames'
-import Link from 'next/link'
 import Image from 'next/image'
 import DialogImage from '../../../assets/icons/SupportImage.svg'
 

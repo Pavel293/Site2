@@ -33,8 +33,6 @@ const Decription = () => {
 
 	const handleButtonClick = (index: number) => {
 		setSelectedButton(index)
-		// Дополнительный код, который будет выполняться при нажатии на кнопку
-		// Например, изменение контента под списком кнопок
 	}
 
 	return (
