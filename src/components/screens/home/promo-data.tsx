@@ -23,22 +23,22 @@ export const propoData = [
 	},
 	{
 		icon: <IconInstance name={EIcons.squareoutline} />,
-		title: 'Работчий стол',
-		description: 'Запись клиентов без ошибок',
+		title: 'Рабочий стол',
+		description: 'Всё самое важное в одном месте',
 	},
 	{
 		icon: <IconInstance name={EIcons.grid} />,
-		title: 'Канбан-доска',
-		description: 'Контролируйте финансовые потоки',
+		title: 'Канбан доска',
+		description: 'Назначайте задачи в два клика',
 	},
 	{
 		icon: <IconInstance name={EIcons.soon} />,
 		title: 'Чат-бот',
-		description: 'Аналитика показателей по услугам кампании',
+		description: 'Создайте своего бота для онлайн записи',
 	},
 	{
 		icon: <IconInstance name={EIcons.soon} />,
 		title: 'Телефония',
-		description: 'Ведение клиентов, товаров, сотрудников',
+		description: 'Совершайте вызовы клиентам внутри системы в едином окне',
 	},
 ]

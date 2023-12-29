@@ -4,7 +4,6 @@
 	align-items: flex-start;
 	width: 100%;
 	flex-direction: column;
-	margin: 0 auto;
 	.buttonBorder {
 		border: 2px solid #496fff;
 		border-radius: 24px;
@@ -34,7 +33,6 @@
 	height: auto;
 	justify-content: left;
 	flex: 0 0 45%;
-	margin: 0vh 0 5vh 0;
 	width: 666px;
 	h1 {
 		margin: 5vh 0 5vh 0;
@@ -60,12 +58,16 @@
 		color: #292f51;
 	}
 	button {
-		margin-top: 15vh;
+		margin-top: 3vh;
 		width: 185px;
 		height: 40px;
 		background: #496fff;
 		color: white;
 		border-radius: 8px;
+		&:hover {
+			transition: 0.5s ease;
+			@apply text-white bg-primary bg-opacity-50 border-transparent;
+		}
 	}
 	.icon {
 		position: absolute;

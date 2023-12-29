@@ -75,6 +75,7 @@
 	overflow: hidden;
 	height: 750px;
 	img {
+		pointer-events: none;
 		width: 100%;
 		object-fit: cover;
 	}

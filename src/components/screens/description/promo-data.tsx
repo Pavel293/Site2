@@ -1,16 +1,18 @@
 import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 
+export const breakline = '\u000A'
+
 export const propoData = [
 	{
 		icon: <IconInstance name={EIcons.journal} />,
 		title: 'Индивидуальные и групповые услуги',
 		description:
-			'Все просто - журнал записи Telebon подойдет под любые задачи\n' +
+			'Все просто - журнал записи Telebon подойдет под любые задачи \u000A' +
 			'Разделяйте запись, учитывайте рабочее время кабинетов и сотрудников компании.',
 	},
 	{
 		icon: <IconInstance name={EIcons.journal} />,
-		title: 'Учет клиентов',
+		title: 'Учитываем клиентов',
 		description:
 			'В удобной карточке  вы видите всю историю посещений и предпочтения клиента ',
 	},
@@ -24,7 +26,7 @@ export const propoData = [
 		icon: <IconInstance name={EIcons.journal} />,
 		title: 'Назначаем задачи',
 		description:
-			'Создание задачи в 2 клика\n' +
+			'Создание задачи в 2 клика \u000A' +
 			'Канбан доска поможет назначить и контролировать исполнение задач',
 	},
 	{

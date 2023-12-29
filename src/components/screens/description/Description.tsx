@@ -115,13 +115,15 @@ const Decription = () => {
 						<span>Аналитика</span>
 					</StyledButton>
 				</div>
-				<div className={styles.buttonContent}>
-					<h1>{item.title}</h1>
-					<h4>{item.description} </h4>
-					<Link href="/404">
-						<button>Давайте попробуем</button>
-					</Link>
-					<div className={styles.icon}>{item.icon}</div>
+				<div style={{ height: '70vh' }}>
+					<div className={styles.buttonContent}>
+						<h1>{item.title}</h1>
+						<h4 style={{ whiteSpace: 'pre-wrap' }}>{item.description} </h4>
+						<Link href="/404">
+							<button>Давайте попробуем</button>
+						</Link>
+						<div className={styles.icon}>{item.icon}</div>
+					</div>
 				</div>
 			</div>
 		</>

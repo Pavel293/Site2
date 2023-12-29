@@ -10,7 +10,7 @@
 	.info {
 		display: flex;
 		flex-direction: row;
-		margin: 50px 0 0 0;
+		margin: 5vh 0 0 0;
 		p {
 			font-family: Gilroy;
 			font-size: 18px;
@@ -50,8 +50,8 @@
 	}
 	.bottom {
 		position: absolute;
-		bottom: 5px;
-		left: 5px;
+		bottom: 1vh;
+		left: 1vw;
 		p {
 			font-family: Gilroy;
 			font-size: 12px;

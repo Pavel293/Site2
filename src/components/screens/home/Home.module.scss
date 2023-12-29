@@ -24,8 +24,10 @@
 
 		&:hover {
 			.circle {
+				transition: 0.5s ease;
 				background-color: #496fff;
 				.icon {
+					transition: 0.5s ease;
 					color: #f8f8fb;
 				}
 			}
@@ -61,6 +63,8 @@
 				letter-spacing: 0em;
 				text-align: left;
 				color: #292f51;
+				width: 10vw;
+				pointer-events: none;
 			}
 
 			p {
@@ -71,6 +75,7 @@
 				letter-spacing: 0em;
 				text-align: left;
 				color: #292f51;
+				pointer-events: none;
 			}
 		}
 
@@ -81,7 +86,6 @@
 		}
 		.iconWrapperSoon {
 			height: 5vh;
-			width: 5vw;
 			position: absolute;
 			top: 0px;
 			right: -30px;

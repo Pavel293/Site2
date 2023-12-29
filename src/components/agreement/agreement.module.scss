@@ -1,0 +1,45 @@
+.wrapper {
+	margin: 0 10vw 0 10vw;
+	.container {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		flex-direction: column;
+
+		h1 {
+			font-size: calc((1vw + 1vh) * 2);
+			font-weight: 900;
+			line-height: calc((1vw + 1vh) * 3);
+			text-align: center;
+			box-sizing: border-box;
+			margin-bottom: 10vh;
+		}
+
+		h2 {
+			font-size: calc((1vw + 1vh) * 0.8);
+			font-weight: 400;
+			line-height: calc((1vw + 1vh) * 1);
+			text-align: left;
+			box-sizing: border-box;
+			margin-bottom: 5vh;
+		}
+
+		h3 {
+			font-size: calc((1vw + 1vh) * 1.2);
+			font-weight: 900;
+			line-height: calc((1vw + 1vh) * 1);
+			text-align: left;
+			box-sizing: border-box;
+			margin-bottom: 1vh;
+		}
+
+		h4 {
+			font-size: calc((1vw + 1vh) * 0.65);
+			font-weight: 300;
+			line-height: calc((1vw + 1vh) * 1);
+			text-align: left;
+			box-sizing: border-box;
+			margin-bottom: 5vh;
+		}
+	}
+}

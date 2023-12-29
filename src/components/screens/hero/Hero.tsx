@@ -4,7 +4,9 @@ import cn from 'classnames'
 import Image from 'next/image'
 import TextAnimation from '@/ui/animation/text-animation/TextAnimation'
 import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
-import DialogImage from '../../../assets/icons/DialogImage.svg'
+import DialogImage1 from '../../../assets/icons/DialogImage1.svg'
+import DialogImage2 from '../../../assets/icons/DialogImage2.svg'
+import DialogImage3 from '../../../assets/icons/DialogImage3.svg'
 import Link from 'next/link'
 const Hero: FC = () => {
 	const texts = [
@@ -52,7 +54,17 @@ const Hero: FC = () => {
 			</div>
 			<div className={styles.right}>
 				<div className={styles.image}>
-					<Image src={DialogImage} alt="Dialog Image" />
+					<Image
+						className={styles.image1}
+						src={DialogImage1}
+						alt="Dialog Image"
+					/>
+					<Image
+						className={styles.image2}
+						src={DialogImage2}
+						alt="Dialog Image"
+					/>
+					<Image src={DialogImage3} alt="Dialog Image" />
 				</div>
 			</div>
 		</div>

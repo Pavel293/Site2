@@ -16,15 +16,27 @@ const Footer: FC = () => {
 				</div>
 				<div className={styles.account}>
 					<h1>Вход в личный кабинет</h1>
-					<p>Создание аккаунта</p>
-					<p>Регистрация</p>
-					<p>Чат техподдержки</p>
+					<Link href="/404">
+						<p>Создание аккаунта</p>
+					</Link>
+					<Link href="/404">
+						<p>Регистрация</p>
+					</Link>
+					<Link href="/404">
+						<p>Чат техподдержки</p>
+					</Link>
 				</div>
 				<div className={styles.doc}>
 					<h1>Документы</h1>
-					<p>Лицензионный договор</p>
-					<p>Политика конфиденциальности</p>
-					<p>Пользовательское соглашение</p>
+					<Link href="/info/licence-agreement">
+						<p>Лицензионный договор</p>
+					</Link>
+					<Link href="/info/confidential">
+						<p>Политика конфиденциальности</p>
+					</Link>
+					<Link href="/info/user-agreement">
+						<p>Пользовательское соглашение</p>
+					</Link>
 				</div>
 				<div className={styles.contact}>
 					<h1>Контакты</h1>
