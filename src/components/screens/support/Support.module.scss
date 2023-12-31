@@ -21,9 +21,9 @@
 
 		h1 {
 			font-family: Gilroy;
-			font-size: 48px;
+			font-size: calc((1vw + 1vh) * 1.7);
+			line-height: calc((1vw + 1vh) * 2);
 			font-weight: 700;
-			line-height: 52px;
 			letter-spacing: 0em;
 			text-align: left;
 			margin-top: 0;
@@ -43,18 +43,18 @@
 		.additionalText {
 			h2 {
 				font-family: Gilroy;
-				font-size: 36px;
+				font-size: calc((1vw + 1vh) * 1.4);
+				line-height: calc((1vw + 1vh) * 2);
 				font-weight: 700;
-				line-height: 52px;
 				letter-spacing: 0em;
 				text-align: left;
 				color: #292f51;
 			}
 			p {
 				font-family: Gilroy;
-				font-size: 24px;
+				font-size: calc((1vw + 1vh) * 0.9);
+				line-height: calc((1vw + 1vh) * 1);
 				font-weight: 500;
-				line-height: 40px;
 				letter-spacing: 0em;
 				text-align: left;
 				margin-bottom: 5vh;
@@ -73,7 +73,7 @@
 	margin-left: auto;
 	position: relative;
 	overflow: hidden;
-	height: 750px;
+	height: 850px;
 	img {
 		pointer-events: none;
 		width: 100%;
@@ -99,7 +99,20 @@
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
+	.left {
+		.box {
+			height: auto;
+			width: 340px;
+		}
+	}
+	.right {
+		height: auto;
+		img {
+			width: 340px;
+			height: auto;
+		}
+	}
 }
 
 @media (min-width: 2300px) {

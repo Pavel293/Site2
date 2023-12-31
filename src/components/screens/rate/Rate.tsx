@@ -38,14 +38,7 @@ const Rate = () => {
 			<div className={cn(styles.fuck, 'wrapper')}>
 				<h1>Доступен каждому</h1>
 				<h2>Выберите количество сотрудников</h2>
-				<div
-					style={{
-						border: '2px solid #496FFF',
-						borderRadius: '15px',
-						padding: '2px',
-						gap: '4px',
-					}}
-				>
+				<div className={styles.buttonContainer}>
 					{['1', '2', '3', '4', '5', '6', '7', '8', '9', '10 и более'].map(
 						(value, index) => (
 							<StyledButton
@@ -58,7 +51,7 @@ const Rate = () => {
 						),
 					)}
 				</div>
-				<p>Добавить сотрудников можно в любой момент работы</p>
+				<h3>Добавить сотрудников можно в любой момент работы</h3>
 				<div className={styles.cards}>
 					<div className={styles.fcard}>
 						<div className={styles.top}>

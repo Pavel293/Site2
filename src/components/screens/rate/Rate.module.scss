@@ -5,7 +5,7 @@
 	width: 100%;
 	flex-direction: column;
 	margin: 0 auto;
-	p {
+	h3 {
 		font-family: Gilroy;
 		font-size: 18px;
 		font-weight: 500;
@@ -32,6 +32,13 @@
 		text-align: left;
 		color: #292f51;
 	}
+}
+
+.buttonContainer {
+	border: 2px solid #496fff;
+	border-radius: 15px;
+	padding: 2px;
+	gap: 4px;
 }
 
 .styled-button {
@@ -296,6 +303,50 @@
 				width: 101px;
 				height: 20px;
 				margin: 0 0 18px 39px;
+			}
+		}
+	}
+}
+
+@media (max-width: 990px) {
+	.buttonContainer {
+		display: none;
+	}
+	.fuck {
+		h3 {
+			display: none;
+		}
+	}
+	.cards {
+		overflow: auto;
+		max-width: 370px;
+		.fcard {
+			.top {
+				.price {
+					h2 {
+						font-size: 36px;
+					}
+				}
+			}
+			.main {
+				button {
+					margin: 0 50px 35px 50px;
+				}
+			}
+		}
+		.scard {
+			margin-right: 40px;
+			.top {
+				.price {
+					h2 {
+						font-size: 36px;
+					}
+				}
+			}
+			.main {
+				button {
+					margin: 0 50px 35px 50px;
+				}
 			}
 		}
 	}
