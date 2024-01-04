@@ -153,7 +153,7 @@
 				flex-direction: column;
 				.auth {
 					> a {
-						@apply flex justify-center text-white px-[24px] border leading-[24px] rounded-full bg-primary w-[100px] h-[4vh];
+						@apply flex justify-center text-white py-[2px] px-[24px] border leading-[24px] rounded-full bg-primary w-[100px] h-[4vh];
 						font-size: calc((1vw + 1vh) * 1);
 					}
 					&.reg {
