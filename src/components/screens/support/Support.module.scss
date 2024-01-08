@@ -74,10 +74,13 @@
 	position: relative;
 	overflow: hidden;
 	height: 850px;
-	img {
-		pointer-events: none;
+	image {
+		position: relative;
 		width: 100%;
-		object-fit: cover;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		padding: 10vh;
 	}
 }
 
@@ -101,15 +104,32 @@
 
 @media (max-width: 430px) {
 	.left {
+		.head {
+			h1 {
+				font-size: calc((1vw + 1vh) * 1.8);
+				text-align: center;
+			}
+		}
 		.box {
+			margin-left: 5vw;
 			height: auto;
 			width: 340px;
+			.additionalText {
+				h2 {
+					font-size: calc((1vw + 1vh) * 1.8);
+					line-height: calc((1vw + 1vh) * 3);
+				}
+				p {
+					font-size: calc((1vw + 1vh) * 1.1);
+					line-height: calc((1vw + 1vh) * 1);
+				}
+			}
 		}
 	}
 	.right {
 		height: auto;
 		img {
-			width: 340px;
+			width: 65vw;
 			height: auto;
 		}
 	}

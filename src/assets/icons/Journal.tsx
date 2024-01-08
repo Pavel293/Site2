@@ -33,7 +33,7 @@ export function Journal() {
 					width="948"
 					height="756"
 					filterUnits="userSpaceOnUse"
-					color-interpolation-filters="sRGB"
+					colorInterpolationFilters="sRGB"
 				>
 					<feFlood floodOpacity="0" result="BackgroundImageFix" />
 					<feColorMatrix
@@ -86,7 +86,7 @@ export function Journal() {
 					width="1485"
 					height="800"
 					filterUnits="userSpaceOnUse"
-					color-interpolation-filters="sRGB"
+					colorInterpolationFilters="sRGB"
 				>
 					<feFlood floodOpacity="0" result="BackgroundImageFix" />
 					<feColorMatrix

@@ -32,10 +32,10 @@ const Hero: FC = () => {
 					</p>
 					<div className={cn(styles.active, styles.buttons)}>
 						<span className={styles.auth}>
-							<Link href="/404">Войти</Link>
+							<Link href="https://lk.telebon.ru/auth">Войти</Link>
 						</span>
 						<span className={cn(styles.auth, styles.reg)}>
-							<Link href="/404">
+							<Link href="https://lk.telebon.ru/registration">
 								<span>Попробовать бесплатно</span>
 								<span
 									style={{

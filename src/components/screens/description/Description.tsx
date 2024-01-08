@@ -4,6 +4,7 @@ import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 import cn from 'classnames'
 import Link from 'next/link'
 import { propoData } from '@/screens/description/promo-data'
+import { AnimatePresence, motion } from 'framer-motion'
 
 interface StyledButtonProps {
 	selected?: boolean
@@ -115,15 +116,32 @@ const Decription = () => {
 						<span>Аналитика</span>
 					</StyledButton>
 				</div>
-				<div style={{ height: '70vh' }}>
-					<div className={styles.buttonContent}>
-						<h1>{item.title}</h1>
-						<h4 style={{ whiteSpace: 'pre-wrap' }}>{item.description} </h4>
-						<Link href="/404">
-							<button>Давайте попробуем</button>
-						</Link>
+				<div>
+					<motion.div className={styles.buttonContent}>
+						<AnimatePresence exitBeforeEnter={false}>
+							<motion.div
+								key={selectedButton}
+								initial={{ opacity: 0, y: 10 }}
+								animate={{ opacity: 1, y: 0 }}
+								exit={{ opacity: 0, y: -5 }}
+								transition={{ delay: 0.2 }}
+							>
+								<motion.h1 layoutId="title">{item.title}</motion.h1>
+								<motion.h4
+									layoutId="description"
+									style={{ whiteSpace: 'pre-wrap' }}
+								>
+									{item.description}{' '}
+								</motion.h4>
+								<Link href="https://lk.telebon.ru/registration">
+									<motion.button layoutId="button">
+										Давайте попробуем
+									</motion.button>
+								</Link>
+							</motion.div>
+						</AnimatePresence>
 						<div className={styles.icon}>{item.icon}</div>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</>

@@ -27,7 +27,7 @@ export function Soon() {
 					width="64"
 					height="28"
 					filterUnits="userSpaceOnUse"
-					color-interpolation-filters="sRGB"
+					colorInterpolationFilters="sRGB"
 				>
 					<feFlood floodOpacity="0" result="BackgroundImageFix" />
 					<feColorMatrix

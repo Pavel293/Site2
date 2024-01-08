@@ -29,15 +29,7 @@ const Support = () => {
 				</div>
 			</div>
 			<div className={styles.right}>
-				<div
-					style={{
-						position: 'relative',
-						width: '100%',
-						height: '100%',
-						display: 'flex',
-						justifyContent: 'center',
-					}}
-				>
+				<div className={styles.image}>
 					<Image src={DialogImage} alt="Dialog Image" />
 				</div>
 			</div>

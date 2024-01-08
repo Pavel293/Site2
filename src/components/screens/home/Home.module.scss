@@ -94,8 +94,8 @@
 
 .cookieContainer {
 	position: fixed;
-	left: 10vw;
-	bottom: 10vh;
+	left: 2vw;
+	bottom: 3vh;
 	background-color: #ebebeb;
 	padding: 1vh;
 	border-radius: 15px;
@@ -204,5 +204,9 @@
 	}
 	.cookieContainer {
 		width: 60vw;
+		button {
+			height: 3vh;
+			width: 20vw;
+		}
 	}
 }

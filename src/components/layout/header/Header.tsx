@@ -5,12 +5,29 @@ import Image from 'next/image'
 import LogoImage from '../../../assets/icons/logo.svg'
 import LogoText from '../../../assets/icons/logo-text.svg'
 import Link from 'next/link'
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 
 const Header: FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
+	const [hidden, setHidden] = useState<boolean>(false)
+	const { scrollY } = useScroll() || { scrollY: 0 }
+
+	useMotionValueEvent(scrollY, 'change', latest => {
+		const previous = scrollY.getPrevious()
+		if (latest > previous && latest > 150) {
+			setHidden(true)
+		} else {
+			setHidden(false)
+		}
+	})
 
 	return (
-		<header className={cn('wrapper', styles.header)}>
+		<motion.nav
+			className={cn('wrapper', styles.header)}
+			variants={{ visible: { y: 0 }, hidden: { y: '-100%' } }}
+			animate={hidden ? 'hidden' : 'visible'}
+			transition={{ duration: 0.35, ease: 'easeInOut' }}
+		>
 			<div className={styles.logo}>
 				<Link href="/">
 					<Image src={LogoImage} alt="logoImage" />
@@ -27,10 +44,10 @@ const Header: FC = () => {
 				{/*	</li>*/}
 				{/*))}*/}
 				<li className={cn(styles.auth, styles.reg)}>
-					<Link href="/404">Регистрация</Link>
+					<Link href="https://lk.telebon.ru/registration">Регистрация</Link>
 				</li>
 				<li className={styles.auth}>
-					<Link href="/404">Войти</Link>
+					<Link href="https://lk.telebon.ru/auth">Войти</Link>
 				</li>
 			</ul>
 			<button
@@ -41,7 +58,7 @@ const Header: FC = () => {
 				<span></span>
 				<span></span>
 			</button>
-		</header>
+		</motion.nav>
 	)
 }
 

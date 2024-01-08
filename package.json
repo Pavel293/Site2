@@ -19,7 +19,7 @@
     "classnames": "^2.3.2",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^10.17.9",
     "html-react-parser": "^4.2.2",
     "next": "13.4.19",
     "nextjs-progressbar": "^0.0.16",
@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "webpack-cli": "^5.1.4"
   }
 }

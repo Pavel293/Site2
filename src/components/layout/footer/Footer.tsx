@@ -16,10 +16,10 @@ const Footer: FC = () => {
 				</div>
 				<div className={styles.account}>
 					<h1>Вход в личный кабинет</h1>
-					<Link href="/404">
+					<Link href="https://lk.telebon.ru/registration">
 						<p>Создание аккаунта</p>
 					</Link>
-					<Link href="/404">
+					<Link href="https://lk.telebon.ru/registration">
 						<p>Регистрация</p>
 					</Link>
 					<Link href="/404">

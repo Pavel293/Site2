@@ -74,7 +74,7 @@ const Rate = () => {
 								Финансы
 							</p>
 							<h1>за 3 сотрудников</h1>
-							<Link href="/404">
+							<Link href="https://lk.telebon.ru/registration">
 								<button>Начать пользоваться</button>
 							</Link>
 						</div>
@@ -111,7 +111,7 @@ const Rate = () => {
 							) : (
 								<h1>за {selectedButton + 1} сотрудников</h1>
 							)}
-							<Link href="/404">
+							<Link href="https://lk.telebon.ru/registration">
 								<button>Попробовать бесплатно</button>
 							</Link>
 						</div>
