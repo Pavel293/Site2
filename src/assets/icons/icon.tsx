@@ -17,6 +17,7 @@ import { Grid } from './Grid'
 import { Soon } from './Soon'
 import { Journal } from './Journal'
 import { Telegram } from './Telegram'
+import { LogoTextTop } from './LogoTextTop'
 
 export enum EIcons {
 	hover1,
@@ -38,6 +39,7 @@ export enum EIcons {
 	soon,
 	journal,
 	telegram,
+	logotexttop,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -60,6 +62,7 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.soon]: Soon,
 	[EIcons.journal]: Journal,
 	[EIcons.telegram]: Telegram,
+	[EIcons.logotexttop]: LogoTextTop,
 }
 
 interface IIconProps {

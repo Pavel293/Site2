@@ -26,13 +26,16 @@ const Home: FC = () => {
 		setShowCookieBanner(false)
 	}
 	return (
-		<Meta title="Главная" description="Главная страница сайта telebon...">
+		<Meta
+			title="Онлайн система записи"
+			description="Главная страница сайта telebon..."
+		>
 			<div className={styles.wrapper}>
 				{showCookieBanner && (
 					<div className={styles.cookieContainer}>
 						<p>
 							Продолжая использовать наш сайт, вы даете{' '}
-							<Link href="/info/cookie-policy">
+							<Link href="/info/cookie">
 								<span>согласие на использование файлов «cookie»</span>
 							</Link>
 							. Если вы не хотите, чтобы ваши данные обрабатывались, измените

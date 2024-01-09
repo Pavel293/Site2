@@ -2,24 +2,23 @@ import { FC, useEffect, useState } from 'react'
 import styles from './Header.module.scss'
 import cn from 'classnames'
 import Image from 'next/image'
-import LogoImage from '../../../assets/icons/logo.svg'
-import LogoText from '../../../assets/icons/logo-text.svg'
+import LogoTextTop from '../../../assets/icons/logo-text-top.svg'
 import Link from 'next/link'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 
 const Header: FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
 	const [hidden, setHidden] = useState<boolean>(false)
-	const { scrollY } = useScroll() || { scrollY: 0 }
-
-	useMotionValueEvent(scrollY, 'change', latest => {
-		const previous = scrollY.getPrevious()
-		if (latest > previous && latest > 150) {
-			setHidden(true)
-		} else {
-			setHidden(false)
-		}
-	})
+	// const { scrollY } = useScroll() || { scrollY: 0 }
+	//
+	// useMotionValueEvent(scrollY, 'change', latest => {
+	// 	const previous = scrollY.getPrevious()
+	// 	if (latest > previous && latest > 150) {
+	// 		setHidden(true)
+	// 	} else {
+	// 		setHidden(false)
+	// 	}
+	// })
 
 	return (
 		<motion.nav
@@ -30,8 +29,7 @@ const Header: FC = () => {
 		>
 			<div className={styles.logo}>
 				<Link href="/">
-					<Image src={LogoImage} alt="logoImage" />
-					<Image src={LogoText} alt="logotext" />
+					<Image src={LogoTextTop} alt="logotext" />
 				</Link>
 			</div>
 

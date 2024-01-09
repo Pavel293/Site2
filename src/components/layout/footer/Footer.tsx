@@ -15,9 +15,9 @@ const Footer: FC = () => {
 					</Link>
 				</div>
 				<div className={styles.account}>
-					<h1>Вход в личный кабинет</h1>
-					<Link href="https://lk.telebon.ru/registration">
-						<p>Создание аккаунта</p>
+					<h1>Личный кабинет</h1>
+					<Link href="https://lk.telebon.ru/auth">
+						<p>Войти в личный кабинет</p>
 					</Link>
 					<Link href="https://lk.telebon.ru/registration">
 						<p>Регистрация</p>
@@ -28,13 +28,13 @@ const Footer: FC = () => {
 				</div>
 				<div className={styles.doc}>
 					<h1>Документы</h1>
-					<Link href="/info/licence-agreement">
+					<Link href="/info/licence">
 						<p>Лицензионный договор</p>
 					</Link>
-					<Link href="/info/confidential">
+					<Link href="/info/privacy-policy">
 						<p>Политика конфиденциальности</p>
 					</Link>
-					<Link href="/info/user-agreement">
+					<Link href="/info/agreement">
 						<p>Пользовательское соглашение</p>
 					</Link>
 				</div>

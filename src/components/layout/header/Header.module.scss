@@ -57,6 +57,7 @@ $menuItems: 7;
 		.logo {
 			position: relative;
 			z-index: 50;
+			width: 40vw;
 		}
 		ul {
 			@apply flex flex-col justify-center items-center    -top-[400%] left-0 z-40 absolute w-full h-0;
