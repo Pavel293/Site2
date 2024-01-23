@@ -34,13 +34,6 @@ const Header: FC = () => {
 			</div>
 
 			<ul className={cn(isOpen && styles.active)}>
-				{/*{links.map(link => (*/}
-				{/*	<li key={link.title}>*/}
-				{/*		<Link href={link.link} className="text-link">*/}
-				{/*			{link.title}*/}
-				{/*		</Link>*/}
-				{/*	</li>*/}
-				{/*))}*/}
 				<li className={cn(styles.auth, styles.reg)}>
 					<Link href="https://lk.telebon.ru/registration">Регистрация</Link>
 				</li>

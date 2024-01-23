@@ -89,17 +89,33 @@
 				position: relative;
 				display: flex;
 				flex-direction: row;
-				h1 {
-					color: white;
-					position: absolute;
-					top: 15px;
-					left: 15px;
-					font-family: Gilroy;
-					font-size: 36px;
-					font-weight: 700;
-					line-height: 52px;
-					letter-spacing: 0em;
-					text-align: left;
+				div {
+					display: flex;
+					flex-direction: column;
+					h1 {
+						color: white;
+						position: absolute;
+						top: 15px;
+						left: 15px;
+						font-family: Gilroy;
+						font-size: 36px;
+						font-weight: 700;
+						line-height: 52px;
+						letter-spacing: 0em;
+						text-align: left;
+					}
+					p {
+						position: absolute;
+						top: 55px;
+						left: 15px;
+						font-family: Gilroy;
+						font-size: 18px;
+						font-weight: 500;
+						line-height: 30px;
+						letter-spacing: 0em;
+						text-align: left;
+						color: white;
+					}
 				}
 				h2 {
 					color: #292f51;
@@ -177,17 +193,33 @@
 				position: relative;
 				display: flex;
 				flex-direction: row;
-				h1 {
-					color: white;
-					position: absolute;
-					top: 15px;
-					left: 15px;
-					font-family: Gilroy;
-					font-size: 36px;
-					font-weight: 700;
-					line-height: 52px;
-					letter-spacing: 0em;
-					text-align: left;
+				div {
+					display: flex;
+					flex-direction: column;
+					h1 {
+						color: white;
+						position: absolute;
+						top: 15px;
+						left: 15px;
+						font-family: Gilroy;
+						font-size: 36px;
+						font-weight: 700;
+						line-height: 52px;
+						letter-spacing: 0em;
+						text-align: left;
+					}
+					p {
+						position: absolute;
+						top: 55px;
+						left: 15px;
+						font-family: Gilroy;
+						font-size: 18px;
+						font-weight: 500;
+						line-height: 30px;
+						letter-spacing: 0em;
+						text-align: left;
+						color: white;
+					}
 				}
 				h2 {
 					color: #292f51;
@@ -285,11 +317,19 @@
 				height: 100px;
 
 				.price {
-					h1 {
-						top: 8px;
-						left: 8px;
-						font-size: 18px;
-						line-height: 26px;
+					div {
+						h1 {
+							top: 8px;
+							left: 8px;
+							font-size: 18px;
+							line-height: 26px;
+						}
+						p {
+							top: 30px;
+							left: 8px;
+							font-size: 9px;
+							line-height: 13px;
+						}
 					}
 
 					h2 {

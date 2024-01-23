@@ -56,7 +56,10 @@ const Rate = () => {
 					<div className={styles.fcard}>
 						<div className={styles.top}>
 							<div className={styles.price}>
-								<h1>Free</h1>
+								<div>
+									<h1>FREE</h1>
+									<p>Базовый</p>
+								</div>
 								<h2>0 ₽ </h2>
 							</div>
 							<p>Для одного или нескольких пользователей</p>
@@ -82,7 +85,10 @@ const Rate = () => {
 					<div className={styles.scard}>
 						<div className={styles.top}>
 							<div className={styles.price}>
-								<h1>Standart</h1>
+								<div>
+									<h1>PRO</h1>
+									<p>Профессиональный</p>
+								</div>
 								<h2>{(selectedButton + 1) * 200} ₽ </h2>
 							</div>
 							<p>

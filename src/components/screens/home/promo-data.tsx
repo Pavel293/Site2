@@ -39,6 +39,6 @@ export const propoData = [
 	{
 		icon: <IconInstance name={EIcons.soon} />,
 		title: 'Телефония',
-		description: 'Совершайте вызовы клиентам внутри системы в едином окне',
+		description: 'Совершайте вызовы клиентам в едином окне внутри системы',
 	},
 ]
