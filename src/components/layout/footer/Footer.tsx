@@ -42,6 +42,9 @@ const Footer: FC = () => {
 					<h1>Контакты</h1>
 					<p>8 812 507 63 33</p>
 					<p>Hello@telebon.ru</p>
+					<p>ООО ГК Белый Медведь</p>
+					<p>ИНН 4345410051</p>
+					<p>ОГРН 1154345004582</p>
 					<div className={styles.image}>
 						<IconInstance name={EIcons.telegram} />
 					</div>
