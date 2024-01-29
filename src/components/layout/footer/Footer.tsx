@@ -3,7 +3,7 @@ import styles from './Footer.module.scss'
 import Link from 'next/link'
 import LogoFooter from '../../../assets/icons/LogoFooter.svg'
 import Image from 'next/image'
-import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
+//import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 
 const Footer: FC = () => {
 	return (
