@@ -42,9 +42,9 @@ const Footer: FC = () => {
 					<h1>Контакты</h1>
 					<p>8 812 507 63 33</p>
 					<p>Hello@telebon.ru</p>
-					<div className={styles.image}>
-						<IconInstance name={EIcons.telegram} />
-					</div>
+					{/*<div className={styles.image}>*/}
+					{/*	<IconInstance name={EIcons.telegram} />*/}
+					{/*</div>*/}
 				</div>
 			</div>
 			<div className={styles.bottom}>
