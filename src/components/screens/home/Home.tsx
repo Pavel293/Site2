@@ -29,6 +29,7 @@ const Home: FC = () => {
 		<Meta
 			title="Онлайн система записи"
 			description="Главная страница сайта telebon..."
+			image="../../../assets/preview/home_preview.jpg"
 		>
 			<div className={styles.wrapper}>
 				{showCookieBanner && (

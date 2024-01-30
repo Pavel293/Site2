@@ -20,11 +20,13 @@ const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 						name="description"
 						content={onlyText(description, 152)}
 					/>
-					<link rel="canonical" href={currentUrl} />
-					<meta property="og:locale" content="en" />
+					<link data-rel="canonical" href={currentUrl} />
+					<meta property="og:locale" content="ru" />
 					<meta property="og:title" content={titleMerge(title)} />
 					<meta property="og:url" content={currentUrl} />
 					<meta property="og:image" content={image || logoImage} />
+					<meta property="og:image:width" content="504px" />
+					<meta property="og:image:height" content="968px" />
 					<meta property="og:site_name" content={siteName} />
 					<meta
 						property="og:description"
