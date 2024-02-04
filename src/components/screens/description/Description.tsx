@@ -5,6 +5,8 @@ import cn from 'classnames'
 import Link from 'next/link'
 import { propoData } from '@/screens/description/promo-data'
 import { AnimatePresence, motion } from 'framer-motion'
+import Image from 'next/image'
+import DecriptionImage from '../../../assets/icons/DescriptionImage.svg'
 
 interface StyledButtonProps {
 	selected?: boolean
@@ -44,76 +46,56 @@ const Decription = () => {
 						selected={selectedButton === 0}
 						onClick={() => handleButtonClick(0)}
 					>
-						<span
-							style={{
-								display: 'inline-flex',
-								verticalAlign: 'middle',
-								height: '20px',
-							}}
-						>
-							<IconInstance name={EIcons.squareoutline} />
-						</span>
-						<span>Журнал записи</span>
+						<div className={styles.iconBox}>
+							<span className={styles.icon}>
+								<IconInstance name={EIcons.squareoutline} />
+							</span>
+						</div>
+						<span className={styles.text}>Электронный журнал</span>
 					</StyledButton>
 					<StyledButton
 						selected={selectedButton === 1}
 						onClick={() => handleButtonClick(1)}
 					>
-						<span
-							style={{
-								display: 'inline-flex',
-								verticalAlign: 'middle',
-								height: '20px',
-							}}
-						>
-							<IconInstance name={EIcons.users3outline} />
-						</span>
-						<span>Учёт клиентов</span>
+						<div className={styles.iconBox}>
+							<span className={styles.icon}>
+								<IconInstance name={EIcons.users3outline} />
+							</span>
+						</div>
+						<span className={styles.text}>Учёт клиентов</span>
 					</StyledButton>
 					<StyledButton
 						selected={selectedButton === 2}
 						onClick={() => handleButtonClick(2)}
 					>
-						<span
-							style={{
-								display: 'inline-flex',
-								verticalAlign: 'middle',
-								height: '20px',
-							}}
-						>
-							<IconInstance name={EIcons.walletoutline} />
-						</span>
-						<span>Финансы</span>
+						<div className={styles.iconBox}>
+							<span className={styles.icon}>
+								<IconInstance name={EIcons.walletoutline} />
+							</span>
+						</div>
+						<span className={styles.text}>Финансы</span>
 					</StyledButton>
 					<StyledButton
 						selected={selectedButton === 3}
 						onClick={() => handleButtonClick(3)}
 					>
-						<span
-							style={{
-								display: 'inline-flex',
-								verticalAlign: 'middle',
-								height: '20px',
-							}}
-						>
-							<IconInstance name={EIcons.calendaroutline} />
-						</span>
-						<span>Задачник</span>
+						<div className={styles.iconBox}>
+							<span className={styles.icon}>
+								<IconInstance name={EIcons.calendaroutline} />
+							</span>
+						</div>
+						<span className={styles.text}>Задачник</span>
 					</StyledButton>
 					<StyledButton
 						selected={selectedButton === 4}
 						onClick={() => handleButtonClick(4)}
 					>
-						<span
-							style={{
-								display: 'inline-flex',
-								verticalAlign: 'middle',
-								height: '20px',
-							}}
-						>
-							<IconInstance name={EIcons.statisticsoutline} />
-						</span>
-						<span>Аналитика</span>
+						<div className={styles.iconBox}>
+							<span className={styles.icon}>
+								<IconInstance name={EIcons.statisticsoutline} />
+							</span>
+						</div>
+						<span className={styles.text}>Аналитика</span>
 					</StyledButton>
 				</div>
 				<div>
@@ -126,14 +108,15 @@ const Decription = () => {
 								exit={{ opacity: 0 }}
 								transition={{ delay: 0.2 }}
 							>
-								<h1>{item.title}</h1>
-								<h4 style={{ whiteSpace: 'pre-wrap' }}>{item.description} </h4>
-								<Link href="https://lk.telebon.ru/registration">
-									<button>Давайте попробуем</button>
-								</Link>
+								<div className={styles.textBox}>
+									<h1>{item.title}</h1>
+									<h4 style={{ whiteSpace: 'pre-wrap' }}>
+										{item.description}{' '}
+									</h4>
+								</div>
+								<Image src={DecriptionImage} alt={''} className={styles.icon} />
 							</motion.div>
 						</AnimatePresence>
-						<div className={styles.icon}>{item.icon}</div>
 					</motion.div>
 				</div>
 			</div>

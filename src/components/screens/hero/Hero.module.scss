@@ -3,6 +3,7 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	margin-top: 128px;
 }
 
 .left {
@@ -11,38 +12,36 @@
 	flex-direction: column;
 	height: auto;
 	justify-content: center;
-	flex: 0 0 50%;
-	margin: 15vh 0 15vh 0;
+	align-items: center;
 
 	.head {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		max-width: 60vw;
-
 		h1 {
 			font-size: 50px;
 			line-height: 65px;
-			font-weight: bold;
-			text-align: left;
+			text-align: center;
+			font-weight: 700;
 		}
 	}
 
 	.additionalText {
 		max-width: 60vw;
-		margin-top: 20px;
+		margin-top: 37px;
 
 		p {
-			font-size: 25px;
-			font-weight: 500;
-			line-height: 32px;
+			font-family: Roboto;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 24px;
 			letter-spacing: 0;
-			text-align: left;
+			text-align: center;
 		}
 
 		.buttons {
-			@apply flex gap-6 items-center;
-			margin: 3vh 0 0 0;
+			@apply flex gap-6 items-center justify-center;
+			margin: 40px 0 0 0;
 
 			list-style: none;
 			padding: 0;
@@ -52,70 +51,25 @@
 					@apply hover:text-text;
 				}
 				> a {
-					@apply flex justify-center text-white py-[8px] px-[24px] border leading-[24px] border-primary rounded-full bg-primary w-[220px] h-[40px];
+					@apply flex justify-center items-center text-white py-[8px] px-[24px] border leading-[24px] border-primary rounded-full bg-primary w-[230px] h-[56px];
+					background: #246bfd;
+					border-radius: 8px;
 					&:hover {
-						@apply text-white bg-primary bg-opacity-50 border-transparent;
+						background: white;
+						color: #246bfd;
 					}
 					&:active {
 						@apply bg-text bg-opacity-30;
 					}
 				}
-				&.reg {
-					a {
-						@apply flex text-primary w-[270px] h-[40px];
-						background-color: transparent;
-						border-color: transparent;
-						&:active {
-							@apply bg-text bg-opacity-30;
-						}
-					}
-				}
 			}
 		}
 	}
-}
-
-.right {
-	display: flex;
-	justify-content: right;
-	align-items: center;
-	flex: 1;
-	width: 100%;
-	margin-left: auto;
-	position: relative;
-	overflow: hidden;
-
 	.image {
 		pointer-events: none;
-		position: relative;
-		width: 432px;
-		height: 457px;
-		animation: showDiv 1s forwards;
-	}
-	.image1 {
-		position: absolute;
-		top: 100px;
-		left: -115px;
-		pointer-events: none;
-		animation: showDiv 2s forwards;
-	}
-	.image2 {
-		position: absolute;
-		bottom: 0;
-		right: 100px;
-		pointer-events: none;
-		animation: showDiv 3s forwards;
-	}
-	@keyframes showDiv {
-		0% {
-			opacity: 0;
-		}
-		50% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
+		margin-top: 64px;
+		display: flex;
+		align-self: center;
 	}
 }
 
@@ -168,24 +122,6 @@
 					}
 				}
 			}
-		}
-	}
-	.right {
-		display: flex;
-		justify-content: center;
-		.image {
-			width: 200px;
-			height: auto;
-		}
-		.image1 {
-			width: 70px;
-			top: 100px;
-			left: -50px;
-		}
-		.image2 {
-			width: 40px;
-			bottom: 0;
-			right: 0;
 		}
 	}
 }

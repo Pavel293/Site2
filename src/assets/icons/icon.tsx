@@ -18,6 +18,12 @@ import { Soon } from './Soon'
 import { Journal } from './Journal'
 import { Telegram } from './Telegram'
 import { LogoTextTop } from './LogoTextTop'
+import { EnterIcon } from './EnterIcon'
+import { LaptopIcon } from './LaptopIcon'
+import { RectangleSplit4UnevenOutline } from './RectangleSplit4UnevenOutline'
+import { MoneyCircleOutline } from './MoneyCircleOutline'
+import { DocumentTextOutline } from './DocumentTextOutline'
+import { TelegramIcon } from './TelegramIcon'
 
 export enum EIcons {
 	hover1,
@@ -40,6 +46,12 @@ export enum EIcons {
 	journal,
 	telegram,
 	logotexttop,
+	entericon,
+	laptopicon,
+	rectanglesplit4unevenoutline,
+	moneycircleoutline,
+	documenttextoutline,
+	telegramicon,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -63,6 +75,12 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.journal]: Journal,
 	[EIcons.telegram]: Telegram,
 	[EIcons.logotexttop]: LogoTextTop,
+	[EIcons.entericon]: EnterIcon,
+	[EIcons.laptopicon]: LaptopIcon,
+	[EIcons.rectanglesplit4unevenoutline]: RectangleSplit4UnevenOutline,
+	[EIcons.moneycircleoutline]: MoneyCircleOutline,
+	[EIcons.documenttextoutline]: DocumentTextOutline,
+	[EIcons.telegramicon]: TelegramIcon,
 }
 
 interface IIconProps {

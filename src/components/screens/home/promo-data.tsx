@@ -2,43 +2,35 @@ import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 
 export const propoData = [
 	{
-		icon: <IconInstance name={EIcons.squareoutline} />,
-		title: 'Журнал',
-		description: 'Запись клиентов без ошибок',
+		icon: <IconInstance name={EIcons.laptopicon} />,
+		title: 'Электронный журнал',
+		description: 'Удобная запись клиентов на услуги. Отображение и фильтрация',
 	},
 	{
-		icon: <IconInstance name={EIcons.walletoutline} />,
-		title: 'Финансы',
-		description: 'Контролируйте финансовые потоки',
-	},
-	{
-		icon: <IconInstance name={EIcons.statisticsoutline} />,
-		title: 'Отчёты',
-		description: 'Аналитика показателей по услугам кампании',
+		icon: <IconInstance name={EIcons.documenttextoutline} />,
+		title: 'График работы',
+		description: 'Просто контролировать и заполнять, гибкие возможности',
 	},
 	{
 		icon: <IconInstance name={EIcons.users3outline} />,
-		title: 'Контроль',
-		description: 'Ведение клиентов, товаров, сотрудников',
+		title: 'Клиентская база',
+		description: 'Гибкая сегментация и классификация клиентов',
 	},
 	{
-		icon: <IconInstance name={EIcons.squareoutline} />,
-		title: 'Рабочий стол',
-		description: 'Всё самое важное в одном месте',
+		icon: <IconInstance name={EIcons.moneycircleoutline} />,
+		title: 'Финансовый учёт',
+		description: 'Контролируйте денежные потоки, разделяйте способы оплаты',
 	},
 	{
-		icon: <IconInstance name={EIcons.grid} />,
-		title: 'Канбан доска',
-		description: 'Назначайте задачи в два клика',
+		icon: <IconInstance name={EIcons.statisticsoutline} />,
+		title: 'Аналитика',
+		description:
+			'Отображение статистики и индексов загрузки, рабочего времени, оказанных услуг',
 	},
 	{
-		icon: <IconInstance name={EIcons.soon} />,
-		title: 'Чат-бот',
-		description: 'Создайте своего бота для онлайн записи',
-	},
-	{
-		icon: <IconInstance name={EIcons.soon} />,
-		title: 'Телефония',
-		description: 'Совершайте вызовы клиентам в едином окне внутри системы',
+		icon: <IconInstance name={EIcons.rectanglesplit4unevenoutline} />,
+		title: 'Команда до 3 человек',
+		description:
+			'Работайте в команде, добавляйте сотрудников и развивайте свой бизнес вместе с сервисом TELEBON',
 	},
 ]

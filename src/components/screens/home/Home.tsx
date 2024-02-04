@@ -4,9 +4,10 @@ import Hero from '@/screens/hero/Hero'
 import styles from './Home.module.scss'
 import { propoData } from '@/screens/home/promo-data'
 import Decription from '@/screens/description/Description'
-import Support from '@/screens/support/Support'
 import Rate from '@/screens/rate/Rate'
 import Link from 'next/link'
+import Image from 'next/image'
+import AccreditaionCompanyImage from '../../../assets/icons/AccreditationCompanyImage.svg'
 
 const Home: FC = () => {
 	const [showCookieBanner, setShowCookieBanner] = useState<boolean>(true)
@@ -47,36 +48,45 @@ const Home: FC = () => {
 				)}
 				<Hero />
 				<Decription />
-				<Support />
 				<Rate />
 
-				<div>
+				<div className={styles.container}>
+					<h1>
+						Базовый бесплатный тариф
+						<span>
+							<br />
+							уже включает в себя
+						</span>
+					</h1>
 					<div className={styles.grid}>
-						{propoData.map((item, index) =>
-							index <= 5 ? (
-								<div key={index} className={styles.card}>
-									<div className={styles.iconWrapper}>
-										<div className={styles.circle}>
-											<div className={styles.icon}>{item.icon}</div>
-										</div>
-									</div>
-									<div className={styles.info}>
-										<h4>{item.title}</h4>
-										<p>{item.description}</p>
-									</div>
+						{propoData.map((item, index) => (
+							<div className={styles.card} key={index}>
+								<div className={styles.image}>{item.icon}</div>
+								<div className={styles.text}>
+									<h2>{item.title}</h2>
+									<p>{item.description}</p>
 								</div>
-							) : (
-								<div key={index} className={styles.card}>
-									<div className={styles.iconWrapperSoon}>
-										<div className={styles.icon}>{item.icon}</div>
-									</div>
-									<div className={styles.info}>
-										<h4>{item.title}</h4>
-										<p>{item.description}</p>
-									</div>
-								</div>
-							),
-						)}
+							</div>
+						))}
+					</div>
+					<Link href="https://lk.telebon.ru/registration">
+						<div className={styles.button}>Зарегистрироваться</div>
+					</Link>
+					<div className={styles.company}>
+						<div className={styles.text}>
+							<h2>В реестре аккредитованных ИТ-компаний</h2>
+							<p>
+								Используем методы шифрования данных. Все сервера находятся в ЦОД
+								на территории России.
+							</p>
+						</div>
+						<div className={styles.image}>
+							<Image
+								src={AccreditaionCompanyImage}
+								alt={''}
+								className={styles.icon}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>

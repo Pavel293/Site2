@@ -3,50 +3,60 @@ $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 $menuItems: 7;
 
 .header {
-	@apply py-[22px] mb-[40px] flex justify-between items-center;
-	.logo {
-		a {
-			@apply flex h-[30px] gap-10 items-center relative w-fit;
-		}
-		img {
-			@apply relative;
-		}
-	}
-	ul {
-		@apply flex  gap-6 items-center;
-		li {
+	width: 100vw;
+	background-color: white;
+	.headerContent {
+		@apply max-w-[1120px] mb-[128px] flex justify-between items-center;
+		margin: 0 auto;
+		.logo {
 			a {
-				transition: 0.5s ease;
-				@apply hover:text-text;
+				@apply flex h-[30px] gap-10 items-center relative w-fit;
+			}
+			img {
+				@apply relative pb-[15px];
 			}
 		}
-		.auth {
-			> a {
-				@apply text-white py-[8px] px-[24px] border leading-[24px] border-primary rounded-full bg-primary;
-				&:hover {
-					@apply text-white bg-primary bg-opacity-50 border-transparent;
-				}
-				&:active {
-					@apply bg-text bg-opacity-30;
+		ul {
+			@apply flex  gap-6 items-center py-[15px];
+			li {
+				a {
+					transition: 0.5s ease;
+					@apply hover:text-text;
 				}
 			}
-			&.reg {
-				a {
-					@apply text-black;
-					border-color: #f8f8fb;
-					background: #f8f8fb;
+			.auth {
+				> a {
+					@apply flex justify-center items-center py-[8px] px-[24px] border leading-[24px] border-white rounded-full bg-white h-[40px];
+					color: #246bfd;
+					border-radius: 8px;
 					&:hover {
-						@apply bg-opacity-50;
+						@apply text-white;
+						background: #246bfd;
+						color: white;
 					}
 					&:active {
 						@apply bg-text bg-opacity-30;
 					}
 				}
+				&.reg {
+					a {
+						@apply text-white;
+						border-color: #246bfd;
+						background: #246bfd;
+						&:hover {
+							@apply bg-white;
+							color: #246bfd;
+						}
+						&:active {
+							@apply bg-text bg-opacity-30;
+						}
+					}
+				}
 			}
 		}
-	}
-	.menu {
-		display: none;
+		.menu {
+			display: none;
+		}
 	}
 }
 
@@ -54,95 +64,97 @@ $menuItems: 7;
 	.header {
 		@apply fixed bg-transparent h-8 w-full z-10;
 		transform: translateY(0) !important;
-		.logo {
-			position: relative;
-			z-index: 50;
-			width: 40vw;
-		}
-		ul {
-			@apply flex flex-col justify-center items-center    -top-[400%] left-0 z-40 absolute w-full h-0;
-			position: absolute;
-			transition: all 0.3s ease-in;
-			transition-delay: 0.25s;
-			padding: 0px 28px 0;
-			list-style: none;
-			li {
-				border-bottom: 1px solid #fff;
-				@apply w-[320px];
-				margin-top: 5px;
-				transform: scale(1.15) translateY(-30px);
-				opacity: 0;
-				transition:
-					transform 0.5s $cubic,
-					opacity 0.6s $cubic;
-				@for $i from 1 through $menuItems {
-					&:nth-child(#{$i}) {
-						transition-delay: #{0.56 - ($i * 0.07)}s;
-					}
-				}
-				a {
-					color: #fff;
-					text-decoration: none;
-					font-size: 22px;
-					line-height: 2.35;
-					width: 100%;
-				}
-				&.auth {
-					@apply border-none;
-
-					&.free {
-						@apply mt-[50px] relative left-0 top-0;
-						a {
-							@apply bg-transparent border-none pl-0;
-						}
-					}
-				}
+		.headerContent {
+			.logo {
+				position: relative;
+				z-index: 50;
+				width: 40vw;
 			}
-			&.active {
-				@apply bg-gray-500 z-40 top-0 h-[100vh];
+			ul {
+				@apply flex flex-col justify-center items-center    -top-[400%] left-0 z-40 absolute w-full h-0;
+				position: absolute;
 				transition: all 0.3s ease-in;
 				transition-delay: 0.25s;
-
+				padding: 0px 28px 0;
+				list-style: none;
 				li {
-					transform: scale(1) translateY(0px);
-					opacity: 1;
+					border-bottom: 1px solid #fff;
+					@apply w-[320px];
+					margin-top: 5px;
+					transform: scale(1.15) translateY(-30px);
+					opacity: 0;
+					transition:
+						transform 0.5s $cubic,
+						opacity 0.6s $cubic;
 					@for $i from 1 through $menuItems {
 						&:nth-child(#{$i}) {
-							transition-delay: #{0.07 * $i + 0.2}s;
+							transition-delay: #{0.56 - ($i * 0.07)}s;
+						}
+					}
+					a {
+						color: #fff;
+						text-decoration: none;
+						font-size: 22px;
+						line-height: 2.35;
+						width: 100%;
+					}
+					&.auth {
+						@apply border-none;
+
+						&.free {
+							@apply mt-[50px] relative left-0 top-0;
+							a {
+								@apply bg-transparent border-none pl-0;
+							}
+						}
+					}
+				}
+				&.active {
+					@apply bg-gray-500 z-40 top-0 h-[100vh];
+					transition: all 0.3s ease-in;
+					transition-delay: 0.25s;
+
+					li {
+						transform: scale(1) translateY(0px);
+						opacity: 1;
+						@for $i from 1 through $menuItems {
+							&:nth-child(#{$i}) {
+								transition-delay: #{0.07 * $i + 0.2}s;
+							}
 						}
 					}
 				}
 			}
-		}
 
-		.menu {
-			@apply block w-8 h-8 p-1 z-50;
-			span {
-				@apply block w-full h-[0.125rem] rounded-[2px] bg-primary relative;
-				transition: 0.3s ease;
-				& + span {
-					@apply mt-[.375rem];
-				}
-				&:nth-child(1) {
-					animation: ease 0.8s menu-icon-top2 forwards;
-				}
-				&:nth-child(2) {
-					animation: ease 0.8s menu-icon-scaled-2 forwards;
-				}
-				&:nth-child(3) {
-					animation: ease 0.8s menu-icon-bottom-2 forwards;
-				}
-			}
-			&.activeMenu {
+			.menu {
+				@apply block w-8 h-8 p-1 z-50;
 				span {
+					@apply block w-full h-[0.125rem] rounded-[2px] bg-primary relative;
+					transition: 0.3s ease;
+					& + span {
+						@apply mt-[.375rem];
+					}
 					&:nth-child(1) {
-						animation: ease 0.8s menu-icon-top forwards;
+						animation: ease 0.8s menu-icon-top2 forwards;
 					}
 					&:nth-child(2) {
-						animation: ease 0.8s menu-icon-scaled forwards;
+						animation: ease 0.8s menu-icon-scaled-2 forwards;
 					}
 					&:nth-child(3) {
-						animation: ease 0.8s menu-icon-bottom forwards;
+						animation: ease 0.8s menu-icon-bottom-2 forwards;
+					}
+				}
+				&.activeMenu {
+					span {
+						&:nth-child(1) {
+							animation: ease 0.8s menu-icon-top forwards;
+						}
+						&:nth-child(2) {
+							animation: ease 0.8s menu-icon-scaled forwards;
+						}
+						&:nth-child(3) {
+							animation: ease 0.8s menu-icon-bottom forwards;
+						}
 					}
 				}
 			}

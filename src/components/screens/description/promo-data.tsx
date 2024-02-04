@@ -1,13 +1,10 @@
 import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 
-export const breakline = '\u000A'
-
 export const propoData = [
 	{
 		icon: <IconInstance name={EIcons.journal} />,
 		title: 'Индивидуальные и групповые услуги',
 		description:
-			'Все просто - журнал записи Telebon подойдет под любые задачи \u000A' +
 			'Разделяйте запись, учитывайте рабочее время кабинетов и сотрудников компании.',
 	},
 	{
