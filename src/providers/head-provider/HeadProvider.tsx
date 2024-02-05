@@ -50,6 +50,7 @@ const HeadProvider: FC<IType> = ({ children }) => {
 					name="viewport"
 					content="width=device-width, initial-scale=1, maximum-scale=1.0"
 				/>
+				<meta name="yandex-verification" content="71a52d8ec1db8eaa" />
 				<Favicons />
 				<meta name="theme-color" content={'#181B1E'} />
 				<meta name="msapplication-navbutton-color" content={'#181B1E'} />
