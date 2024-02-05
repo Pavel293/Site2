@@ -15,8 +15,10 @@ const HeadProvider: FC<IType> = ({ children }) => {
 				stopDelayMs={200}
 				height={3}
 			/>
+
 			<Head>
 				{/* <!-- Top.Mail.Ru counter --> */}
+				<noscript>6zk0syi22z79zb81</noscript>
 				<script
 					type="text/javascript"
 					dangerouslySetInnerHTML={{
@@ -48,9 +50,7 @@ const HeadProvider: FC<IType> = ({ children }) => {
 					name="viewport"
 					content="width=device-width, initial-scale=1, maximum-scale=1.0"
 				/>
-
 				<Favicons />
-
 				<meta name="theme-color" content={'#181B1E'} />
 				<meta name="msapplication-navbutton-color" content={'#181B1E'} />
 				<meta
