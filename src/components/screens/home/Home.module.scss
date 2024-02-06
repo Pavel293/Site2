@@ -223,22 +223,55 @@
 	}
 }
 
-@media (max-width: 430px) {
-	.grid {
-		.card {
-			.circle {
-				width: 27px;
-				height: 27px;
-			}
-			.iconWrapperSoon {
-				position: absolute;
-				top: 0;
-				right: -25px;
+@media (max-width: 440px) {
+	.container {
+		width: 400px;
+		h1 {
+			font-size: 25px;
+		}
+		.grid {
+			grid-template-columns: repeat(1, 1fr);
+			.card {
+				.text {
+					gap: 10px;
+					h2 {
+						font-size: 15px;
+					}
+					p {
+						font-size: 15px;
+					}
+				}
+				.image{
+					height: 32px;
+					width: 32px;
+					border-radius: 10px;
+					svg {
+						height: 20px;
+					}
+				}
 			}
 		}
-	}
-	.wrapper {
-		@apply flex flex-col gap-[100px] pt-24;
+		.company {
+			width: 400px;
+			margin: 32px auto;
+			flex-direction: column;
+			.text {
+				width: 356px;
+				gap: 10px;
+				h2 {
+					font-size: 15px;
+				}
+				p{
+					font-size: 15px;
+				}
+			}
+			.image {
+				margin-left: 0;
+				width: 300px;
+				display: flex;
+				align-self: center;
+			}
+		}
 	}
 	.cookieContainer {
 		width: 60vw;

@@ -62,13 +62,15 @@ $menuItems: 7;
 
 @media (max-width: 990px) {
 	.header {
-		@apply fixed bg-transparent h-8 w-full z-10;
+		@apply fixed bg-white w-full z-10;
 		transform: translateY(0) !important;
 		.headerContent {
 			.logo {
 				position: relative;
 				z-index: 50;
 				width: 40vw;
+				margin: 15px 0;
+
 			}
 			ul {
 				@apply flex flex-col justify-center items-center    -top-[400%] left-0 z-40 absolute w-full h-0;
