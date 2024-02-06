@@ -164,14 +164,6 @@
 }
 
 @media (max-width: 1200px) {
-	.grid {
-		.card {
-			.circle {
-				width: 35px;
-				height: 35px;
-			}
-		}
-	}
 }
 
 @media (max-width: 990px) {
@@ -241,7 +233,7 @@
 						font-size: 15px;
 					}
 				}
-				.image{
+				.image {
 					height: 32px;
 					width: 32px;
 					border-radius: 10px;
@@ -261,7 +253,7 @@
 				h2 {
 					font-size: 15px;
 				}
-				p{
+				p {
 					font-size: 15px;
 				}
 			}
