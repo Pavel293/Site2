@@ -62,15 +62,15 @@ const BazaZnaniy: FC = () => {
 						<Link href="/baza-znaniy/role-model">
 							<h2>Ролевая модель</h2>
 						</Link>
-						<Link href="/baza-znaniy/classifier">
-							<h2>Классификаторы</h2>
-						</Link>
+						{/*<Link href="/baza-znaniy/classifier">*/}
+						{/*	<h2>Классификаторы</h2>*/}
+						{/*</Link>*/}
 						<Link href="/baza-znaniy/importing-clients">
 							<h2>Импорт клиентов</h2>
 						</Link>
-						<Link href="/baza-znaniy/rate">
-							<h2>Тарифы</h2>
-						</Link>
+						{/*<Link href="/baza-znaniy/rate">*/}
+						{/*	<h2>Тарифы</h2>*/}
+						{/*</Link>*/}
 						<Link href="/baza-znaniy/technical-support">
 							<h2>Техподдержка</h2>
 						</Link>
