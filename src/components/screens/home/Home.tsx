@@ -69,9 +69,9 @@ const Home: FC = () => {
 							</div>
 						))}
 					</div>
-					<Link href="https://lk.telebon.ru/registration">
-						<div className={styles.button}>Зарегистрироваться</div>
-					</Link>
+					<div className={styles.button}>
+						<Link href="https://lk.telebon.ru/registration">Зарегистрироваться</Link>
+					</div>
 					<div className={styles.company}>
 						<div className={styles.text}>
 							<h2>В реестре аккредитованных ИТ-компаний</h2>

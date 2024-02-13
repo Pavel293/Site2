@@ -67,6 +67,7 @@
 		}
 	}
 	.button {
+		-webkit-tap-highlight-color: transparent;
 		display: flex;
 		margin: 0 auto;
 		align-items: center;
@@ -211,17 +212,22 @@
 		}
 	}
 	.wrapper {
-		@apply flex flex-col gap-[100px] pt-24;
+		@apply flex flex-col gap-[100px] pt-12;
 	}
 }
 
 @media (max-width: 440px) {
+	.wrapper {
+		padding-top: 0;
+		gap: 32px;
+	}
 	.container {
 		width: 400px;
 		h1 {
 			font-size: 25px;
 		}
 		.grid {
+			margin: 16px 0 48px 0;
 			grid-template-columns: repeat(1, 1fr);
 			.card {
 				.text {
@@ -245,7 +251,7 @@
 		}
 		.company {
 			width: 400px;
-			margin: 32px auto;
+			margin: 32px auto 0 auto;
 			flex-direction: column;
 			.text {
 				width: 356px;

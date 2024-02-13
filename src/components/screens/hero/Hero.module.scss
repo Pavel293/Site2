@@ -42,7 +42,7 @@
 		.buttons {
 			@apply flex gap-6 items-center justify-center;
 			margin: 40px 0 0 0;
-
+			-webkit-tap-highlight-color: transparent;
 			list-style: none;
 			padding: 0;
 			.auth {

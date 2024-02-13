@@ -65,9 +65,11 @@
 		display: none;
 	}
 	.fuck {
-		height: 800px;
+		height: 700px;
+		margin-top: 32px;
 		h1{
 			font-size: 20px;
+			margin: 16px auto 32px auto;
 		}
 	}
 	.container {
@@ -75,21 +77,22 @@
 		grid-template-columns: repeat(2, 1fr);
 		gap: 10px;
 		.card {
-			height: 200px;
-			width: 200px;
-			padding: 20px;
+			height: 180px;
+			width: 180px;
+			padding: 10px 15px;
 			h2{
 				font-size: 15px;
+				line-height: 18px;
 			}
 			p{
 				margin-top: 5px;
 				font-size: 12px;
 				line-height: 12px;
-				width: 105px;
+				width: 90px;
 			}
 			h3 {
 				font-size: 100px;
-				bottom: 0;
+				bottom: -20px;
 				right: 20px;
 			}
 		}
