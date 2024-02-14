@@ -4,33 +4,17 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Img64 from '../../../assets/baza-znaniy/img64.svg'
 import Img65 from '../../../assets/baza-znaniy/img65.svg'
+import styles from '../BazaZnaniy.module.scss'
 
 const RoleModel: FC = () => {
 	return (
 		<Meta title="Ролевая модель" description="Ролевая модель">
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>
-						Ролевая модель системы Telebon
-					</h1>
+				<div className={styles.textbox}>
+					<h1>Ролевая модель системы Telebon</h1>
 					<p>
 						В зависимости от функционала и доступных возможностей система
 						предусматривает три варианта ролей:

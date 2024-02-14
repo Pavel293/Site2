@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Img10 from '../../../assets/baza-znaniy/img10.svg'
 import Img11 from '../../../assets/baza-znaniy/img11.svg'
 import Img13 from '../../../assets/baza-znaniy/img13.svg'
+import styles from '../BazaZnaniy.module.scss'
 
 const CreatingResources: FC = () => {
 	return (
@@ -12,29 +13,12 @@ const CreatingResources: FC = () => {
 			title="Создание пространства для оказания услуг"
 			description="Создание пространства для оказания услуг"
 		>
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>
-						Создание пространства для оказания услуг
-					</h1>
+				<div className={styles.textbox}>
+					<h1>Создание пространства для оказания услуг</h1>
 					<p>
 						Любая услуга оказывается в определенном пространстве: офисное
 						помещение, кабинет, бокс и т.д. В системе Telebon это называется

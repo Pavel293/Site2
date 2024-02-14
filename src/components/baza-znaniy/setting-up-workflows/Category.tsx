@@ -7,6 +7,7 @@ import Img15 from '../../../assets/baza-znaniy/img15.svg'
 import Img17 from '../../../assets/baza-znaniy/img17.svg'
 import Img18 from '../../../assets/baza-znaniy/img18.svg'
 import Img19 from '../../../assets/baza-znaniy/img19.svg'
+import styles from '../BazaZnaniy.module.scss'
 
 const Category: FC = () => {
 	return (
@@ -14,27 +15,12 @@ const Category: FC = () => {
 			title="Категории услуг и услуги"
 			description="Категории услуг и услуги"
 		>
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>Категории услуг и услуги</h1>
+				<div className={styles.textbox}>
+					<h1>Категории услуг и услуги</h1>
 					<p>
 						Все услуги подразделяются на категории услуг. Для их создания
 						необходимо выбрать вкладку «Компания» {'>'} «Услуги компании». В

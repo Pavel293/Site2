@@ -22,32 +22,18 @@ import Img48 from '../../../assets/baza-znaniy/img48.svg'
 import Img49 from '../../../assets/baza-znaniy/img49.svg'
 import Img50 from '../../../assets/baza-znaniy/img50.svg'
 import Img51 from '../../../assets/baza-znaniy/img51.svg'
+import styles from '../BazaZnaniy.module.scss'
 
 const RecordingLog: FC = () => {
 	return (
 		<Meta title="Журнал записи" description="Журнал записи">
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>Журнал записи</h1>
-					<h1 style={{ marginBottom: '20px' }}>Интерфейс</h1>
+				<div className={styles.textbox}>
+					<h1>Журнал записи</h1>
+					<h1>Интерфейс</h1>
 					<p>
 						Имея в арсенале «Категории услуг», «Услуги», исполнителей услуг,
 						заполненное расписание рабочего дня организации и сотрудников можно
@@ -98,8 +84,8 @@ const RecordingLog: FC = () => {
 					<p>Отображение списком</p>
 					<br />
 					<Image src={Img40} alt={'Настройка режима работы организации'} />
-					<h1 style={{ marginBottom: '20px' }}>Запись на услугу</h1>
-					<h1 style={{ marginBottom: '20px' }}>Индивидуальная</h1>
+					<h1>Запись на услугу</h1>
+					<h1>Индивидуальная</h1>
 					<p>Создание записи осуществляется через:</p>
 					<li>«Журнал записи» (нажатием на любое свободное время);</li>
 					<Image src={Img41} alt={'Настройка режима работы организации'} />
@@ -166,7 +152,7 @@ const RecordingLog: FC = () => {
 						Как итог, мы видим запись в журнале, плюс краткую информацию по ней.{' '}
 						<Image src={Img49} alt={'Настройка режима работы организации'} />{' '}
 					</p>
-					<h1 style={{ marginBottom: '20px' }}>Групповая</h1>
+					<h1>Групповая</h1>
 					<p>Создание записи осуществляется через:</p>
 					<li>«Журнал записи» (нажатием на любое свободное время);</li>
 					<Image src={Img41} alt={'Настройка режима работы организации'} />

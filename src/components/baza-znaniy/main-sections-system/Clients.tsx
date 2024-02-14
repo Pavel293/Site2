@@ -21,31 +21,17 @@ import Img64 from '../../../assets/baza-znaniy/img64.svg'
 import Img65 from '../../../assets/baza-znaniy/img65.svg'
 import Img66 from '../../../assets/baza-znaniy/img66.svg'
 import Image from 'next/image'
+import styles from '../BazaZnaniy.module.scss'
 
 const Clients: FC = () => {
 	return (
 		<Meta title="Клиенты" description="Клиенты">
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>Клиенты</h1>
+				<div className={styles.textbox}>
+					<h1>Клиенты</h1>
 					<p>
 						Раздел «Клиенты» позволяет отслеживать Вашу Клиентскую базу, видеть
 						новых, повторных, ушедших Клиентов. Вся информация о конкретном
@@ -75,7 +61,7 @@ const Clients: FC = () => {
 						Подробно импорт клиентов рассмотрен в разделе «Импорт клиентов»
 					</li>
 					<li>Клиент автоматически создается при создании записи.</li>
-					<h1 style={{ marginBottom: '20px' }}>Импорт Клиентов</h1>
+					<h1>Импорт Клиентов</h1>
 					<p>
 						«Импорт Клиентов» подразумевает добавление, уже существующей у Вас,
 						базы в систему Telebon. Данная функция расположена в блоке
@@ -105,9 +91,7 @@ const Clients: FC = () => {
 						<br /> Примечание: система не добавит вновь Клиента, который уже
 						есть в базе Telebon, ориентиром послужит номер телефона Клиента.
 					</li>
-					<h1 style={{ marginBottom: '20px' }}>
-						Классификаторы категорий услуг
-					</h1>
+					<h1>Классификаторы категорий услуг</h1>
 					<p>
 						Классификаторы необходимы для разграничения Клиентов на определенные
 						категории при записи на услуги. Настройка осуществляется при
@@ -139,9 +123,7 @@ const Clients: FC = () => {
 					<Image src={Img62} alt={''} />
 					<Image src={Img63} alt={''} />
 					<br />
-					<h1 style={{ marginBottom: '20px' }}>
-						Ролевая модель системы Telebon
-					</h1>
+					<h1>Ролевая модель системы Telebon</h1>
 					<p>
 						В зависимости от функционала и доступных возможностей система
 						предусматривает три варианта ролей:
@@ -169,9 +151,7 @@ const Clients: FC = () => {
 						строка «Тип занятости».
 					</p>
 					<Image src={Img65} alt={''} />
-					<h1 style={{ marginBottom: '20px' }}>
-						Техническая поддержка пользователя в системе Telebon
-					</h1>
+					<h1>Техническая поддержка пользователя в системе Telebon</h1>
 					<p>
 						Связь с технической поддержкой можно осуществить одним из трех
 						способов:

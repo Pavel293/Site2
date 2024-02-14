@@ -5,30 +5,17 @@ import Img1 from '../../../assets/baza-znaniy/img1.svg'
 import Img2 from '../../../assets/baza-znaniy/img2.svg'
 import Img3 from '../../../assets/baza-znaniy/img3.svg'
 import Image from 'next/image'
+import styles from '../BazaZnaniy.module.scss'
 
 const Registration: FC = () => {
 	return (
 		<Meta title="Регистрация" description="Регистрация">
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>Регистрация</h1>
+				<div className={styles.textbox}>
+					<h1>Регистрация</h1>
 					<p>
 						Для начала работы необходимо перейти на сайт{' '}
 						<span>
@@ -49,18 +36,8 @@ const Registration: FC = () => {
 						(организации) вносится в свободной форме. Вы в любой момент можете
 						отредактировать данные о себе и о своей организации.
 					</p>
-					<div style={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
-						<Image
-							style={{ margin: '0 auto' }}
-							src={Img2}
-							alt={'Окно регистрации'}
-						/>
-						<Image
-							style={{ margin: '0 auto' }}
-							src={Img3}
-							alt={'Окно регистрации'}
-						/>
-					</div>
+					<Image src={Img2} alt={'Окно регистрации'} />
+					<Image src={Img3} alt={'Окно регистрации'} />
 				</div>
 			</div>
 		</Meta>
