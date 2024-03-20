@@ -29,23 +29,10 @@ const Home: FC = () => {
 	return (
 		<Meta
 			title="Онлайн система записи"
-			description="Главная страница сайта telebon..."
-			image="../../../assets/preview/home_preview.jpg"
+			description="Бесплатный сервис для компаний и частных специалистов"
+			image="home_preview.jpg"
 		>
 			<div className={styles.wrapper}>
-				{showCookieBanner && (
-					<div className={styles.cookieContainer}>
-						<p>
-							Продолжая использовать наш сайт, вы даете{' '}
-							<Link href="/info/cookie">
-								<span>согласие на использование файлов «cookie»</span>
-							</Link>
-							. Если вы не хотите, чтобы ваши данные обрабатывались, измените
-							настройки браузера.
-						</p>
-						<button onClick={handleAcceptCookies}>ОК</button>
-					</div>
-				)}
 				<Hero />
 				<Decription />
 				<Rate />
@@ -70,7 +57,9 @@ const Home: FC = () => {
 						))}
 					</div>
 					<div className={styles.button}>
-						<Link href="https://lk.telebon.ru/registration">Зарегистрироваться</Link>
+						<Link href="https://lk.telebon.ru/registration">
+							Зарегистрироваться
+						</Link>
 					</div>
 					<div className={styles.company}>
 						<div className={styles.text}>
@@ -90,6 +79,21 @@ const Home: FC = () => {
 					</div>
 				</div>
 			</div>
+			{showCookieBanner && (
+				<noindex>
+					<div className={styles.cookieContainer}>
+						<p>
+							Продолжая использовать наш сайт, вы даете{' '}
+							<Link href="/info/cookie">
+								<span>согласие на использование файлов «cookie»</span>
+							</Link>
+							. Если вы не хотите, чтобы ваши данные обрабатывались, измените
+							настройки браузера.
+						</p>
+						<button onClick={handleAcceptCookies}>ОК</button>
+					</div>
+				</noindex>
+			)}
 		</Meta>
 	)
 }

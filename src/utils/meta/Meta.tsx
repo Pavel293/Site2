@@ -2,14 +2,13 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { FC } from 'react'
 import { siteName, titleMerge } from '@/config/seo.config'
-import logoImage from '../../assets/icons/logo.svg'
 import { onlyText } from '../string/clearText'
 import { ISeo } from '@/utils/meta/mete.interface'
 
 const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 	const { asPath } = useRouter()
 	const currentUrl = `${process.env.APP_URL}${asPath}`
-
+	const imageUrl = `https://telebon.ru/preview/${image}`
 	return (
 		<>
 			{description ? (
@@ -21,10 +20,11 @@ const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 						content={onlyText(description, 152)}
 					/>
 					<link data-rel="canonical" href={currentUrl} />
+					<meta property="og:type" content="website" />
 					<meta property="og:locale" content="ru" />
 					<meta property="og:title" content={titleMerge(title)} />
 					<meta property="og:url" content={currentUrl} />
-					<meta property="og:image" content={image || logoImage} />
+					<meta property="og:image" content={imageUrl} />
 					<meta property="og:image:width" content="504px" />
 					<meta property="og:image:height" content="968px" />
 					<meta property="og:site_name" content={siteName} />
@@ -32,6 +32,7 @@ const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 						property="og:description"
 						content={onlyText(description, 197)}
 					/>
+					<meta name="yandex-verification" content="b75dacf638c09dd0" />
 					<script
 						dangerouslySetInnerHTML={{
 							__html: `
