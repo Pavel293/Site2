@@ -14,31 +14,17 @@ import Img76 from '../../../assets/baza-znaniy/img76.svg'
 import Img77 from '../../../assets/baza-znaniy/img77.svg'
 import Img78 from '../../../assets/baza-znaniy/img78.svg'
 import Image from 'next/image'
+import styles from '../BazaZnaniy.module.scss'
 
 const Finance: FC = () => {
 	return (
 		<Meta title="Финансы" description="Финансы">
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>Финансы</h1>
+				<div className={styles.textbox}>
+					<h1>Финансы</h1>
 					<p>
 						Раздел финансы позволяет отслеживать историю поступления и списания
 						денежных средств. Для начала работы необходимо настроить кассы,

@@ -3,6 +3,7 @@ import Meta from '@/utils/meta/Meta'
 import Link from 'next/link'
 import Image from 'next/image'
 import Img9 from '../../../assets/baza-znaniy/img9.svg'
+import styles from '../BazaZnaniy.module.scss'
 
 const SettingUpAWorkSchedule: FC = () => {
 	return (
@@ -10,29 +11,12 @@ const SettingUpAWorkSchedule: FC = () => {
 			title="Настройка графика работы организации"
 			description="Настройка графика работы организации"
 		>
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>
-						Настройка графика работы организации
-					</h1>
+				<div className={styles.textbox}>
+					<h1>Настройка графика работы организации</h1>
 					<p>
 						В любой компании всё начинается с малого, так и в Telebon первое,
 						что необходимо указать – это «режим работы» организации. Найти его

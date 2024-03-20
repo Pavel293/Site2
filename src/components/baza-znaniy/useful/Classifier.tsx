@@ -8,33 +8,17 @@ import Img60 from '../../../assets/baza-znaniy/img60.svg'
 import Img61 from '../../../assets/baza-znaniy/img61.svg'
 import Img62 from '../../../assets/baza-znaniy/img62.svg'
 import Img63 from '../../../assets/baza-znaniy/img63.svg'
+import styles from '../BazaZnaniy.module.scss'
 
 const Classifier: FC = () => {
 	return (
 		<Meta title="Классификация" description="Классификация">
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>
-						Классификаторы категорий услуг
-					</h1>
+				<div className={styles.textbox}>
+					<h1>Классификаторы категорий услуг</h1>
 					<p>
 						Классификаторы необходимы для разграничения Клиентов на определенные
 						категории при записи на услуги. Настройка осуществляется при

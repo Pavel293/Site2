@@ -12,31 +12,17 @@ import Img26 from '../../../assets/baza-znaniy/img26.svg'
 import Img27 from '../../../assets/baza-znaniy/img27.svg'
 import Img28 from '../../../assets/baza-znaniy/img28.svg'
 import Img29 from '../../../assets/baza-znaniy/img28.svg'
+import styles from '../BazaZnaniy.module.scss'
 
 const Employee: FC = () => {
 	return (
 		<Meta title="Сотрудники" description="Сотрудники">
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>Сотрудники</h1>
+				<div className={styles.textbox}>
+					<h1>Сотрудники</h1>
 					<p>
 						При создании записи в «Журнале записи» необходимо указывать
 						Сотрудника, исполняющего данную услугу. Для этого необходимо создать

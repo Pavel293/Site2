@@ -3,33 +3,17 @@ import Meta from '@/utils/meta/Meta'
 import Link from 'next/link'
 import Image from 'next/image'
 import Img66 from '../../../assets/baza-znaniy/img66.svg'
+import styles from '../BazaZnaniy.module.scss'
 
 const TechnicalSupport: FC = () => {
 	return (
 		<Meta title="Техническая поддежка" description="Техническая поддержка">
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>
-						Техническая поддержка пользователя в системе Telebon
-					</h1>
+				<div className={styles.textbox}>
+					<h1>Техническая поддержка пользователя в системе Telebon</h1>
 					<p>
 						Связь с технической поддержкой можно осуществить одним из трех
 						способов:

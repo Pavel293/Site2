@@ -8,31 +8,17 @@ import Img54 from '../../../assets/baza-znaniy/img54.svg'
 import Img55 from '../../../assets/baza-znaniy/img55.svg'
 import Img56 from '../../../assets/baza-znaniy/img56.svg'
 import Img57 from '../../../assets/baza-znaniy/img57.svg'
+import styles from '../BazaZnaniy.module.scss'
 
 const ImportingClients: FC = () => {
 	return (
 		<Meta title="Импорт клиентов" description="Импорт клиентов">
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>Импорт Клиентов</h1>
+				<div className={styles.textbox}>
+					<h1>Импорт Клиентов</h1>
 					<p>
 						«Импорт Клиентов» подразумевает добавление, уже существующей у Вас,
 						базы в систему Telebon. Данная функция расположена в блоке

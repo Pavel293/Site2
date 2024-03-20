@@ -8,31 +8,17 @@ import Img82 from '../../../assets/baza-znaniy/img82.svg'
 import Img83 from '../../../assets/baza-znaniy/img83.svg'
 import Img84 from '../../../assets/baza-znaniy/img84.svg'
 import Image from 'next/image'
+import styles from '../BazaZnaniy.module.scss'
 
 const Portal: FC = () => {
 	return (
 		<Meta title="Портал" description="Портал">
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>Портал</h1>
+				<div className={styles.textbox}>
+					<h1>Портал</h1>
 					<p>
 						Раздел «Портал» находится в левом нижнем углу экрана. Он содержит в
 						себе информацию о количестве подключенных сотрудников к системе

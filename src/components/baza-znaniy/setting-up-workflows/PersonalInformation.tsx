@@ -5,33 +5,17 @@ import Image from 'next/image'
 import Img5 from '../../../assets/baza-znaniy/img5.svg'
 import Img6 from '../../../assets/baza-znaniy/img6.svg'
 import Img7 from '../../../assets/baza-znaniy/img7.svg'
+import styles from '../BazaZnaniy.module.scss'
 
 const PersonalInformation: FC = () => {
 	return (
 		<Meta title="Личная информация" description="Личная информация">
-			<div>
-				<p
-					style={{
-						textAlign: 'left',
-						margin: '5vh',
-						fontSize: '16px',
-					}}
-				>
+			<div className={styles.infobox}>
+				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
 				</p>
-				<div
-					style={{
-						width: '60vw',
-						margin: '0 20vw',
-						display: 'flex',
-						alignSelf: 'center',
-						flexDirection: 'column',
-						gap: '5px',
-					}}
-				>
-					<h1 style={{ marginBottom: '20px' }}>
-						Личная информация пользователя
-					</h1>
+				<div className={styles.textbox}>
+					<h1>Личная информация пользователя</h1>
 					<p>
 						Для начала работы необходимо проверить и, при необходимости,
 						отредактировать всю информацию о себе. Для этого открываем «Личный
