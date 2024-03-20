@@ -8,7 +8,11 @@ import styles from '../BazaZnaniy.module.scss'
 
 const RoleModel: FC = () => {
 	return (
-		<Meta title="Ролевая модель" description="Ролевая модель">
+		<Meta
+			title="Ролевая модель"
+			description="Ролевая модель"
+			image="home_preview.jpg"
+		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>

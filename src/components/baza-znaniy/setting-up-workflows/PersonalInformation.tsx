@@ -9,7 +9,11 @@ import styles from '../BazaZnaniy.module.scss'
 
 const PersonalInformation: FC = () => {
 	return (
-		<Meta title="Личная информация" description="Личная информация">
+		<Meta
+			title="Личная информация"
+			description="Личная информация"
+			image="home_preview.jpg"
+		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>

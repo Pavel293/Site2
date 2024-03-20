@@ -12,7 +12,11 @@ import styles from '../BazaZnaniy.module.scss'
 
 const ImportingClients: FC = () => {
 	return (
-		<Meta title="Импорт клиентов" description="Импорт клиентов">
+		<Meta
+			title="Импорт клиентов"
+			description="Импорт клиентов"
+			image="home_preview.jpg"
+		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>

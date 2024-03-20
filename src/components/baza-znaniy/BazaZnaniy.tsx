@@ -5,7 +5,11 @@ import Link from 'next/link'
 
 const BazaZnaniy: FC = () => {
 	return (
-		<Meta title="База знаний" description="База знаний">
+		<Meta
+			title="База знаний"
+			description="База знаний"
+			image="home_preview.jpg"
+		>
 			<div className={styles.wrapper}>
 				<p>TELEBON</p>
 				<div className={styles.container}>

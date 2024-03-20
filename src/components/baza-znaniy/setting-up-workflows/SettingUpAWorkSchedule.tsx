@@ -10,6 +10,7 @@ const SettingUpAWorkSchedule: FC = () => {
 		<Meta
 			title="Настройка графика работы организации"
 			description="Настройка графика работы организации"
+			image="home_preview.jpg"
 		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>

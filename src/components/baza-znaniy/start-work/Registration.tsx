@@ -9,7 +9,11 @@ import styles from '../BazaZnaniy.module.scss'
 
 const Registration: FC = () => {
 	return (
-		<Meta title="Регистрация" description="Регистрация">
+		<Meta
+			title="Регистрация"
+			description="Регистрация"
+			image="home_preview.jpg"
+		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>

@@ -12,7 +12,11 @@ import styles from '../BazaZnaniy.module.scss'
 
 const Classifier: FC = () => {
 	return (
-		<Meta title="Классификация" description="Классификация">
+		<Meta
+			title="Классификация"
+			description="Классификация"
+			image="home_preview.jpg"
+		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>

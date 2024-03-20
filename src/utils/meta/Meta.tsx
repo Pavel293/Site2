@@ -7,7 +7,7 @@ import { ISeo } from '@/utils/meta/mete.interface'
 
 const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 	const { asPath } = useRouter()
-	const currentUrl = `${process.env.APP_URL}${asPath}`
+	const currentUrl = `${process.env.NEXT_PUBLIC_URL}${asPath}`
 	const imageUrl = `https://telebon.ru/preview/${image}`
 	return (
 		<>

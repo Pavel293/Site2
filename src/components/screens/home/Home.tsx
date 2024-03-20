@@ -32,7 +32,11 @@ const Home: FC = () => {
 			description="Бесплатный сервис для компаний и частных специалистов"
 			image="home_preview.jpg"
 		>
-			<div className={styles.wrapper}>
+			<div
+				className={styles.wrapper}
+				itemScope
+				itemType="http://schema.org/WebPage"
+			>
 				<Hero />
 				<Decription />
 				<Rate />
@@ -94,6 +98,7 @@ const Home: FC = () => {
 					</div>
 				</noindex>
 			)}
+			<link itemProp="url" href="https://telebon.ru" />
 		</Meta>
 	)
 }

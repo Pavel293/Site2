@@ -12,6 +12,7 @@ const CreatingResources: FC = () => {
 		<Meta
 			title="Создание пространства для оказания услуг"
 			description="Создание пространства для оказания услуг"
+			image="home_preview.jpg"
 		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>

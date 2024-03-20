@@ -1,10 +1,8 @@
 User-agent: *
-Disallow: /src/config/
-Disallow: /src/utils/
-Disallow: /src/providers/
-Disallow: /src/shared/
+Disallow: /.next/
+Disallow: /api/
 Allow: /public/
-Allow: /src/components/
-Allow: /src/assets/
+Disallow: /node_modules/
+Disallow: /baza-znaniy
 Host: www.telebon.ru
 Sitemap: https://telebon.ru/sitemap.xml

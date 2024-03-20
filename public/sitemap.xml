@@ -4,41 +4,25 @@
     <url>
         <loc>https://telebon.ru/</loc>
         <lastmod>2023-12-28T06:37:58+03:00</lastmod>
-        <priority>1.00</priority>
-    </url>
-    <url>
-        <loc>https://lk.telebon.ru/registration</loc>
-        <lastmod>2023-12-28T06:37:58+03:00</lastmod>
-        <priority>0.90</priority>
-    </url>
-    <url>
-        <loc>https://lk.telebon.ru/auth</loc>
-        <lastmod>2023-12-28T06:37:58+03:00</lastmod>
-        <priority>0.90</priority>
     </url>
     <url>
         <loc>https://telebon.ru/info/licence</loc>
         <lastmod>2023-12-28T06:37:58+03:00</lastmod>
-        <priority>0.80</priority>
     </url>
     <url>
         <loc>https://telebon.ru/info/agreement</loc>
         <lastmod>2023-12-28T06:37:58+03:00</lastmod>
-        <priority>0.80</priority>
     </url>
     <url>
         <loc>https://telebon.ru/info/cookie</loc>
         <lastmod>2023-12-28T06:37:58+03:00</lastmod>
-        <priority>0.80</priority>
     </url>
     <url>
         <loc>https://telebon.ru/info/privacy-policy</loc>
         <lastmod>2023-12-28T06:37:58+03:00</lastmod>
-        <priority>0.80</priority>
     </url>
     <url>
         <loc>https://telebon.ru/404</loc>
         <lastmod>2023-12-28T06:37:58+03:00</lastmod>
-        <priority>0.10</priority>
     </url>
 </urlset>

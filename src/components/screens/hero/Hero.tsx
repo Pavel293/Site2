@@ -3,7 +3,6 @@ import styles from './Hero.module.scss'
 import cn from 'classnames'
 import Image from 'next/image'
 import TextAnimation from '@/ui/animation/text-animation/TextAnimation'
-import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 import LaptopTelebon from '../../../assets/icons/LaptopTelebon.svg'
 import Link from 'next/link'
 const Hero: FC = () => {
@@ -17,12 +16,12 @@ const Hero: FC = () => {
 		<div className={cn(styles.fuck, 'wrapper')}>
 			<div className={cn(styles.left)}>
 				<div className={styles.head}>
-					<h1>
+					<h1 itemProp="name">
 						Запись на услуги и автоматизация
 						<TextAnimation texts={texts} />
 					</h1>
 				</div>
-				<div className={styles.additionalText}>
+				<div className={styles.additionalText} itemProp="description">
 					<p>Бесплатный сервис для компаний и частных специалистов</p>
 					<div className={cn(styles.active, styles.buttons)}>
 						<span className={styles.auth}>

@@ -6,6 +6,7 @@ const UserAgreement: FC = () => {
 		<Meta
 			title="Пользовательское соглашение"
 			description="Пользовательское соглашение"
+			image="home_preview.jpg"
 		>
 			<div className={styles.wrapper}>
 				<div className={styles.container}>

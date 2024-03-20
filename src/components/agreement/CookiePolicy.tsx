@@ -7,6 +7,7 @@ const CookiePolicy: FC = () => {
 		<Meta
 			title="Политика использования файлов «cookie»"
 			description="Политика использования файлов «cookie»"
+			image="home_preview.jpg"
 		>
 			<div className={styles.wrapper}>
 				<div className={styles.container}>

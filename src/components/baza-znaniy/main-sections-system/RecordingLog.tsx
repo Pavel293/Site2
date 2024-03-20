@@ -26,7 +26,11 @@ import styles from '../BazaZnaniy.module.scss'
 
 const RecordingLog: FC = () => {
 	return (
-		<Meta title="Журнал записи" description="Журнал записи">
+		<Meta
+			title="Журнал записи"
+			description="Журнал записи"
+			image="home_preview.jpg"
+		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>

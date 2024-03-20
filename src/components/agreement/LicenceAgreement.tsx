@@ -3,7 +3,11 @@ import styles from './agreement.module.scss'
 import Meta from '@/utils/meta/Meta'
 const LicenceAgreement: FC = () => {
 	return (
-		<Meta title="Лицензионный договор" description="Лицензионный договор">
+		<Meta
+			title="Лицензионный договор"
+			description="Лицензионный договор"
+			image="home_preview.jpg"
+		>
 			<div className={styles.wrapper}>
 				<div className={styles.container}>
 					<h1>ЛИЦЕНЗИОННЫЙ ДОГОВОР (ОФЕРТА)</h1>
