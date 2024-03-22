@@ -4,5 +4,6 @@ Disallow: /api/
 Allow: /public/
 Disallow: /node_modules/
 Disallow: /baza-znaniy
-Host: www.telebon.ru
+Disallow: /info
+Host: telebon.ru
 Sitemap: https://telebon.ru/sitemap.xml
