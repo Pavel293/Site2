@@ -24,6 +24,37 @@ import { RectangleSplit4UnevenOutline } from './RectangleSplit4UnevenOutline'
 import { MoneyCircleOutline } from './MoneyCircleOutline'
 import { DocumentTextOutline } from './DocumentTextOutline'
 import { TelegramIcon } from './TelegramIcon'
+import { BrushOutline } from './BrushOutline'
+import { AttractionsOutline } from './AttractionsOutline'
+import { AutoOutline } from './AutoOutline'
+import { BuildOutline } from './BuildOutline'
+import { GavelOutline } from './GavelOutline'
+import { HeartOutline } from './HeartOutline'
+import { SchoolOutline } from './SchoolOutline'
+import { SportsOutline } from './SportsOutline'
+import { ArrowForwardLeft } from './ArrowForwardLeft'
+import { ArrowForwardRight } from './ArrowForwardRight'
+import { UsersAuduo } from './UsersAuduo'
+import { Robot } from './Robot'
+import { ContactSupport } from './ContactSupport'
+import { SupportCall } from './SupportCall'
+import { SupportMail } from './SupportMail'
+import { SupportPhone } from './SupportPhone'
+import { SupportMailAddress } from './SupportMailAddress'
+import { SupportWorkingHours } from './SupportWorkingHours'
+import { SupportPhoneBold } from './SupportPhoneBold'
+import { SupportMailAddressSmall } from './SupportMailAddressSmall'
+import { DownloadApp } from './DownloadApp'
+import { HowToReg } from './HowToReg'
+import { AccountCircle } from './AccountCircle'
+import { ContactSupportSmall } from './ContactSupportSmall'
+import { CallImage } from './CallImage'
+import { CircleBolt } from './CircleBolt'
+import { Click } from './Click'
+import { Marketing } from './Marketing'
+import { HourGlass } from './HourGlass'
+import { Success } from './Success'
+import { ArrowLeft } from './ArrowLeft'
 
 export enum EIcons {
 	hover1,
@@ -52,6 +83,37 @@ export enum EIcons {
 	moneycircleoutline,
 	documenttextoutline,
 	telegramicon,
+	brushoutline,
+	attractionsoutline,
+	autooutline,
+	buildoutline,
+	gaveloutline,
+	heartoutline,
+	sportsoutline,
+	schooloutline,
+	arrowforwardleft,
+	arrowforwardright,
+	usersauduo,
+	robot,
+	contactsupport,
+	supportcall,
+	supportmail,
+	supportphone,
+	supportmailaddress,
+	supportworkinghours,
+	supportphonebold,
+	supportmailaddresssmall,
+	downloadapp,
+	howtoreg,
+	accountcircle,
+	contactsupportsmall,
+	callimage,
+	circlebolt,
+	click,
+	marketing,
+	hourglass,
+	success,
+	arrowleft,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -81,6 +143,37 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.moneycircleoutline]: MoneyCircleOutline,
 	[EIcons.documenttextoutline]: DocumentTextOutline,
 	[EIcons.telegramicon]: TelegramIcon,
+	[EIcons.brushoutline]: BrushOutline,
+	[EIcons.attractionsoutline]: AttractionsOutline,
+	[EIcons.autooutline]: AutoOutline,
+	[EIcons.buildoutline]: BuildOutline,
+	[EIcons.gaveloutline]: GavelOutline,
+	[EIcons.heartoutline]: HeartOutline,
+	[EIcons.schooloutline]: SchoolOutline,
+	[EIcons.sportsoutline]: SportsOutline,
+	[EIcons.arrowforwardleft]: ArrowForwardLeft,
+	[EIcons.arrowforwardright]: ArrowForwardRight,
+	[EIcons.usersauduo]: UsersAuduo,
+	[EIcons.robot]: Robot,
+	[EIcons.contactsupport]: ContactSupport,
+	[EIcons.supportcall]: SupportCall,
+	[EIcons.supportmail]: SupportMail,
+	[EIcons.supportphone]: SupportPhone,
+	[EIcons.supportphonebold]: SupportPhoneBold,
+	[EIcons.supportmailaddress]: SupportMailAddress,
+	[EIcons.supportmailaddresssmall]: SupportMailAddressSmall,
+	[EIcons.supportworkinghours]: SupportWorkingHours,
+	[EIcons.downloadapp]: DownloadApp,
+	[EIcons.howtoreg]: HowToReg,
+	[EIcons.accountcircle]: AccountCircle,
+	[EIcons.contactsupportsmall]: ContactSupportSmall,
+	[EIcons.callimage]: CallImage,
+	[EIcons.circlebolt]: CircleBolt,
+	[EIcons.click]: Click,
+	[EIcons.marketing]: Marketing,
+	[EIcons.hourglass]: HourGlass,
+	[EIcons.success]: Success,
+	[EIcons.arrowleft]: ArrowLeft,
 }
 
 interface IIconProps {

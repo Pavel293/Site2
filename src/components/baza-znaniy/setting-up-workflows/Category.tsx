@@ -14,7 +14,7 @@ const Category: FC = () => {
 		<Meta
 			title="Категории услуг и услуги"
 			description="Категории услуг и услуги"
-			image="home_preview.jpg"
+			image="logo_preview.png"
 		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>

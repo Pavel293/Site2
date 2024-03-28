@@ -29,7 +29,7 @@ const RecordingLog: FC = () => {
 		<Meta
 			title="Журнал записи"
 			description="Журнал записи"
-			image="home_preview.jpg"
+			image="logo_preview.png"
 		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>

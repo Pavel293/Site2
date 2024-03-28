@@ -12,7 +12,7 @@ const Registration: FC = () => {
 		<Meta
 			title="Регистрация"
 			description="Регистрация"
-			image="home_preview.jpg"
+			image="logo_preview.png"
 		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>

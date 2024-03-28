@@ -7,7 +7,7 @@ import styles from '../BazaZnaniy.module.scss'
 
 const Interface: FC = () => {
 	return (
-		<Meta title="Интерфейс" description="Интерфейс" image="home_preview.jpg">
+		<Meta title="Интерфейс" description="Интерфейс" image="logo_preview.png">
 			<div className={styles.infobox}>
 				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>

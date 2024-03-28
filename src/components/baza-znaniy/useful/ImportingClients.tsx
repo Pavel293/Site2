@@ -15,7 +15,7 @@ const ImportingClients: FC = () => {
 		<Meta
 			title="Импорт клиентов"
 			description="Импорт клиентов"
-			image="home_preview.jpg"
+			image="logo_preview.png"
 		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>

@@ -1,0 +1,152 @@
+.fuck {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	flex-direction: row;
+	gap: 178px;
+	background: #f6f6f6;
+	border-radius: 40px;
+	padding: 48px 64px;
+}
+.left {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+	width: 559px;
+	.text {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		h2 {
+			font-size: 64px;
+			font-weight: 700;
+			line-height: 82px;
+			text-align: left;
+			color: #000000;
+		}
+		p {
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 33px;
+			text-align: left;
+			color: #00000099;
+		}
+	}
+	.button {
+		transition: 0.5s ease;
+		@apply hover:text-text;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 559px;
+		height: 81px;
+		border-radius: 24px;
+		background: #246bfd;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 33px;
+		color: #ffffff;
+		user-select: none;
+		&:hover {
+			background: #1d418c;
+			color: white;
+		}
+		&:active {
+			@apply bg-text bg-opacity-30;
+		}
+	}
+}
+.container {
+	max-width: 453px;
+	position: relative;
+	.switch {
+		position: absolute;
+		transition: 0.5s ease;
+		@apply hover:text-text;
+		display: flex;
+		align-items: center;
+		align-self: center;
+		justify-content: center;
+		width: 56px;
+		height: 56px;
+		border-radius: 100%;
+		background: #ffffff;
+		color: #000000;
+		user-select: none;
+		z-index: 3;
+		&:hover {
+			background: #616161;
+			color: #000000;
+		}
+		&.left {
+			left: -80px;
+			top: 45%;
+		}
+		&.right {
+			right: -80px;
+			top: 45%;
+		}
+	}
+	.slick-dots li button:before {
+		content: '';
+	}
+	.slick-dots li button {
+		margin: 0;
+		padding: 0;
+		width: 8px;
+		height: 8px;
+		font-size: 0;
+		line-height: 0;
+		display: block;
+		cursor: pointer;
+		color: transparent;
+		border: 0;
+		outline: none;
+		background: #d7d7d7;
+		border-radius: 50%;
+	}
+
+	.slick-dots li.slick-active button {
+		background: #246bfd;
+	}
+}
+
+//@media (max-width: 440px) {
+//	.buttonContainer {
+//		display: none;
+//	}
+//	.fuck {
+//		height: 700px;
+//		margin-top: 32px;
+//		h1 {
+//			font-size: 20px;
+//			margin: 16px auto 32px auto;
+//		}
+//	}
+//	.container {
+//		display: grid;
+//		grid-template-columns: repeat(2, 1fr);
+//		gap: 10px;
+//		.card {
+//			height: 180px;
+//			width: 180px;
+//			padding: 10px 15px;
+//			h2 {
+//				font-size: 15px;
+//				line-height: 18px;
+//			}
+//			p {
+//				margin-top: 5px;
+//				font-size: 12px;
+//				line-height: 12px;
+//				width: 90px;
+//			}
+//			h3 {
+//				font-size: 100px;
+//				bottom: -20px;
+//				right: 20px;
+//			}
+//		}
+//	}
+//}

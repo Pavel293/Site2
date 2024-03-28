@@ -11,7 +11,7 @@ const RoleModel: FC = () => {
 		<Meta
 			title="Ролевая модель"
 			description="Ролевая модель"
-			image="home_preview.jpg"
+			image="logo_preview.png"
 		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>

@@ -25,7 +25,7 @@ import styles from '../BazaZnaniy.module.scss'
 
 const Clients: FC = () => {
 	return (
-		<Meta title="Клиенты" description="Клиенты" image="home_preview.jpg">
+		<Meta title="Клиенты" description="Клиенты" image="logo_preview.png">
 			<div className={styles.infobox}>
 				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>

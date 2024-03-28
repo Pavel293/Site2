@@ -3,7 +3,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://telebon.ru/</loc>
-        <lastmod>2023-12-28T06:37:58+03:00</lastmod>
+        <lastmod>2024-03-28T16:08:58+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://telebon.ru/price</loc>
+        <lastmod>2024-03-28T16:08:58+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://telebon.ru/telegram-bot</loc>
+        <lastmod>2024-03-28T16:08:58+03:00</lastmod>
     </url>
 <!--    <url>-->
 <!--        <loc>https://telebon.ru/info/licence</loc>-->

@@ -15,7 +15,7 @@ const Classifier: FC = () => {
 		<Meta
 			title="Классификация"
 			description="Классификация"
-			image="home_preview.jpg"
+			image="logo_preview.png"
 		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>

@@ -19,6 +19,19 @@ p {
 	@apply p-0 m-0 text-text;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Onest', sans-serif;
+}
+
+body {
+	font-family: 'Manrope', sans-serif;
+}
+
 .wrapper {
-	@apply mx-auto px-[15px];
+	@apply mx-auto;
 }

@@ -29,12 +29,19 @@ const Header: FC = () => {
 			transition={{ duration: 0.35, ease: 'easeInOut' }}
 		>
 			<div className={styles.headerContent}>
-				<div className={styles.logo}>
-					<Link href="/">
-						<Image src={LogoImageNew} alt="logotext" />
+				<div className={styles.navmenu}>
+					<div className={styles.logo}>
+						<Link href="/">
+							<Image src={LogoImageNew} alt="logotext" />
+						</Link>
+					</div>
+					<Link href="/price">
+						<span>Ценовая политика</span>
+					</Link>
+					<Link href="/telegram-bot">
+						<span>Бот для онлайн записи</span>
 					</Link>
 				</div>
-
 				<ul className={cn(isOpen && styles.active)}>
 					<li className={cn(styles.auth, styles.reg)}>
 						<Link href="https://lk.telebon.ru/registration">
@@ -44,16 +51,6 @@ const Header: FC = () => {
 					<li className={styles.auth}>
 						<Link href="https://lk.telebon.ru/auth">
 							<span>Войти</span>
-							<span
-								style={{
-									display: 'inline-flex',
-									verticalAlign: 'middle',
-									marginLeft: '10px',
-									height: '20px',
-								}}
-							>
-								<IconInstance name={EIcons.entericon} />
-							</span>
 						</Link>
 					</li>
 				</ul>

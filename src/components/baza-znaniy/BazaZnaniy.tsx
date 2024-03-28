@@ -8,7 +8,7 @@ const BazaZnaniy: FC = () => {
 		<Meta
 			title="База знаний"
 			description="База знаний"
-			image="home_preview.jpg"
+			image="logo_preview.png"
 		>
 			<div className={styles.wrapper}>
 				<p>TELEBON</p>

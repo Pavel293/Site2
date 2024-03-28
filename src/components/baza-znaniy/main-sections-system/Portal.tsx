@@ -12,7 +12,7 @@ import styles from '../BazaZnaniy.module.scss'
 
 const Portal: FC = () => {
 	return (
-		<Meta title="Портал" description="Портал" image="home_preview.jpg">
+		<Meta title="Портал" description="Портал" image="logo_preview.png">
 			<div className={styles.infobox}>
 				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>

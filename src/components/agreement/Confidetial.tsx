@@ -7,7 +7,7 @@ const Confidential: FC = () => {
 		<Meta
 			title="Политика конфиденциальности"
 			description="Политика конфиденциальности"
-			image="home_preview.jpg"
+			image="logo_preview.png"
 		>
 			<div className={styles.wrapper}>
 				<div className={styles.container}>

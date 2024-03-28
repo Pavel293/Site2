@@ -1,0 +1,90 @@
+.fuck {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	flex-direction: column;
+	background: #f6f6f6;
+	border-radius: 40px;
+	padding: 48px 0;
+	h2 {
+		width: 1112px;
+		font-size: 48px;
+		font-weight: 700;
+		line-height: 62px;
+		letter-spacing: 0;
+		text-align: center;
+		color: #000000;
+	}
+}
+.container {
+	max-width: 1216px;
+	position: relative;
+	padding: 55px 0;
+	.switch {
+		position: absolute;
+		transition: 0.5s ease;
+		@apply hover:text-text;
+		display: flex;
+		align-items: center;
+		align-self: center;
+		justify-content: center;
+		width: 98px;
+		height: 98px;
+		border-radius: 100%;
+		background: #246bfd;
+		color: #ffffff;
+		user-select: none;
+		&:hover {
+			background: #1d418c;
+			color: white;
+		}
+		&.left {
+			left: -100px;
+			top: 40%;
+		}
+		&.right {
+			right: -100px;
+			top: 40%;
+		}
+	}
+}
+
+//@media (max-width: 440px) {
+//	.buttonContainer {
+//		display: none;
+//	}
+//	.fuck {
+//		height: 700px;
+//		margin-top: 32px;
+//		h1 {
+//			font-size: 20px;
+//			margin: 16px auto 32px auto;
+//		}
+//	}
+//	.container {
+//		display: grid;
+//		grid-template-columns: repeat(2, 1fr);
+//		gap: 10px;
+//		.card {
+//			height: 180px;
+//			width: 180px;
+//			padding: 10px 15px;
+//			h2 {
+//				font-size: 15px;
+//				line-height: 18px;
+//			}
+//			p {
+//				margin-top: 5px;
+//				font-size: 12px;
+//				line-height: 12px;
+//				width: 90px;
+//			}
+//			h3 {
+//				font-size: 100px;
+//				bottom: -20px;
+//				right: 20px;
+//			}
+//		}
+//	}
+//}

@@ -18,7 +18,7 @@ import styles from '../BazaZnaniy.module.scss'
 
 const Finance: FC = () => {
 	return (
-		<Meta title="Финансы" description="Финансы" image="home_preview.jpg">
+		<Meta title="Финансы" description="Финансы" image="logo_preview.png">
 			<div className={styles.infobox}>
 				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>

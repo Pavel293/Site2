@@ -1,0 +1,38 @@
+.fuck {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.main_container {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+	align-items: center;
+	justify-content: center;
+	.title {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		align-items: center;
+		justify-content: center;
+		h2 {
+			font-size: 80px;
+			font-weight: 700;
+			line-height: 102px;
+			text-align: left;
+			color: #161616;
+		}
+		p {
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 55px;
+			text-align: left;
+			color: #000000;
+		}
+	}
+	.image {
+		box-shadow: 0 4px 15px 0 #00000026;
+		border-radius: 20px;
+	}
+}

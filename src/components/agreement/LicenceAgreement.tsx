@@ -6,7 +6,7 @@ const LicenceAgreement: FC = () => {
 		<Meta
 			title="Лицензионный договор"
 			description="Лицензионный договор"
-			image="home_preview.jpg"
+			image="logo_preview.png"
 		>
 			<div className={styles.wrapper}>
 				<div className={styles.container}>

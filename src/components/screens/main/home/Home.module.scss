@@ -1,0 +1,8 @@
+.wrapper {
+	@apply flex flex-col;
+	gap: 180px;
+	max-width: 1480px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}

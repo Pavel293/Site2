@@ -10,7 +10,7 @@ const TechnicalSupport: FC = () => {
 		<Meta
 			title="Техническая поддежка"
 			description="Техническая поддержка"
-			image="home_preview.jpg"
+			image="logo_preview.png"
 		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>

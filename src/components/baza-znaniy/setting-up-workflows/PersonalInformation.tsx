@@ -12,7 +12,7 @@ const PersonalInformation: FC = () => {
 		<Meta
 			title="Личная информация"
 			description="Личная информация"
-			image="home_preview.jpg"
+			image="logo_preview.png"
 		>
 			<div className={styles.infobox}>
 				<p className={styles.altp}>

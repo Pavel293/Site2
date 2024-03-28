@@ -1,99 +1,141 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import styles from './Footer.module.scss'
 import Link from 'next/link'
 import LogoImageNew from '../../../assets/icons/LogoImageNew.svg'
 import Image from 'next/image'
 import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
+import cn from 'classnames'
 
 const Footer: FC = () => {
+	const [showCookieBanner, setShowCookieBanner] = useState<boolean>(true)
+	const [copyActivePhone, setCopyActivePhone] = useState(false)
+	const [copyActiveMail, setCopyActiveMail] = useState(false)
+
+	useEffect(() => {
+		const hasAcceptedCookies = document.cookie.includes(
+			'hasAcceptedCookies=true',
+		)
+		if (hasAcceptedCookies) {
+			setShowCookieBanner(false)
+		}
+	}, [])
+
+	const handleAcceptCookies = () => {
+		document.cookie =
+			'hasAcceptedCookies=true; expires=Fri, 31 Dec 9999 23:59:59 GMT'
+		setShowCookieBanner(false)
+	}
+	const clickPhone = () => {
+		setCopyActivePhone(true)
+		setTimeout(() => setCopyActivePhone(false), 600)
+	}
+	const clickMail = () => {
+		setCopyActiveMail(true)
+		setTimeout(() => setCopyActiveMail(false), 600)
+	}
+
+	const copyToClipboard = (phoneNumber: string) => {
+		navigator.clipboard.writeText(phoneNumber)
+	}
 	return (
 		<div className={styles.footer}>
-			<div className={styles.info}>
-				<div className={styles.logoline}>
-					<div className={styles.content}>
-						<div className={styles.image}>
+			<div className={styles.container}>
+				<div className={styles.aboveline}>
+					<div className={styles.left}>
+						<div>
 							<Link href="/">
-								<Image src={LogoImageNew} alt="LogoImageNew" />
+								<Image src={LogoImageNew} alt="LogoImage" />
 							</Link>
 						</div>
-						<div className={styles.contact}>
-							<h1>8 812 507-63-33</h1>
-							<h2>hello@telebon.ru</h2>
+						<div className={styles.textcontent}>
+							<div className={styles.text}>
+								<Link href="https://lk.telebon.ru/registration">
+									<p>
+										<IconInstance name={EIcons.howtoreg} />
+										<span>Зарегистрироваться</span>
+									</p>
+								</Link>
+								<Link href="/info/licence">
+									<p>Лицензионный договор-оферта</p>
+								</Link>
+							</div>
+							<div className={styles.text}>
+								<Link href="https://lk.telebon.ru/auth">
+									<p>
+										<IconInstance name={EIcons.accountcircle} />
+										<span>Личный кабинет</span>
+									</p>
+								</Link>
+								<Link href="/info/privacy-policy">
+									<p>Политика конфиденциальности</p>
+								</Link>
+							</div>
+							<div className={styles.text}>
+								<Link href="/404">
+									<p>
+										<IconInstance name={EIcons.contactsupportsmall} />
+										<span>Чат технической поддержки</span>
+									</p>
+								</Link>
+								<Link href="/info/agreement">
+									<p>Пользовательское соглашение</p>
+								</Link>
+							</div>
+							{/*<Link href="/baza-znaniy">*/}
+							{/*	<p>База знаний</p>*/}
+							{/*</Link>*/}
+						</div>
+					</div>
+					<div className={styles.right}>
+						<div
+							className={cn(styles.copyboard, {
+								[styles.active]: copyActiveMail,
+							})}
+							onClick={() => {
+								copyToClipboard('hello@telebon.ru')
+								clickMail()
+							}}
+						>
+							<IconInstance name={EIcons.supportmailaddresssmall} />
+						</div>
+						<div
+							className={cn(styles.copyboard, {
+								[styles.active]: copyActivePhone,
+							})}
+							onClick={() => {
+								copyToClipboard('+7 (812) 507-63-33')
+								clickPhone()
+							}}
+						>
+							<IconInstance name={EIcons.supportphonebold} />
+						</div>
+						<div className={styles.button}>
+							<IconInstance name={EIcons.downloadapp} />
 						</div>
 					</div>
 				</div>
-				<div className={styles.textcontent}>
+				<div className={styles.line}></div>
+				<div className={styles.underline}>
 					<div className={styles.text}>
-						<Link href="https://lk.telebon.ru/registration">
-							<h2>
-								<span>Регистрация</span>
-							</h2>
-						</Link>
-						<Link href="https://lk.telebon.ru/auth">
-							<h2>
-								<span>Личный кабинет</span>
-							</h2>
-						</Link>
-						<Link href="/404">
-							<h2>
-								<span>Чат технической поддержки</span>
-							</h2>
-						</Link>
-						{/*<Link href="/baza-znaniy">*/}
-						{/*	<p>База знаний</p>*/}
-						{/*</Link>*/}
-					</div>
-					<div className={styles.text}>
-						<Link href="/info/licence">
-							<h2>Лицензионный договор-оферта</h2>
-						</Link>
-						<Link href="/info/privacy-policy">
-							<h2>Политика конфиденциальности</h2>
-						</Link>
-						<Link href="/info/agreement">
-							<h2>Пользовательское соглашение</h2>
-						</Link>
-					</div>
-					<div className={styles.line}></div>
-					<div
-						className={styles.text}
-						style={{ justifyContent: 'space-between' }}
-					>
-						<h2>
-							©️ 2023-2024, ООО «ГК «Белый медведь » ИНН 4345410051 ОГРН
-							1154345004582
-						</h2>
-						<IconInstance name={EIcons.telegramicon} />
+						<p>©️ 2024</p>
 					</div>
 				</div>
-
-				{/*	<div className={styles.doc}>*/}
-				{/*		<h1>Документы</h1>*/}
-				{/*		<Link href="/info/licence">*/}
-				{/*			<p>Лицензионный договор</p>*/}
-				{/*		</Link>*/}
-				{/*		<Link href="/info/privacy-policy">*/}
-				{/*			<p>Политика конфиденциальности</p>*/}
-				{/*		</Link>*/}
-				{/*		<Link href="/info/agreement">*/}
-				{/*			<p>Пользовательское соглашение</p>*/}
-				{/*		</Link>*/}
-				{/*	</div>*/}
-				{/*	<div className={styles.contact}>*/}
-				{/*		<h1>Контакты</h1>*/}
-				{/*		<p>8 812 507 63 33</p>*/}
-				{/*		<p>Hello@telebon.ru</p>*/}
-				{/*		<p>ООО ГК Белый Медведь</p>*/}
-				{/*		<p>ИНН 4345410051</p>*/}
-				{/*		<p>ОГРН 1154345004582</p>*/}
-				{/*		/!*<div className={styles.image}>*!/*/}
-				{/*		/!*	<IconInstance name={EIcons.telegram} />*!/*/}
-				{/*		/!*</div>*!/*/}
-				{/*	</div>*/}
-				{/*</div>*/}
-				{/*<div className={styles.bottom}>*/}
-				{/*	<p>©️ 2024 ООО ГК Белый медведь, ИНН 4345410051</p>*/}
 			</div>
+			{showCookieBanner && (
+				<noindex>
+					<div className={styles.cookieContainer}>
+						<p>
+							Продолжая использовать наш сайт, вы даете{' '}
+							<Link href="/info/cookie">
+								<span>согласие на использование файлов «cookie»</span>
+							</Link>
+							. Если вы не хотите, чтобы ваши данные обрабатывались, измените
+							настройки браузера.
+						</p>
+						<button onClick={handleAcceptCookies}>ОК</button>
+					</div>
+				</noindex>
+			)}
 		</div>
 	)
 }

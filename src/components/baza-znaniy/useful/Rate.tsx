@@ -6,7 +6,7 @@ import styles from '../BazaZnaniy.module.scss'
 
 const Rate: FC = () => {
 	return (
-		<Meta title="Тарифы" description="Тарифы" image="home_preview.jpg">
+		<Meta title="Тарифы" description="Тарифы" image="logo_preview.png">
 			<div className={styles.infobox}>
 				<p className={styles.altp}>
 					<Link href="/baza-znaniy">Назад</Link>
