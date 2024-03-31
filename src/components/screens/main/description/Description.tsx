@@ -18,7 +18,9 @@ const Decription = () => {
 					<div className={styles.list}>
 						{propoData.map((item, index) => (
 							<div className={styles.item} key={index}>
-								<div className={styles.circle}>{index + 1}</div>
+								<noindex>
+									<div className={styles.circle}>{index + 1}</div>
+								</noindex>
 								<p>{item.title}</p>
 							</div>
 						))}
