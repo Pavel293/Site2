@@ -45,7 +45,6 @@ export const propoData = [
 	{
 		icon: <IconInstance name={EIcons.gaveloutline} />,
 		title: 'Право',
-		description:
-			'Индивидуальные тренеры, бассейны,  мастера йоги, стрейчинга, школы танцев, школы единоборств, зимних видов спорта',
+		description: 'Частная адвокатура, нотариат',
 	},
 ]

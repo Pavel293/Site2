@@ -3,7 +3,7 @@ import styles from './Hero.module.scss'
 import cn from 'classnames'
 import Image from 'next/image'
 import HeroChatImage from '../../../../assets/icons/HeroChatImage.png'
-import HeroPhoneImage from '../../../../assets/icons/HeroPhoneImage.png'
+import HeroPhoneImage from '../../../../assets/icons/HeroPhoneImageNew.png'
 import Link from 'next/link'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 

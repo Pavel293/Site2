@@ -41,7 +41,7 @@ const AnalyticsTelebot: FC = () => {
 						<p>Зарабатывают на партнерских программах</p>
 					</div>
 				</div>
-				<Link href={'/price'}>
+				<Link href={'https://lk.telebon.ru/registration'}>
 					<div className={styles.button}>Начать работу</div>
 				</Link>
 			</div>

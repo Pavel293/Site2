@@ -3,9 +3,10 @@ import styles from './Support.module.scss'
 import cn from 'classnames'
 import Link from 'next/link'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
-import { Field, Form, Formik, useFormik } from 'formik'
+import { useFormik } from 'formik'
 import InputMask from 'react-input-mask'
-import Modal from '@/ui/modal/Modal'
+import ModalSupport from '@/ui/modal/ModalSupport/ModalSupport'
+import ModalCopy from '@/ui/modal/ModalCopy/ModalCopy'
 
 interface SupportProps {
 	nextBlockRef: React.RefObject<HTMLDivElement>
@@ -19,9 +20,8 @@ export interface FormValues {
 }
 
 const Support: FC<SupportProps> = ({ nextBlockRef }) => {
-	const [copyActivePhone, setCopyActivePhone] = useState(false)
-	const [copyActiveMail, setCopyActiveMail] = useState(false)
 	const [isModalOpen, setIsModalOpen] = useState(false)
+	const [copiedSuccess, setCopiedSuccess] = useState(false)
 	const initialValues: FormValues = {
 		name: '',
 		phoneNumber: '',
@@ -66,20 +66,36 @@ const Support: FC<SupportProps> = ({ nextBlockRef }) => {
 		formik.setFieldValue('isValidForm', isValidForm)
 	}, [formik.values])
 
-	const clickPhone = () => {
-		setCopyActivePhone(true)
-		setTimeout(() => setCopyActivePhone(false), 600)
-		copyToClipboard('+7 (812) 507-63-33')
+	const unsecuredCopyToClipboard = (text: string) => {
+		const textArea = document.createElement('textarea')
+		textArea.style.position = `fixed`
+		textArea.style.top = `0`
+		textArea.style.left = `0`
+		textArea.style.opacity = `0`
+		textArea.value = text
+		document.body.appendChild(textArea)
+		textArea.focus()
+		textArea.select()
+		try {
+			document.execCommand('copy')
+		} catch (err) {
+			console.error(`Unable to copy to clipboard`, err)
+		}
+		document.body.removeChild(textArea)
 	}
 
-	const clickMail = () => {
-		setCopyActiveMail(true)
-		setTimeout(() => setCopyActiveMail(false), 600)
-		copyToClipboard('hello@telebon.ru')
-	}
-
-	const copyToClipboard = (text: string) => {
-		navigator.clipboard.writeText(text)
+	const copyToClipboard = async (text: string) => {
+		try {
+			if (window.isSecureContext && navigator.clipboard) {
+				await navigator.clipboard.writeText(text)
+				setCopiedSuccess(true)
+				setTimeout(() => setCopiedSuccess(false), 1500)
+			} else {
+				unsecuredCopyToClipboard(text)
+			}
+		} catch (e) {
+			console.log(e)
+		}
 	}
 
 	return (
@@ -134,41 +150,52 @@ const Support: FC<SupportProps> = ({ nextBlockRef }) => {
 								type="submit"
 								className={cn(styles.button, {
 									[styles.disabled]:
-										!formik.isValid || !formik.values.isValidForm,
+										!formik.isValid ||
+										!formik.values.isValidForm ||
+										isModalOpen,
 								})}
-								disabled={!formik.isValid || !formik.values.isValidForm}
+								disabled={
+									!formik.isValid || !formik.values.isValidForm || isModalOpen
+								}
 							>
 								Связаться
 							</button>
 						</div>
 					</form>
-					<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+					{isModalOpen ? (
+						<ModalSupport
+							isOpen={isModalOpen}
+							onClose={() => setIsModalOpen(false)}
+						/>
+					) : null}
 				</div>
 				<div className={styles.right}>
 					<div className={styles.card}>
-						<IconInstance name={EIcons.supportcall} />
+						<div className={styles.image}>
+							<IconInstance name={EIcons.supportcall} />
+						</div>
 						<div
-							className={cn(styles.copyboard, {
-								[styles.active]: copyActivePhone,
-							})}
-							onClick={clickPhone}
+							className={styles.copyboard}
+							onClick={() => copyToClipboard('+7 (812) 507-63-33')}
 						>
 							<IconInstance name={EIcons.supportphone} />
 						</div>
 					</div>
 					<div className={styles.card}>
-						<IconInstance name={EIcons.supportmail} />
+						<div className={styles.image}>
+							<IconInstance name={EIcons.supportmail} />
+						</div>
 						<div
-							className={cn(styles.copyboard, {
-								[styles.active]: copyActiveMail,
-							})}
-							onClick={clickMail}
+							className={styles.copyboard}
+							onClick={() => copyToClipboard('hello@telebon.ru')}
 						>
 							<IconInstance name={EIcons.supportmailaddress} />
 						</div>
 					</div>
 					<div className={styles.card}>
-						<IconInstance name={EIcons.supportworkinghours} />
+						<div className={styles.image}>
+							<IconInstance name={EIcons.supportworkinghours} />
+						</div>
 						<div className={styles.working_hours}>
 							<p>
 								<span>Рабочие: </span>
@@ -180,6 +207,10 @@ const Support: FC<SupportProps> = ({ nextBlockRef }) => {
 							</p>
 						</div>
 					</div>
+					<ModalCopy
+						isOpen={copiedSuccess}
+						onClose={() => setCopiedSuccess(false)}
+					/>
 				</div>
 			</div>
 		</div>

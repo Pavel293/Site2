@@ -38,11 +38,17 @@
 		}
 	}
 	.phone_image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 90px;
+		height: 90px;
+		z-index: 3;
 		transition: 0.5s ease;
 		@apply hover:text-text;
-		position: absolute;
-		bottom: -155px;
-		right: -14px;
+		position: fixed;
+		bottom: 8vh;
+		right: 8vw;
 		color: #ff7043;
 		&:hover {
 			color: #dd6039;

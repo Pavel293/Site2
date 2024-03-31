@@ -23,7 +23,7 @@ const AboutUs: FC = () => {
 						<p className={styles.title}>Подстраиваемся под запросы клиентов</p>
 						<p>
 							Telebon готов меняться вместе с Вами. Специалисты рассмотрят любой
-							запрос, найдут варианты внедрения в систему.
+							запрос, найдут варианты внедрения в систему
 						</p>
 					</div>
 				</div>
@@ -38,8 +38,14 @@ const AboutUs: FC = () => {
 					</div>
 					<div className={styles.card}>
 						<IconInstance name={EIcons.contactsupport} />
-						<p className={styles.title}>Активная клиентская поддержка</p>
-						<p>Всегда на связи 24/7, 7 дней в неделю готовы помочь!</p>
+						<p className={styles.title}>
+							Активная
+							<br /> клиентская поддержка
+						</p>
+						<p>
+							Всегда на связи 24/7,
+							<br /> 7 дней в неделю готовы помочь
+						</p>
 					</div>
 				</div>
 			</div>

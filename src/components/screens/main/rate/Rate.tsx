@@ -28,6 +28,16 @@ const Rate = () => {
 		slidesToScroll: 1,
 		swipeToSlide: true,
 		arrows: false,
+		responsive: [
+			{
+				breakpoint: 993,
+				settings: { slidesToShow: 3 },
+			},
+			{
+				breakpoint: 768,
+				settings: { slidesToShow: 1 },
+			},
+		],
 	}
 
 	const cardDisc = propoData?.map((item, i) => (

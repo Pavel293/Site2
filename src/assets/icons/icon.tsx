@@ -55,6 +55,8 @@ import { Marketing } from './Marketing'
 import { HourGlass } from './HourGlass'
 import { Success } from './Success'
 import { ArrowLeft } from './ArrowLeft'
+import { CookieIcon } from './CookieIcon'
+import { ContentCopy } from './ContentCopy'
 
 export enum EIcons {
 	hover1,
@@ -114,6 +116,8 @@ export enum EIcons {
 	hourglass,
 	success,
 	arrowleft,
+	cookie,
+	contentcopy,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -174,6 +178,8 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.hourglass]: HourGlass,
 	[EIcons.success]: Success,
 	[EIcons.arrowleft]: ArrowLeft,
+	[EIcons.cookie]: CookieIcon,
+	[EIcons.contentcopy]: ContentCopy,
 }
 
 interface IIconProps {

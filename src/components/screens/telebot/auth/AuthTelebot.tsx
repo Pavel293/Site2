@@ -1,14 +1,15 @@
 import React, { useRef } from 'react'
-import styles from './AuthTelebot.module.scss'
 import cn from 'classnames'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import SliderItem from '@/screens/telebot/auth/slideritem/SliderItem'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import styles from './AuthTelebot.module.scss'
 import Image from 'next/image'
 import AuthTelebotImg from '../../../../assets/icons/AuthTelebot.svg'
 import { propoData } from '@/screens/telebot/auth/promo-data'
+import Link from 'next/link'
 export interface ICard {
 	icon: any
 	title: string
@@ -43,7 +44,7 @@ const AuthTelebot = () => {
 						<Image
 							src={AuthTelebotImg}
 							alt={
-								'Чтобы начать пользоваться ботом, зарегистрируйте личый кабинет Telebon!'
+								'Чтобы начать пользоваться ботом, зарегистрируйте личный кабинет Telebon!'
 							}
 						></Image>
 						<h2>Авторизация</h2>
@@ -52,9 +53,10 @@ const AuthTelebot = () => {
 							Telebon!
 						</p>
 					</div>
-					<button className={styles.button}>Зарегистрироваться</button>
+					<Link href={'https://lk.telebon.ru/registration'}>
+						<button className={styles.button}>Зарегистрироваться</button>
+					</Link>
 				</div>
-
 				<div className={styles.container}>
 					<div
 						className={`${styles.switch} ${styles.left}`}

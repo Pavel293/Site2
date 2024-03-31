@@ -1,11 +1,10 @@
-import { FC, useEffect, useState } from 'react'
+import { FC, useState } from 'react'
 import styles from './Header.module.scss'
 import cn from 'classnames'
 import Image from 'next/image'
 import LogoImageNew from '../../../assets/icons/LogoImageNew.svg'
 import Link from 'next/link'
-import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
-import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
+import { motion } from 'framer-motion'
 
 const Header: FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -30,17 +29,21 @@ const Header: FC = () => {
 		>
 			<div className={styles.headerContent}>
 				<div className={styles.navmenu}>
-					<div className={styles.logo}>
-						<Link href="/">
+					<Link href="/">
+						<div className={styles.logo}>
 							<Image src={LogoImageNew} alt="logotext" />
+						</div>
+					</Link>
+					<div className={styles.item}>
+						<Link href="/price">
+							<span>Ценовая политика</span>
 						</Link>
 					</div>
-					<Link href="/price">
-						<span>Ценовая политика</span>
-					</Link>
-					<Link href="/telegram-bot">
-						<span>Бот для онлайн записи</span>
-					</Link>
+					<div className={styles.item}>
+						<Link href="/telegram-bot">
+							<span>Бот для онлайн-записи</span>
+						</Link>
+					</div>
 				</div>
 				<ul className={cn(isOpen && styles.active)}>
 					<li className={cn(styles.auth, styles.reg)}>

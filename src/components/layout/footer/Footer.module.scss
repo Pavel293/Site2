@@ -10,15 +10,17 @@
 		display: flex;
 		flex-direction: column;
 		gap: 24px;
+		max-width: 1480px;
+		width: 100%;
 		.aboveline {
 			display: flex;
 			flex-direction: row;
-			gap: 131px;
+			justify-content: space-between;
 			.left {
 				display: flex;
 				flex-direction: column;
 				gap: 24px;
-				width: 1028px;
+				width: fit-content;
 				.textcontent {
 					display: flex;
 					flex-direction: row;
@@ -30,18 +32,17 @@
 			.right {
 				display: flex;
 				flex-direction: column;
-				gap: 6px;
 				.button {
 					margin-top: 3px;
 				}
 				.copyboard {
-					border-radius: 10px;
-					padding: 12px;
+					border-radius: 8px;
+					padding: 3px;
 					transition: background 0.6s ease;
 					width: fit-content;
 				}
 				.copyboard.active {
-					background: rgba(128, 128, 128, 0.57); /* Цвет серого фона */
+					background: rgba(128, 128, 128, 0.57);
 				}
 			}
 		}
@@ -49,8 +50,6 @@
 			display: flex;
 			height: 1px;
 			background: #dddfe0;
-		}
-		.underline {
 		}
 	}
 	.text {
@@ -78,34 +77,318 @@
 		position: fixed;
 		left: 2vw;
 		bottom: 3vh;
-		background-color: #ebebeb;
-		padding: 1vh;
-		border-radius: 15px;
-		width: 27vw;
+		gap: 16px;
+		background-color: #f6f6f6;
+		color: #000000;
+		box-shadow: 0px 4px 5px 0px #0000000d;
+		padding: 48px;
+		border-radius: 40px;
+		width: 713px;
 		display: flex;
-		flex-direction: row;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 		z-index: 999999;
-		font-size: calc((1vw + 1vh) * 0.45);
-		font-weight: 300;
-		line-height: calc((1vw + 1vh) * 1);
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 25px;
+		letter-spacing: 0.03em;
 		text-align: left;
 		box-sizing: border-box;
-
 		p {
 			span {
-				text-decoration: underline;
+				font-weight: 700;
 			}
 		}
-
+		.title {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 16px;
+			font-size: 32px;
+			font-weight: 700;
+			line-height: 44px;
+			letter-spacing: 0.03em;
+			text-align: left;
+		}
 		button {
-			height: 4vh;
-			width: 10vw;
-			border-radius: 5px;
-			border-color: gray;
-			border-style: solid;
-			border-width: 1px;
-			margin-left: auto;
+			transition: 0.5s ease;
+			margin-top: 8px;
+			height: 64px;
+			width: 303px;
+			border-radius: 24px;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 33px;
+			text-align: center;
+			background: #ff7f41;
+			color: #ffffff;
+			user-select: none;
+			&:hover {
+				background: #dd6139;
+				color: white;
+			}
+			&:active {
+				@apply bg-text bg-opacity-30;
+			}
+		}
+	}
+}
+
+@media (max-width: 1600px) {
+	.footer {
+		margin: 96px 0 0 0;
+		padding: 50px 0;
+		.container {
+			gap: 18px;
+			max-width: 1200px;
+			.aboveline {
+				.left {
+					gap: 18px;
+					.textcontent {
+						gap: 24px;
+					}
+				}
+				.right {
+					.button {
+						margin-top: 3px;
+						svg {
+							height: 55px;
+							width: fit-content;
+						}
+					}
+					.copyboard {
+						border-radius: 8px;
+						padding: 3px;
+						.phone {
+							svg {
+								height: 30px;
+								width: fit-content;
+							}
+						}
+						.email {
+							svg {
+								height: 15px;
+								width: fit-content;
+							}
+						}
+					}
+				}
+			}
+		}
+		.text {
+			gap: 8px;
+			p {
+				gap: 8px;
+				font-size: 13px;
+				line-height: 22px;
+				span {
+					font-size: 16px;
+					line-height: 22px;
+				}
+			}
+		}
+		.cookieContainer {
+			gap: 12px;
+			padding: 36px;
+			border-radius: 35px;
+			width: 592px;
+			font-size: 14px;
+			line-height: 20px;
+			.title {
+				gap: 16px;
+				font-size: 28px;
+				line-height: 32px;
+			}
+			button {
+				margin-top: 6px;
+				height: 50px;
+				width: 250px;
+				border-radius: 20px;
+				font-size: 15px;
+				line-height: 33px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	.footer {
+		margin: 72px 0 0 0;
+		padding: 40px 0;
+		.container {
+			gap: 14px;
+			max-width: 900px;
+			.aboveline {
+				.left {
+					gap: 14px;
+					.logo {
+						img {
+							height: 40px;
+							width: fit-content;
+						}
+					}
+					.textcontent {
+						gap: 12px;
+					}
+				}
+				.right {
+					.button {
+						margin-top: 3px;
+						svg {
+							height: 40px;
+							width: fit-content;
+						}
+					}
+					.copyboard {
+						border-radius: 8px;
+						padding: 3px;
+						.phone {
+							svg {
+								height: 20px;
+								width: fit-content;
+							}
+						}
+						.email {
+							svg {
+								height: 10px;
+								width: fit-content;
+							}
+						}
+					}
+				}
+			}
+		}
+		.text {
+			gap: 6px;
+			svg {
+				width: 16px;
+				height: 16px;
+			}
+			p {
+				gap: 6px;
+				font-size: 10px;
+				line-height: 15px;
+				span {
+					font-size: 12px;
+					line-height: 15px;
+				}
+			}
+		}
+		.cookieContainer {
+			gap: 10px;
+			padding: 28px;
+			border-radius: 30px;
+			width: 481px;
+			font-size: 12px;
+			line-height: 14px;
+			.title {
+				svg {
+					width: 14px;
+					height: 14px;
+				}
+				gap: 10px;
+				font-size: 18px;
+				line-height: 24px;
+			}
+			button {
+				margin-top: 4px;
+				height: 40px;
+				width: 200px;
+				border-radius: 16px;
+				font-size: 14px;
+				line-height: 33px;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.footer {
+		margin: 64px 0 0 0;
+		padding: 30px 0;
+		.container {
+			gap: 12px;
+			max-width: 600px;
+			.aboveline {
+				.left {
+					gap: 12px;
+					.logo {
+						img {
+							height: 30px;
+							width: fit-content;
+						}
+					}
+					.textcontent {
+						gap: 10px;
+					}
+				}
+				.right {
+					.button {
+						margin-top: 1px;
+						svg {
+							height: 30px;
+							width: fit-content;
+						}
+					}
+					.copyboard {
+						border-radius: 8px;
+						padding: 3px;
+						.phone {
+							svg {
+								height: 15px;
+								width: fit-content;
+							}
+						}
+						.email {
+							svg {
+								height: 10px;
+								width: fit-content;
+							}
+						}
+					}
+				}
+			}
+		}
+		.text {
+			gap: 6px;
+			svg {
+				width: 14px;
+				height: 14px;
+			}
+			p {
+				gap: 3px;
+				font-size: 8px;
+				line-height: 14px;
+				span {
+					font-size: 8px;
+					line-height: 14px;
+				}
+			}
+		}
+		.cookieContainer {
+			gap: 8px;
+			padding: 20px;
+			border-radius: 25px;
+			width: 333px;
+			font-size: 8px;
+			line-height: 12px;
+			.title {
+				svg {
+					width: 10px;
+					height: 10px;
+				}
+				gap: 8px;
+				font-size: 14px;
+				line-height: 18px;
+			}
+			button {
+				margin-top: 2px;
+				height: 30px;
+				width: 150px;
+				border-radius: 18px;
+				font-size: 11px;
+				line-height: 24px;
+			}
 		}
 	}
 }

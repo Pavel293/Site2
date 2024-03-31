@@ -4,12 +4,11 @@ import Link from 'next/link'
 import LogoImageNew from '../../../assets/icons/LogoImageNew.svg'
 import Image from 'next/image'
 import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
-import cn from 'classnames'
+import ModalCopy from '@/ui/modal/ModalCopy/ModalCopy'
 
 const Footer: FC = () => {
 	const [showCookieBanner, setShowCookieBanner] = useState<boolean>(true)
-	const [copyActivePhone, setCopyActivePhone] = useState(false)
-	const [copyActiveMail, setCopyActiveMail] = useState(false)
+	const [copiedSuccess, setCopiedSuccess] = useState(false)
 
 	useEffect(() => {
 		const hasAcceptedCookies = document.cookie.includes(
@@ -25,28 +24,49 @@ const Footer: FC = () => {
 			'hasAcceptedCookies=true; expires=Fri, 31 Dec 9999 23:59:59 GMT'
 		setShowCookieBanner(false)
 	}
-	const clickPhone = () => {
-		setCopyActivePhone(true)
-		setTimeout(() => setCopyActivePhone(false), 600)
-	}
-	const clickMail = () => {
-		setCopyActiveMail(true)
-		setTimeout(() => setCopyActiveMail(false), 600)
+
+	const unsecuredCopyToClipboard = (text: string) => {
+		const textArea = document.createElement('textarea')
+		textArea.style.position = `fixed`
+		textArea.style.top = `0`
+		textArea.style.left = `0`
+		textArea.style.opacity = `0`
+		textArea.value = text
+		document.body.appendChild(textArea)
+		textArea.focus()
+		textArea.select()
+		try {
+			document.execCommand('copy')
+		} catch (err) {
+			console.error(`Unable to copy to clipboard`, err)
+		}
+		document.body.removeChild(textArea)
 	}
 
-	const copyToClipboard = (phoneNumber: string) => {
-		navigator.clipboard.writeText(phoneNumber)
+	const copyToClipboard = async (text: string) => {
+		try {
+			if (window.isSecureContext && navigator.clipboard) {
+				await navigator.clipboard.writeText(text)
+				setCopiedSuccess(true)
+				setTimeout(() => setCopiedSuccess(false), 1500)
+			} else {
+				unsecuredCopyToClipboard(text)
+			}
+		} catch (e) {
+			console.log(e)
+		}
 	}
+
 	return (
 		<div className={styles.footer}>
 			<div className={styles.container}>
 				<div className={styles.aboveline}>
 					<div className={styles.left}>
-						<div>
-							<Link href="/">
+						<Link href="/">
+							<div className={styles.logo}>
 								<Image src={LogoImageNew} alt="LogoImage" />
-							</Link>
-						</div>
+							</div>
+						</Link>
 						<div className={styles.textcontent}>
 							<div className={styles.text}>
 								<Link href="https://lk.telebon.ru/registration">
@@ -88,26 +108,24 @@ const Footer: FC = () => {
 					</div>
 					<div className={styles.right}>
 						<div
-							className={cn(styles.copyboard, {
-								[styles.active]: copyActiveMail,
-							})}
+							className={styles.copyboard}
 							onClick={() => {
 								copyToClipboard('hello@telebon.ru')
-								clickMail()
 							}}
 						>
-							<IconInstance name={EIcons.supportmailaddresssmall} />
+							<div className={styles.email}>
+								<IconInstance name={EIcons.supportmailaddresssmall} />
+							</div>
 						</div>
 						<div
-							className={cn(styles.copyboard, {
-								[styles.active]: copyActivePhone,
-							})}
+							className={styles.copyboard}
 							onClick={() => {
 								copyToClipboard('+7 (812) 507-63-33')
-								clickPhone()
 							}}
 						>
-							<IconInstance name={EIcons.supportphonebold} />
+							<div className={styles.phone}>
+								<IconInstance name={EIcons.supportphonebold} />
+							</div>
 						</div>
 						<div className={styles.button}>
 							<IconInstance name={EIcons.downloadapp} />
@@ -120,10 +138,18 @@ const Footer: FC = () => {
 						<p>©️ 2024</p>
 					</div>
 				</div>
+				<ModalCopy
+					isOpen={copiedSuccess}
+					onClose={() => setCopiedSuccess(false)}
+				/>
 			</div>
 			{showCookieBanner && (
 				<noindex>
 					<div className={styles.cookieContainer}>
+						<div className={styles.title}>
+							<IconInstance name={EIcons.cookie} />
+							<p>Мы используем файлы cookie</p>
+						</div>
 						<p>
 							Продолжая использовать наш сайт, вы даете{' '}
 							<Link href="/info/cookie">
@@ -132,7 +158,7 @@ const Footer: FC = () => {
 							. Если вы не хотите, чтобы ваши данные обрабатывались, измените
 							настройки браузера.
 						</p>
-						<button onClick={handleAcceptCookies}>ОК</button>
+						<button onClick={handleAcceptCookies}>Принять</button>
 					</div>
 				</noindex>
 			)}

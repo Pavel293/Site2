@@ -13,7 +13,6 @@
 	.title {
 		display: flex;
 		flex-direction: column;
-		gap: 16px;
 		align-items: center;
 		justify-content: center;
 		h2 {
@@ -46,7 +45,6 @@
 					justify-content: center;
 					align-items: center;
 					.column {
-						width: 512px;
 						display: flex;
 						flex-direction: column;
 						gap: 17px;
@@ -113,6 +111,7 @@
 					gap: 58px;
 					align-items: start;
 					.title {
+						gap: 16px;
 						p {
 							font-size: 24px;
 							font-weight: 600;
@@ -146,17 +145,19 @@
 				height: 341px;
 				width: 659px;
 				display: flex;
-				padding: 36px 0 23px 21px;
+				padding: 36px 21px 23px 21px;
 				.column {
 					display: flex;
 					flex-direction: column;
 					gap: 24px;
+					width: 100%;
 					.title {
 						font-size: 48px;
 						font-weight: 700;
 						line-height: 66px;
 						text-align: left;
 						color: #161616;
+						align-self: flex-start;
 					}
 					p {
 						font-size: 32px;
@@ -168,6 +169,329 @@
 					.image {
 						margin-top: 16px;
 						align-self: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1600px) {
+	.main_container {
+		gap: 32px;
+		.title {
+			h2 {
+				font-size: 48px;
+				line-height: 82px;
+			}
+		}
+		.column {
+			gap: 16px;
+			.row1 {
+				gap: 25px;
+				.box1 {
+					border-radius: 24px;
+					height: 276px;
+					width: 775px;
+					padding: 40px 95px 39px 60px;
+					.row {
+						gap: 90px;
+						img {
+						}
+						.column {
+							gap: 13px;
+							p {
+								font-size: 18px;
+								line-height: 24px;
+							}
+							.title {
+								font-size: 36px;
+								line-height: 44px;
+							}
+						}
+					}
+				}
+				.box2 {
+					border-radius: 24px;
+					height: 276px;
+					width: 400px;
+					padding: 30px 40px 77px 18px;
+					.column {
+						width: 512px;
+						gap: 13px;
+						.title {
+							font-size: 32px;
+							line-height: 44px;
+						}
+						p {
+							font-size: 18px;
+							line-height: 24px;
+						}
+					}
+				}
+			}
+			.row2 {
+				gap: 25px;
+				.box3 {
+					border-radius: 24px;
+					height: 276px;
+					width: 645px;
+					padding: 30px 180px 18px 34px;
+					.column {
+						gap: 58px;
+						.title {
+							p {
+								font-size: 18px;
+								line-height: 24px;
+							}
+							span {
+								font-size: 48px;
+								line-height: 55px;
+							}
+						}
+						p {
+							font-size: 26px;
+							line-height: 36px;
+						}
+					}
+				}
+				.box4 {
+					border-radius: 24px;
+					height: 276px;
+					width: 530px;
+					padding: 36px 80px 23px 21px;
+					.column {
+						gap: 20px;
+						.title {
+							font-size: 36px;
+							line-height: 44px;
+						}
+						p {
+							font-size: 28px;
+							line-height: 24px;
+						}
+						.image {
+							margin-top: 12px;
+							img {
+								height: 100px;
+								width: 100px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	.main_container {
+		gap: 28px;
+		.title {
+			h2 {
+				font-size: 38px;
+				line-height: 55px;
+			}
+		}
+		.column {
+			gap: 15px;
+			.row1 {
+				gap: 20px;
+				.box1 {
+					border-radius: 20px;
+					height: 204px;
+					width: 575px;
+					padding: 20px 75px 19px 40px;
+					.row {
+						gap: 50px;
+						img {
+						}
+						.column {
+							gap: 13px;
+							p {
+								font-size: 14px;
+								line-height: 18px;
+							}
+							.title {
+								font-size: 28px;
+								line-height: 34px;
+							}
+						}
+					}
+				}
+				.box2 {
+					border-radius: 20px;
+					height: 204px;
+					width: 300px;
+					padding: 20px 40px 77px 18px;
+					.column {
+						width: 512px;
+						gap: 13px;
+						.title {
+							font-size: 28px;
+							line-height: 34px;
+						}
+						p {
+							font-size: 14px;
+							line-height: 18px;
+						}
+					}
+				}
+			}
+			.row2 {
+				gap: 20px;
+				.box3 {
+					border-radius: 20px;
+					height: 204px;
+					width: 480px;
+					padding: 20px 130px 9px 24px;
+					.column {
+						gap: 40px;
+						.title {
+							p {
+								font-size: 14px;
+								line-height: 18px;
+							}
+							span {
+								font-size: 36px;
+								line-height: 40px;
+							}
+						}
+						p {
+							font-size: 20px;
+							line-height: 28px;
+						}
+					}
+				}
+				.box4 {
+					border-radius: 20px;
+					height: 204px;
+					width: 400px;
+					padding: 26px 50px 23px 21px;
+					.column {
+						gap: 12px;
+						.title {
+							font-size: 28px;
+							line-height: 34px;
+						}
+						p {
+							font-size: 20px;
+							line-height: 28px;
+						}
+						.image {
+							margin-top: 6px;
+							img {
+								height: 75px;
+								width: 75px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.main_container {
+		gap: 20px;
+		.title {
+			h2 {
+				font-size: 23px;
+				line-height: 30px;
+			}
+		}
+		.column {
+			gap: 10px;
+			.row1 {
+				gap: 16px;
+				.box1 {
+					border-radius: 16px;
+					height: 133px;
+					width: 384px;
+					padding: 10px 50px 9px 35px;
+					.row {
+						gap: 45px;
+						.column {
+							gap: 11px;
+							p {
+								font-size: 8px;
+								line-height: 12px;
+							}
+							.title {
+								font-size: 16px;
+								line-height: 20px;
+							}
+						}
+					}
+				}
+				.box2 {
+					border-radius: 16px;
+					height: 133px;
+					width: 200px;
+					padding: 15px 40px 77px 18px;
+					.column {
+						width: 512px;
+						gap: 13px;
+						.title {
+							font-size: 16px;
+							line-height: 20px;
+						}
+						p {
+							font-size: 8px;
+							line-height: 12px;
+						}
+					}
+				}
+			}
+			.row2 {
+				gap: 20px;
+				.box3 {
+					border-radius: 16px;
+					height: 133px;
+					width: 318px;
+					padding: 17px 60px 9px 24px;
+					.column {
+						gap: 23px;
+						.title {
+							gap: 8px;
+							p {
+								font-size: 8px;
+								line-height: 12px;
+							}
+							span {
+								font-size: 28px;
+								line-height: 30px;
+							}
+						}
+						p {
+							font-size: 14px;
+							line-height: 16px;
+						}
+					}
+				}
+				.box4 {
+					border-radius: 16px;
+					height: 133px;
+					width: 262px;
+					padding: 20px 30px 23px 21px;
+					.column {
+						gap: 8px;
+						.title {
+							font-size: 16px;
+							line-height: 20px;
+						}
+						p {
+							font-size: 14px;
+							line-height: 16px;
+						}
+						.image {
+							margin-top: 3px;
+							img {
+								height: 50px;
+								width: 50px;
+							}
+						}
 					}
 				}
 			}

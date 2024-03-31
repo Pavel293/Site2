@@ -4,7 +4,7 @@ import cn from 'classnames'
 import Link from 'next/link'
 import { Field, Form, Formik, useFormik } from 'formik'
 import InputMask from 'react-input-mask'
-import Modal from '../../../ui/modal/Modal'
+import ModalSupport from '@/ui/modal/ModalSupport/ModalSupport'
 import { FormValues } from '@/screens/main/support/Support'
 
 const Import: FC = () => {
@@ -111,14 +111,22 @@ const Import: FC = () => {
 							type="submit"
 							className={cn(styles.button, {
 								[styles.disabled]:
-									!formik.isValid || !formik.values.isValidForm,
+									!formik.isValid || !formik.values.isValidForm || isModalOpen,
 							})}
+							disabled={
+								!formik.isValid || !formik.values.isValidForm || isModalOpen
+							}
 						>
 							Связаться
 						</button>
 					</div>
 				</form>
-				<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+				{isModalOpen ? (
+					<ModalSupport
+						isOpen={isModalOpen}
+						onClose={() => setIsModalOpen(false)}
+					/>
+				) : null}
 			</div>
 		</div>
 	)

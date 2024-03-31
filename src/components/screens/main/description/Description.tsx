@@ -32,11 +32,13 @@ const Decription = () => {
 						/>
 					</div>
 				</div>
-				<Link href="https://lk.telebon.ru/registration">
-					<button className={styles.button}>
-						<span>Подключить</span>
-					</button>
-				</Link>
+				<div className={styles.button_box}>
+					<Link href="https://lk.telebon.ru/registration">
+						<button className={styles.button}>
+							<span>Подключить</span>
+						</button>
+					</Link>
+				</div>
 			</div>
 		</>
 	)
