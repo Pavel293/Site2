@@ -17,7 +17,7 @@ export const propoData = [
 		icon: <IconInstance name={EIcons.schooloutline} />,
 		title: 'Образование',
 		description:
-			'Логопеды, дефектологи, репетиторы, центры дополнительного образования (для взрослых/детей)...',
+			'Логопеды, дефектологи, репетиторы, центры дополнительного образования для взрослых и детей',
 	},
 	{
 		icon: <IconInstance name={EIcons.sportsoutline} />,
@@ -28,7 +28,7 @@ export const propoData = [
 	{
 		icon: <IconInstance name={EIcons.attractionsoutline} />,
 		title: 'Развлечения',
-		description: 'Организаторы мероприятий, квестов , фотографы',
+		description: 'Организаторы мероприятий, квестов, фотографы',
 	},
 	{
 		icon: <IconInstance name={EIcons.autooutline} />,

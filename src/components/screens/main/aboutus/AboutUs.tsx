@@ -4,10 +4,14 @@ import cn from 'classnames'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 const AboutUs: FC = () => {
 	return (
-		<div className={cn(styles.fuck, 'wrapper')}>
+		<div
+			className={cn(styles.fuck, 'wrapper')}
+			itemScope
+			itemType="http://schema.org/Organization"
+		>
 			<div className={styles.main_container}>
 				<div className={styles.title}>
-					<h2>Почему именно Telebon?</h2>
+					<h2 itemProp="name">Почему именно Telebon?</h2>
 				</div>
 				<div className={styles.card_container}>
 					<div className={styles.card}>

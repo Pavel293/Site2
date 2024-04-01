@@ -10,21 +10,28 @@ $menuItems: 7;
 		@apply max-w-[1480px] flex justify-between items-center;
 		margin: 0 auto;
 		.navmenu {
-			font-weight: 600;
-			font-size: 18px;
 			display: flex;
 			flex-direction: row;
-			gap: 48px;
 			align-items: center;
-			.item {
-				color: #12092d;
-				transition: color 0.3s ease;
-			}
-			&:hover .item {
-				color: #12092d66;
-			}
-			.item:hover {
-				color: #12092d !important;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 50px;
+			gap: 24px;
+			.tabs {
+				display: flex;
+				flex-direction: row;
+				.item {
+					padding: 24px;
+					height: 100%;
+					color: #12092d;
+					transition: color 0.3s ease;
+				}
+				&:hover .item {
+					color: #12092d66;
+				}
+				.item:hover {
+					color: #12092d !important;
+				}
 			}
 		}
 		.logo {
@@ -83,11 +90,17 @@ $menuItems: 7;
 
 @media (max-width: 1600px) {
 	.header {
+		margin-top: 30px;
 		.headerContent {
 			max-width: 1200px;
 			.navmenu {
 				font-size: 15px;
-				gap: 24px;
+				gap: 12px;
+				.tabs {
+					.item {
+						padding: 12px;
+					}
+				}
 			}
 			.logo {
 				img {
@@ -119,11 +132,17 @@ $menuItems: 7;
 
 @media (max-width: 1300px) {
 	.header {
+		margin-top: 20px;
 		.headerContent {
 			max-width: 900px;
 			.navmenu {
 				font-size: 11px;
-				gap: 12px;
+				gap: 6px;
+				.tabs {
+					.item {
+						padding: 6px;
+					}
+				}
 			}
 			.logo {
 				img {
@@ -153,11 +172,17 @@ $menuItems: 7;
 
 @media (max-width: 992px) {
 	.header {
+		margin-top: 10px;
 		.headerContent {
 			max-width: 600px;
 			.navmenu {
 				font-size: 9px;
-				gap: 8px;
+				gap: 4px;
+				.tabs {
+					.item {
+						padding: 4px;
+					}
+				}
 			}
 			.logo {
 				img {

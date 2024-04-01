@@ -22,7 +22,11 @@ const Hero: FC<HeroProps> = ({ nextBlockRef }) => {
 		}
 	}
 	return (
-		<div className={cn(styles.fuck, 'wrapper')}>
+		<div
+			className={cn(styles.fuck, 'wrapper')}
+			itemScope
+			itemType="http://schema.org/SoftwareApplication"
+		>
 			<div className={styles.main_container}>
 				<div className={cn(styles.left)}>
 					<div className={styles.head}>
@@ -36,11 +40,15 @@ const Hero: FC<HeroProps> = ({ nextBlockRef }) => {
 							Увеличьте количество записей и автоматизируйте клиентскую базу
 						</p>
 					</div>
-					<div className={cn(styles.active, styles.buttons)}>
-						<span className={styles.auth}>
-							<Link href="https://lk.telebon.ru/registration">Попробовать</Link>
-						</span>
-					</div>
+					<noindex>
+						<button className={cn(styles.active, styles.buttons)}>
+							<span className={styles.auth}>
+								<Link href="https://lk.telebon.ru/registration">
+									Попробовать
+								</Link>
+							</span>
+						</button>
+					</noindex>
 				</div>
 				<div className={styles.right}>
 					<div>

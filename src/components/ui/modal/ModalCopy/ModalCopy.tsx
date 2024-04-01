@@ -19,10 +19,12 @@ const ModalCopy: FC<ModalMessageProps> = ({ isOpen, onClose }) => {
 	}, [isOpen, onClose])
 
 	return isOpen ? (
-		<div className={styles.successMessage}>
-			<IconInstance name={EIcons.contentcopy} />
-			<p>Данные скопированы</p>
-		</div>
+		<noindex>
+			<div className={styles.successMessage}>
+				<IconInstance name={EIcons.contentcopy} />
+				<p>Данные скопированы</p>
+			</div>
+		</noindex>
 	) : null
 }
 

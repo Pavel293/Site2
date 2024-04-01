@@ -9,9 +9,13 @@ import Link from 'next/link'
 const Decription = () => {
 	return (
 		<>
-			<div className={cn(styles.fuck, 'wrapper')}>
+			<div
+				className={cn(styles.fuck, 'wrapper')}
+				itemScope
+				itemType="http://schema.org/Intangible"
+			>
 				<div className={styles.container}>
-					<h2>
+					<h2 itemProp="name">
 						Telebon позволяет создать Telegram-бота для онлайн-записи клиентов
 						на услуги
 					</h2>
@@ -36,9 +40,11 @@ const Decription = () => {
 				</div>
 				<div className={styles.button_box}>
 					<Link href="https://lk.telebon.ru/registration">
-						<button className={styles.button}>
-							<span>Подключить</span>
-						</button>
+						<noindex>
+							<button className={styles.button}>
+								<span>Подключить</span>
+							</button>
+						</noindex>
 					</Link>
 				</div>
 			</div>

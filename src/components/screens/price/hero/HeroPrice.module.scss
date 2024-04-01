@@ -84,3 +84,126 @@
 		}
 	}
 }
+
+@media (max-width: 1600px) {
+	.fuck {
+		margin: 112px 0 120px;
+	}
+	.main_container {
+		gap: 20px;
+		.head {
+			gap: 16px;
+			h1 {
+				font-size: 50px;
+				line-height: 60px;
+			}
+		}
+		.additionalText {
+			width: 507px;
+			p {
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+		.phone_image {
+			width: 86px;
+			height: 86px;
+			svg {
+				width: 75px;
+				height: 75px;
+			}
+		}
+		.buttons {
+			.auth {
+				> a {
+					border-radius: 18px;
+					padding: 17px 85px;
+					font-size: 15px;
+					line-height: 33px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	.fuck {
+		margin: 92px 0 100px;
+	}
+	.main_container {
+		gap: 16px;
+		.head {
+			gap: 14px;
+			h1 {
+				font-size: 36px;
+				line-height: 44px;
+			}
+		}
+		.additionalText {
+			width: 390px;
+			p {
+				font-size: 14px;
+				line-height: 18px;
+			}
+		}
+		.phone_image {
+			width: 66px;
+			height: 66px;
+			svg {
+				width: 60px;
+				height: 60px;
+			}
+		}
+		.buttons {
+			.auth {
+				> a {
+					border-radius: 15px;
+					padding: 14px 60px;
+					font-size: 14px;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.fuck {
+		margin: 62px 0 70px;
+	}
+	.main_container {
+		gap: 12px;
+		.head {
+			gap: 10px;
+			h1 {
+				font-size: 24px;
+				line-height: 32px;
+			}
+		}
+		.additionalText {
+			width: 230px;
+			p {
+				font-size: 9px;
+				line-height: 13px;
+			}
+		}
+		.phone_image {
+			width: 51px;
+			height: 51px;
+			svg {
+				width: 45px;
+				height: 45px;
+			}
+		}
+		.buttons {
+			.auth {
+				> a {
+					border-radius: 11px;
+					padding: 12px 30px;
+					font-size: 11px;
+					line-height: 14px;
+				}
+			}
+		}
+	}
+}

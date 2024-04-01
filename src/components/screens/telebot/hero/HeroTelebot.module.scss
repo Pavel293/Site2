@@ -87,3 +87,129 @@
 		}
 	}
 }
+
+@media (max-width: 1600px) {
+	.fuck {
+		margin: 172px 0 180px;
+	}
+	.main_container {
+		gap: 20px;
+		.head {
+			gap: 16px;
+			width: 966px;
+			h1 {
+				font-size: 50px;
+				line-height: 65px;
+			}
+		}
+		.additionalText {
+			width: 570px;
+			p {
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+		.phone_image {
+			width: 86px;
+			height: 86px;
+			svg {
+				width: 75px;
+				height: 75px;
+			}
+		}
+		.buttons {
+			.auth {
+				> a {
+					border-radius: 18px;
+					padding: 17px 100px;
+					font-size: 15px;
+					line-height: 24px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	.fuck {
+		margin: 122px 0 130px;
+	}
+	.main_container {
+		gap: 16px;
+		.head {
+			gap: 12px;
+			width: 715px;
+			h1 {
+				font-size: 36px;
+				line-height: 44px;
+			}
+		}
+		.additionalText {
+			width: 415px;
+			p {
+				font-size: 13px;
+				line-height: 24px;
+			}
+		}
+		.phone_image {
+			width: 66px;
+			height: 66px;
+			svg {
+				width: 60px;
+				height: 60px;
+			}
+		}
+		.buttons {
+			.auth {
+				> a {
+					border-radius: 15px;
+					padding: 14px 70px;
+					font-size: 14px;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.fuck {
+		margin: 72px 0 80px;
+	}
+	.main_container {
+		gap: 14px;
+		.head {
+			gap: 8px;
+			width: 460px;
+			h1 {
+				font-size: 24px;
+				line-height: 32px;
+			}
+		}
+		.additionalText {
+			width: 290px;
+			p {
+				font-size: 9px;
+				line-height: 14px;
+			}
+		}
+		.phone_image {
+			width: 51px;
+			height: 51px;
+			svg {
+				width: 45px;
+				height: 45px;
+			}
+		}
+		.buttons {
+			.auth {
+				> a {
+					border-radius: 11px;
+					padding: 12px 45px;
+					font-size: 11px;
+					line-height: 14px;
+				}
+			}
+		}
+	}
+}

@@ -23,25 +23,27 @@ const ModalSupport: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 	}
 
 	return (
-		<div
-			className={cn(styles.modalOverlay, {
-				[styles.active]: isOpen,
-				[styles.closing]: isClosing,
-			})}
-			onClick={handleClose}
-		>
-			<div className={styles.modal}>
-				<IconInstance name={EIcons.success} />
-				<p className={styles.title}>Спасибо!</p>
-				<p>Скоро мы с Вами свяжемся 🤙🏻 </p>
-				<button>
-					<div className={styles.arrow}>
-						<IconInstance name={EIcons.arrowleft} />
-						Вернуться на главную
-					</div>
-				</button>
+		<noindex>
+			<div
+				className={cn(styles.modalOverlay, {
+					[styles.active]: isOpen,
+					[styles.closing]: isClosing,
+				})}
+				onClick={handleClose}
+			>
+				<div className={styles.modal}>
+					<IconInstance name={EIcons.success} />
+					<p className={styles.title}>Спасибо!</p>
+					<p>Скоро мы с Вами свяжемся 🤙🏻 </p>
+					<button>
+						<div className={styles.arrow}>
+							<IconInstance name={EIcons.arrowleft} />
+							Вернуться на главную
+						</div>
+					</button>
+				</div>
 			</div>
-		</div>
+		</noindex>
 	)
 }
 

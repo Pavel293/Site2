@@ -38,6 +38,10 @@
 				width: 955px;
 				display: flex;
 				padding: 47px 102px 46px 67px;
+				img {
+					user-select: none;
+					pointer-events: none;
+				}
 				.row {
 					display: flex;
 					flex-direction: row;
@@ -146,6 +150,10 @@
 				width: 659px;
 				display: flex;
 				padding: 36px 21px 23px 21px;
+				img {
+					user-select: none;
+					pointer-events: none;
+				}
 				.column {
 					display: flex;
 					flex-direction: column;

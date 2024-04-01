@@ -14,7 +14,9 @@ const Tarif: FC = () => {
 					</p>
 				</div>
 				<Link href={'/price'}>
-					<div className={styles.button}>Перейти</div>
+					<noindex>
+						<button className={styles.button}>Перейти</button>
+					</noindex>
 				</Link>
 			</div>
 		</div>

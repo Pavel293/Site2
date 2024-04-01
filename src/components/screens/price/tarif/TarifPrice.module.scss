@@ -4,6 +4,7 @@
 	align-items: center;
 	width: 100%;
 }
+
 .main_container {
 	display: flex;
 	flex-direction: column;
@@ -34,6 +35,10 @@
 			background: #f6f6f6;
 			width: 728px;
 			padding: 24px 0 0 48px;
+			img {
+				user-select: none;
+				pointer-events: none;
+			}
 			.text {
 				display: flex;
 				flex-direction: column;
@@ -67,7 +72,7 @@
 				}
 			}
 			.journal {
-				height: 547px;
+				height: fit-content;
 				display: flex;
 				flex-direction: column;
 				gap: 24px;
@@ -102,6 +107,9 @@
 				.image {
 					align-self: center;
 				}
+				img {
+					width: 340px;
+				}
 			}
 			.analitycs {
 				height: 512px;
@@ -122,6 +130,291 @@
 			display: flex;
 			flex-direction: column;
 			gap: 24px;
+		}
+	}
+}
+
+@media (max-width: 1600px) {
+	.main_container {
+		gap: 36px;
+		.title {
+			gap: 20px;
+			h2 {
+				font-size: 60px;
+				line-height: 80px;
+			}
+		}
+		.row {
+			gap: 20px;
+			.card {
+				border-radius: 35px;
+				width: 590px;
+				padding: 18px 0 0 42px;
+				.text {
+					gap: 8px;
+					p {
+						font-size: 17px;
+						line-height: 24px;
+					}
+					.title {
+						font-size: 42px;
+						line-height: 48px;
+					}
+				}
+				.recording {
+					height: 580px;
+					gap: 32px;
+					img {
+						width: 500px;
+					}
+					.text {
+						width: 410px;
+					}
+				}
+				.journal {
+					gap: 24px;
+					img {
+						width: 480px;
+					}
+					.text {
+						width: 480px;
+					}
+				}
+				.taskbook {
+					height: 450px;
+					gap: 16px;
+					img {
+						width: 500px;
+					}
+					.text {
+						width: 310px;
+					}
+				}
+				.finance {
+					height: fit-content;
+					gap: 28px;
+					img {
+						width: 370px;
+					}
+					.text {
+						width: 380px;
+					}
+				}
+				.messenger {
+					height: 650px;
+					gap: 20px;
+					width: fit-content;
+					img {
+						width: 300px;
+					}
+				}
+				.analitycs {
+					height: 424px;
+					gap: 24px;
+					img {
+						width: 480px;
+					}
+					.text {
+						width: 480px;
+					}
+				}
+			}
+			.left {
+				gap: 18px;
+			}
+			.right {
+				gap: 24px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	.main_container {
+		gap: 32px;
+		.title {
+			gap: 16px;
+			h2 {
+				font-size: 45px;
+				line-height: 60px;
+			}
+		}
+		.row {
+			gap: 18px;
+			.card {
+				border-radius: 30px;
+				width: 441px;
+				padding: 14px 0 0 30px;
+				.text {
+					gap: 6px;
+					p {
+						font-size: 13px;
+						line-height: 15px;
+					}
+					.title {
+						font-size: 32px;
+						line-height: 36px;
+					}
+				}
+				.recording {
+					height: 430px;
+					gap: 28px;
+					img {
+						width: 380px;
+					}
+					.text {
+						width: 310px;
+					}
+				}
+				.journal {
+					gap: 20px;
+					img {
+						width: 350px;
+					}
+					.text {
+						width: 350px;
+					}
+				}
+				.taskbook {
+					height: 320px;
+					gap: 16px;
+					img {
+						width: 380px;
+					}
+					.text {
+						width: 310px;
+					}
+				}
+				.finance {
+					height: fit-content;
+					gap: 24px;
+					img {
+						width: 280px;
+					}
+					.text {
+						width: 280px;
+					}
+				}
+				.messenger {
+					height: 490px;
+					gap: 20px;
+					width: fit-content;
+					img {
+						width: 230px;
+					}
+				}
+				.analitycs {
+					height: 300px;
+					gap: 24px;
+					img {
+						width: 350px;
+					}
+					.text {
+						width: 350px;
+					}
+				}
+			}
+			.left {
+				gap: 18px;
+			}
+			.right {
+				gap: 24px;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.main_container {
+		gap: 24px;
+		.title {
+			gap: 14px;
+			h2 {
+				font-size: 30px;
+				line-height: 60px;
+			}
+		}
+		.row {
+			gap: 14px;
+			.card {
+				border-radius: 25px;
+				width: 293px;
+				padding: 12px 0 0 24px;
+				.text {
+					gap: 6px;
+					p {
+						font-size: 8px;
+						line-height: 11px;
+					}
+					.title {
+						font-size: 20px;
+						line-height: 24px;
+					}
+				}
+				.recording {
+					height: 310px;
+					gap: 22px;
+					img {
+						width: 250px;
+					}
+					.text {
+						width: 190px;
+					}
+				}
+				.journal {
+					gap: 16px;
+					img {
+						width: 220px;
+					}
+					.text {
+						width: 220px;
+					}
+				}
+				.taskbook {
+					height: 220px;
+					gap: 16px;
+					img {
+						width: 250px;
+					}
+					.text {
+						width: 310px;
+					}
+				}
+				.finance {
+					height: fit-content;
+					gap: 20px;
+					img {
+						width: 170px;
+					}
+					.text {
+						width: 180px;
+					}
+				}
+				.messenger {
+					height: 350px;
+					gap: 16px;
+					width: fit-content;
+					img {
+						width: 160px;
+					}
+				}
+				.analitycs {
+					height: 200px;
+					gap: 18px;
+					img {
+						width: 220px;
+					}
+					.text {
+						width: 220px;
+					}
+				}
+			}
+			.left {
+				gap: 18px;
+			}
+			.right {
+				gap: 24px;
+			}
 		}
 	}
 }

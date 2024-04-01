@@ -45,9 +45,24 @@ const Support: FC<SupportProps> = ({ nextBlockRef }) => {
 		return errors
 	}
 
-	const onSubmit = (values: FormValues) => {
-		console.log(values)
-		setIsModalOpen(true)
+	const onSubmit = async (values: FormValues) => {
+		try {
+			const response = await fetch(
+				`https://code10.ru/bot_prod/send_info?name=${values.name}&phone=${values.phoneNumber}`,
+				{
+					method: 'POST',
+				},
+			)
+			if (response.ok) {
+				console.log('Данные успешно отправлены', response)
+				setIsModalOpen(true)
+				setTimeout(() => formik.resetForm(), 1000)
+			} else {
+				console.error('Ошибка при отправке данных:', response.statusText)
+			}
+		} catch (error) {
+			console.error('Ошибка при отправке данных:', error)
+		}
 	}
 
 	const formik = useFormik({
@@ -169,11 +184,20 @@ const Support: FC<SupportProps> = ({ nextBlockRef }) => {
 						/>
 					) : null}
 				</div>
-				<div className={styles.right}>
-					<div className={styles.card}>
+				<div
+					className={styles.right}
+					itemScope
+					itemType="http://schema.org/Organization"
+				>
+					<div
+						className={styles.card}
+						itemScope
+						itemType="http://schema.org/ContactPoint"
+					>
 						<div className={styles.image}>
 							<IconInstance name={EIcons.supportcall} />
 						</div>
+						<meta itemProp="telephone" content="+7 (812) 507-63-33" />
 						<div
 							className={styles.copyboard}
 							onClick={() => copyToClipboard('+7 (812) 507-63-33')}
@@ -181,10 +205,15 @@ const Support: FC<SupportProps> = ({ nextBlockRef }) => {
 							<IconInstance name={EIcons.supportphone} />
 						</div>
 					</div>
-					<div className={styles.card}>
+					<div
+						className={styles.card}
+						itemScope
+						itemType="http://schema.org/ContactPoint"
+					>
 						<div className={styles.image}>
 							<IconInstance name={EIcons.supportmail} />
 						</div>
+						<meta itemProp="email" content="hello@telebon.ru" />
 						<div
 							className={styles.copyboard}
 							onClick={() => copyToClipboard('hello@telebon.ru')}
@@ -192,13 +221,30 @@ const Support: FC<SupportProps> = ({ nextBlockRef }) => {
 							<IconInstance name={EIcons.supportmailaddress} />
 						</div>
 					</div>
-					<div className={styles.card}>
+					<div
+						className={styles.card}
+						itemScope
+						itemType="http://schema.org/LocalBusiness"
+					>
 						<div className={styles.image}>
 							<IconInstance name={EIcons.supportworkinghours} />
 						</div>
-						<div className={styles.working_hours}>
-							<p>
+						<div
+							className={styles.working_hours}
+							itemProp="openingHoursSpecification"
+							itemScope
+							itemType="http://schema.org/OpeningHoursSpecification"
+						>
+							<p
+								itemProp="dayOfWeek"
+								itemScope
+								itemType="http://schema.org/DayOfWeek"
+							>
 								<span>Рабочие: </span>
+								<meta
+									itemProp="openingHours"
+									content="Mo-Fr 09:00-18:00"
+								></meta>
 								Пн-Пт, 9:00 - 18:00
 							</p>
 							<p>

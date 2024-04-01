@@ -8,10 +8,8 @@ const PortalPrice: FC = () => {
 		<div className={cn(styles.fuck, 'wrapper')}>
 			<div className={styles.main_container}>
 				<div className={styles.title}>
-					<p>
-						Telebon использует ежедневное списание средств, чтобы Вы могли
-						пополнять баланс любыми суммами в любое удобное время
-					</p>
+					<h2>Telebon использует ежедневное списание средств</h2>
+					<p>Вы можете пополнять баланс любыми суммами в любое время</p>
 				</div>
 				<div className={styles.image}>
 					<Image

@@ -45,8 +45,12 @@ const Rate = () => {
 	))
 	return (
 		<>
-			<div className={cn(styles.fuck, `wrapper`)}>
-				<h2>
+			<div
+				className={cn(styles.fuck, `wrapper`)}
+				itemScope
+				itemType="http://schema.org/Service"
+			>
+				<h2 itemProp="name">
 					Telebon подойдет для мастеров различных направлений в сфере услуг
 				</h2>
 				<div className={styles.container}>

@@ -32,9 +32,24 @@ const Import: FC = () => {
 		return errors
 	}
 
-	const onSubmit = (values: FormValues) => {
-		console.log(values)
-		setIsModalOpen(true)
+	const onSubmit = async (values: FormValues) => {
+		try {
+			const response = await fetch(
+				`https://code10.ru/bot_prod/send_info?name=${values.name}&phone=${values.phoneNumber}`,
+				{
+					method: 'POST',
+				},
+			)
+			if (response.ok) {
+				console.log('Данные успешно отправлены', response)
+				setIsModalOpen(true)
+				setTimeout(() => formik.resetForm(), 1000)
+			} else {
+				console.error('Ошибка при отправке данных:', response.statusText)
+			}
+		} catch (error) {
+			console.error('Ошибка при отправке данных:', error)
+		}
 	}
 
 	const formik = useFormik({
@@ -67,60 +82,64 @@ const Import: FC = () => {
 						переездом
 					</p>
 				</div>
-				<form onSubmit={formik.handleSubmit}>
-					<div className={styles.input_container}>
-						<div className={styles.input}>
-							<input
-								type="text"
-								name="name"
-								placeholder="Введите Ваше Имя"
-								className={styles.custom_input}
-								value={formik.values.name}
-								onChange={formik.handleChange}
-							/>
-							<InputMask
-								mask="+7 (999) 999-99-99"
-								maskChar=" "
-								type="text"
-								name="phoneNumber"
-								placeholder="Номер телефона"
-								className={styles.custom_input}
-								value={formik.values.phoneNumber}
-								onChange={formik.handleChange}
-							/>
+				<noindex>
+					<form onSubmit={formik.handleSubmit}>
+						<div className={styles.input_container}>
+							<div className={styles.input}>
+								<input
+									type="text"
+									name="name"
+									placeholder="Введите Ваше Имя"
+									className={styles.custom_input}
+									value={formik.values.name}
+									onChange={formik.handleChange}
+								/>
+								<InputMask
+									mask="+7 (999) 999-99-99"
+									maskChar=" "
+									type="text"
+									name="phoneNumber"
+									placeholder="Номер телефона"
+									className={styles.custom_input}
+									value={formik.values.phoneNumber}
+									onChange={formik.handleChange}
+								/>
+							</div>
+							<label className={styles.checkbox_container}>
+								<input
+									type="checkbox"
+									name="consent"
+									className={styles.checkbox}
+									checked={formik.values.consent}
+									onChange={formik.handleChange}
+								/>
+								<p>
+									Вы соглашаетесь на обработку персональных данных и обязуетесь
+									соблюдать условия{' '}
+									<span>
+										<Link href={'/info/agreement'}>
+											Пользовательского соглашения
+										</Link>
+									</span>
+								</p>
+							</label>
+							<button
+								type="submit"
+								className={cn(styles.button, {
+									[styles.disabled]:
+										!formik.isValid ||
+										!formik.values.isValidForm ||
+										isModalOpen,
+								})}
+								disabled={
+									!formik.isValid || !formik.values.isValidForm || isModalOpen
+								}
+							>
+								Связаться
+							</button>
 						</div>
-						<label className={styles.checkbox_container}>
-							<input
-								type="checkbox"
-								name="consent"
-								className={styles.checkbox}
-								checked={formik.values.consent}
-								onChange={formik.handleChange}
-							/>
-							<p>
-								Вы соглашаетесь на обработку персональных данных и обязуетесь
-								соблюдать условия{' '}
-								<span>
-									<Link href={'/info/agreement'}>
-										Пользовательского соглашения
-									</Link>
-								</span>
-							</p>
-						</label>
-						<button
-							type="submit"
-							className={cn(styles.button, {
-								[styles.disabled]:
-									!formik.isValid || !formik.values.isValidForm || isModalOpen,
-							})}
-							disabled={
-								!formik.isValid || !formik.values.isValidForm || isModalOpen
-							}
-						>
-							Связаться
-						</button>
-					</div>
-				</form>
+					</form>
+				</noindex>
 				{isModalOpen ? (
 					<ModalSupport
 						isOpen={isModalOpen}
