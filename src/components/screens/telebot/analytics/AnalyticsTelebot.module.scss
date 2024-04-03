@@ -200,3 +200,45 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.main_container {
+		gap: 8.53vw;
+		.title {
+			width: 92vw;
+			h2 {
+				font-size: 6.4vw;
+				line-height: 9.26vw;
+			}
+		}
+		img {
+			width: 92vw;
+		}
+		.button {
+			border-radius: 5.3vw;
+			width: 92vw;
+			height: 14.4vw;
+			font-size: 4vw;
+			line-height: 4.5vw;
+		}
+		.statistic {
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+			.card {
+				width: 92vw;
+				gap: 4vw;
+				padding: 6.4vw 6vw;
+				font-size: 4.26vw;
+				line-height: 5.85vw;
+				.title {
+					width: 100%;
+					display: block;
+					font-size: 8.53vw;
+					line-height: 11.7vw;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

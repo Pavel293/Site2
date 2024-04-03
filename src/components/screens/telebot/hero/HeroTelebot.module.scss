@@ -213,3 +213,44 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.fuck {
+		margin: 24.5vw 0 2.4vw;
+	}
+	.main_container {
+		gap: 6.4vw;
+		.head {
+			gap: 4vw;
+			width: 92vw;
+			h1 {
+				font-size: 8.5vw;
+				line-height: 10.93vw;
+				text-align: left;
+			}
+		}
+		.additionalText {
+			width: 92vw;
+			p {
+				font-size: 4.26vw;
+				line-height: 5.86vw;
+				text-align: left;
+			}
+		}
+		.phone_image {
+			display: none;
+		}
+		.buttons {
+			.auth {
+				> a {
+					border-radius: 5.3vw;
+					padding: 0;
+					width: 92vw;
+					height: 14.4vw;
+					font-size: 4vw;
+					line-height: 4.5vw;
+				}
+			}
+		}
+	}
+}

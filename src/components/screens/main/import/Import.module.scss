@@ -253,3 +253,55 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.main_container {
+		gap: 6.4vw;
+		width: 92vw;
+		.title {
+			gap: 4vw;
+			h2 {
+				font-size: 6.4vw;
+				line-height: 6.4vw;
+				text-align: left;
+			}
+			p {
+				width: 100%;
+				font-size: 4vw;
+				line-height: 4vw;
+				text-align: left;
+			}
+		}
+		.input_container {
+			gap: 4.8vw;
+			width: 100%;
+			.input {
+				gap: 6.4vw;
+				.custom_input {
+					padding: 0 4vw;
+					border-radius: 2.1vw;
+					font-size: 3.8vw;
+					line-height: 4vw;
+					height: 10.7vw;
+				}
+			}
+			.checkbox_container {
+				gap: 2.1vw;
+				font-size: 3.2vw;
+				line-height: 4vw;
+				color: #00000099;
+				.checkbox {
+					border-radius: 2.1vw;
+					width: 6.4vw;
+					height: 6.4vw;
+				}
+			}
+			.button {
+				height: 14.4vw;
+				border-radius: 5.3vw;
+				font-size: 4vw;
+				line-height: 4.5vw;
+			}
+		}
+	}
+}

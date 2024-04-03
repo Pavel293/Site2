@@ -82,3 +82,19 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.successMessage {
+		gap: 5.3px;
+		padding: 3.8vw;
+		border-radius: 4vw;
+		svg {
+			width: 3.7vw;
+			height: 3.7vw;
+		}
+		p {
+			font-size: 2.7vw;
+			line-height: 4.4vw;
+		}
+	}
+}

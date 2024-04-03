@@ -291,3 +291,75 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.main_container {
+		gap: 8.53vw;
+		padding: 0;
+		.title {
+			h2 {
+				font-size: 8.53vw;
+				line-height: 10.93vw;
+				text-align: left;
+			}
+		}
+		.column {
+			gap: 6.4vw;
+			.row {
+				display: flex;
+				flex-direction: column;
+				gap: 6.4vw;
+				&:first-child {
+					.card {
+						&:first-child {
+							.title {
+								display: flex;
+								gap: 0;
+								align-items: flex-start;
+								width: 100%;
+							}
+						}
+					}
+				}
+
+				&:nth-child(2) {
+					.card {
+						&:nth-child(2) {
+							.description {
+								width: 100%;
+							}
+						}
+					}
+				}
+
+				.card {
+					display: flex;
+					flex-direction: column;
+					gap: 4vw;
+					align-items: flex-start;
+					justify-content: flex-start;
+					width: 92vw;
+					height: fit-content;
+					border-radius: 6.4vw;
+					padding: 6.4vw;
+					svg {
+						width: 17vw;
+						height: 17vw;
+					}
+					.title {
+						display: block;
+						font-size: 6.4vw;
+						font-weight: 800;
+						line-height: 8.53vw;
+						text-align: left;
+					}
+					.description {
+						width: 100%;
+						font-size: 4.26vw;
+						line-height: 5.86vw;
+					}
+				}
+			}
+		}
+	}
+}

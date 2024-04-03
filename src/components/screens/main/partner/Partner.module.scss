@@ -506,3 +506,123 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.main_container {
+		gap: 8.5vw;
+		.title {
+			h2 {
+				font-size: 8.53vw;
+				line-height: 9vw;
+				text-align: left;
+			}
+		}
+		.column {
+			gap: 5vw;
+			.row1 {
+				flex-direction: column;
+				gap: 5vw;
+				.box1 {
+					border-radius: 6.4vw;
+					height: 43vw;
+					width: 92vw;
+					padding: 5.6vw 4vw 5.6vw 2.5vw;
+					img {
+						width: 12.8vw;
+						height: 12.8vw;
+					}
+					.row {
+						flex-direction: row-reverse;
+						gap: 2.1vw;
+						align-items: flex-start;
+						.column {
+							flex-direction: column;
+							gap: 5vw;
+							width: 72vw;
+							p {
+								font-size: 3.05vw;
+								line-height: 3.8vw;
+							}
+							.title {
+								font-size: 5vw;
+								line-height: 6.4vw;
+							}
+						}
+					}
+				}
+				.box2 {
+					border-radius: 6.4vw;
+					height: 38vw;
+					width: 92vw;
+					padding: 9vw 7vw 9vw 4vw;
+					.column {
+						width: 100%;
+						align-items: flex-start;
+						gap: 6.4vw;
+						.title {
+							font-size: 5vw;
+							line-height: 5vw;
+						}
+						p {
+							font-size: 3.05vw;
+							line-height: 3.8vw;
+						}
+					}
+				}
+			}
+			.row2 {
+				flex-direction: column-reverse;
+				gap: 5vw;
+				.box3 {
+					border-radius: 6.4vw;
+					height: 67vw;
+					width: 92vw;
+					padding: 10vw 21.5vw 10vw 4vw;
+					.column {
+						gap: 6.4vw;
+						.title {
+							gap: 0;
+							p {
+								font-size: 5vw;
+								line-height: 6.4vw;
+							}
+							span {
+								font-size: 5vw;
+								line-height: 6.4vw;
+							}
+						}
+						p {
+							font-size: 5vw;
+							line-height: 6.4vw;
+						}
+					}
+				}
+				.box4 {
+					border-radius: 6.4vw;
+					height: 58vw;
+					width: 92vw;
+					padding: 10vw 5vw;
+					.column {
+						gap: 2vw;
+						width: 100%;
+						p {
+							font-size: 4vw;
+							line-height: 4.6vw;
+						}
+						.title {
+							font-size: 5vw;
+							line-height: 6.4vw;
+						}
+						.image {
+							margin-top: 6.4vw;
+							img {
+								width: 17.1vw;
+								height: 17.1vw;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

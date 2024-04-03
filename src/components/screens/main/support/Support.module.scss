@@ -406,3 +406,105 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.main_container {
+		flex-direction: column;
+		gap: 6.4vw;
+		background: #ffffff;
+		width: 92vw;
+		padding: 6.4vw 0;
+		.left {
+			display: flex;
+			flex-direction: column;
+			gap: 6.4vw;
+			align-items: start;
+			justify-content: center;
+			.title {
+				display: flex;
+				flex-direction: column;
+				gap: 2vw;
+				align-items: start;
+				justify-content: center;
+				h2 {
+					font-size: 8.53vw;
+					line-height: 10.6vw;
+				}
+				p {
+					font-size: 4vw;
+					line-height: 7.46vw;
+				}
+			}
+			.input_container {
+				display: flex;
+				flex-direction: column;
+				gap: 6.4vw;
+				width: 92vw;
+				.inputs {
+					display: flex;
+					flex-direction: column;
+					gap: 6.4vw;
+					.custom_input {
+						width: 92vw;
+						padding: 0 4vw;
+						border-radius: 2.1vw;
+						font-size: 3.8vw;
+						line-height: 4vw;
+						height: 10.7vw;
+						background: #f6f6f6;
+					}
+				}
+				.checkbox_container {
+					gap: 2.1vw;
+					font-size: 3.2vw;
+					line-height: 4vw;
+					color: #00000099;
+					.checkbox {
+						border-radius: 2.1vw;
+						width: 6.4vw;
+						height: 6.4vw;
+					}
+				}
+				.button {
+					width: 92vw;
+					height: 14.4vw;
+					border-radius: 5.3vw;
+					font-size: 4vw;
+					line-height: 4.5vw;
+				}
+			}
+		}
+		.right {
+			gap: 0;
+			.card {
+				gap: 6.4vw;
+				padding: 2.67vw;
+				align-items: center;
+				&:nth-child(3) {
+					gap: 6.4vw;
+				}
+				.working_hours {
+					display: flex;
+					flex-direction: column;
+					gap: 0;
+					font-size: 4.26vw;
+					line-height: 7.46vw;
+				}
+			}
+			.image {
+				svg {
+					height: 8.5vw;
+					width: 8.5vw;
+				}
+			}
+			.copyboard {
+				align-self: center;
+				svg {
+					height: 5.86vw;
+					width: fit-content;
+					align-self: flex-start;
+				}
+			}
+		}
+	}
+}

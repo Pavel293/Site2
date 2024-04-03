@@ -48,3 +48,14 @@
 		max-width: 600px;
 	}
 }
+
+@media (max-width: 768px) {
+	.wrapper {
+		max-width: 100vw;
+		gap: 17vw;
+	}
+	.maxwrapper {
+		gap: 17vw;
+		max-width: 92vw;
+	}
+}

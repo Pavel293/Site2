@@ -277,3 +277,49 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.fuck {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		flex-direction: row;
+		gap: 178px;
+		background: #ffffff;
+		border-radius: 40px;
+		padding: 0;
+	}
+	.left {
+		gap: 4vw;
+		width: 92vw;
+		.text {
+			align-items: center;
+			img {
+				width: 30.1vw;
+				height: 30.1vw;
+			}
+			h2 {
+				font-size: 8.53vw;
+				line-height: 10.93vw;
+				text-align: center;
+			}
+			p {
+				font-size: 4.25vw;
+				font-weight: 500;
+				line-height: 5.86vw;
+				text-align: center;
+			}
+		}
+		.button {
+			width: 92vw;
+			height: 14.4vw;
+			border-radius: 3.2vw;
+			font-size: 4.25vw;
+			line-height: 5.86vw;
+		}
+	}
+	.container {
+		display: none;
+	}
+}

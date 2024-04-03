@@ -19,6 +19,14 @@ const Decription = () => {
 						Telebon позволяет создать Telegram-бота для онлайн-записи клиентов
 						на услуги
 					</h2>
+					<div className={styles.image}>
+						<Image
+							src={DescriptionTelebonImage}
+							alt={
+								'Telebon позволяет создать Telegram-бота для онлайн-записи клиентов на услуги'
+							}
+						/>
+					</div>
 					<div className={styles.list}>
 						{propoData.map((item, index) => (
 							<div className={styles.item} key={index}>
@@ -28,14 +36,6 @@ const Decription = () => {
 								<p>{item.title}</p>
 							</div>
 						))}
-					</div>
-					<div className={styles.image}>
-						<Image
-							src={DescriptionTelebonImage}
-							alt={
-								'Telebon позволяет создать Telegram-бота для онлайн-записи клиентов на услуги'
-							}
-						/>
 					</div>
 				</div>
 				<div className={styles.button_box}>

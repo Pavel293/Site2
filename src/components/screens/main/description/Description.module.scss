@@ -233,3 +233,68 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.fuck {
+		gap: 8.5vw;
+		max-width: 92vw;
+		align-items: flex-start;
+		.container {
+			gap: 0;
+			h2 {
+				font-size: 6.3vw;
+				font-weight: 700;
+				line-height: 6.8vw;
+				text-align: left;
+				margin-left: 0;
+				width: 92vw;
+			}
+			.list {
+				width: fit-content;
+				display: flex;
+				flex-direction: column;
+				gap: 8.5vw;
+				.item {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 4vw;
+					width: 92vw;
+					.circle {
+						width: 12.8vw;
+						height: 12.8vw;
+						font-size: 6.3vw;
+						font-weight: 500;
+						line-height: 6.8vw;
+						text-align: center;
+					}
+					p {
+						color: #12092d;
+						font-size: 4.1vw;
+						font-weight: 600;
+						line-height: 4.5vw;
+						text-align: left;
+					}
+				}
+			}
+			.image {
+				position: relative;
+				bottom: 0;
+				right: 0;
+				img {
+					width: 92vw;
+				}
+			}
+		}
+		.button_box {
+			margin: 0 auto;
+			.button {
+				width: 92vw;
+				height: 14.4vw;
+				border-radius: 5.3vw;
+				font-size: 4vw;
+				line-height: 4.5vw;
+			}
+		}
+	}
+}

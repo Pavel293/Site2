@@ -2,7 +2,9 @@ import React, { FC } from 'react'
 import styles from './AboutUs.module.scss'
 import cn from 'classnames'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
+import useMatchMedia from '@/hooks/useMatchMedia'
 const AboutUs: FC = () => {
+	const isMobile = useMatchMedia('768')
 	return (
 		<div
 			className={cn(styles.fuck, 'wrapper')}
@@ -42,10 +44,18 @@ const AboutUs: FC = () => {
 					</div>
 					<div className={styles.card}>
 						<IconInstance name={EIcons.contactsupport} />
-						<p className={styles.title}>
-							Активная
-							<br /> клиентская поддержка
-						</p>
+						{isMobile ? (
+							<p className={styles.title}>
+								Активная клиентская
+								<br /> поддержка
+							</p>
+						) : (
+							<p className={styles.title}>
+								Активная
+								<br /> клиентская поддержка
+							</p>
+						)}
+
 						<p>
 							Всегда на связи 24/7,
 							<br /> 7 дней в неделю готовы помочь

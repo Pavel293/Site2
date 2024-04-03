@@ -5,10 +5,12 @@ import LogoImageNew from '../../../assets/icons/LogoImageNew.svg'
 import Image from 'next/image'
 import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 import ModalCopy from '@/ui/modal/ModalCopy/ModalCopy'
+import useMatchMedia from '@/hooks/useMatchMedia'
 
 const Footer: FC = () => {
 	const [showCookieBanner, setShowCookieBanner] = useState<boolean>(true)
 	const [copiedSuccess, setCopiedSuccess] = useState(false)
+	const isMobile = useMatchMedia('768')
 
 	useEffect(() => {
 		const hasAcceptedCookies = document.cookie.includes(
@@ -62,51 +64,86 @@ const Footer: FC = () => {
 			<div className={styles.footer}>
 				<div className={styles.container}>
 					<div className={styles.aboveline}>
-						<div className={styles.left}>
-							<Link href="/">
-								<div className={styles.logo}>
-									<Image src={LogoImageNew} alt="LogoImage" />
+						{isMobile ? (
+							<div className={styles.left}>
+								<div className={styles.textcontent}>
+									<div className={styles.text}>
+										<Link href="https://lk.telebon.ru/auth">
+											<p className={styles.authtext}>Войти</p>
+										</Link>
+										<Link href="https://lk.telebon.ru/registration">
+											<p className={styles.authtext}>Регистрация</p>
+										</Link>
+										<Link href="/info/licence">
+											<p>Лицензионный договор-оферта</p>
+										</Link>
+										<Link href="/info/privacy-policy">
+											<p>Политика конфиденциальности</p>
+										</Link>
+										<Link href="/info/agreement">
+											<p>Пользовательское соглашение</p>
+										</Link>
+										<Link href="/404">
+											<p>
+												<span>Чат тех. поддержки</span>
+												<IconInstance name={EIcons.contactsupportsmall} />
+											</p>
+										</Link>
+									</div>
+									{/*<Link href="/baza-znaniy">*/}
+									{/*	<p>База знаний</p>*/}
+									{/*</Link>*/}
 								</div>
-							</Link>
-							<div className={styles.textcontent}>
-								<div className={styles.text}>
-									<Link href="https://lk.telebon.ru/registration">
-										<p>
-											<IconInstance name={EIcons.howtoreg} />
-											<span>Зарегистрироваться</span>
-										</p>
-									</Link>
-									<Link href="/info/licence">
-										<p>Лицензионный договор-оферта</p>
-									</Link>
-								</div>
-								<div className={styles.text}>
-									<Link href="https://lk.telebon.ru/auth">
-										<p>
-											<IconInstance name={EIcons.accountcircle} />
-											<span>Личный кабинет</span>
-										</p>
-									</Link>
-									<Link href="/info/privacy-policy">
-										<p>Политика конфиденциальности</p>
-									</Link>
-								</div>
-								<div className={styles.text}>
-									<Link href="/404">
-										<p>
-											<IconInstance name={EIcons.contactsupportsmall} />
-											<span>Чат технической поддержки</span>
-										</p>
-									</Link>
-									<Link href="/info/agreement">
-										<p>Пользовательское соглашение</p>
-									</Link>
-								</div>
-								{/*<Link href="/baza-znaniy">*/}
-								{/*	<p>База знаний</p>*/}
-								{/*</Link>*/}
 							</div>
-						</div>
+						) : (
+							<div className={styles.left}>
+								<Link href="/">
+									<div className={styles.logo}>
+										<Image src={LogoImageNew} alt="LogoImage" />
+									</div>
+								</Link>
+								<div className={styles.textcontent}>
+									<div className={styles.text}>
+										<Link href="https://lk.telebon.ru/registration">
+											<p>
+												<IconInstance name={EIcons.howtoreg} />
+												<span>Зарегистрироваться</span>
+											</p>
+										</Link>
+										<Link href="/info/licence">
+											<p>Лицензионный договор-оферта</p>
+										</Link>
+									</div>
+									<div className={styles.text}>
+										<Link href="https://lk.telebon.ru/auth">
+											<p>
+												<IconInstance name={EIcons.accountcircle} />
+												<span>Личный кабинет</span>
+											</p>
+										</Link>
+										<Link href="/info/privacy-policy">
+											<p>Политика конфиденциальности</p>
+										</Link>
+									</div>
+									<div className={styles.text}>
+										<Link href="/404">
+											<p>
+												<IconInstance name={EIcons.contactsupportsmall} />
+												<span>Чат технической поддержки</span>
+											</p>
+										</Link>
+										<Link href="/info/agreement">
+											<p>Пользовательское соглашение</p>
+										</Link>
+									</div>
+
+									{/*<Link href="/baza-znaniy">*/}
+									{/*	<p>База знаний</p>*/}
+									{/*</Link>*/}
+								</div>
+							</div>
+						)}
+
 						<div className={styles.right}>
 							<div
 								className={styles.copyboard}
@@ -131,6 +168,13 @@ const Footer: FC = () => {
 							<div className={styles.button}>
 								<IconInstance name={EIcons.downloadapp} />
 							</div>
+							{isMobile ? (
+								<Link href="/">
+									<div className={styles.logo}>
+										<Image src={LogoImageNew} alt="LogoImage" />
+									</div>
+								</Link>
+							) : null}
 						</div>
 					</div>
 					<div className={styles.line}></div>

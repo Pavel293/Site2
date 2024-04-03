@@ -99,3 +99,23 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.main_container {
+		gap: 6.4vw;
+		.title {
+			gap: 4vw;
+			h2 {
+				font-size: 6.4vw;
+				line-height: 8vw;
+			}
+			p {
+				font-size: 4.26vw;
+				line-height: 5.86vw;
+			}
+		}
+		.image {
+			border-radius: 3.2vw;
+		}
+	}
+}
