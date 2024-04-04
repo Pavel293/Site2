@@ -34,6 +34,67 @@
 				flex-direction: column;
 				.button {
 					margin-top: 3px;
+					position: relative;
+					.appUnavailableModal {
+						position: absolute;
+						top: -170px;
+						left: 50%;
+						transform: translateX(-50%);
+						background-color: #ffffff;
+						border-radius: 20px;
+						padding: 32px;
+						height: 164px;
+						width: 580px;
+						z-index: 9999;
+						text-align: center;
+						.triangle {
+							svg {
+								color: #ffffff;
+								z-index: 999;
+								position: absolute;
+								height: 48px;
+								width: 48px;
+								bottom: -26px;
+								left: calc(50% - 24px);
+							}
+						}
+						.box {
+							display: flex;
+							flex-direction: row;
+							gap: 16px;
+							svg {
+								height: 48px;
+								width: 48px;
+								position: relative;
+							}
+							.text {
+								display: flex;
+								flex-direction: column;
+								margin: 0;
+								width: 450px;
+								gap: 0;
+								p {
+									font-size: 18px;
+									font-weight: 500;
+									line-height: 24.59px;
+									letter-spacing: 0.03em;
+									text-align: left;
+									color: #000000;
+								}
+								.write {
+									color: #00000099;
+								}
+								span {
+									font-size: 18px;
+									font-weight: 500;
+									line-height: 24.59px;
+									letter-spacing: 0.03em;
+									text-align: left;
+									color: #246bfd;
+								}
+							}
+						}
+					}
 				}
 				.copyboard {
 					border-radius: 8px;
@@ -151,6 +212,39 @@
 				.right {
 					.button {
 						margin-top: 3px;
+						.appUnavailableModal {
+							top: -120px;
+							border-radius: 18px;
+							padding: 24px;
+							height: 114px;
+							width: 430px;
+							.triangle {
+								svg {
+									height: 40px;
+									width: 40px;
+									bottom: -20px;
+									left: calc(50% - 20px);
+								}
+							}
+							.box {
+								gap: 14px;
+								svg {
+									height: 40px;
+									width: 40px;
+								}
+								.text {
+									width: 340px;
+									p {
+										font-size: 13px;
+										line-height: 18px;
+									}
+									span {
+										font-size: 13px;
+										line-height: 18px;
+									}
+								}
+							}
+						}
 						svg {
 							height: 55px;
 							width: fit-content;
@@ -234,6 +328,39 @@
 				.right {
 					.button {
 						margin-top: 3px;
+						.appUnavailableModal {
+							top: -100px;
+							border-radius: 18px;
+							padding: 18px;
+							height: 94px;
+							width: 360px;
+							.triangle {
+								svg {
+									height: 32px;
+									width: 32px;
+									bottom: -14px;
+									left: calc(50% - 16px);
+								}
+							}
+							.box {
+								gap: 10px;
+								svg {
+									height: 32px;
+									width: 32px;
+								}
+								.text {
+									width: 275px;
+									p {
+										font-size: 11px;
+										line-height: 15px;
+									}
+									span {
+										font-size: 11px;
+										line-height: 15px;
+									}
+								}
+							}
+						}
 						svg {
 							height: 40px;
 							width: fit-content;
@@ -325,6 +452,39 @@
 				.right {
 					.button {
 						margin-top: 1px;
+						.appUnavailableModal {
+							top: -80px;
+							border-radius: 14px;
+							padding: 14px;
+							height: 78px;
+							width: 270px;
+							.triangle {
+								svg {
+									height: 26px;
+									width: 26px;
+									bottom: -10px;
+									left: calc(50% - 13px);
+								}
+							}
+							.box {
+								gap: 8px;
+								svg {
+									height: 26px;
+									width: 26px;
+								}
+								.text {
+									width: 200px;
+									p {
+										font-size: 8px;
+										line-height: 12px;
+									}
+									span {
+										font-size: 8px;
+										line-height: 12px;
+									}
+								}
+							}
+						}
 						svg {
 							height: 30px;
 							width: fit-content;
@@ -421,6 +581,41 @@
 					gap: 1.6vw;
 					.button {
 						margin-top: 3.4vw;
+						.appUnavailableModal {
+							background: #f6f6f6;
+							top: -30vw;
+							border-radius: 4.4vw;
+							padding: 4vw;
+							height: 28vw;
+							width: 92vw;
+							.triangle {
+								svg {
+									height: 8.53vw;
+									width: 8.53vw;
+									bottom: -5vw;
+									left: calc(50% - 4.25vw);
+									color: #f6f6f6;
+								}
+							}
+							.box {
+								gap: 2vw;
+								svg {
+									height: 8.53vw;
+									width: 8.53vw;
+								}
+								.text {
+									width: 70vw;
+									p {
+										font-size: 2.9vw;
+										line-height: 5vw;
+									}
+									span {
+										font-size: 2.9vw;
+										line-height: 5vw;
+									}
+								}
+							}
+						}
 						svg {
 							height: fit-content;
 							width: 86.4vw;
@@ -484,28 +679,28 @@
 			}
 		}
 		.cookieContainer {
-			gap: 8px;
-			padding: 20px;
-			border-radius: 25px;
-			width: 333px;
-			font-size: 8px;
-			line-height: 12px;
+			gap: 2vw;
+			padding: 6vw;
+			border-radius: 6.4vw;
+			width: 70vw;
+			font-size: 2vw;
+			line-height: 3vw;
 			.title {
 				svg {
-					width: 10px;
-					height: 10px;
+					width: 3.5vw;
+					height: 3.5vw;
 				}
-				gap: 8px;
-				font-size: 14px;
-				line-height: 18px;
+				gap: 2vw;
+				font-size: 3vw;
+				line-height: 4.5vw;
 			}
 			button {
-				margin-top: 2px;
-				height: 30px;
-				width: 150px;
-				border-radius: 18px;
-				font-size: 11px;
-				line-height: 24px;
+				margin-top: 1vw;
+				height: 8vw;
+				width: 40vw;
+				border-radius: 4.8vw;
+				font-size: 3vw;
+				line-height: 4.5vw;
 			}
 		}
 	}

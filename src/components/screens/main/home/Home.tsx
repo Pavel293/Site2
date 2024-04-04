@@ -14,8 +14,8 @@ const Home: FC = () => {
 	const nextBlockRef = useRef<HTMLDivElement>(null)
 	return (
 		<Meta
-			title="Онлайн система записи"
-			description="Бесплатный сервис для компаний и частных специалистов"
+			title="Telebon CRM"
+			description="Новый сервис онлайн-записи с возможностью записи Клиентов в Telegram"
 			image="logo_preview.png"
 		>
 			<div

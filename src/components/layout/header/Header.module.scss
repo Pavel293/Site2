@@ -17,7 +17,7 @@ $menuItems: 7;
 			align-items: center;
 			font-weight: 600;
 			font-size: 18px;
-			line-height: 50px;
+			line-height: 25px;
 			gap: 24px;
 
 			.tabs {
@@ -25,8 +25,8 @@ $menuItems: 7;
 				flex-direction: row;
 
 				.item {
-					padding: 24px;
-					height: 100%;
+					padding: 10px;
+					height: fit-content;
 					color: #12092d;
 					transition: color 0.3s ease;
 				}
@@ -113,11 +113,12 @@ $menuItems: 7;
 
 			.navmenu {
 				font-size: 15px;
+				line-height: 20px;
 				gap: 12px;
 
 				.tabs {
 					.item {
-						padding: 12px;
+						padding: 8px;
 					}
 				}
 			}
@@ -162,6 +163,7 @@ $menuItems: 7;
 
 			.navmenu {
 				font-size: 11px;
+				line-height: 15px;
 				gap: 6px;
 
 				.tabs {
@@ -208,6 +210,7 @@ $menuItems: 7;
 
 			.navmenu {
 				font-size: 9px;
+				line-height: 12px;
 				gap: 4px;
 
 				.tabs {
@@ -277,8 +280,8 @@ $menuItems: 7;
 			ul {
 				@apply flex flex-col justify-center items-center    -top-[400%] left-0 z-40 absolute w-full h-0;
 
-				transition: all 0.3s ease-in;
-				transition-delay: 0.25s;
+				transition: all 0.3s ease-out;
+				transition-delay: 0s;
 				list-style: none;
 
 				li {
@@ -355,7 +358,7 @@ $menuItems: 7;
 				&.active {
 					@apply bg-white z-40 top-0 h-fit;
 					transition: all 0.3s ease-in;
-					transition-delay: 0.25s;
+					transition-delay: 0s;
 					margin-top: 15vw;
 					height: fit-content;
 					li {
@@ -371,17 +374,18 @@ $menuItems: 7;
 			}
 
 			.menu {
-				@apply block w-[6.4vw] h-[6.4vw] p-1 z-50;
+				transition: transform 0.3s ease-out;
+				@apply block w-[6.4vw] h-[6.4vw] p-[1vw] z-50;
 				span {
-					@apply block w-full h-[0.6vw] rounded-[2px] bg-primary relative;
+					@apply block w-full h-[0.6vw] rounded-[0.5vw] bg-primary relative;
 					transition: 0.3s ease;
 
 					& + span {
-						@apply mt-[1.2vw];
+						@apply mt-[1.3vw];
 					}
 
 					&:nth-child(1) {
-						animation: ease 0.8s menu-icon-top2 forwards;
+						animation: ease 0.8s menu-icon-top-2 forwards;
 					}
 
 					&:nth-child(2) {
@@ -410,5 +414,77 @@ $menuItems: 7;
 				}
 			}
 		}
+	}
+}
+
+@keyframes menu-icon-top {
+	0% {
+		transform: translateY(0) rotate(0);
+	}
+	50% {
+		transform: translateY(1.9vw) rotate(0);
+	}
+	100% {
+		transform: translateY(1.9vw) rotate(45deg);
+	}
+}
+
+@keyframes menu-icon-scaled {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+
+@keyframes menu-icon-bottom {
+	0% {
+		transform: translateY(0) rotate(0);
+	}
+	50% {
+		transform: translateY(-1.9vw) rotate(0);
+	}
+	100% {
+		transform: translateY(-1.9vw) rotate(-45deg);
+	}
+}
+
+@keyframes menu-icon-top-2 {
+	0% {
+		transform: translateY(1.9vw) rotate(45deg);
+	}
+	50% {
+		transform: translateY(1.9vw) rotate(0);
+	}
+	100% {
+		transform: translateY(0) rotate(0);
+	}
+}
+
+@keyframes menu-icon-scaled-2 {
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes menu-icon-bottom-2 {
+	0% {
+		transform: translateY(-1.9vw) rotate(-45deg);
+	}
+	50% {
+		transform: translateY(-1.9vw) rotate(0);
+	}
+	100% {
+		transform: translateY(0) rotate(0);
 	}
 }

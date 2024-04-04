@@ -47,6 +47,9 @@ body {
 	@media (max-width: 992px) {
 		bottom: -10px !important;
 	}
+	@media (max-width: 768px) {
+		bottom: -6.4vw !important;
+	}
 }
 .slick-dots li {
 	margin: 0 !important;
@@ -63,6 +66,10 @@ body {
 	@media (max-width: 992px) {
 		width: 14px !important;
 		height: 14px !important;
+	}
+	@media (max-width: 768px) {
+		width: 4vw !important;
+		height: 4vw !important;
 	}
 }
 .slick-dots li button:before {
@@ -83,6 +90,10 @@ body {
 	@media (max-width: 992px) {
 		width: 4px !important;
 		height: 4px !important;
+	}
+	@media (max-width: 768px) {
+		width: 1.3vw !important;
+		height: 1.3vw !important;
 	}
 }
 

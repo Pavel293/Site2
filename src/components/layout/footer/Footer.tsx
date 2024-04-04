@@ -8,8 +8,9 @@ import ModalCopy from '@/ui/modal/ModalCopy/ModalCopy'
 import useMatchMedia from '@/hooks/useMatchMedia'
 
 const Footer: FC = () => {
-	const [showCookieBanner, setShowCookieBanner] = useState<boolean>(true)
+	const [showCookieBanner, setShowCookieBanner] = useState<boolean>(false)
 	const [copiedSuccess, setCopiedSuccess] = useState(false)
+	const [showAppUnavailableModal, setShowAppUnavailableModal] = useState(false)
 	const isMobile = useMatchMedia('768')
 
 	useEffect(() => {
@@ -18,6 +19,20 @@ const Footer: FC = () => {
 		)
 		if (hasAcceptedCookies) {
 			setShowCookieBanner(false)
+		} else {
+			setShowCookieBanner(true)
+		}
+		const handleClickOutside = (event: MouseEvent) => {
+			const modal = document.querySelector('.appUnavailableModal')
+			if (modal && !modal.contains(event.target as Node)) {
+				setShowAppUnavailableModal(false)
+			}
+		}
+
+		document.addEventListener('mousedown', handleClickOutside)
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside)
 		}
 	}, [])
 
@@ -43,6 +58,16 @@ const Footer: FC = () => {
 			console.error(`Unable to copy to clipboard`, err)
 		}
 		document.body.removeChild(textArea)
+	}
+
+	const handlePhoneClick = () => {
+		const phoneNumber = `+7 (812) 507-63-33`
+		if (isMobile) {
+			window.location.href = `tel:${phoneNumber.replace(/\s/g, ``)}`
+			copyToClipboard(phoneNumber)
+		} else {
+			copyToClipboard(phoneNumber)
+		}
 	}
 
 	const copyToClipboard = async (text: string) => {
@@ -83,7 +108,7 @@ const Footer: FC = () => {
 										<Link href="/info/agreement">
 											<p>Пользовательское соглашение</p>
 										</Link>
-										<Link href="/404">
+										<Link href="https://t.me/+Z4n8gxkEgQZmYjMy">
 											<p>
 												<span>Чат тех. поддержки</span>
 												<IconInstance name={EIcons.contactsupportsmall} />
@@ -126,7 +151,7 @@ const Footer: FC = () => {
 										</Link>
 									</div>
 									<div className={styles.text}>
-										<Link href="/404">
+										<Link href="https://t.me/+Z4n8gxkEgQZmYjMy">
 											<p>
 												<IconInstance name={EIcons.contactsupportsmall} />
 												<span>Чат технической поддержки</span>
@@ -155,18 +180,40 @@ const Footer: FC = () => {
 									<IconInstance name={EIcons.supportmailaddresssmall} />
 								</div>
 							</div>
-							<div
-								className={styles.copyboard}
-								onClick={() => {
-									copyToClipboard('+7 (812) 507-63-33')
-								}}
-							>
+							<div className={styles.copyboard} onClick={handlePhoneClick}>
 								<div className={styles.phone}>
 									<IconInstance name={EIcons.supportphonebold} />
 								</div>
 							</div>
-							<div className={styles.button}>
+							<div
+								className={styles.button}
+								onClick={() =>
+									setShowAppUnavailableModal(!showAppUnavailableModal)
+								}
+							>
 								<IconInstance name={EIcons.downloadapp} />
+								{showAppUnavailableModal && (
+									<div className={styles.appUnavailableModal}>
+										<div className={styles.triangle}>
+											<IconInstance name={EIcons.triangle} />
+										</div>
+										<div className={styles.box}>
+											<IconInstance name={EIcons.errorimage} />
+											<div className={styles.text}>
+												<p>
+													Приложение проходит проверку в AppStore и Google play.
+													Но Вы можете его скачать с нашей помощью.
+												</p>
+												<p className={styles.write}>
+													Напишите в{' '}
+													<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
+														<span>чат службы поддержки</span>
+													</Link>
+												</p>
+											</div>
+										</div>
+									</div>
+								)}
 							</div>
 							{isMobile ? (
 								<Link href="/">

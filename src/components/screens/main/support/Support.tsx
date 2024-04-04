@@ -7,6 +7,7 @@ import { useFormik } from 'formik'
 import InputMask from 'react-input-mask'
 import ModalSupport from '@/ui/modal/ModalSupport/ModalSupport'
 import ModalCopy from '@/ui/modal/ModalCopy/ModalCopy'
+import useMatchMedia from '@/hooks/useMatchMedia'
 
 interface SupportProps {
 	nextBlockRef: React.RefObject<HTMLDivElement>
@@ -22,6 +23,7 @@ export interface FormValues {
 const Support: FC<SupportProps> = ({ nextBlockRef }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [copiedSuccess, setCopiedSuccess] = useState(false)
+	const isMobile = useMatchMedia('768')
 	const initialValues: FormValues = {
 		name: '',
 		phoneNumber: '',
@@ -97,6 +99,16 @@ const Support: FC<SupportProps> = ({ nextBlockRef }) => {
 			console.error(`Unable to copy to clipboard`, err)
 		}
 		document.body.removeChild(textArea)
+	}
+
+	const handlePhoneClick = () => {
+		const phoneNumber = `+7 (812) 507-63-33`
+		if (isMobile) {
+			window.location.href = `tel:${phoneNumber.replace(/\s/g, ``)}`
+			copyToClipboard(phoneNumber)
+		} else {
+			copyToClipboard(phoneNumber)
+		}
 	}
 
 	const copyToClipboard = async (text: string) => {
@@ -198,10 +210,7 @@ const Support: FC<SupportProps> = ({ nextBlockRef }) => {
 							<IconInstance name={EIcons.supportcall} />
 						</div>
 						<meta itemProp="telephone" content="+7 (812) 507-63-33" />
-						<div
-							className={styles.copyboard}
-							onClick={() => copyToClipboard('+7 (812) 507-63-33')}
-						>
+						<div className={styles.copyboard} onClick={handlePhoneClick}>
 							<IconInstance name={EIcons.supportphone} />
 						</div>
 					</div>

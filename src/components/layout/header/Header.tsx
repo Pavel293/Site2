@@ -5,10 +5,12 @@ import Image from 'next/image'
 import LogoImageNew from '../../../assets/icons/LogoImageNew.svg'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import useMatchMedia from '@/hooks/useMatchMedia'
 
 const Header: FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
 	const [hidden, setHidden] = useState<boolean>(false)
+	const isMobile = useMatchMedia('768')
 	// const { scrollY } = useScroll() || { scrollY: 0 }
 	//
 	// useMotionValueEvent(scrollY, 'change', latest => {
@@ -31,17 +33,17 @@ const Header: FC = () => {
 				<div className={styles.headerContent}>
 					<div className={styles.navmenu}>
 						<Link href="/">
-							<div className={styles.logo}>
+							<div className={styles.logo} onClick={() => setIsOpen(false)}>
 								<Image src={LogoImageNew} alt="logotext" />
 							</div>
 						</Link>
 						<div className={styles.tabs}>
-							<div className={styles.item}>
-								<Link href="/price">Ценовая политика</Link>
-							</div>
-							<div className={styles.item}>
-								<Link href="/telegram-bot">Бот для онлайн-записи</Link>
-							</div>
+							<Link href="/price">
+								<div className={styles.item}>Ценовая политика</div>
+							</Link>
+							<Link href="/telegram-bot">
+								<div className={styles.item}>Бот для онлайн-записи</div>
+							</Link>
 						</div>
 					</div>
 					<ul className={cn(isOpen && styles.active)}>
@@ -55,6 +57,20 @@ const Header: FC = () => {
 								<span>Войти</span>
 							</Link>
 						</li>
+						{isMobile ? (
+							<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
+								<Link href="/price">
+									<span>Ценовая политика</span>
+								</Link>
+							</li>
+						) : null}
+						{isMobile ? (
+							<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
+								<Link href="/telegram-bot">
+									<span>Бот для онлайн-записи</span>
+								</Link>
+							</li>
+						) : null}
 					</ul>
 					<button
 						onClick={() => setIsOpen(!isOpen)}

@@ -57,6 +57,8 @@ import { Success } from './Success'
 import { ArrowLeft } from './ArrowLeft'
 import { CookieIcon } from './CookieIcon'
 import { ContentCopy } from './ContentCopy'
+import { Error } from './Error'
+import { Triangle } from './Triangle'
 
 export enum EIcons {
 	hover1,
@@ -118,6 +120,8 @@ export enum EIcons {
 	arrowleft,
 	cookie,
 	contentcopy,
+	errorimage,
+	triangle,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -180,6 +184,8 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.arrowleft]: ArrowLeft,
 	[EIcons.cookie]: CookieIcon,
 	[EIcons.contentcopy]: ContentCopy,
+	[EIcons.errorimage]: Error,
+	[EIcons.triangle]: Triangle,
 }
 
 interface IIconProps {
