@@ -6,14 +6,15 @@ import Image from 'next/image'
 import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 import ModalCopy from '@/ui/modal/ModalCopy/ModalCopy'
 import useMatchMedia from '@/hooks/useMatchMedia'
+import { useRouter } from 'next/router'
 
 const Footer: FC = () => {
 	const [showCookieBanner, setShowCookieBanner] = useState<boolean>(false)
 	const [copiedSuccess, setCopiedSuccess] = useState(false)
 	const [showAppUnavailableModal, setShowAppUnavailableModal] = useState(false)
 	const isMobile = useMatchMedia('768')
-	const is404Page =
-		typeof window !== 'undefined' && window.location.pathname === '/404'
+	const router = useRouter()
+	const is404Page = router.pathname === `/404`
 
 	useEffect(() => {
 		const hasAcceptedCookies = document.cookie.includes(
@@ -90,7 +91,7 @@ const Footer: FC = () => {
 		<noindex>
 			<div
 				className={styles.footer}
-				style={{ display: !is404Page ? `none` : `flex` }}
+				style={{ display: is404Page ? `none` : `flex` }}
 			>
 				<div className={styles.container}>
 					<div className={styles.aboveline}>
