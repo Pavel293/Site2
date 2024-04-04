@@ -278,7 +278,7 @@ $menuItems: 7;
 			}
 
 			ul {
-				@apply flex flex-col justify-center items-center    -top-[400%] left-0 z-40 absolute w-full h-0;
+				@apply flex flex-col justify-center items-center -top-[400%] left-0 z-40 absolute w-full h-0;
 
 				transition: all 0.3s ease-out;
 				transition-delay: 0s;
@@ -292,12 +292,12 @@ $menuItems: 7;
 					opacity: 0;
 					transition:
 						transform 0.5s $cubic,
-						opacity 0.6s $cubic;
-					@for $i from 1 through $menuItems {
-						&:nth-child(#{$i}) {
-							transition-delay: #{0.56 - ($i * 0.07)}s;
-						}
-					}
+						opacity 0s $cubic;
+					//@for $i from 1 through $menuItems {
+					//	&:nth-child(#{$i}) {
+					//		transition-delay: #{0.56 - ($i * 0.07)}s;
+					//	}
+					//}
 
 					a {
 						color: #fff;
@@ -305,6 +305,8 @@ $menuItems: 7;
 						font-size: 22px;
 						line-height: 2.35;
 						width: 100%;
+						// Добавляем анимацию исчезновения текста
+						transition: opacity 0.3s ease;
 					}
 
 					&.auth {
@@ -369,6 +371,10 @@ $menuItems: 7;
 								transition-delay: #{0.07 * $i + 0.2}s;
 							}
 						}
+					}
+					// Добавляем прозрачность к тексту, чтобы он исчезал вместе с фоном
+					a {
+						opacity: 1;
 					}
 				}
 			}
