@@ -12,6 +12,8 @@ const Footer: FC = () => {
 	const [copiedSuccess, setCopiedSuccess] = useState(false)
 	const [showAppUnavailableModal, setShowAppUnavailableModal] = useState(false)
 	const isMobile = useMatchMedia('768')
+	const is404Page =
+		typeof window !== 'undefined' && window.location.pathname === '/404'
 
 	useEffect(() => {
 		const hasAcceptedCookies = document.cookie.includes(
@@ -86,7 +88,10 @@ const Footer: FC = () => {
 
 	return (
 		<noindex>
-			<div className={styles.footer}>
+			<div
+				className={styles.footer}
+				style={{ display: !is404Page ? `none` : `flex` }}
+			>
 				<div className={styles.container}>
 					<div className={styles.aboveline}>
 						{isMobile ? (

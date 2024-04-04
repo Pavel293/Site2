@@ -5,7 +5,6 @@ export default function ErrorPage() {
 		<div
 			style={{
 				position: 'relative',
-				zIndex: '999',
 				height: '100%',
 				width: '100%',
 				inset: '0',
