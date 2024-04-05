@@ -35,6 +35,9 @@
 				.button {
 					margin-top: 3px;
 					position: relative;
+					.appUnavailableModal.active {
+						//animation: fadeOut 0.6s ease forwards;
+					}
 					.appUnavailableModal {
 						position: absolute;
 						top: -170px;
@@ -47,6 +50,7 @@
 						width: 580px;
 						z-index: 9999;
 						text-align: center;
+						animation: fadeIn 0.6s ease forwards;
 						.triangle {
 							svg {
 								color: #ffffff;
@@ -703,5 +707,23 @@
 				line-height: 4.5vw;
 			}
 		}
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
 	}
 }

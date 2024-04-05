@@ -7,6 +7,7 @@ import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 import ModalCopy from '@/ui/modal/ModalCopy/ModalCopy'
 import useMatchMedia from '@/hooks/useMatchMedia'
 import { useRouter } from 'next/router'
+import cn from 'classnames'
 
 const Footer: FC = () => {
 	const [showCookieBanner, setShowCookieBanner] = useState<boolean>(false)
@@ -191,36 +192,63 @@ const Footer: FC = () => {
 									<IconInstance name={EIcons.supportphonebold} />
 								</div>
 							</div>
-							<div
-								className={styles.button}
-								onClick={() =>
-									setShowAppUnavailableModal(!showAppUnavailableModal)
-								}
-							>
-								<IconInstance name={EIcons.downloadapp} />
-								{showAppUnavailableModal && (
-									<div className={styles.appUnavailableModal}>
-										<div className={styles.triangle}>
-											<IconInstance name={EIcons.triangle} />
-										</div>
-										<div className={styles.box}>
-											<IconInstance name={EIcons.errorimage} />
-											<div className={styles.text}>
-												<p>
-													Приложение проходит проверку в AppStore и Google play.
-													Но Вы можете его скачать с нашей помощью.
-												</p>
-												<p className={styles.write}>
-													Напишите в{' '}
-													<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
-														<span>чат службы поддержки</span>
-													</Link>
-												</p>
+							{isMobile ? (
+								<div className={cn(styles.button, showAppUnavailableModal && styles.active)} onClick={() => setShowAppUnavailableModal(!showAppUnavailableModal)}>
+									<IconInstance name={EIcons.downloadapp} />
+									{showAppUnavailableModal && (
+										<div className={cn(styles.appUnavailableModal, styles.active)}>
+											<div className={styles.triangle}>
+												<IconInstance name={EIcons.triangle} />
+											</div>
+											<div className={styles.box}>
+												<IconInstance name={EIcons.errorimage} />
+												<div className={styles.text}>
+													<p>
+														Приложение проходит проверку в AppStore и Google play.
+														Но Вы можете его скачать с нашей помощью.
+													</p>
+													<p className={styles.write}>
+														Напишите в{' '}
+														<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
+															<span>чат службы поддержки</span>
+														</Link>
+													</p>
+												</div>
 											</div>
 										</div>
-									</div>
-								)}
-							</div>
+									)}
+								</div>
+							) : (
+								<div
+									className={cn(styles.button, showAppUnavailableModal && styles.active)}
+									onMouseEnter={() => setShowAppUnavailableModal(true)}
+									onMouseLeave={() => setShowAppUnavailableModal(false)}
+								>
+									<IconInstance name={EIcons.downloadapp} />
+									{showAppUnavailableModal && (
+										<div className={cn(styles.appUnavailableModal, styles.active)}>
+											<div className={styles.triangle}>
+												<IconInstance name={EIcons.triangle} />
+											</div>
+											<div className={styles.box}>
+												<IconInstance name={EIcons.errorimage} />
+												<div className={styles.text}>
+													<p>
+														Приложение проходит проверку в AppStore и Google play.
+														Но Вы можете его скачать с нашей помощью.
+													</p>
+													<p className={styles.write}>
+														Напишите в{' '}
+														<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
+															<span>чат службы поддержки</span>
+														</Link>
+													</p>
+												</div>
+											</div>
+										</div>
+									)}
+								</div>
+							)}
 							{isMobile ? (
 								<Link href="/">
 									<div className={styles.logo}>
