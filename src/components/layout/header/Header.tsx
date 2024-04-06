@@ -24,64 +24,66 @@ const Header: FC = () => {
 
 	return (
 		<noindex>
-			<motion.nav
-				className={cn('wrapper', styles.header)}
-				variants={{ visible: { y: 0 }, hidden: { y: '-100%' } }}
-				animate={hidden ? 'hidden' : 'visible'}
-				transition={{ duration: 0.35, ease: 'easeInOut' }}
-			>
-				<div className={styles.headerContent}>
-					<div className={styles.navmenu}>
-						<Link href="/">
-							<div className={styles.logo} onClick={() => setIsOpen(false)}>
-								<Image src={LogoImageNew} alt="logotext" />
-							</div>
-						</Link>
-						<div className={styles.tabs}>
-							<Link href="/price">
-								<div className={styles.item}>Ценовая политика</div>
+			<div className={isOpen ? styles.darken : undefined}>
+				<motion.nav
+					className={cn('wrapper', styles.header)}
+					variants={{ visible: { y: 0 }, hidden: { y: '-100%' } }}
+					animate={hidden ? 'hidden' : 'visible'}
+					transition={{ duration: 0.35, ease: 'easeInOut' }}
+				>
+					<div className={styles.headerContent}>
+						<div className={styles.navmenu}>
+							<Link href="/">
+								<div className={styles.logo} onClick={() => setIsOpen(false)}>
+									<Image src={LogoImageNew} alt="logotext" />
+								</div>
 							</Link>
-							<Link href="/telegram-bot">
-								<div className={styles.item}>Бот для онлайн-записи</div>
-							</Link>
-						</div>
-					</div>
-					<ul className={cn(isOpen && styles.active)}>
-						<li className={cn(styles.auth, styles.reg)}>
-							<Link href="https://lk.telebon.ru/registration">
-								Зарегистрироваться
-							</Link>
-						</li>
-						<li className={styles.auth}>
-							<Link href="https://lk.telebon.ru/auth">
-								<span>Войти</span>
-							</Link>
-						</li>
-						{isMobile ? (
-							<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
+							<div className={styles.tabs}>
 								<Link href="/price">
-									<span>Ценовая политика</span>
+									<div className={styles.item}>Ценовая политика</div>
 								</Link>
-							</li>
-						) : null}
-						{isMobile ? (
-							<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
 								<Link href="/telegram-bot">
-									<span>Бот для онлайн-записи</span>
+									<div className={styles.item}>Бот для онлайн-записи</div>
+								</Link>
+							</div>
+						</div>
+						<ul className={cn(isOpen && styles.active)}>
+							<li className={cn(styles.auth, styles.reg)}>
+								<Link href="https://lk.telebon.ru/registration">
+									Зарегистрироваться
 								</Link>
 							</li>
-						) : null}
-					</ul>
-					<button
-						onClick={() => setIsOpen(!isOpen)}
-						className={cn(isOpen && styles.activeMenu, styles.menu)}
-					>
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
-				</div>
-			</motion.nav>
+							<li className={styles.auth}>
+								<Link href="https://lk.telebon.ru/auth">
+									<span>Войти</span>
+								</Link>
+							</li>
+							{isMobile ? (
+								<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
+									<Link href="/price">
+										<span>Ценовая политика</span>
+									</Link>
+								</li>
+							) : null}
+							{isMobile ? (
+								<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
+									<Link href="/telegram-bot">
+										<span>Бот для онлайн-записи</span>
+									</Link>
+								</li>
+							) : null}
+						</ul>
+						<button
+							onClick={() => setIsOpen(!isOpen)}
+							className={cn(isOpen && styles.activeMenu, styles.menu)}
+						>
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</motion.nav>
+			</div>
 		</noindex>
 	)
 }

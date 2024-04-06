@@ -2,6 +2,16 @@ $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 
 $menuItems: 7;
 
+.darken {
+	background-color: #00000066;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+}
+
 .header {
 	position: fixed;
 	top: 0;
@@ -90,7 +100,7 @@ $menuItems: 7;
 						background: #246bfd;
 
 						&:hover {
-							background: #1d418c;
+							background: #1f5ad3;
 							color: white;
 						}
 
@@ -284,7 +294,7 @@ $menuItems: 7;
 			ul {
 				@apply flex flex-col justify-center items-center -top-[400%] left-0 z-40 absolute w-full h-0;
 
-				transition: all 0.3s ease-out;
+				transition: all 0s ease-out;
 				transition-delay: 0s;
 				list-style: none;
 
@@ -295,7 +305,7 @@ $menuItems: 7;
 					transform: scale(1.15) translateY(-30px);
 					opacity: 0;
 					transition:
-						transform 0.5s $cubic,
+						transform 0s $cubic,
 						opacity 0s $cubic;
 					//@for $i from 1 through $menuItems {
 					//	&:nth-child(#{$i}) {
@@ -310,7 +320,7 @@ $menuItems: 7;
 						line-height: 2.35;
 						width: 100%;
 						// Добавляем анимацию исчезновения текста
-						transition: opacity 0.3s ease;
+						transition: opacity 0s ease;
 					}
 
 					&.auth {
@@ -363,20 +373,20 @@ $menuItems: 7;
 
 				&.active {
 					@apply bg-white z-40 top-0 h-fit;
-					transition: all 0.3s ease-in;
+					border-radius: 0 0 5.3vw 5.3vw;
+					transition: all 0s ease-in;
 					transition-delay: 0s;
 					margin-top: 15vw;
 					height: fit-content;
 					li {
 						transform: scale(1) translateY(0px);
 						opacity: 1;
-						@for $i from 1 through $menuItems {
-							&:nth-child(#{$i}) {
-								transition-delay: #{0.07 * $i + 0.2}s;
-							}
-						}
+						//@for $i from 1 through $menuItems {
+						//	&:nth-child(#{$i}) {
+						//		transition-delay: #{0.07 * $i + 0.2}s;
+						//	}
+						//}
 					}
-					// Добавляем прозрачность к тексту, чтобы он исчезал вместе с фоном
 					a {
 						opacity: 1;
 					}
@@ -387,7 +397,7 @@ $menuItems: 7;
 				transition: transform 0.3s ease-out;
 				@apply block w-[6.4vw] h-[6.4vw] p-[1vw] z-50;
 				span {
-					@apply block w-full h-[0.6vw] rounded-[0.5vw] bg-primary relative;
+					@apply block w-full h-[0.6vw] rounded-[0.5vw] bg-black relative;
 					transition: 0.3s ease;
 
 					& + span {

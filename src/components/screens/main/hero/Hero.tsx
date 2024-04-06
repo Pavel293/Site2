@@ -8,6 +8,7 @@ import HeroPhoneImage from '../../../../assets/icons/HeroPhoneImageNew.png'
 import Link from 'next/link'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import useMatchMedia from '@/hooks/useMatchMedia'
+import CommonButton from '@/ui/button/CommonButton'
 
 interface HeroProps {
 	nextBlockRef: React.RefObject<HTMLDivElement>
@@ -44,13 +45,9 @@ const Hero: FC<HeroProps> = ({ nextBlockRef }) => {
 						</p>
 					</div>
 					<noindex>
-						<button className={cn(styles.active, styles.buttons)}>
-							<span className={styles.auth}>
-								<Link href="https://lk.telebon.ru/registration">
-									Попробовать
-								</Link>
-							</span>
-						</button>
+						<CommonButton href="https://lk.telebon.ru/registration">
+							Попробовать
+						</CommonButton>
 					</noindex>
 				</div>
 				<div className={styles.right}>

@@ -45,6 +45,13 @@
 		font-weight: 700;
 		line-height: 32.78px;
 		text-align: center;
+		&:hover {
+			background: #1f5ad3;
+			color: white;
+		}
+		&:active {
+			@apply bg-text bg-opacity-30;
+		}
 	}
 }
 
