@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import styles from './Tarif.module.scss'
 import cn from 'classnames'
 import Link from 'next/link'
+import CommonButton from '@/ui/button/CommonButton'
 const Tarif: FC = () => {
 	return (
 		<div className={cn(styles.fuck, 'wrapper')}>
@@ -13,11 +14,11 @@ const Tarif: FC = () => {
 						политикой
 					</p>
 				</div>
-				<Link href={'/price'}>
-					<noindex>
-						<button className={styles.button}>Перейти</button>
-					</noindex>
-				</Link>
+				<noindex>
+					<CommonButton href="/price" color={'gray'} size={'l'}>
+						Попробовать
+					</CommonButton>
+				</noindex>
 			</div>
 		</div>
 	)

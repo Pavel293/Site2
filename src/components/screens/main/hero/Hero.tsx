@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import useMatchMedia from '@/hooks/useMatchMedia'
 import CommonButton from '@/ui/button/CommonButton'
+import themelight from '../../../../styles/colors'
 
 interface HeroProps {
 	nextBlockRef: React.RefObject<HTMLDivElement>
@@ -45,7 +46,11 @@ const Hero: FC<HeroProps> = ({ nextBlockRef }) => {
 						</p>
 					</div>
 					<noindex>
-						<CommonButton href="https://lk.telebon.ru/registration">
+						<CommonButton
+							href="https://lk.telebon.ru/registration"
+							color={'primary'}
+							size={'s'}
+						>
 							Попробовать
 						</CommonButton>
 					</noindex>

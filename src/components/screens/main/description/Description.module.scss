@@ -61,32 +61,6 @@
 	}
 	.button_box {
 		margin: 0 auto;
-		.button {
-			margin: 0 auto;
-			transition: 0.5s ease;
-			@apply hover:text-text;
-			position: relative;
-			z-index: 2;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 436px;
-			height: 81px;
-			border-radius: 24px;
-			background: #ff7043;
-			font-weight: 700;
-			font-size: 24px;
-			line-height: 33px;
-			color: #ffffff;
-			user-select: none;
-			&:hover {
-				background: #dd6139;
-				color: white;
-			}
-			&:active {
-				@apply bg-text bg-opacity-30;
-			}
-		}
 	}
 }
 
@@ -124,15 +98,6 @@
 				img {
 					width: 619px;
 				}
-			}
-		}
-		.button_box {
-			.button {
-				width: 283px;
-				height: 60px;
-				border-radius: 18px;
-				font-size: 15px;
-				line-height: 24px;
 			}
 		}
 	}
@@ -174,15 +139,6 @@
 				}
 			}
 		}
-		.button_box {
-			.button {
-				width: 283px;
-				height: 50px;
-				border-radius: 15px;
-				font-size: 15px;
-				line-height: 24px;
-			}
-		}
 	}
 }
 
@@ -220,15 +176,6 @@
 				img {
 					width: 359px;
 				}
-			}
-		}
-		.button_box {
-			.button {
-				width: 203px;
-				height: 40px;
-				border-radius: 11px;
-				font-size: 11px;
-				line-height: 24px;
 			}
 		}
 	}
@@ -284,16 +231,6 @@
 				img {
 					width: 92vw;
 				}
-			}
-		}
-		.button_box {
-			margin: 0 auto;
-			.button {
-				width: 92vw;
-				height: 14.4vw;
-				border-radius: 5.3vw;
-				font-size: 4vw;
-				line-height: 4.5vw;
 			}
 		}
 	}

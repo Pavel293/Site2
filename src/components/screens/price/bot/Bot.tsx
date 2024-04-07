@@ -4,6 +4,7 @@ import cn from 'classnames'
 import Link from 'next/link'
 import Image from 'next/image'
 import Telegram from '../../../../assets/icons/TelegramIcon.png'
+import CommonButton from '@/ui/button/CommonButton'
 const Bot: FC = () => {
 	return (
 		<div className={cn(styles.fuck, 'wrapper')}>
@@ -20,9 +21,11 @@ const Bot: FC = () => {
 						стоимость.
 					</p>
 				</div>
-				<Link href={'/telegram-bot'}>
-					<div className={styles.button}>Узнать подробнее</div>
-				</Link>
+				<noindex>
+					<CommonButton href="/telegram-bot" color={'gray02'} size={'l'}>
+						Узнать подробнее
+					</CommonButton>
+				</noindex>
 			</div>
 		</div>
 	)

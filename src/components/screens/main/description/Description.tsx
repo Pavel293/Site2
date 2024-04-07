@@ -5,6 +5,7 @@ import { propoData } from '@/screens/main/description/promo-data'
 import Image from 'next/image'
 import DescriptionTelebonImage from '../../../../assets/icons/DescriptionTelebonImage.png'
 import Link from 'next/link'
+import CommonButton from '@/ui/button/CommonButton'
 
 const Decription = () => {
 	return (
@@ -39,13 +40,15 @@ const Decription = () => {
 					</div>
 				</div>
 				<div className={styles.button_box}>
-					<Link href="https://lk.telebon.ru/registration">
-						<noindex>
-							<button className={styles.button}>
-								<span>Подключить</span>
-							</button>
-						</noindex>
-					</Link>
+					<noindex>
+						<CommonButton
+							href="https://lk.telebon.ru/registration"
+							color={'orange'}
+							size={'s'}
+						>
+							Попробовать
+						</CommonButton>
+					</noindex>
 				</div>
 			</div>
 		</>

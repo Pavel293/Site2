@@ -6,6 +6,7 @@ import HeroChatImage from '../../../../assets/icons/HeroChatImage.png'
 import HeroPhoneImage from '../../../../assets/icons/HeroPhoneImage.png'
 import Link from 'next/link'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
+import CommonButton from '@/ui/button/CommonButton'
 
 interface HeroProps {
 	nextBlockRef: React.RefObject<HTMLDivElement>
@@ -36,11 +37,15 @@ const HeroPrice: FC<HeroProps> = ({ nextBlockRef }) => {
 						фиксированная
 					</p>
 				</div>
-				<div className={cn(styles.active, styles.buttons)}>
-					<span className={styles.auth}>
-						<Link href="https://lk.telebon.ru/registration">Попробовать</Link>
-					</span>
-				</div>
+				<noindex>
+					<CommonButton
+						href="https://lk.telebon.ru/registration"
+						color={'primary'}
+						size={'s'}
+					>
+						Попробовать
+					</CommonButton>
+				</noindex>
 				<div className={styles.phone_image} onClick={scrollToComponent}>
 					<IconInstance name={EIcons.callimage} />
 				</div>

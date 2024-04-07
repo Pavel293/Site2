@@ -7,6 +7,7 @@ import HeroPhoneImage from '../../../../assets/icons/HeroPhoneImage.png'
 import Link from 'next/link'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import useMatchMedia from '@/hooks/useMatchMedia'
+import CommonButton from '@/ui/button/CommonButton'
 
 interface HeroProps {
 	nextBlockRef: React.RefObject<HTMLDivElement>
@@ -51,11 +52,15 @@ const HeroTelebot: FC<HeroProps> = ({ nextBlockRef }) => {
 						</p>
 					)}
 				</div>
-				<div className={cn(styles.active, styles.buttons)}>
-					<span className={styles.auth}>
-						<Link href="https://lk.telebon.ru/registration">Подключить</Link>
-					</span>
-				</div>
+				<noindex>
+					<CommonButton
+						href="https://lk.telebon.ru/registration"
+						color={'primary'}
+						size={'s'}
+					>
+						Подключить
+					</CommonButton>
+				</noindex>
 				<div className={styles.phone_image} onClick={scrollToComponent}>
 					<IconInstance name={EIcons.callimage} />
 				</div>

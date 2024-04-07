@@ -10,6 +10,7 @@ import Image from 'next/image'
 import AuthTelebotImg from '../../../../assets/icons/AuthTelebot.svg'
 import { propoData } from '@/screens/telebot/auth/promo-data'
 import Link from 'next/link'
+import CommonButton from '@/ui/button/CommonButton'
 export interface ICard {
 	icon: any
 	title: string
@@ -53,9 +54,15 @@ const AuthTelebot = () => {
 							Telebon!
 						</p>
 					</div>
-					<Link href={'https://lk.telebon.ru/registration'}>
-						<button className={styles.button}>Зарегистрироваться</button>
-					</Link>
+					<noindex>
+						<CommonButton
+							href="https://lk.telebon.ru/registration"
+							color={'primary'}
+							size={'m'}
+						>
+							Зарегистрироваться
+						</CommonButton>
+					</noindex>
 				</div>
 				<div className={styles.container}>
 					<div

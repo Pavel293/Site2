@@ -4,6 +4,7 @@ import cn from 'classnames'
 import Link from 'next/link'
 import Image from 'next/image'
 import Analytics from '../../../../assets/icons/AnalyticsTelebot.png'
+import CommonButton from '@/ui/button/CommonButton'
 
 const AnalyticsTelebot: FC = () => {
 	return (
@@ -41,9 +42,15 @@ const AnalyticsTelebot: FC = () => {
 						<p>Зарабатывают на партнерских программах</p>
 					</div>
 				</div>
-				<Link href={'https://lk.telebon.ru/registration'}>
-					<div className={styles.button}>Начать работу</div>
-				</Link>
+				<noindex>
+					<CommonButton
+						href="https://lk.telebon.ru/registration"
+						color={'primary'}
+						size={'l'}
+					>
+						Начать работу
+					</CommonButton>
+				</noindex>
 			</div>
 		</div>
 	)
