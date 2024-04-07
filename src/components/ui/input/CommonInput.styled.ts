@@ -134,7 +134,21 @@ export const CheckboxContainer = styled.label<PaletteProps>`
 	font-weight: 500;
 	line-height: 27.32px;
 	text-align: left;
-
+	span {
+		color: ${({ palette }) => {
+			if (palette) {
+				switch (palette) {
+					case 'orange':
+						return themelight.text.orange01
+					case 'primary':
+					default:
+						return themelight.text.primary01
+				}
+			} else {
+				return themelight.text.primary01
+			}
+		}};
+	}
 	.checkbox {
 		color: ${({ palette }) => {
 			if (palette) {
