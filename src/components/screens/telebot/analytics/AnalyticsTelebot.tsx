@@ -47,6 +47,7 @@ const AnalyticsTelebot: FC = () => {
 						href="https://lk.telebon.ru/registration"
 						color={'primary'}
 						size={'l'}
+						target={'_blank'}
 					>
 						Начать работу
 					</CommonButton>

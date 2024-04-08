@@ -10,6 +10,9 @@
 	flex-direction: row;
 	gap: 32px;
 	align-items: center;
+	img {
+		pointer-events: none;
+	}
 	.left {
 		width: 735px;
 		gap: 48px;
@@ -44,12 +47,12 @@
 		}
 	}
 	.right {
+		user-select: none;
 		width: 690px;
 		display: flex;
 		flex-direction: row;
 		gap: 16px;
 		position: relative;
-		user-select: none;
 		.phone_image {
 			display: flex;
 			align-items: center;
@@ -63,6 +66,7 @@
 			bottom: 8vh;
 			right: 8vw;
 			color: #ff7043;
+			cursor: pointer;
 			&:hover {
 				color: #dd6039;
 			}

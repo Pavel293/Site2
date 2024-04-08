@@ -27,7 +27,7 @@ const AuthTelebot = () => {
 	const settings = {
 		dots: true,
 		infinite: true,
-		speed: 500,
+		speed: 350,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		swipeToSlide: true,
@@ -59,6 +59,7 @@ const AuthTelebot = () => {
 							href="https://lk.telebon.ru/registration"
 							color={'primary'}
 							size={'m'}
+							target={'_blank'}
 						>
 							Зарегистрироваться
 						</CommonButton>

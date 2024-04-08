@@ -45,6 +45,7 @@ const Decription = () => {
 							href="https://lk.telebon.ru/registration"
 							color={'orange'}
 							size={'s'}
+							target={'_blank'}
 						>
 							Попробовать
 						</CommonButton>

@@ -42,6 +42,7 @@ const HeroPrice: FC<HeroProps> = ({ nextBlockRef }) => {
 						href="https://lk.telebon.ru/registration"
 						color={'primary'}
 						size={'s'}
+						target={'_blank'}
 					>
 						Попробовать
 					</CommonButton>

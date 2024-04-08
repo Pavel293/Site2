@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { StyledButton } from './CommonButton.styled'
 import Link from 'next/link'
+import styles from './CommonButton.module.scss'
 
 interface ButtonProps {
 	href?: string
@@ -10,33 +10,32 @@ interface ButtonProps {
 	className?: string
 	disabled?: boolean
 	type?: 'submit' | 'button' | 'reset'
+	target?: '_blank' | '_self'
 }
 
 const CommonButton: FC<ButtonProps> = ({
 	href,
-	color,
-	size,
+	color = 'primary',
+	size = 'm',
 	children,
 	disabled,
 	type = 'button',
+	target = '_self',
 }) => {
+	const classNames = [styles.button, styles[size], styles[color]].join(' ')
+
 	return (
 		<>
 			{href ? (
-				<Link href={href}>
-					<StyledButton
-						color={color}
-						size={size}
-						type={type}
-						disabled={disabled}
-					>
+				<Link href={href} target={target}>
+					<button className={classNames} type={type} disabled={disabled}>
 						{children}
-					</StyledButton>
+					</button>
 				</Link>
 			) : (
-				<StyledButton color={color} size={size} type={type} disabled={disabled}>
+				<button className={classNames} type={type} disabled={disabled}>
 					{children}
-				</StyledButton>
+				</button>
 			)}
 		</>
 	)

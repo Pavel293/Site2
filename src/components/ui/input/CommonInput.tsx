@@ -4,13 +4,9 @@ import { useFormik } from 'formik'
 import InputMask from 'react-input-mask'
 import ModalSupport from '@/ui/modal/ModalSupport/ModalSupport'
 import { FormValues } from '@/screens/main/support/Support'
-import {
-	CheckboxContainer,
-	Input,
-	InputContainer,
-	MainContainer,
-} from '@/ui/input/CommonInput.styled'
 import CommonButton from '@/ui/button/CommonButton'
+import styles from './CommonInput.module.scss'
+import themelight from '../../../styles/colors'
 
 interface CommonInputProps {
 	palette?: 'primary' | 'orange'
@@ -79,17 +75,20 @@ const CommonInput: FC<CommonInputProps> = ({ palette }) => {
 	}, [formik.values])
 
 	return (
-		<MainContainer>
+		<div className={styles.main_container}>
 			<form onSubmit={formik.handleSubmit}>
-				<InputContainer>
-					<Input palette={palette}>
+				<div className={styles.input_container}>
+					<div className={styles.input}>
 						<input
 							type="text"
 							name="name"
 							placeholder="Введите Ваше Имя"
-							className="custom_input"
+							className={styles.custom_input}
 							value={formik.values.name}
 							onChange={formik.handleChange}
+							style={{
+								background: palette === 'primary' ? '#F5F5F5' : '#FFFFFF',
+							}}
 						/>
 						<InputMask
 							mask="+7 (999) 999-99-99"
@@ -97,29 +96,45 @@ const CommonInput: FC<CommonInputProps> = ({ palette }) => {
 							type="text"
 							name="phoneNumber"
 							placeholder="Номер телефона"
-							className="custom_input"
+							className={styles.custom_input}
 							value={formik.values.phoneNumber}
 							onChange={formik.handleChange}
+							style={{
+								background: palette === 'primary' ? '#F5F5F5' : '#FFFFFF',
+							}}
 						/>
-					</Input>
-					<CheckboxContainer palette={palette}>
+					</div>
+					<label className={styles.checkbox_container}>
 						<input
 							type="checkbox"
 							name="consent"
-							className="checkbox"
+							className={styles.checkbox}
 							checked={formik.values.consent}
 							onChange={formik.handleChange}
+							style={{
+								color:
+									palette === 'primary'
+										? themelight.color.btn_primary
+										: themelight.color.btn_orange,
+							}}
 						/>
 						<p>
 							Вы соглашаетесь на обработку персональных данных и обязуетесь
 							соблюдать условия{' '}
-							<span>
+							<span
+								style={{
+									color:
+										palette === 'primary'
+											? themelight.color.btn_primary
+											: themelight.color.btn_orange,
+								}}
+							>
 								<Link href={'/info/agreement'}>
 									Пользовательского соглашения
 								</Link>
 							</span>
 						</p>
-					</CheckboxContainer>
+					</label>
 					<CommonButton
 						size={'l'}
 						color={palette}
@@ -130,15 +145,7 @@ const CommonInput: FC<CommonInputProps> = ({ palette }) => {
 					>
 						Связаться
 					</CommonButton>
-					{/*<Button*/}
-					{/*	type="submit"*/}
-					{/*	disabled={*/}
-					{/*		!formik.isValid || !formik.values.isValidForm || isModalOpen*/}
-					{/*	}*/}
-					{/*>*/}
-					{/*	Связаться*/}
-					{/*</Button>*/}
-				</InputContainer>
+				</div>
 			</form>
 			{isModalOpen ? (
 				<ModalSupport
@@ -146,7 +153,7 @@ const CommonInput: FC<CommonInputProps> = ({ palette }) => {
 					onClose={() => setIsModalOpen(false)}
 				/>
 			) : null}
-		</MainContainer>
+		</div>
 	)
 }
 

@@ -7,11 +7,14 @@ $menuItems: 7;
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	z-index: 9;
 }
 
+.indent {
+	height: 40px;
+}
 .header {
 	position: fixed;
 	top: 0;
@@ -19,8 +22,6 @@ $menuItems: 7;
 	z-index: 1000;
 	width: 100vw;
 	background-color: white;
-	padding-top: 40px;
-
 	.headerContent {
 		@apply max-w-[1480px] flex justify-between items-center;
 		margin: 0 auto;
@@ -39,7 +40,7 @@ $menuItems: 7;
 				flex-direction: row;
 
 				.item {
-					padding: 10px;
+					padding: 10px 24px;
 					height: fit-content;
 					color: #12092d;
 					transition: color 0.3s ease;
@@ -119,9 +120,10 @@ $menuItems: 7;
 }
 
 @media (max-width: 1600px) {
+	.indent {
+		height: 30px;
+	}
 	.header {
-		padding-top: 30px;
-
 		.headerContent {
 			max-width: 1200px;
 
@@ -132,7 +134,7 @@ $menuItems: 7;
 
 				.tabs {
 					.item {
-						padding: 8px;
+						padding: 8px 20px;
 					}
 				}
 			}
@@ -169,9 +171,10 @@ $menuItems: 7;
 }
 
 @media (max-width: 1300px) {
+	.indent {
+		height: 20px;
+	}
 	.header {
-		padding-top: 20px;
-
 		.headerContent {
 			max-width: 900px;
 
@@ -182,7 +185,7 @@ $menuItems: 7;
 
 				.tabs {
 					.item {
-						padding: 6px;
+						padding: 6px 16px;
 					}
 				}
 			}
@@ -216,9 +219,10 @@ $menuItems: 7;
 }
 
 @media (max-width: 992px) {
+	.indent {
+		height: 10px;
+	}
 	.header {
-		padding-top: 10px;
-
 		.headerContent {
 			max-width: 600px;
 
@@ -229,7 +233,7 @@ $menuItems: 7;
 
 				.tabs {
 					.item {
-						padding: 4px;
+						padding: 4px 12px;
 					}
 				}
 			}
@@ -292,8 +296,7 @@ $menuItems: 7;
 			}
 
 			ul {
-				@apply flex flex-col justify-center items-center -top-[400%] left-0 z-40 absolute w-full h-0;
-
+				@apply flex flex-col-reverse justify-center items-center -top-[400%] left-0 z-40 absolute w-full h-0;
 				transition: all 0s ease-out;
 				transition-delay: 0s;
 				list-style: none;
@@ -319,20 +322,21 @@ $menuItems: 7;
 						font-size: 22px;
 						line-height: 2.35;
 						width: 100%;
-						// Добавляем анимацию исчезновения текста
 						transition: opacity 0s ease;
 					}
 
 					&.auth {
 						@apply border-none;
 						> a {
+							display: flex;
+							justify-content: flex-start;
 							height: fit-content;
-							width: fit-content;
+							width: 92vw;
 							font-size: 4.53vw;
 							line-height: 5.6vw;
 							background: transparent;
 							color: #000000;
-							margin: 4.53vw 0;
+							padding: 6.53vw 1vw;
 							&:hover {
 								background: #313131;
 								color: white;
@@ -345,8 +349,10 @@ $menuItems: 7;
 
 						&.reg {
 							a {
+								display: flex;
+								justify-content: flex-start;
 								height: fit-content;
-								width: fit-content;
+								width: 92vw;
 								font-size: 4.53vw;
 								line-height: 5.6vw;
 								background: transparent;
@@ -377,7 +383,6 @@ $menuItems: 7;
 					transition: all 0s ease-in;
 					transition-delay: 0s;
 					margin-top: 15vw;
-					height: fit-content;
 					li {
 						transform: scale(1) translateY(0px);
 						opacity: 1;

@@ -23,7 +23,7 @@ const Rate = () => {
 	const settings = {
 		dots: false,
 		infinite: true,
-		speed: 500,
+		speed: 350,
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		swipeToSlide: true,

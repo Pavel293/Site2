@@ -100,10 +100,13 @@ const Footer: FC = () => {
 							<div className={styles.left}>
 								<div className={styles.textcontent}>
 									<div className={styles.text}>
-										<Link href="https://lk.telebon.ru/auth">
+										<Link href="https://lk.telebon.ru/auth" target={'_blank'}>
 											<p className={styles.authtext}>Войти</p>
 										</Link>
-										<Link href="https://lk.telebon.ru/registration">
+										<Link
+											href="https://lk.telebon.ru/registration"
+											target={'_blank'}
+										>
 											<p className={styles.authtext}>Регистрация</p>
 										</Link>
 										<Link href="/info/licence">
@@ -115,7 +118,10 @@ const Footer: FC = () => {
 										<Link href="/info/agreement">
 											<p>Пользовательское соглашение</p>
 										</Link>
-										<Link href="https://t.me/+Z4n8gxkEgQZmYjMy">
+										<Link
+											href="https://t.me/+Z4n8gxkEgQZmYjMy"
+											target={'_blank'}
+										>
 											<p>
 												<span>Чат тех. поддержки</span>
 												<IconInstance name={EIcons.contactsupportsmall} />
@@ -136,7 +142,10 @@ const Footer: FC = () => {
 								</Link>
 								<div className={styles.textcontent}>
 									<div className={styles.text}>
-										<Link href="https://lk.telebon.ru/registration">
+										<Link
+											href="https://lk.telebon.ru/registration"
+											target={'_blank'}
+										>
 											<p>
 												<IconInstance name={EIcons.howtoreg} />
 												<span>Зарегистрироваться</span>
@@ -147,7 +156,7 @@ const Footer: FC = () => {
 										</Link>
 									</div>
 									<div className={styles.text}>
-										<Link href="https://lk.telebon.ru/auth">
+										<Link href="https://lk.telebon.ru/auth" target={'_blank'}>
 											<p>
 												<IconInstance name={EIcons.accountcircle} />
 												<span>Личный кабинет</span>
@@ -158,7 +167,10 @@ const Footer: FC = () => {
 										</Link>
 									</div>
 									<div className={styles.text}>
-										<Link href="https://t.me/+Z4n8gxkEgQZmYjMy">
+										<Link
+											href="https://t.me/+Z4n8gxkEgQZmYjMy"
+											target={'_blank'}
+										>
 											<p>
 												<IconInstance name={EIcons.contactsupportsmall} />
 												<span>Чат технической поддержки</span>
@@ -193,10 +205,20 @@ const Footer: FC = () => {
 								</div>
 							</div>
 							{isMobile ? (
-								<div className={cn(styles.button, showAppUnavailableModal && styles.active)} onClick={() => setShowAppUnavailableModal(!showAppUnavailableModal)}>
+								<div
+									className={cn(
+										styles.button,
+										showAppUnavailableModal && styles.active,
+									)}
+									onClick={() =>
+										setShowAppUnavailableModal(!showAppUnavailableModal)
+									}
+								>
 									<IconInstance name={EIcons.downloadapp} />
 									{showAppUnavailableModal && (
-										<div className={cn(styles.appUnavailableModal, styles.active)}>
+										<div
+											className={cn(styles.appUnavailableModal, styles.active)}
+										>
 											<div className={styles.triangle}>
 												<IconInstance name={EIcons.triangle} />
 											</div>
@@ -204,12 +226,15 @@ const Footer: FC = () => {
 												<IconInstance name={EIcons.errorimage} />
 												<div className={styles.text}>
 													<p>
-														Приложение проходит проверку в AppStore и Google play.
-														Но Вы можете его скачать с нашей помощью.
+														Приложение проходит проверку в AppStore и Google
+														play. Но Вы можете его скачать с нашей помощью.
 													</p>
 													<p className={styles.write}>
 														Напишите в{' '}
-														<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
+														<Link
+															href={'https://t.me/+Z4n8gxkEgQZmYjMy'}
+															target={'_blank'}
+														>
 															<span>чат службы поддержки</span>
 														</Link>
 													</p>
@@ -220,13 +245,18 @@ const Footer: FC = () => {
 								</div>
 							) : (
 								<div
-									className={cn(styles.button, showAppUnavailableModal && styles.active)}
+									className={cn(
+										styles.button,
+										showAppUnavailableModal && styles.active,
+									)}
 									onMouseEnter={() => setShowAppUnavailableModal(true)}
 									onMouseLeave={() => setShowAppUnavailableModal(false)}
 								>
 									<IconInstance name={EIcons.downloadapp} />
 									{showAppUnavailableModal && (
-										<div className={cn(styles.appUnavailableModal, styles.active)}>
+										<div
+											className={cn(styles.appUnavailableModal, styles.active)}
+										>
 											<div className={styles.triangle}>
 												<IconInstance name={EIcons.triangle} />
 											</div>
@@ -234,8 +264,8 @@ const Footer: FC = () => {
 												<IconInstance name={EIcons.errorimage} />
 												<div className={styles.text}>
 													<p>
-														Приложение проходит проверку в AppStore и Google play.
-														Но Вы можете его скачать с нашей помощью.
+														Приложение проходит проверку в AppStore и Google
+														play. Но Вы можете его скачать с нашей помощью.
 													</p>
 													<p className={styles.write}>
 														Напишите в{' '}
