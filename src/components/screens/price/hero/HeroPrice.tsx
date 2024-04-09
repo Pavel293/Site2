@@ -13,15 +13,15 @@ interface HeroProps {
 }
 
 const HeroPrice: FC<HeroProps> = ({ nextBlockRef }) => {
-	const scrollToComponent = () => {
-		if (nextBlockRef.current) {
-			const windowHeight = window.innerHeight
-			const { top, height } = nextBlockRef.current.getBoundingClientRect()
-			const scrollPosition =
-				top + window.scrollY - (windowHeight / 2 - height / 2)
-			window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
-		}
-	}
+	// const scrollToComponent = () => {
+	// 	if (nextBlockRef.current) {
+	// 		const windowHeight = window.innerHeight
+	// 		const { top, height } = nextBlockRef.current.getBoundingClientRect()
+	// 		const scrollPosition =
+	// 			top + window.scrollY - (windowHeight / 2 - height / 2)
+	// 		window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
+	// 	}
+	// }
 	return (
 		<div className={cn(styles.fuck, 'wrapper')}>
 			<div className={styles.main_container}>
@@ -47,9 +47,9 @@ const HeroPrice: FC<HeroProps> = ({ nextBlockRef }) => {
 						Попробовать
 					</CommonButton>
 				</noindex>
-				<div className={styles.phone_image} onClick={scrollToComponent}>
-					<IconInstance name={EIcons.callimage} />
-				</div>
+				{/*<div className={styles.phone_image} onClick={scrollToComponent}>*/}
+				{/*	<IconInstance name={EIcons.callimage} />*/}
+				{/*</div>*/}
 			</div>
 		</div>
 	)

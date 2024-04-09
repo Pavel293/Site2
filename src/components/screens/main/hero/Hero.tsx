@@ -17,15 +17,15 @@ interface HeroProps {
 
 const Hero: FC<HeroProps> = ({ nextBlockRef }) => {
 	const isMobile = useMatchMedia('768')
-	const scrollToComponent = () => {
-		if (nextBlockRef.current) {
-			const windowHeight = window.innerHeight
-			const { top, height } = nextBlockRef.current.getBoundingClientRect()
-			const scrollPosition =
-				top + window.scrollY - (windowHeight / 2 - height / 2)
-			window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
-		}
-	}
+	// const scrollToComponent = () => {
+	// 	if (nextBlockRef.current) {
+	// 		const windowHeight = window.innerHeight
+	// 		const { top, height } = nextBlockRef.current.getBoundingClientRect()
+	// 		const scrollPosition =
+	// 			top + window.scrollY - (windowHeight / 2 - height / 2)
+	// 		window.scrollTo({ top: scrollPosition, behavior: 'smooth' })
+	// 	}
+	// }
 	return (
 		<div
 			className={cn(styles.fuck, 'wrapper')}
@@ -72,9 +72,9 @@ const Hero: FC<HeroProps> = ({ nextBlockRef }) => {
 					<div>
 						<Image src={HeroPhoneImage} alt={'Телеграм бот'} />
 					</div>
-					<div className={styles.phone_image} onClick={scrollToComponent}>
-						<IconInstance name={EIcons.callimage} />
-					</div>
+					{/*<div className={styles.phone_image} onClick={scrollToComponent}>*/}
+					{/*	<IconInstance name={EIcons.callimage} />*/}
+					{/*</div>*/}
 				</div>
 			</div>
 		</div>
