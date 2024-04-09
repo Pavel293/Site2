@@ -208,7 +208,7 @@ $line-height: 33px;
 		@include button-hover(ghost);
 	}
 	&:active {
-		background: #bec0ca;
+		background: #bec0ca !important;
 	}
 	&[disabled] {
 		background: $color-disabled;

@@ -21,6 +21,9 @@
 				flex-direction: column;
 				gap: 24px;
 				width: fit-content;
+				.logo {
+					width: fit-content;
+				}
 				.textcontent {
 					display: flex;
 					flex-direction: row;

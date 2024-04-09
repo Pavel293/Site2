@@ -68,7 +68,6 @@ const Footer: FC = () => {
 		const phoneNumber = `+7 (812) 507-63-33`
 		if (isMobile) {
 			window.location.href = `tel:${phoneNumber.replace(/\s/g, ``)}`
-			copyToClipboard(phoneNumber)
 		} else {
 			copyToClipboard(phoneNumber)
 		}
@@ -100,26 +99,26 @@ const Footer: FC = () => {
 							<div className={styles.left}>
 								<div className={styles.textcontent}>
 									<div className={styles.text}>
-										<Link href="https://lk.telebon.ru/auth" target={'_blank'}>
+										<Link href='https://lk.telebon.ru/auth' target={'_blank'}>
 											<p className={styles.authtext}>Войти</p>
 										</Link>
 										<Link
-											href="https://lk.telebon.ru/registration"
+											href='https://lk.telebon.ru/registration'
 											target={'_blank'}
 										>
 											<p className={styles.authtext}>Регистрация</p>
 										</Link>
-										<Link href="/info/licence">
+										<Link href='/info/licence'>
 											<p>Лицензионный договор-оферта</p>
 										</Link>
-										<Link href="/info/privacy-policy">
+										<Link href='/info/privacy-policy'>
 											<p>Политика конфиденциальности</p>
 										</Link>
-										<Link href="/info/agreement">
+										<Link href='/info/agreement'>
 											<p>Пользовательское соглашение</p>
 										</Link>
 										<Link
-											href="https://t.me/+Z4n8gxkEgQZmYjMy"
+											href='https://t.me/+Z4n8gxkEgQZmYjMy'
 											target={'_blank'}
 										>
 											<p>
@@ -135,15 +134,15 @@ const Footer: FC = () => {
 							</div>
 						) : (
 							<div className={styles.left}>
-								<Link href="/">
-									<div className={styles.logo}>
-										<Image src={LogoImageNew} alt="LogoImage" />
-									</div>
-								</Link>
+								<div className={styles.logo}>
+									<Link href='/'>
+										<Image src={LogoImageNew} alt='LogoImage' />
+									</Link>
+								</div>
 								<div className={styles.textcontent}>
 									<div className={styles.text}>
 										<Link
-											href="https://lk.telebon.ru/registration"
+											href='https://lk.telebon.ru/registration'
 											target={'_blank'}
 										>
 											<p>
@@ -151,24 +150,24 @@ const Footer: FC = () => {
 												<span>Зарегистрироваться</span>
 											</p>
 										</Link>
-										<Link href="/info/licence">
+										<Link href='/info/licence'>
 											<p>Лицензионный договор-оферта</p>
 										</Link>
 									</div>
 									<div className={styles.text}>
-										<Link href="https://lk.telebon.ru/auth" target={'_blank'}>
+										<Link href='https://lk.telebon.ru/auth' target={'_blank'}>
 											<p>
 												<IconInstance name={EIcons.accountcircle} />
 												<span>Личный кабинет</span>
 											</p>
 										</Link>
-										<Link href="/info/privacy-policy">
+										<Link href='/info/privacy-policy'>
 											<p>Политика конфиденциальности</p>
 										</Link>
 									</div>
 									<div className={styles.text}>
 										<Link
-											href="https://t.me/+Z4n8gxkEgQZmYjMy"
+											href='https://t.me/+Z4n8gxkEgQZmYjMy'
 											target={'_blank'}
 										>
 											<p>
@@ -176,7 +175,7 @@ const Footer: FC = () => {
 												<span>Чат технической поддержки</span>
 											</p>
 										</Link>
-										<Link href="/info/agreement">
+										<Link href='/info/agreement'>
 											<p>Пользовательское соглашение</p>
 										</Link>
 									</div>
@@ -280,9 +279,9 @@ const Footer: FC = () => {
 								</div>
 							)}
 							{isMobile ? (
-								<Link href="/">
+								<Link href='/'>
 									<div className={styles.logo}>
-										<Image src={LogoImageNew} alt="LogoImage" />
+										<Image src={LogoImageNew} alt='LogoImage' />
 									</div>
 								</Link>
 							) : null}
@@ -308,7 +307,7 @@ const Footer: FC = () => {
 							</div>
 							<p>
 								Продолжая использовать наш сайт, вы даете{' '}
-								<Link href="/info/cookie">
+								<Link href='/info/cookie'>
 									<span>согласие на использование файлов «cookie»</span>
 								</Link>
 								. Если вы не хотите, чтобы ваши данные обрабатывались, измените

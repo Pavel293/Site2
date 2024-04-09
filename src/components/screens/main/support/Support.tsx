@@ -47,7 +47,6 @@ const Support: FC<SupportProps> = ({ nextBlockRef }) => {
 		const phoneNumber = `+7 (812) 507-63-33`
 		if (isMobile) {
 			window.location.href = `tel:${phoneNumber.replace(/\s/g, ``)}`
-			copyToClipboard(phoneNumber)
 		} else {
 			copyToClipboard(phoneNumber)
 		}
