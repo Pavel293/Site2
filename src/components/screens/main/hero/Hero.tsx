@@ -42,7 +42,8 @@ const Hero: FC<HeroProps> = ({ nextBlockRef }) => {
 					</div>
 					<div className={styles.additionalText}>
 						<p itemProp="description">
-							Увеличьте количество записей и автоматизируйте клиентскую базу
+							Увеличьте количество записей и автоматизируйте работу клиентской
+							базы
 						</p>
 					</div>
 					<noindex>

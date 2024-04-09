@@ -38,7 +38,7 @@ const AboutUs: FC = () => {
 						<IconInstance name={EIcons.robot} />
 						<p className={styles.title}>Тelegram-бот</p>
 						<p>
-							Возможность легкой записи для Ваших Клиентов в самом популярном
+							Возможность легкой записи для Ваших клиентов в самом популярном
 							мессенджере
 						</p>
 					</div>
