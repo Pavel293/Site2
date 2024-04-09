@@ -38,10 +38,9 @@ const CommonInput: FC<CommonInputProps> = ({ palette }) => {
 	}
 
 	const onSubmit = async (values: FormValues) => {
-		setIsModalOpen(true)
 		try {
 			const response = await fetch(
-				`https://code101.ru/bot_prod/send_info?name=${values.name}&phone=${values.phoneNumber}`,
+				`https://code10.ru/bot_prod/send_info?name=${values.name}&phone=${values.phoneNumber}`,
 				{
 					method: 'POST',
 				},
