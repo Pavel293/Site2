@@ -121,6 +121,34 @@
 			height: 1px;
 			background: #dddfe0;
 		}
+		.underline {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			gap: 16px;
+			a {
+				svg {
+					transition: color 0.5s;
+					color: #00000066;
+				}
+
+				&:nth-child(2) {
+					margin-left: 16px;
+
+					svg {
+						&:hover {
+							color: #25a2e0;
+						}
+					}
+				}
+
+				&:nth-child(3):hover {
+					svg {
+						color: #0077ff;
+					}
+				}
+			}
+		}
 	}
 	.text {
 		display: flex;
@@ -277,6 +305,19 @@
 					}
 				}
 			}
+			.underline {
+				gap: 12px;
+				a {
+					svg {
+						width: 30px;
+						height: 30px;
+					}
+
+					&:nth-child(2) {
+						margin-left: 12px;
+					}
+				}
+			}
 		}
 		.text {
 			gap: 8px;
@@ -390,6 +431,19 @@
 								width: fit-content;
 							}
 						}
+					}
+				}
+			}
+			.underline {
+				gap: 8px;
+				a {
+					svg {
+						width: 25px;
+						height: 25px;
+					}
+
+					&:nth-child(2) {
+						margin-left: 8px;
 					}
 				}
 			}
@@ -514,6 +568,19 @@
 								width: fit-content;
 							}
 						}
+					}
+				}
+			}
+			.underline {
+				gap: 6px;
+				a {
+					svg {
+						width: 18px;
+						height: 18px;
+					}
+
+					&:nth-child(2) {
+						margin-left: 6px;
 					}
 				}
 			}
@@ -659,6 +726,22 @@
 			}
 			.line {
 				display: none;
+			}
+			.underline {
+				gap: 4vw;
+				a {
+					svg {
+						width: 8.53vw;
+						height: 8.53vw;
+					}
+
+					&:nth-child(2) {
+						margin-left: 49.6vw;
+					}
+				}
+				.text {
+					font-size: 4.26vw;
+				}
 			}
 		}
 		.text {

@@ -26,12 +26,10 @@ const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 					<meta property="og:title" content={titleMerge(title)} />
 					<meta property="og:url" content={currentUrl} />
 					<meta property="og:site_name" content="Telebon" />
-					<meta property="og:image" content={imageUrl} />
 					<meta
 						property="og:image"
 						content="https://telebon.ru/preview/mini_logo_preview.png"
 					/>
-					<meta property="og:image" content={imageUrl} />
 					<meta property="og:site_name" content={siteName} />
 					<meta
 						property="og:description"

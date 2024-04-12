@@ -59,6 +59,8 @@ import { CookieIcon } from './CookieIcon'
 import { ContentCopy } from './ContentCopy'
 import { Error } from './Error'
 import { Triangle } from './Triangle'
+import { TelegramLogo } from './TelegramLogo'
+import { VKLogo } from './VKLogo'
 
 export enum EIcons {
 	hover1,
@@ -122,6 +124,8 @@ export enum EIcons {
 	contentcopy,
 	errorimage,
 	triangle,
+	telegramlogo,
+	vklogo,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -186,6 +190,8 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.contentcopy]: ContentCopy,
 	[EIcons.errorimage]: Error,
 	[EIcons.triangle]: Triangle,
+	[EIcons.telegramlogo]: TelegramLogo,
+	[EIcons.vklogo]: VKLogo,
 }
 
 interface IIconProps {
