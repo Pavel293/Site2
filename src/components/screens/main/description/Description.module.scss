@@ -3,7 +3,7 @@
 	justify-content: center;
 	width: 100%;
 	flex-direction: column;
-	gap: 47px;
+	gap: 136px;
 	position: relative;
 	max-width: 1480px;
 	align-items: flex-start;
@@ -16,8 +16,15 @@
 			font-weight: 700;
 			font-size: 54px;
 			line-height: 69px;
-			margin-left: 16px;
 			color: #000000;
+		}
+		h3 {
+			font-size: 32px;
+			font-weight: 500;
+			line-height: 41px;
+			text-align: left;
+			color: #16161699;
+			margin-top: 16px;
 		}
 		.list {
 			width: fit-content;
@@ -30,16 +37,17 @@
 				align-items: center;
 				gap: 32px;
 				.circle {
-					width: 80px;
-					height: 80px;
+					width: 64px;
+					height: 64px;
 					border-radius: 100%;
-					background: #f6f6f6;
+					background: #161616;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					font-size: 48px;
+					font-size: 32px;
 					font-weight: 500;
-					line-height: 66px;
+					line-height: 44px;
+					color: #ffffff;
 				}
 				p {
 					color: #12092d;
@@ -53,10 +61,10 @@
 			user-select: none;
 			pointer-events: none;
 			position: absolute;
-			bottom: 0;
-			right: -146px;
+			bottom: 18%;
+			right: -46px;
 			img {
-				width: 842px;
+				width: 518px;
 			}
 		}
 	}
@@ -68,24 +76,28 @@
 @media (max-width: 1600px) {
 	.fuck {
 		max-width: 1200px;
-		gap: 35px;
+		gap: 100px;
 		.container {
 			gap: 48px;
 			h2 {
 				width: 1166px;
 				font-size: 44px;
 				line-height: 55px;
-				margin-left: 16px;
+			}
+			h3 {
+				font-size: 25px;
+				line-height: 27px;
+				margin-top: 14px;
 			}
 			.list {
 				gap: 24px;
 				.item {
 					gap: 24px;
 					.circle {
-						width: 60px;
-						height: 60px;
-						font-size: 32px;
-						line-height: 60px;
+						width: 40px;
+						height: 40px;
+						font-size: 25px;
+						line-height: 27px;
 					}
 					p {
 						font-size: 25px;
@@ -94,10 +106,9 @@
 				}
 			}
 			.image {
-				bottom: 0;
-				right: -90px;
+				right: 20px;
 				img {
-					width: 619px;
+					width: 370px;
 				}
 			}
 		}
@@ -107,24 +118,28 @@
 @media (max-width: 1300px) {
 	.fuck {
 		max-width: 900px;
-		gap: 27px;
+		gap: 70px;
 		.container {
 			gap: 32px;
 			h2 {
 				width: 866px;
 				font-size: 33px;
 				line-height: 45px;
-				margin-left: 14px;
+			}
+			h3 {
+				font-size: 19px;
+				line-height: 20px;
+				margin-top: 12px;
 			}
 			.list {
 				gap: 18px;
 				.item {
 					gap: 18px;
 					.circle {
-						width: 50px;
-						height: 50px;
-						font-size: 25px;
-						line-height: 50px;
+						width: 36px;
+						height: 36px;
+						font-size: 19px;
+						line-height: 20px;
 					}
 					p {
 						font-size: 19px;
@@ -133,10 +148,9 @@
 				}
 			}
 			.image {
-				bottom: 0;
-				right: -90px;
+				right: -10px;
 				img {
-					width: 519px;
+					width: 290px;
 				}
 			}
 		}
@@ -146,24 +160,28 @@
 @media (max-width: 992px) {
 	.fuck {
 		max-width: 600px;
-		gap: 27px;
+		gap: 50px;
 		.container {
 			gap: 24px;
 			h2 {
 				width: 566px;
 				font-size: 22px;
 				line-height: 30px;
-				margin-left: 14px;
+			}
+			h3 {
+				font-size: 12px;
+				line-height: 15px;
+				margin-top: 10px;
 			}
 			.list {
 				gap: 13px;
 				.item {
 					gap: 13px;
 					.circle {
-						width: 35px;
-						height: 35px;
-						font-size: 18px;
-						line-height: 35px;
+						width: 26px;
+						height: 26px;
+						font-size: 12px;
+						line-height: 15px;
 					}
 					p {
 						font-size: 12px;
@@ -172,10 +190,9 @@
 				}
 			}
 			.image {
-				bottom: 0;
 				right: -50px;
 				img {
-					width: 359px;
+					width: 210px;
 				}
 			}
 		}
@@ -211,9 +228,9 @@
 					.circle {
 						width: 12.8vw;
 						height: 12.8vw;
-						font-size: 6.3vw;
+						font-size: 4.1vw;
 						font-weight: 500;
-						line-height: 6.8vw;
+						line-height: 4.5vw;
 						text-align: center;
 					}
 					p {

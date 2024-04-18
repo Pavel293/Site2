@@ -4,10 +4,13 @@ import cn from 'classnames'
 import { propoData } from '@/screens/main/description/promo-data'
 import Image from 'next/image'
 import DescriptionTelebonImage from '../../../../assets/icons/DescriptionTelebonImage.png'
+import DescriptionTelebonImageNew from '../../../../assets/icons/DescriptionTelebonImageNew.png'
 import Link from 'next/link'
 import CommonButton from '@/ui/button/CommonButton'
+import useMatchMedia from '@/hooks/useMatchMedia'
 
 const Decription = () => {
+	const isMobile = useMatchMedia('768')
 	return (
 		<>
 			<div
@@ -16,17 +19,31 @@ const Decription = () => {
 				itemType="http://schema.org/Intangible"
 			>
 				<div className={styles.container}>
-					<h2 itemProp="name">
-						Telebon позволяет создать Telegram-бота для онлайн-записи клиентов
-						на услуги
-					</h2>
+					{isMobile ? (
+						<div>
+							<h2 itemProp="name">
+								Telebon позволяет создать Telegram-бота для онлайн-записи
+								клиентов на услуги
+							</h2>
+						</div>
+					) : (
+						<div>
+							<h2 itemProp="name">Что мы предлагаем?</h2>
+							<h3>
+								Telebon позволяет создать Telegram-бота для онлайн-записи
+								клиентов на услуги
+							</h3>
+						</div>
+					)}
 					<div className={styles.image}>
-						<Image
-							src={DescriptionTelebonImage}
-							alt={
-								'Telebon позволяет создать Telegram-бота для онлайн-записи клиентов на услуги'
-							}
-						/>
+						<div>
+							<Image
+								src={DescriptionTelebonImageNew}
+								alt={
+									'Telebon позволяет создать Telegram-бота для онлайн-записи клиентов на услуги'
+								}
+							/>
+						</div>
 					</div>
 					<div className={styles.list}>
 						{propoData.map((item, index) => (
@@ -44,7 +61,7 @@ const Decription = () => {
 						<CommonButton
 							href="https://lk.telebon.ru/registration"
 							color={'orange'}
-							size={'s'}
+							size={'m'}
 							target={'_blank'}
 						>
 							Попробовать

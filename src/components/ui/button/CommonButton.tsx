@@ -4,7 +4,7 @@ import styles from './CommonButton.module.scss'
 
 interface ButtonProps {
 	href?: string
-	color?: 'primary' | 'orange' | 'gray' | 'gray02' | 'ghost'
+	color?: 'primary' | 'orange' | 'gray' | 'gray02' | 'ghost' | 'black'
 	size?: 'l' | 'm' | 's' | 'xs'
 	children: React.ReactNode
 	className?: string

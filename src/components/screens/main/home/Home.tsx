@@ -9,6 +9,7 @@ import Partner from '@/screens/main/partner/Partner'
 import Tarif from '@/screens/main/tarif/Tarif'
 import AboutUs from '@/screens/main/aboutus/AboutUs'
 import Support from '@/screens/main/support/Support'
+import Feedback from '@/screens/main/feedback/Feedback'
 
 const Home: FC = () => {
 	const nextBlockRef = useRef<HTMLDivElement>(null)
@@ -28,6 +29,7 @@ const Home: FC = () => {
 				<Rate />
 				<Import />
 				<Partner />
+				<Feedback />
 				<Tarif />
 				<AboutUs />
 				<Support nextBlockRef={nextBlockRef} />

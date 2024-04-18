@@ -4,7 +4,7 @@ import cn from 'classnames'
 import Image from 'next/image'
 import HeroChatImage from '../../../../assets/icons/HeroChatImage.png'
 import HeroChatImageMobile from '../../../../assets/icons/HeroChatImageMobile.png'
-import HeroPhoneImage from '../../../../assets/icons/HeroPhoneImageNew.png'
+import HeroPhoneImage from '../../../../assets/icons/HeroPhoneImage.png'
 import Link from 'next/link'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import useMatchMedia from '@/hooks/useMatchMedia'
@@ -16,7 +16,6 @@ interface HeroProps {
 }
 
 const Hero: FC<HeroProps> = ({ nextBlockRef }) => {
-	const isMobile = useMatchMedia('768')
 	// const scrollToComponent = () => {
 	// 	if (nextBlockRef.current) {
 	// 		const windowHeight = window.innerHeight
@@ -58,18 +57,6 @@ const Hero: FC<HeroProps> = ({ nextBlockRef }) => {
 					</noindex>
 				</div>
 				<div className={styles.right}>
-					{isMobile ? (
-						<div>
-							<Image
-								src={HeroChatImageMobile}
-								alt={'Онлайн запись на услуги'}
-							/>
-						</div>
-					) : (
-						<div>
-							<Image src={HeroChatImage} alt={'Онлайн запись на услуги'} />
-						</div>
-					)}
 					<div>
 						<Image src={HeroPhoneImage} alt={'Телеграм бот'} />
 					</div>

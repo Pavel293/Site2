@@ -1,9 +1,10 @@
 $color-primary: #007bff;
 $color-orange: #ff7f00;
-$color-gray: #6c757d;
+$color-gray: #616161;
 $color-gray02: #495057;
 $color-disabled: #cccccc;
 $color-ghost: transparent;
+$color-black: #252525;
 
 $font-weight: 700;
 $line-height: 33px;
@@ -144,29 +145,36 @@ $line-height: 33px;
 	} @else if $color == ghost {
 		background: $color-ghost;
 		color: #000;
+	} @else if $color == black {
+		background: $color-black;
+		color: #fff;
 	}
 }
 
 @mixin button-hover($color) {
 	@if $color == primary {
 		&:hover {
-			background: darken($color-primary, 10%);
+			background: #1f62ed;
 		}
 	} @else if $color == orange {
 		&:hover {
-			background: darken($color-orange, 10%);
+			background: #f0673d;
 		}
 	} @else if $color == gray {
 		&:hover {
-			background: darken($color-gray, 10%);
+			background: #414141;
 		}
 	} @else if $color == gray02 {
 		&:hover {
-			background: darken($color-gray02, 10%);
+			background: #293139;
 		}
 	} @else if $color == ghost {
 		&:hover {
-			background: darken($color-ghost, 10%);
+			background: #ff7043;
+		}
+	} @else if $color == black {
+		&:hover {
+			background: #246bfd;
 		}
 	}
 }
@@ -206,6 +214,10 @@ $line-height: 33px;
 	&.ghost {
 		@include button-color(ghost);
 		@include button-hover(ghost);
+	}
+	&.black {
+		@include button-color(black);
+		@include button-hover(black);
 	}
 	&:active {
 		background: #bec0ca !important;
