@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import styles from './Feedback.module.scss'
 import cn from 'classnames'
 import { propoData } from './promo-data'
@@ -16,11 +16,6 @@ export interface ICard {
 	image: React.ReactNode
 	button: string
 	link: string
-}
-
-interface Props {
-	data: ICard[]
-	arrowRef: React.MutableRefObject<null>
 }
 
 const Feedback = () => {

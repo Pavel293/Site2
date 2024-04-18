@@ -2,9 +2,9 @@ import React, { FC } from 'react'
 import styles from './SliderItem.module.scss'
 import { ICard } from '@/screens/main/feedback/Feedback'
 import cn from 'classnames'
-import CommonButton from '@/ui/button/CommonButton'
 import useMatchMedia from '@/hooks/useMatchMedia'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface IProps {
 	item: ICard
@@ -27,7 +27,10 @@ const SliderItem: FC<IProps> = props => {
 				{isMobile ? (
 					<>
 						<div>
-							<div className={styles.image}>{item.image}</div>
+							<div className={styles.image}>
+								{/*<Image src={item.image} alt={''} />*/}
+								{item.image}
+							</div>
 							<div className={styles.master}>
 								<div className={styles.name}>
 									<p>{item.name}</p>

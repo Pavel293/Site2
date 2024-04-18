@@ -1,9 +1,7 @@
-import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
-import { BrushOutline } from '../../../../assets/icons/BrushOutline'
 import Image from 'next/image'
 import React from 'react'
 import MasterValeria from '../../../../assets/icons/MasterValeria.png'
-import MasterDiana from '../../../../assets/icons/Masterdiana.png'
+import MasterDiana from '../../../../assets/icons/MasterDiana.png'
 import MasterKristina from '../../../../assets/icons/MasterKristina.png'
 
 export const propoData = [
