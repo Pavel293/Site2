@@ -7,12 +7,14 @@ import { FormValues } from '@/screens/main/support/Support'
 import CommonButton from '@/ui/button/CommonButton'
 import styles from './CommonInput.module.scss'
 import themelight from '../../../styles/colors'
+import useMatchMedia from '@/hooks/useMatchMedia'
 
 interface CommonInputProps {
 	palette?: 'primary' | 'orange'
 }
 
 const CommonInput: FC<CommonInputProps> = ({ palette }) => {
+	const isMobile = useMatchMedia('768')
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const initialValues = {
 		name: '',
@@ -86,7 +88,8 @@ const CommonInput: FC<CommonInputProps> = ({ palette }) => {
 							value={formik.values.name}
 							onChange={formik.handleChange}
 							style={{
-								background: palette === 'primary' ? '#F5F5F5' : '#FFFFFF',
+								background:
+									isMobile || palette === 'primary' ? '#F5F5F5' : '#FFFFFF',
 							}}
 						/>
 						<InputMask
@@ -99,7 +102,8 @@ const CommonInput: FC<CommonInputProps> = ({ palette }) => {
 							value={formik.values.phoneNumber}
 							onChange={formik.handleChange}
 							style={{
-								background: palette === 'primary' ? '#F5F5F5' : '#FFFFFF',
+								background:
+									isMobile || palette === 'primary' ? '#F5F5F5' : '#FFFFFF',
 							}}
 						/>
 					</div>

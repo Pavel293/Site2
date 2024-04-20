@@ -41,7 +41,7 @@ export const propoData = [
 		),
 		name: 'Диана',
 		profession: 'Бровист-визажист',
-		experience: 'более 1,5-х лет',
+		experience: 'более 1,5 лет',
 		city: 'Ульяновск',
 		image: <Image src={MasterDiana} alt={''} />,
 		button: 'Записаться к Диане',

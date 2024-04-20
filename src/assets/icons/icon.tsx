@@ -62,6 +62,7 @@ import { Triangle } from './Triangle'
 import { TelegramLogo } from './TelegramLogo'
 import { VKLogo } from './VKLogo'
 import { DollarCircle } from './DollarCircle'
+import { SuccessOutline } from './SuccessOutline'
 
 export enum EIcons {
 	hover1,
@@ -128,6 +129,7 @@ export enum EIcons {
 	telegramlogo,
 	vklogo,
 	dollarcircle,
+	successoutline,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -195,6 +197,7 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.telegramlogo]: TelegramLogo,
 	[EIcons.vklogo]: VKLogo,
 	[EIcons.dollarcircle]: DollarCircle,
+	[EIcons.successoutline]: SuccessOutline,
 }
 
 interface IIconProps {

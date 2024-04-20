@@ -76,6 +76,9 @@ const Header: FC = () => {
 								</div>
 							</Link>
 							<div className={styles.tabs}>
+								<Link href="/solution/journal">
+									<div className={styles.item}>Возможности</div>
+								</Link>
 								<Link href="/price">
 									<div className={styles.item}>Ценовая политика</div>
 								</Link>
@@ -99,6 +102,13 @@ const Header: FC = () => {
 								<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
 									<Link href="/telegram-bot">
 										<span>Бот для онлайн-записи</span>
+									</Link>
+								</li>
+							) : null}
+							{isMobile ? (
+								<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
+									<Link href="/solution/journal">
+										<span>Возможности</span>
 									</Link>
 								</li>
 							) : null}

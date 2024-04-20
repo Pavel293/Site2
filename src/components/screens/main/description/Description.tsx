@@ -64,7 +64,7 @@ const Decription = () => {
 							size={'m'}
 							target={'_blank'}
 						>
-							Попробовать
+							Подключить
 						</CommonButton>
 					</noindex>
 				</div>
