@@ -19,22 +19,12 @@ const Decription = () => {
 				itemType="http://schema.org/Intangible"
 			>
 				<div className={styles.container}>
-					{isMobile ? (
-						<div>
-							<h2 itemProp="name">
-								Telebon позволяет создать Telegram-бота для онлайн-записи
-								клиентов на услуги
-							</h2>
-						</div>
-					) : (
-						<div>
-							<h2 itemProp="name">Что мы предлагаем?</h2>
-							<h3>
-								Telebon позволяет создать Telegram-бота для онлайн-записи
-								клиентов на услуги
-							</h3>
-						</div>
-					)}
+					<div>
+						<h2 itemProp="name">
+							Telebon позволяет создать Telegram-бота для онлайн-записи клиентов
+							на услуги
+						</h2>
+					</div>
 					<div className={styles.image}>
 						<div>
 							<Image

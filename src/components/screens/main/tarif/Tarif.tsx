@@ -17,7 +17,7 @@ const Tarif: FC = () => {
 					</p>
 				</div>
 				<noindex>
-					<CommonButton href="/price" color={'black'} size={'l'}>
+					<CommonButton href="/price" color={'orange'} size={'l'}>
 						Попробовать
 					</CommonButton>
 				</noindex>

@@ -5,7 +5,6 @@ Disallow: /api/
 Allow: /public/
 Allow: /price
 Allow: /telegram-bot
-Allow: /solution
 Disallow: /node_modules/
 Disallow: /baza-znaniy
 Disallow: /info
