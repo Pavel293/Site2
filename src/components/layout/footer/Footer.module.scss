@@ -50,7 +50,7 @@
 						background-color: #ffffff;
 						border-radius: 20px;
 						padding: 32px;
-						height: 164px;
+						height: 178px;
 						width: 580px;
 						z-index: 9999;
 						text-align: center;
@@ -75,12 +75,8 @@
 								width: 48px;
 								position: relative;
 							}
-							.text {
-								display: flex;
-								flex-direction: column;
-								margin: 0;
+							.text_app {
 								width: 450px;
-								gap: 0;
 								p {
 									font-size: 18px;
 									font-weight: 500;
@@ -89,15 +85,7 @@
 									text-align: left;
 									color: #000000;
 								}
-								.write {
-									color: #00000099;
-								}
 								span {
-									font-size: 18px;
-									font-weight: 500;
-									line-height: 24.59px;
-									letter-spacing: 0.03em;
-									text-align: left;
 									color: #246bfd;
 								}
 							}
@@ -124,7 +112,7 @@
 		.underline {
 			display: flex;
 			flex-direction: row;
-			align-items: flex-end;
+			align-items: center;
 			gap: 16px;
 			a {
 				svg {
@@ -269,13 +257,9 @@
 									height: 40px;
 									width: 40px;
 								}
-								.text {
+								.text_app {
 									width: 340px;
 									p {
-										font-size: 13px;
-										line-height: 18px;
-									}
-									span {
 										font-size: 13px;
 										line-height: 18px;
 									}
@@ -398,13 +382,9 @@
 									height: 32px;
 									width: 32px;
 								}
-								.text {
+								.text_app {
 									width: 275px;
 									p {
-										font-size: 11px;
-										line-height: 15px;
-									}
-									span {
 										font-size: 11px;
 										line-height: 15px;
 									}
@@ -535,13 +515,9 @@
 									height: 26px;
 									width: 26px;
 								}
-								.text {
+								.text_app {
 									width: 200px;
 									p {
-										font-size: 8px;
-										line-height: 12px;
-									}
-									span {
 										font-size: 8px;
 										line-height: 12px;
 									}
@@ -679,13 +655,9 @@
 									height: 8.53vw;
 									width: 8.53vw;
 								}
-								.text {
+								.text_app {
 									width: 70vw;
 									p {
-										font-size: 2.9vw;
-										line-height: 5vw;
-									}
-									span {
 										font-size: 2.9vw;
 										line-height: 5vw;
 									}

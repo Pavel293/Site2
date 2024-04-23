@@ -4,9 +4,9 @@
 	margin: 0 20px;
 
 	.card {
-		width: 520px;
-		height: 632px;
-		padding: 24px 10px 48px 48px;
+		width: 624px;
+		height: 586px;
+		padding: 48px 24px;
 		background: #f6f6f6;
 		display: flex;
 		flex-direction: column;
@@ -16,7 +16,7 @@
 
 		.feedback {
 			p {
-				font-size: 20px;
+				font-size: 16px;
 				font-weight: 600;
 				line-height: 27.32px;
 				text-align: left;
@@ -28,12 +28,10 @@
 			display: flex;
 			flex-direction: column;
 			gap: 16px;
-			width: 320px;
-
 			p {
 				font-size: 18px;
 				font-weight: 600;
-				line-height: 24.59px;
+				line-height: 24px;
 				text-align: left;
 				color: #16161699;
 			}
@@ -44,9 +42,9 @@
 
 			.name {
 				p {
-					font-size: 32px;
+					font-size: 24px;
 					font-weight: 700;
-					line-height: 43.71px;
+					line-height: 33px;
 					text-align: left;
 					color: #161616;
 				}
@@ -54,16 +52,35 @@
 		}
 
 		.image {
-			position: absolute;
-			bottom: -43px;
-			right: -80px;
-
+			display: flex;
+			flex-direction: row;
+			gap: 16px;
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 21.86px;
+			text-align: left;
+			color: #ffffff99;
+			align-items: center;
 			img {
-				width: 280px;
-				height: 280px;
+				width: 100px;
+				height: 100px;
+				border-radius: 100%;
 			}
 		}
-
+		.button_container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			svg {
+				width: 54px;
+				height: 54px;
+				color: #16161666;
+				transition: color 0.5s;
+				&:hover {
+					color: #0077ff;
+				}
+			}
+		}
 		button {
 			background: #246bfd;
 			padding: 16px 24px;
@@ -86,13 +103,11 @@
 	}
 
 	.card-2 {
-		padding: 24px 28px 48px 19px;
 		background: #252525;
 
 		.feedback {
 			p {
 				color: #ffffff;
-				font-size: 17px;
 			}
 		}
 
@@ -113,57 +128,66 @@
 		}
 
 		.image {
-			right: -92px;
+		}
+		.button_container {
+			svg {
+				color: #ffffff66;
+			}
 		}
 	}
 
 	.card-3 {
-		padding: 24px 33px 48px 48px;
 		background: #f6f6f6;
 
 		.image {
-			right: -122px;
+			color: #16161699;
 		}
 	}
 }
 
 @media (max-width: 1600px) {
 	.container {
-		width: 500px;
-		height: 575px;
+		width: 524px;
+		height: 486px;
 		margin: 0 16px;
 		.card {
-			width: 420px;
-			height: 532px;
-			padding: 22px 8px 40px 40px;
+			width: 524px;
+			height: 486px;
+			padding: 20px 40px;
 			border-radius: 20px;
 			.feedback {
 				p {
-					font-size: 18px;
-					line-height: 24px;
+					font-size: 15px;
+					line-height: 20px;
 				}
 			}
 
 			.master {
-				gap: 14px;
-				width: 260px;
+				gap: 6px;
 				p {
 					font-size: 15px;
-					line-height: 22px;
+					line-height: 17px;
 				}
 				.name {
 					p {
-						font-size: 26px;
+						font-size: 20px;
 						line-height: 30px;
 					}
 				}
 			}
 			.image {
-				bottom: -30px;
-				right: -80px;
+				font-size: 12px;
+				line-height: 16px;
+				gap: 12px;
 				img {
-					width: 240px;
-					height: 240px;
+					width: 80px;
+					height: 80px;
+				}
+			}
+			.button_container {
+				svg {
+					width: 44px;
+					height: 44px;
 				}
 			}
 			button {
@@ -174,66 +198,52 @@
 				line-height: 20px;
 			}
 		}
-
-		.card-2 {
-			padding: 22px 26px 40px 17px;
-			.feedback {
-				p {
-					font-size: 13px;
-					line-height: 19px;
-				}
-			}
-			.image {
-				right: -92px;
-			}
-		}
-
-		.card-3 {
-			padding: 22px 30px 40px 40px;
-			.image {
-				right: -122px;
-			}
-		}
 	}
 }
 
 @media (max-width: 1300px) {
 	.container {
-		width: 400px;
-		height: 475px;
+		width: 424px;
+		height: 386px;
 		margin: 0 12px;
 		.card {
-			width: 320px;
-			height: 432px;
-			padding: 20px 6px 32px 32px;
+			width: 424px;
+			height: 386px;
+			padding: 16px 32px;
 			border-radius: 18px;
 			.feedback {
 				p {
-					font-size: 14px;
-					line-height: 20px;
+					font-size: 11px;
+					line-height: 15px;
 				}
 			}
 
 			.master {
-				gap: 12px;
-				width: 175px;
+				gap: 6px;
 				p {
-					font-size: 10px;
-					line-height: 18px;
+					font-size: 11px;
+					line-height: 15px;
 				}
 				.name {
 					p {
-						font-size: 18px;
-						line-height: 22px;
+						font-size: 16px;
+						line-height: 20px;
 					}
 				}
 			}
 			.image {
-				bottom: -30px;
-				right: -60px;
+				font-size: 10px;
+				line-height: 14px;
+				gap: 8px;
 				img {
-					width: 190px;
-					height: 190px;
+					width: 60px;
+					height: 60px;
+				}
+			}
+			.button_container {
+				svg {
+					width: 34px;
+					height: 34px;
 				}
 			}
 			button {
@@ -244,49 +254,28 @@
 				line-height: 18px;
 			}
 		}
-
-		.card-2 {
-			padding: 20px 24px 32px 13px;
-			.feedback {
-				p {
-					font-size: 11px;
-					line-height: 14px;
-				}
-			}
-			.image {
-				right: -52px;
-			}
-		}
-
-		.card-3 {
-			padding: 20px 26px 32px 32px;
-			.image {
-				right: -82px;
-			}
-		}
 	}
 }
 
 @media (max-width: 992px) {
 	.container {
-		width: 300px;
-		height: 375px;
+		width: 284px;
+		height: 266px;
 		margin: 0 10px;
 		.card {
-			width: 220px;
-			height: 332px;
-			padding: 18px 4px 26px 26px;
+			width: 284px;
+			height: 266px;
+			padding: 12px 24px;
 			border-radius: 16px;
 			.feedback {
 				p {
-					font-size: 9px;
-					line-height: 14px;
+					font-size: 7px;
+					line-height: 11px;
 				}
 			}
 
 			.master {
 				gap: 6px;
-				width: 125px;
 				p {
 					font-size: 7px;
 					line-height: 11px;
@@ -299,11 +288,18 @@
 				}
 			}
 			.image {
-				bottom: -20px;
-				right: -50px;
+				font-size: 6px;
+				line-height: 10px;
+				gap: 4px;
 				img {
-					width: 140px;
-					height: 140px;
+					width: 40px;
+					height: 40px;
+				}
+			}
+			.button_container {
+				svg {
+					width: 24px;
+					height: 24px;
 				}
 			}
 			button {
@@ -312,26 +308,6 @@
 				border-radius: 6px;
 				font-size: 7px;
 				line-height: 16px;
-			}
-		}
-
-		.card-2 {
-			padding: 18px 20px 26px 18px;
-			.feedback {
-				p {
-					font-size: 7px;
-					line-height: 11px;
-				}
-			}
-			.image {
-				right: -52px;
-			}
-		}
-
-		.card-3 {
-			padding: 18px 18px 26px 18px;
-			.image {
-				right: -62px;
 			}
 		}
 	}

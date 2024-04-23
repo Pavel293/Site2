@@ -223,17 +223,15 @@ const Footer: FC = () => {
 											</div>
 											<div className={styles.box}>
 												<IconInstance name={EIcons.errorimage} />
-												<div className={styles.text}>
+												<div className={styles.text_app}>
 													<p>
 														Приложение проходит проверку в AppStore и Google
-														play. Но Вы можете его скачать с нашей помощью.
-													</p>
-													<p className={styles.write}>
-														Напишите в{' '}
-														<Link
-															href={'https://t.me/+Z4n8gxkEgQZmYjMy'}
-															target={'_blank'}
-														>
+														play (Для Android доступно скачивание с{' '}
+														<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
+															<span>RuStore</span>
+														</Link>
+														). Для установки на устройства Apple напишите в
+														<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
 															<span>чат службы поддержки</span>
 														</Link>
 													</p>
@@ -261,13 +259,14 @@ const Footer: FC = () => {
 											</div>
 											<div className={styles.box}>
 												<IconInstance name={EIcons.errorimage} />
-												<div className={styles.text}>
+												<div className={styles.text_app}>
 													<p>
 														Приложение проходит проверку в AppStore и Google
-														play. Но Вы можете его скачать с нашей помощью.
-													</p>
-													<p className={styles.write}>
-														Напишите в{' '}
+														play (Для Android доступно скачивание с{' '}
+														<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
+															<span>RuStore</span>
+														</Link>
+														). Для установки на устройства Apple напишите в
 														<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
 															<span>чат службы поддержки</span>
 														</Link>

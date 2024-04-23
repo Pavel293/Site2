@@ -5,6 +5,7 @@ import cn from 'classnames'
 import useMatchMedia from '@/hooks/useMatchMedia'
 import Link from 'next/link'
 import Image from 'next/image'
+import { EIcons, Icon as IconInstance } from '../../../../../assets/icons/icon'
 
 interface IProps {
 	item: ICard
@@ -49,8 +50,9 @@ const SliderItem: FC<IProps> = props => {
 					</>
 				) : (
 					<>
-						<div className={styles.feedback}>
-							<p>{item.feedback}</p>
+						<div className={styles.image}>
+							{item.image}
+							<div>{item.description}</div>
 						</div>
 						<div className={styles.master}>
 							<div className={styles.name}>
@@ -63,11 +65,18 @@ const SliderItem: FC<IProps> = props => {
 								<br />
 								Город: <span>{item.city}</span>
 							</p>
+						</div>
+						<div className={styles.feedback}>
+							<p>{item.feedback}</p>
+						</div>
+						<div className={styles.button_container}>
 							<Link href={item.link} target={'_blank'}>
 								<button>{item.button}</button>
 							</Link>
+							<Link href={item.linkvk} target={'_blank'}>
+								<IconInstance name={EIcons.vklogo} />
+							</Link>
 						</div>
-						<div className={styles.image}>{item.image}</div>
 					</>
 				)}
 			</div>
