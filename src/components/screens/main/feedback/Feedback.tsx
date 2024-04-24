@@ -11,13 +11,14 @@ export interface ICard {
 	feedback: React.ReactNode
 	name: string
 	profession: React.ReactNode
-	experience: string
+	experience: string | null
 	city: string
 	image: React.ReactNode
 	button: string
 	link: string
 	linkvk: string
 	description: React.ReactNode
+	social: string
 }
 
 const Feedback = () => {
@@ -54,17 +55,17 @@ const Feedback = () => {
 					<Slider {...settings} ref={arrowRef}>
 						{cardDisc}
 					</Slider>
-					{/*<div*/}
-					{/*	className={`${styles.switch} ${styles.right}`}*/}
-					{/*	onClick={() => {*/}
-					{/*		if (arrowRef && arrowRef.current) {*/}
-					{/*			//@ts-ignore*/}
-					{/*			arrowRef.current.slickNext()*/}
-					{/*		}*/}
-					{/*	}}*/}
-					{/*>*/}
-					{/*	<IconInstance name={EIcons.arrowforwardright} />*/}
-					{/*</div>*/}
+					<div
+						className={`${styles.switch} ${styles.right}`}
+						onClick={() => {
+							if (arrowRef && arrowRef.current) {
+								//@ts-ignore
+								arrowRef.current.slickNext()
+							}
+						}}
+					>
+						<IconInstance name={EIcons.arrowforwardright} />
+					</div>
 				</div>
 			</div>
 		</>

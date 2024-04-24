@@ -15,9 +15,9 @@ interface IProps {
 const SliderItem: FC<IProps> = props => {
 	const { item, index } = props
 	const cardClass =
-		index === 0
+		index === 1
 			? `${styles.card} ${styles['card-2']}`
-			: index === 1
+			: index === 2
 				? `${styles.card} ${styles['card-3']}`
 				: `${styles.card} ${styles['card-3']}`
 	const isMobile = useMatchMedia('768')
@@ -50,31 +50,41 @@ const SliderItem: FC<IProps> = props => {
 					</>
 				) : (
 					<>
-						<div className={styles.image}>
-							{item.image}
-							<div>{item.description}</div>
-						</div>
-						<div className={styles.master}>
-							<div className={styles.name}>
-								<p>{item.name}</p>
+						<div>
+							<div className={styles.image}>
+								{item.image}
+								<div>{item.description}</div>
 							</div>
-							<p>
-								Профессия: <span>{item.profession}</span>
-								<br />
-								Стаж работы: <span>{item.experience}</span>
-								<br />
-								Город: <span>{item.city}</span>
-							</p>
-						</div>
-						<div className={styles.feedback}>
-							<p>{item.feedback}</p>
+							<div className={styles.master}>
+								<div className={styles.name}>
+									<p>{item.name}</p>
+								</div>
+								<p>
+									Профессия: <span>{item.profession}</span>
+									<br />
+									{item.experience ? (
+										<>
+											Стаж работы: <span>{item.experience}</span>
+											<br />
+										</>
+									) : null}
+									Город: <span>{item.city}</span>
+								</p>
+							</div>
+							<div className={styles.feedback}>
+								<p>{item.feedback}</p>
+							</div>
 						</div>
 						<div className={styles.button_container}>
 							<Link href={item.link} target={'_blank'}>
 								<button>{item.button}</button>
 							</Link>
 							<Link href={item.linkvk} target={'_blank'}>
-								<IconInstance name={EIcons.vklogo} />
+								{item.social === 'vk' ? (
+									<IconInstance name={EIcons.vklogo} />
+								) : (
+									<IconInstance name={EIcons.telegramlogo} />
+								)}
 							</Link>
 						</div>
 					</>

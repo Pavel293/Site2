@@ -61,7 +61,8 @@ $menuItems: 7;
 		.logo {
 			display: flex;
 			align-items: center;
-
+			user-select: none;
+			pointer-events: none;
 			a {
 				@apply flex h-[30px] gap-10 items-center relative w-fit;
 			}
