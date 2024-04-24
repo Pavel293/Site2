@@ -83,9 +83,8 @@
 		}
 		button {
 			background: #246bfd;
-			padding: 16px 24px;
+			width: 234px;
 			height: 54px;
-			width: fit-content;
 			border-radius: 12px;
 			color: white;
 			font-size: 16px;
@@ -93,6 +92,9 @@
 			line-height: 22px;
 			text-align: left;
 			transition: 0.5s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			&:hover {
 				background: #1f62ed;
 			}
@@ -191,11 +193,11 @@
 				}
 			}
 			button {
-				padding: 12px 20px;
 				height: 44px;
 				border-radius: 10px;
 				font-size: 14px;
 				line-height: 20px;
+				width: 204px;
 			}
 		}
 	}
@@ -247,11 +249,11 @@
 				}
 			}
 			button {
-				padding: 8px 14px;
 				height: 34px;
 				border-radius: 8px;
 				font-size: 10px;
 				line-height: 18px;
+				width: 154px;
 			}
 		}
 	}
@@ -303,11 +305,11 @@
 				}
 			}
 			button {
-				padding: 4px 10px;
 				height: 24px;
 				border-radius: 6px;
 				font-size: 7px;
 				line-height: 16px;
+				width: 110px;
 			}
 		}
 	}

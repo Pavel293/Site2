@@ -41,7 +41,7 @@ export const propoData = [
 		image: <Image src={MasterDiana} alt={''} />,
 		button: 'Записаться к Диане',
 		link: 'https://t.me/DkMakeupBrows_bot',
-		linkvk: 'https://vk.com/sugar_kristi',
+		linkvk: 'https://vk.com/feeldisha',
 		description: (
 			<>
 				“Сделаю красивые брови и макияж любой сложности,
@@ -69,7 +69,7 @@ export const propoData = [
 		image: <Image src={MasterKristina} alt={''} />,
 		button: 'Записаться к Кристине',
 		link: 'https://t.me/Massagedepilationbot',
-		linkvk: 'https://vk.com/feeldisha',
+		linkvk: 'https://vk.com/sugar_kristi',
 		description: (
 			<>
 				“Девочки, приходите ко мне на аппаратный массаж!

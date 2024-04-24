@@ -227,10 +227,14 @@ const Footer: FC = () => {
 													<p>
 														Приложение проходит проверку в AppStore и Google
 														play (Для Android доступно скачивание с{' '}
-														<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
+														<Link
+															href={
+																'https://apps.rustore.ru/app/ru.lk.telebon.twa?ysclid=lvdj286i8m397367225'
+															}
+														>
 															<span>RuStore</span>
 														</Link>
-														). Для установки на устройства Apple напишите в
+														). Для установки на устройства Apple напишите в{' '}
 														<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
 															<span>чат службы поддержки</span>
 														</Link>
