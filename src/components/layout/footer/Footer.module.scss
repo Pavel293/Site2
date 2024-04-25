@@ -113,26 +113,32 @@
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			gap: 16px;
-			a {
-				svg {
-					transition: color 0.5s;
-					color: #00000066;
-				}
-
-				&:nth-child(2) {
-					margin-left: 16px;
-
+			justify-content: space-between;
+			.underline_social {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 16px;
+				a {
 					svg {
-						&:hover {
-							color: #25a2e0;
+						transition: color 0.5s;
+						color: #00000066;
+					}
+
+					&:nth-child(2) {
+						margin-left: 16px;
+
+						svg {
+							&:hover {
+								color: #25a2e0;
+							}
 						}
 					}
-				}
 
-				&:nth-child(3):hover {
-					svg {
-						color: #0077ff;
+					&:nth-child(3):hover {
+						svg {
+							color: #0077ff;
+						}
 					}
 				}
 			}
@@ -630,6 +636,7 @@
 				.right {
 					display: flex;
 					flex-direction: column;
+					align-items: center;
 					gap: 1.6vw;
 					.button {
 						margin-top: 3.4vw;
@@ -691,8 +698,17 @@
 						background: rgba(128, 128, 128, 0.57);
 					}
 					.logo {
+						display: flex;
+						justify-content: center;
+						align-self: center;
 						width: 61.87vw;
 						height: fit-content;
+					}
+					.rustore {
+						svg {
+							width: 92vw;
+							height: 14vw;
+						}
 					}
 				}
 			}
@@ -700,6 +716,7 @@
 				display: none;
 			}
 			.underline {
+				justify-content: center;
 				gap: 4vw;
 				a {
 					svg {

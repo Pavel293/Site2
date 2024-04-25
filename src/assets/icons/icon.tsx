@@ -64,6 +64,8 @@ import { VKLogo } from './VKLogo'
 import { DollarCircle } from './DollarCircle'
 import { SuccessOutline } from './SuccessOutline'
 import { RoubleCircle } from './RoubleCircle'
+import { RuStoreV1 } from './RuStoreV1'
+import { RuStoreV2 } from './RuStoreV2'
 
 export enum EIcons {
 	hover1,
@@ -132,6 +134,8 @@ export enum EIcons {
 	dollarcircle,
 	successoutline,
 	roublecircle,
+	rustore1,
+	rustore2,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -201,6 +205,8 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.dollarcircle]: DollarCircle,
 	[EIcons.successoutline]: SuccessOutline,
 	[EIcons.roublecircle]: RoubleCircle,
+	[EIcons.rustore1]: RuStoreV1,
+	[EIcons.rustore2]: RuStoreV2,
 }
 
 interface IIconProps {

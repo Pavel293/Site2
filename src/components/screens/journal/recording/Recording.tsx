@@ -34,6 +34,8 @@ const Recording: FC = () => {
 					</video>
 				</div>
 				<div></div>
+				<div></div>
+				<div></div>
 				<div className={styles.video_container}>
 					<p>
 						Индивидуальные и групповые записи в CRM-системе для сферы услуг -

@@ -7,7 +7,7 @@ import Solution from '@/screens/journal/solution/Solution'
 import System from '@/screens/journal/system/System'
 import Recording from '@/screens/journal/recording/Recording'
 import Cooperation from '@/screens/journal/cooperation/Cooperation'
-import JournalBot from '@/screens/journal/JournalBot/JournalBot'
+import JournalBot from '@/screens/journal/journal_bot/JournalBot'
 
 const HomeJournal: FC = () => {
 	const nextBlockRef = useRef<HTMLDivElement>(null)

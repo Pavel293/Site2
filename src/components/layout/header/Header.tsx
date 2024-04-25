@@ -76,9 +76,9 @@ const Header: FC = () => {
 								</div>
 							</Link>
 							<div className={styles.tabs}>
-								{/*<Link href="/solution/journal">*/}
-								{/*	<div className={styles.item}>Возможности</div>*/}
-								{/*</Link>*/}
+								<Link href="/solution/journal">
+									<div className={styles.item}>Журнал записи</div>
+								</Link>
 								<Link href="/price">
 									<div className={styles.item}>Ценовая политика</div>
 								</Link>
@@ -105,13 +105,13 @@ const Header: FC = () => {
 									</Link>
 								</li>
 							) : null}
-							{/*{isMobile ? (*/}
-							{/*	<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>*/}
-							{/*		<Link href="/solution/journal">*/}
-							{/*			<span>Возможности</span>*/}
-							{/*		</Link>*/}
-							{/*	</li>*/}
-							{/*) : null}*/}
+							{isMobile ? (
+								<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
+									<Link href="/solution/journal">
+										<span>Журнал записи</span>
+									</Link>
+								</li>
+							) : null}
 							{isMobile ? (
 								<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
 									<Link href="/price">

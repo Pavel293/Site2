@@ -267,10 +267,14 @@ const Footer: FC = () => {
 													<p>
 														Приложение проходит проверку в AppStore и Google
 														play (Для Android доступно скачивание с{' '}
-														<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
+														<Link
+															href={
+																'https://apps.rustore.ru/app/ru.lk.telebon.twa?ysclid=lvdj286i8m397367225'
+															}
+														>
 															<span>RuStore</span>
 														</Link>
-														). Для установки на устройства Apple напишите в
+														). Для установки на устройства Apple напишите в{' '}
 														<Link href={'https://t.me/+Z4n8gxkEgQZmYjMy'}>
 															<span>чат службы поддержки</span>
 														</Link>
@@ -282,25 +286,49 @@ const Footer: FC = () => {
 								</div>
 							)}
 							{isMobile ? (
-								<Link href="/">
-									<div className={styles.logo}>
+								<div className={styles.rustore}>
+									<Link
+										href={
+											'https://apps.rustore.ru/app/ru.lk.telebon.twa?ysclid=lvdj286i8m397367225'
+										}
+										target={'_blank'}
+									>
+										<IconInstance name={EIcons.rustore2} />
+									</Link>
+								</div>
+							) : null}
+							{isMobile ? (
+								<div className={styles.logo}>
+									<Link href="/">
 										<Image src={LogoImageNew} alt="LogoImage" />
-									</div>
-								</Link>
+									</Link>
+								</div>
 							) : null}
 						</div>
 					</div>
 					<div className={styles.line}></div>
 					<div className={styles.underline}>
-						<div className={styles.text}>
-							<p>©️ 2024</p>
+						<div className={styles.underline_social}>
+							<div className={styles.text}>
+								<p>©️ 2024</p>
+							</div>
+							<Link href={'https://t.me/telebon_channel'} target={'_blank'}>
+								<IconInstance name={EIcons.telegramlogo} />
+							</Link>
+							<Link href={'https://vk.com/teleboncrm'} target={'_blank'}>
+								<IconInstance name={EIcons.vklogo} />
+							</Link>
 						</div>
-						<Link href={'https://t.me/telebon_channel'} target={'_blank'}>
-							<IconInstance name={EIcons.telegramlogo} />
-						</Link>
-						<Link href={'https://vk.com/teleboncrm'} target={'_blank'}>
-							<IconInstance name={EIcons.vklogo} />
-						</Link>
+						{isMobile ? null : (
+							<Link
+								href={
+									'https://apps.rustore.ru/app/ru.lk.telebon.twa?ysclid=lvdj286i8m397367225'
+								}
+								target={'_blank'}
+							>
+								<IconInstance name={EIcons.rustore1} />
+							</Link>
+						)}
 					</div>
 					<ModalCopy
 						isOpen={copiedSuccess}
