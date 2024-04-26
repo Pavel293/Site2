@@ -126,6 +126,7 @@
 		h2 {
 			font-size: 8.53vw;
 			line-height: 10.93vw;
+			text-align: center;
 		}
 		.bottom {
 			flex-direction: column-reverse;
@@ -135,15 +136,16 @@
 				margin-top: 4.26vw;
 				gap: 6.4vw;
 				.card {
-					padding-right: 9.6vw;
+					align-items: center;
 					gap: 4.26vw;
 					p {
 						font-size: 6.4vw;
 						line-height: 8.8vw;
+						text-align: center;
 					}
 					svg {
-						width: 8.53vw;
-						height: 8.53vw;
+						width: 12.8vw;
+						height: 12.8vw;
 					}
 				}
 			}

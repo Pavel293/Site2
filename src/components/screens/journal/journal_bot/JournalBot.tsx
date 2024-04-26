@@ -3,6 +3,7 @@ import styles from './JournalBot.module.scss'
 import cn from 'classnames'
 import Image from 'next/image'
 import JournalBotImage from '../../../../assets/icons/JournalBotImage.png'
+import Link from 'next/link'
 
 const JournalBot: FC = () => {
 	return (
@@ -27,7 +28,9 @@ const JournalBot: FC = () => {
 						и надежное ведение данных о клиентах, улучшает контроль над
 						расписанием и{' '}
 						<span className={styles.span}>
-							позволяет быстро реагировать на изменения.
+							<Link href={'/telegram-bot'}>
+								позволяет быстро реагировать на изменения.
+							</Link>
 						</span>{' '}
 					</p>
 				</div>
