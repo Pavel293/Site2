@@ -19,7 +19,7 @@ const SliderItem: FC<IProps> = props => {
 			? `${styles.card} ${styles['card-2']}`
 			: index === 2
 				? `${styles.card} ${styles['card-3']}`
-				: `${styles.card} ${styles['card-3']}`
+				: `${styles.card}`
 	const isMobile = useMatchMedia('768')
 
 	return (
@@ -27,7 +27,7 @@ const SliderItem: FC<IProps> = props => {
 			<div className={cn(cardClass)}>
 				{isMobile ? (
 					<>
-						<div>
+						<div className={styles.top}>
 							<div className={styles.image}>
 								{/*<Image src={item.image} alt={''} />*/}
 								{item.image}
@@ -36,21 +36,28 @@ const SliderItem: FC<IProps> = props => {
 								<div className={styles.name}>
 									<p>{item.name}</p>
 								</div>
-								<p>
-									<span>{item.profession}</span>
-								</p>
+								<p>{item.profession}</p>
 							</div>
 							<div className={styles.feedback}>
 								<p>{item.feedback}</p>
 							</div>
 						</div>
-						<Link href={item.link} target={'_blank'}>
-							<button>{item.button}</button>
-						</Link>
+						<div className={styles.button_container}>
+							<Link href={item.link} target={'_blank'}>
+								<button>{item.button}</button>
+							</Link>
+							<Link href={item.linkvk} target={'_blank'}>
+								{item.social === 'vk' ? (
+									<IconInstance name={EIcons.vklogo} />
+								) : (
+									<IconInstance name={EIcons.telegramlogo} />
+								)}
+							</Link>
+						</div>
 					</>
 				) : (
 					<>
-						<div>
+						<div className={styles.top}>
 							<div className={styles.image}>
 								{item.image}
 								<div>{item.description}</div>

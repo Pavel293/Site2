@@ -30,12 +30,12 @@ const HeroPrice: FC<HeroProps> = ({ nextBlockRef }) => {
 						<span>Две недели бесплатно: </span> откройте новые возможности
 						вместе с Telebon
 					</h1>
-				</div>
-				<div className={styles.additionalText}>
-					<p itemProp="description">
-						Никаких хитростей - после окончания пробного периода цена
-						фиксированная
-					</p>
+					<div className={styles.additionalText}>
+						<p itemProp="description">
+							Никаких хитростей - после окончания пробного периода цена
+							фиксированная
+						</p>
+					</div>
 				</div>
 				<noindex>
 					<CommonButton

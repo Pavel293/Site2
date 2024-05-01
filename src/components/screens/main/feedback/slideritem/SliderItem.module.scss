@@ -13,7 +13,11 @@
 		justify-content: space-between;
 		border-radius: 20px;
 		position: relative;
-
+		.top {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
 		.feedback {
 			p {
 				font-size: 16px;
@@ -27,7 +31,7 @@
 		.master {
 			display: flex;
 			flex-direction: column;
-			gap: 16px;
+			gap: 8px;
 			p {
 				font-size: 18px;
 				font-weight: 600;
@@ -59,7 +63,7 @@
 			font-weight: 600;
 			line-height: 21.86px;
 			text-align: left;
-			color: #ffffff99;
+			color: #16161699;
 			align-items: center;
 			img {
 				width: 100px;
@@ -130,6 +134,7 @@
 		}
 
 		.image {
+			color: #ffffff66;
 		}
 		.button_container {
 			svg {
@@ -157,6 +162,9 @@
 			height: 486px;
 			padding: 20px 40px;
 			border-radius: 20px;
+			.top {
+				gap: 12px;
+			}
 			.feedback {
 				p {
 					font-size: 15px;
@@ -213,6 +221,9 @@
 			height: 386px;
 			padding: 16px 32px;
 			border-radius: 18px;
+			.top {
+				gap: 8px;
+			}
 			.feedback {
 				p {
 					font-size: 11px;
@@ -269,6 +280,9 @@
 			height: 266px;
 			padding: 12px 24px;
 			border-radius: 16px;
+			.top {
+				gap: 4px;
+			}
 			.feedback {
 				p {
 					font-size: 7px;
@@ -325,6 +339,11 @@
 			height: 193.8vw;
 			padding: 6.4vw;
 			border-radius: 5.3vw;
+			.top {
+				display: flex;
+				flex-direction: column;
+				gap: 2.13vw;
+			}
 			.feedback {
 				p {
 					font-size: 3.73vw;
@@ -354,9 +373,15 @@
 					height: 49vw;
 				}
 			}
+			.button_container {
+				svg {
+					width: 14.4vw;
+					height: 14.4vw;
+				}
+			}
 			button {
 				padding: 0;
-				width: 79vw;
+				width: 60vw;
 				height: 14.4vw;
 				border-radius: 3.2vw;
 				font-size: 4.26vw;
@@ -364,6 +389,11 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+			}
+		}
+		.card-3 {
+			.master {
+				width: 49vw;
 			}
 		}
 	}

@@ -24,10 +24,7 @@ const Hero: FC<HeroProps> = ({ nextBlockRef }) => {
 						<h1 itemProp="name">
 							Электронный журнал записи клиентов в CRM-системе:
 							{isMobile ? <> </> : <br />}
-							<span>
-								удобное и эффективное
-								<br /> решение для сферы услуг
-							</span>
+							<span>удобное и эффективное решение для сферы услуг</span>
 						</h1>
 					</div>
 					<div className={styles.additionalText}>

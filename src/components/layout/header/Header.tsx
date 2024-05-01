@@ -70,8 +70,8 @@ const Header: FC = () => {
 					</motion.nav>
 					<div className={styles.headerContent} ref={menuRef}>
 						<div className={styles.navmenu}>
-							<Link href="/">
-								<div className={styles.logo} onClick={() => setIsOpen(false)}>
+							<Link href="/" onClick={() => setIsOpen(false)}>
+								<div className={styles.logo}>
 									<Image src={LogoImageNew} alt="logotext" />
 								</div>
 							</Link>

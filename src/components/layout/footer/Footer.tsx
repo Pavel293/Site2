@@ -320,14 +320,16 @@ const Footer: FC = () => {
 							</Link>
 						</div>
 						{isMobile ? null : (
-							<Link
-								href={
-									'https://apps.rustore.ru/app/ru.lk.telebon.twa?ysclid=lvdj286i8m397367225'
-								}
-								target={'_blank'}
-							>
-								<IconInstance name={EIcons.rustore1} />
-							</Link>
+							<div className={styles.rustore}>
+								<Link
+									href={
+										'https://apps.rustore.ru/app/ru.lk.telebon.twa?ysclid=lvdj286i8m397367225'
+									}
+									target={'_blank'}
+								>
+									<IconInstance name={EIcons.rustore1} />
+								</Link>
+							</div>
 						)}
 					</div>
 					<ModalCopy

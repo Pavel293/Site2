@@ -2,14 +2,8 @@ import React, { FC } from 'react'
 import styles from './Hero.module.scss'
 import cn from 'classnames'
 import Image from 'next/image'
-import HeroChatImage from '../../../../assets/icons/HeroChatImage.png'
-import HeroChatImageMobile from '../../../../assets/icons/HeroChatImageMobile.png'
 import HeroPhoneImage from '../../../../assets/icons/HeroPhoneImage.png'
-import Link from 'next/link'
-import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
-import useMatchMedia from '@/hooks/useMatchMedia'
 import CommonButton from '@/ui/button/CommonButton'
-import themelight from '../../../../styles/colors'
 
 interface HeroProps {
 	nextBlockRef: React.RefObject<HTMLDivElement>
@@ -38,12 +32,12 @@ const Hero: FC<HeroProps> = ({ nextBlockRef }) => {
 							Новый сервис с <span>возможностью записи клиентов</span> в
 							Telegram
 						</h1>
-					</div>
-					<div className={styles.additionalText}>
-						<p itemProp="description">
-							Увеличьте количество записей и автоматизируйте работу клиентской
-							базы
-						</p>
+						<div className={styles.additionalText}>
+							<p itemProp="description">
+								Увеличьте количество записей и автоматизируйте работу с
+								клиентской базой
+							</p>
+						</div>
 					</div>
 					<noindex>
 						<CommonButton

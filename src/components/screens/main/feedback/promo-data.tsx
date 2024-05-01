@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
-import MasterDiana from '../../../../assets/icons/MasterDiana.png'
-import MasterSofia from '../../../../assets/icons/MasterSofia.png'
-import MasterKristina from '../../../../assets/icons/MasterKristina.png'
+import MasterDiana from '../../../../assets/icons/MasterDiana.svg'
+import MasterSofia from '../../../../assets/icons/MasterSofia.svg'
+import MasterKristina from '../../../../assets/icons/MasterKristina.svg'
 
 export const propoData = [
 	{

@@ -445,29 +445,29 @@
 	.main_container {
 		display: flex;
 		flex-direction: column;
-		gap: 48px;
+		gap: 4.26vw;
 		align-items: flex-start;
 		justify-content: center;
 		.title {
 			display: flex;
 			flex-direction: column;
-			gap: 24px;
 			align-items: flex-start;
 			justify-content: center;
 			h2 {
-				align-self: flex-start;
-				width: 77.6vw;
-				font-size: 6.4vw;
-				line-height: 8vw;
+				align-self: center;
+				text-align: center;
+				width: 92vw;
+				font-size: 7.46vw;
+				line-height: 9.6vw;
 			}
 		}
 
 		.row {
 			display: flex;
 			flex-direction: column;
-			gap: 24px;
+			gap: 4.26vw;
 			.card {
-				border-radius: 40px;
+				border-radius: 6.4vw;
 				background: #f6f6f6;
 				width: 92vw;
 				padding: 6.4vw 0 0 6.4vw;
@@ -482,8 +482,8 @@
 						text-align: left;
 					}
 					.title {
-						font-size: 6.4vw;
-						line-height: 8.53vw;
+						font-size: 7.46vw;
+						line-height: 10.13vw;
 						text-align: left;
 					}
 				}

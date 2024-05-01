@@ -146,7 +146,7 @@ const CommonInput: FC<CommonInputProps> = ({ palette }) => {
 						}
 						type={'submit'}
 					>
-						Связаться
+						{palette === 'primary' ? 'Связаться' : 'Отправить'}
 					</CommonButton>
 				</div>
 			</form>

@@ -25,7 +25,14 @@ const Recording: FC = () => {
 						инструментов для улучшения процессов работы, в том числе и записи
 						клиентов.
 					</p>
-					<video className={styles.video} autoPlay loop muted>
+					<video
+						className={styles.video}
+						autoPlay
+						loop
+						muted
+						playsInline
+						webkit-playsinline
+					>
 						<source
 							src="/video/create_solo_recording_on_computer.mp4"
 							type="video/mp4"

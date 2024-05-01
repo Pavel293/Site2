@@ -509,16 +509,17 @@
 
 @media (max-width: 768px) {
 	.main_container {
-		gap: 8.5vw;
+		gap: 6.4vw;
 		.title {
 			h2 {
-				font-size: 8.53vw;
-				line-height: 9vw;
-				text-align: left;
+				font-size: 7.46vw;
+				line-height: 9.6vw;
+				text-align: center;
+				width: 80vw;
 			}
 		}
 		.column {
-			gap: 5vw;
+			gap: 4.26vw;
 			.row1 {
 				flex-direction: column;
 				gap: 5vw;

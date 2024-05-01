@@ -9,11 +9,11 @@ const Bot: FC = () => {
 	return (
 		<div className={cn(styles.fuck, 'wrapper')}>
 			<div className={styles.main_container}>
-				<Image
-					src={Telegram}
-					alt={'Создание Telegram-бота для онлайн-записей'}
-				/>
 				<div className={styles.title}>
+					<Image
+						src={Telegram}
+						alt={'Создание Telegram-бота для онлайн-записей'}
+					/>
 					<h2>Создание Telegram-бота для онлайн-записей</h2>
 					<p>
 						Предоставьте клиентам ссылку для самостоятельной записи на услуги

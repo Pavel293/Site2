@@ -104,6 +104,14 @@
 				}
 			}
 		}
+		.rustore {
+			a {
+				svg {
+					width: 159px;
+					height: 64px;
+				}
+			}
+		}
 		.line {
 			display: flex;
 			height: 1px;
@@ -308,6 +316,14 @@
 					}
 				}
 			}
+			.rustore {
+				a {
+					svg {
+						width: 129px;
+						height: 54px;
+					}
+				}
+			}
 		}
 		.text {
 			gap: 8px;
@@ -430,6 +446,14 @@
 
 					&:nth-child(2) {
 						margin-left: 8px;
+					}
+				}
+			}
+			.rustore {
+				a {
+					svg {
+						width: 99px;
+						height: 44px;
 					}
 				}
 			}
@@ -563,6 +587,14 @@
 
 					&:nth-child(2) {
 						margin-left: 6px;
+					}
+				}
+			}
+			.rustore {
+				a {
+					svg {
+						width: 69px;
+						height: 34px;
 					}
 				}
 			}

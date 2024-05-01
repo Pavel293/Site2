@@ -36,29 +36,6 @@
 			color: #00000099;
 		}
 	}
-	.button {
-		transition: 0.5s ease;
-		@apply hover:text-text;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 664px;
-		height: 81px;
-		border-radius: 24px;
-		background: #38434d;
-		font-weight: 700;
-		font-size: 24px;
-		line-height: 33px;
-		color: #ffffff;
-		user-select: none;
-		&:hover {
-			background: #293139;
-			color: white;
-		}
-		&:active {
-			@apply bg-text bg-opacity-30;
-		}
-	}
 }
 
 @media (max-width: 1600px) {
@@ -79,13 +56,6 @@
 				font-size: 20px;
 				line-height: 25px;
 			}
-		}
-		.button {
-			width: 570px;
-			height: 60px;
-			border-radius: 18px;
-			font-size: 15px;
-			line-height: 33px;
 		}
 	}
 }
@@ -109,13 +79,6 @@
 				line-height: 20px;
 			}
 		}
-		.button {
-			width: 450px;
-			height: 50px;
-			border-radius: 15px;
-			font-size: 14px;
-			line-height: 33px;
-		}
 	}
 }
 
@@ -138,42 +101,28 @@
 				line-height: 15px;
 			}
 		}
-		.button {
-			width: 280px;
-			height: 40px;
-			border-radius: 11px;
-			font-size: 11px;
-			line-height: 33px;
-		}
 	}
 }
 
 @media (max-width: 768px) {
 	.main_container {
-		gap: 4vw;
+		gap: 6.4vw;
 		width: 92vw;
 		img {
 			width: 30.93vw;
 			height: 30.93vw;
 		}
 		.title {
-			gap: 4vw;
+			gap: 4.26vw;
 			h2 {
-				font-size: 8.53vw;
-				line-height: 10.93vw;
-				margin: 0 4vw;
+				font-size: 7.46vw;
+				line-height: 9.6vw;
+				margin: 0 10vw;
 			}
 			p {
 				font-size: 4.26vw;
 				line-height: 5.86vw;
 			}
-		}
-		.button {
-			width: 92vw;
-			height: 14.4vw;
-			border-radius: 6.4vw;
-			font-size: 4.26vw;
-			line-height: 5.86vw;
 		}
 	}
 }

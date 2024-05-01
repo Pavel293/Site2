@@ -4,8 +4,10 @@ import cn from 'classnames'
 import Image from 'next/image'
 import JournalBotImage from '../../../../assets/icons/JournalBotImage.png'
 import Link from 'next/link'
+import useMatchMedia from '@/hooks/useMatchMedia'
 
 const JournalBot: FC = () => {
+	const isMobile = useMatchMedia('768')
 	return (
 		<div
 			className={cn(styles.fuck, 'wrapper')}
@@ -18,7 +20,7 @@ const JournalBot: FC = () => {
 						Повысьте уровень сервиса, увеличьте{' '}
 						<span>
 							эффективность
-							<br /> работы и конкурентоспособность
+							{isMobile ? null : <br />} работы и конкурентоспособность
 						</span>{' '}
 						с помощью Telegram
 					</h2>
