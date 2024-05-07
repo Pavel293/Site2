@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './normalize';
+@import './fonts';
+
+* {
+	@apply m-0 p-0 box-border;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	@apply p-0 m-0 text-text;
+	color: #161616;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	font-family: 'Manrope', sans-serif;
+}
+.wrapper {
+	@apply mx-auto;
+}
+
+.slick-dots {
+	bottom: -25px;
+	@media (max-width: 1600px) {
+		bottom: -20px !important;
+	}
+	@media (max-width: 1300px) {
+		bottom: -15px !important;
+	}
+	@media (max-width: 992px) {
+		bottom: -10px !important;
+	}
+	@media (max-width: 768px) {
+		bottom: -6.4vw !important;
+	}
+}
+.slick-dots li {
+	margin: 0 !important;
+	width: 20px !important;
+	height: 20px !important;
+	@media (max-width: 1600px) {
+		width: 18px !important;
+		height: 18px !important;
+	}
+	@media (max-width: 1300px) {
+		width: 16px !important;
+		height: 16px !important;
+	}
+	@media (max-width: 992px) {
+		width: 14px !important;
+		height: 14px !important;
+	}
+	@media (max-width: 768px) {
+		width: 4vw !important;
+		height: 4vw !important;
+	}
+}
+.slick-dots li button:before {
+	content: '' !important;
+	background: #d7d7d7;
+	width: 8px !important;
+	height: 8px !important;
+	border-radius: 50%;
+	margin: 6px;
+	@media (max-width: 1600px) {
+		width: 7px !important;
+		height: 7px !important;
+	}
+	@media (max-width: 1300px) {
+		width: 6px !important;
+		height: 6px !important;
+	}
+	@media (max-width: 992px) {
+		width: 4px !important;
+		height: 4px !important;
+	}
+	@media (max-width: 768px) {
+		width: 1.5vw !important;
+		height: 1.5vw !important;
+	}
+}
+
+.slick-dots li.slick-active button:before {
+	content: '';
+	background: #246bfd;
+	border-radius: 50%;
+	width: 8px;
+	height: 8px;
+	margin: 6px;
+}
