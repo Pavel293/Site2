@@ -8,7 +8,7 @@
 		background: #ffffff;
 		border-radius: 1.04vw;
 		box-shadow: 0 0.42vw 0.94vw 0 #cfcfcf1a;
-		padding: 2.08vw 1.56vw 1.04vw;
+		padding: 2.08vw 0 1.04vw 1.56vw;
 		.icon {
 			width: 2.81vw;
 			height: 2.81vw;
@@ -24,7 +24,7 @@
 			}
 		}
 		.image {
-			svg {
+			img {
 				width: 9.9vw;
 				height: 3.65vw;
 			}
@@ -36,6 +36,7 @@
 			text-align: left;
 			color: #262626;
 			margin-bottom: 0.42vw;
+			height: 2.5vw;
 		}
 	}
 }

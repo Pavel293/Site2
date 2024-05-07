@@ -59,6 +59,15 @@ import { Settings } from './recording/Settings'
 import { UserProfileStar } from './recording/UserProfileStar'
 import { ButtonArrowRight } from './ButtonArrowRight'
 import { Brush } from './slider/Brush'
+import { Barber } from './slider/Barber'
+import { Cosmetic } from './slider/Cosmetic'
+import { Manicure } from './slider/Manicure'
+import { Massage } from './slider/Massage'
+import { Mirror } from './slider/Mirror'
+import { Soap } from './slider/Soap'
+import { Spa } from './slider/Spa'
+import { Tatoo } from './slider/Tatoo'
+import { Towel } from './slider/Towel'
 
 export enum EIcons {
 	walletoutline,
@@ -122,6 +131,15 @@ export enum EIcons {
 	userprofilestar,
 	buttonarrowright,
 	brush,
+	barber,
+	cosmetic,
+	manicure,
+	massage,
+	mirror,
+	soap,
+	spa,
+	tatoo,
+	towel,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -186,6 +204,15 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.userprofilestar]: UserProfileStar,
 	[EIcons.buttonarrowright]: ButtonArrowRight,
 	[EIcons.brush]: Brush,
+	[EIcons.barber]: Barber,
+	[EIcons.cosmetic]: Cosmetic,
+	[EIcons.manicure]: Manicure,
+	[EIcons.massage]: Massage,
+	[EIcons.mirror]: Mirror,
+	[EIcons.soap]: Soap,
+	[EIcons.spa]: Spa,
+	[EIcons.tatoo]: Tatoo,
+	[EIcons.towel]: Towel,
 }
 
 interface IIconProps {
