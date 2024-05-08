@@ -16,7 +16,7 @@ const Home: FC = () => {
 			image="logo_preview.png"
 		>
 			<div className={styles.wrapper}>
-				<Description />
+				{/*<Description />*/}
 				<Recording />
 				<SliderBlock />
 			</div>
