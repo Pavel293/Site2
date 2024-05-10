@@ -1,12 +1,14 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import styles from './Recording.module.scss'
 import cn from 'classnames'
 import RecordingPhone from '../../../../assets/icons/recording/RecordingPhone.png'
-import RecordingTelegram from '../../../../assets/icons/recording/RecordingTelegram.png'
+import RecordingPhoneJournal from '../../../../assets/icons/recording/RecordingPhoneJournal.png'
+import Click from '../../../../assets/icons/recording/Click.png'
 import Image from 'next/image'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import Cards from '@/screens/main/recording/cards/Cards'
 import DescriptionA from '@/screens/main/descriptiona/DescriptionA'
+import RecordingTelegram from '../../../../assets/icons/recording/RecordingTelegram.png'
 
 const Recording: FC = () => {
 	return (
@@ -15,30 +17,56 @@ const Recording: FC = () => {
 			<div className={styles.main_container}>
 				<div className={styles.left}>
 					<div className={styles.left_head}>
-						<h2>Уникальный инструмент для записи</h2>
-						<p>Персональный Telegram бот</p>
+						<div className={styles.hrow}>
+							<div className={styles.left_head}>
+								<h2>Революция в онлайн записи</h2>
+								<p>Персональный Telegram бот</p>
+							</div>
+							<div className={styles.circle}>
+								<IconInstance name={EIcons.linkarrow} />
+							</div>
+						</div>
+						<div className={styles.line}></div>
 					</div>
-					<div className={styles.row}>
+					<div className={styles.image}>
 						<div className={styles.phone}>
 							<Image src={RecordingPhone} alt={''} />
 						</div>
-						<div className={styles.column}>
-							<Image src={RecordingTelegram} alt={''} />
-							<button>СОЗДАТЬ ЗА 5 МИНУТ</button>
+						<div className={styles.click}>
+							<Image src={Click} alt={''} />
 						</div>
 					</div>
 				</div>
 				<div className={styles.right}>
 					<div className={styles.right_head}>
-						<span>ЗАПИСЬ НА УСЛУГИ ПО НОВОМУ</span>
-						<h3>Предоставьте клиентам возможность записываться удобно</h3>
-						<p>
-							Вашим клиентам больше не потребуется искать Ваш номер телефона или
-							страницу в соцсетях. Он сможет просто открыть Telegram{' '}
-						</p>
+						<div className={styles.text}>
+							<h3>Предоставьте клиентам возможность записываться свободно</h3>
+							<p>
+								Вашим клиентам больше не потребуется искать Ваш номер телефона
+								или страницу в соцсетях. Он сможет просто открыть Telegram
+							</p>
+						</div>
+						<div>
+							<IconInstance name={EIcons.recordingtelegram} />
+						</div>
+						<div className={styles.circle}>
+							<IconInstance name={EIcons.linkarrow} />
+						</div>
 					</div>
-					<div>
-						<IconInstance name={EIcons.recordingtelegram} />
+					<div className={styles.row}>
+						<div className={styles.telegram_block}>
+							<div className={styles.circle}>
+								<IconInstance name={EIcons.linkarrow} />
+							</div>
+							<p>ПОДРОБНЕЕ</p>
+							<Image src={RecordingTelegram} alt={''} />
+						</div>
+						<div className={styles.phone_block}>
+							<div className={styles.circle}>
+								<IconInstance name={EIcons.linkarrow} />
+							</div>
+							<Image src={RecordingPhoneJournal} alt={''} />
+						</div>
 					</div>
 				</div>
 			</div>

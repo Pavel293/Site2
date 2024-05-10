@@ -28,26 +28,27 @@
 		font-weight: 700;
 		line-height: 2.98vw;
 		text-align: left;
-		color: #161616;
+		color: #0e131f;
 	}
 	p {
 		font-size: 0.73vw;
 		font-weight: 400;
 		line-height: 1.25vw;
-		color: #8f8f8f;
+		color: #161616b2;
 		text-align: left;
 	}
 	.main_container {
 		display: flex;
 		align-items: center;
-		width: 79.17vw;
+		width: 71.04vw;
 		height: 31.25vw;
 		background: #f5f5f7;
 		border-radius: 0.83vw;
 		position: relative;
+		overflow: hidden;
 		.text {
 			margin: auto auto auto 4.17vw;
-			width: 33.66vw;
+			width: 33.96vw;
 			display: flex;
 			flex-direction: column;
 			gap: 1.04vw;
@@ -56,7 +57,7 @@
 			z-index: 2;
 			position: absolute;
 			top: 0;
-			right: 13.54vw;
+			right: 7.8vw;
 			height: 31.25vw;
 			width: 26.04vw;
 			background: linear-gradient(
@@ -70,7 +71,7 @@
 		.anim_container {
 			position: absolute;
 			top: 0;
-			right: 0;
+			right: -0.6vw;
 			background: #f5f5f7;
 			height: 31.25vw;
 			width: 34.375vw;

@@ -3,21 +3,22 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: #f5f5f7;
+	background: #ffffff;
 	width: 100%;
 	.main_container {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		gap: 3.1vw;
+		gap: 0.83vw;
 		.card {
 			display: flex;
 			flex-direction: column;
-			width: 23.69vw;
+			width: 22.92vw;
 			height: 15.05vw;
 			border-radius: 1.04vw;
 			background: #ffffff;
-			padding: 1.3vw 3.7vw 1.3vw 1.3vw;
+			border: 5px solid #ededed;
+			padding: 1.3vw;
 			.title {
 				h4 {
 					font-size: 0.885vw;
@@ -31,6 +32,7 @@
 			}
 			.description {
 				p {
+					height: 3.125vw;
 					font-size: 0.78vw;
 					font-weight: 400;
 					line-height: 1.04vw;

@@ -32,8 +32,8 @@ const DescriptionA: FC = () => {
 			{/*</div>*/}
 			<div className={styles.text}>
 				<h2>
-					Ознакомьтесь с функциями
-					<br /> <span>нашей системы</span>
+					Ознакомьтесь с основными
+					<br /> функциями платформы
 				</h2>
 				<p>
 					Собрали всё самое необходимое, разработали с учётом пожеланий мастеров
@@ -66,7 +66,7 @@ const DescriptionA: FC = () => {
 								) : null}
 							</div>
 						))}
-						<button>Попробовать бесплатно</button>
+						<button>ПОПРОБОВАТЬ БЕСПЛАТНО</button>
 					</div>
 					<div className={styles.image}>
 						<Image

@@ -60,7 +60,6 @@ const SliderBlock: FC = () => {
 						{cardDisc}
 					</Slider>
 				</div>
-				<div className={styles.line}></div>
 			</div>
 		</div>
 	)
