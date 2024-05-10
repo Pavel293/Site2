@@ -1,0 +1,151 @@
+.base {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.circle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 100%;
+		background: #ffffff80;
+		z-index: 2;
+		width: 1.875vw;
+		height: 1.875vw;
+		border: 0.105vw solid #dedee0;
+		transition: background 0.5s;
+		svg {
+			transition: color 0.5s;
+			width: 1.25vw;
+			height: 1.25vw;
+			color: #747474;
+		}
+	}
+	.main_container {
+		display: flex;
+		flex-direction: column;
+		gap: 1.67vw;
+		align-items: center;
+		justify-content: center;
+		.column {
+			display: flex;
+			flex-direction: column;
+			gap: 0.83vw;
+			.row {
+				display: flex;
+				flex-direction: row;
+				gap: 0.83vw;
+				.first {
+					width: 35vw;
+					height: 35vw;
+					background: url('../../../../assets/icons/professional/ProfessionalBackgroundFirst.png')
+						no-repeat;
+					background-size: cover;
+				}
+				.second {
+					width: 35.21vw;
+					height: 35vw;
+					.up {
+						height: 17.08vw;
+						width: 35.21vw;
+						background: #f7f7f9;
+						border-radius: 1.67vw;
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						justify-content: flex-end;
+						padding: 0.83vw;
+						&:hover {
+							.circle {
+								background: #29a9ea;
+								svg {
+									color: #ffffff;
+								}
+							}
+						}
+					}
+					.left {
+						height: 17.08vw;
+						width: 17.08vw;
+						background: #f7f7f9;
+						border-radius: 1.67vw;
+					}
+					.right {
+						height: 17.08vw;
+						width: 17.19vw;
+						background: #f7f7f9;
+						border-radius: 1.67vw;
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						justify-content: flex-end;
+						padding: 0.83vw;
+						&:hover {
+							.circle {
+								background: #29a9ea;
+								svg {
+									color: #ffffff;
+								}
+							}
+						}
+					}
+				}
+				.third {
+					width: 35vw;
+					height: 35vw;
+					.up {
+						height: 17.08vw;
+						width: 17.18vw;
+						background: #f7f7f9;
+						border-radius: 1.67vw;
+					}
+					.bottom {
+						height: 17.08vw;
+						width: 17.18vw;
+						background: #f7f7f9;
+						border-radius: 1.67vw;
+					}
+					.left {
+						height: 35vw;
+						width: 17.18vw;
+						background: #f7f7f9;
+						border-radius: 1.67vw;
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						justify-content: flex-end;
+						padding: 0.83vw;
+						overflow: hidden;
+						&:hover {
+							img {
+								margin-left: 0.42vw;
+								rotate: 0grad;
+							}
+							.circle {
+								background: #29a9ea;
+								svg {
+									color: #ffffff;
+								}
+							}
+						}
+						img {
+							transition:
+								rotate 0.5s,
+								margin-left 0.5s;
+							margin-left: 3.65vw;
+							rotate: -10grad;
+							width: 14.67vw;
+						}
+					}
+				}
+				.fourth {
+					width: 35vw;
+					height: 35vw;
+					background: url('../../../../assets/icons/professional/ProfessionalBackgroundThird.png')
+						no-repeat;
+					background-size: cover;
+				}
+			}
+		}
+	}
+}

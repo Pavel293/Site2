@@ -6,6 +6,7 @@ import Description from '@/screens/main/description/Description'
 import DescriptionA from '@/screens/main/descriptiona/DescriptionA'
 import Recording from '@/screens/main/recording/Recording'
 import SliderBlock from '@/screens/main/slider/SliderBlock'
+import Professional from '@/screens/main/professional/Professional'
 
 const Home: FC = () => {
 	const nextBlockRef = useRef<HTMLDivElement>(null)
@@ -18,6 +19,7 @@ const Home: FC = () => {
 			<div className={styles.wrapper}>
 				<Description />
 				<Recording />
+				<Professional />
 				{/*<SliderBlock />*/}
 			</div>
 		</Meta>
