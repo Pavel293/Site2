@@ -97,6 +97,10 @@
 						width: 2.5vw;
 						height: 2.5vw;
 						border: 2.88px dashed transparent;
+						svg {
+							width: 1.25vw;
+							height: 1.25vw;
+						}
 					}
 					p {
 						transition: border-bottom-color 0.5s;
@@ -115,7 +119,7 @@
 						position: absolute;
 						width: 19.27vw;
 						height: 8.59vw;
-						background: #f5f5f7;
+						background: #ffffff;
 						align-items: flex-start;
 						padding: 1.3vw 1.25vw 1.04vw;
 						left: 13vw;

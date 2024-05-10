@@ -90,6 +90,10 @@
 						display: flex;
 						flex-direction: column;
 						gap: 0.26vw;
+						img {
+							min-width: 6.15vw;
+							min-height: 6.15vw;
+						}
 						svg {
 							width: 6.15vw;
 							height: 6.15vw;
