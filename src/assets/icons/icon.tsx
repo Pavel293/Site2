@@ -69,6 +69,9 @@ import { Spa } from './slider/Spa'
 import { Tatoo } from './slider/Tatoo'
 import { Towel } from './slider/Towel'
 import { LinkArrow } from './LinkArrow'
+import { LogoMark } from './professional/LogoMark'
+import { PlusOne } from './professional/PlusOne'
+import { Calendar } from './professional/Calendar'
 
 export enum EIcons {
 	walletoutline,
@@ -142,6 +145,9 @@ export enum EIcons {
 	tatoo,
 	towel,
 	linkarrow,
+	logomark,
+	plusone,
+	calendar,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -216,6 +222,9 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.tatoo]: Tatoo,
 	[EIcons.towel]: Towel,
 	[EIcons.linkarrow]: LinkArrow,
+	[EIcons.logomark]: LogoMark,
+	[EIcons.plusone]: PlusOne,
+	[EIcons.calendar]: Calendar,
 }
 
 interface IIconProps {

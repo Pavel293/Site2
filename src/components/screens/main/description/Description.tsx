@@ -27,7 +27,7 @@ import img20 from '../../../../assets/icons/main/png/img20.png'
 import img21 from '../../../../assets/icons/main/png/img21.png'
 const Description: FC = () => {
 	return (
-		<div className={cn(styles.fuck, 'wrapper')}>
+		<div className={cn(styles.base, 'wrapper')}>
 			<div className={styles.main_container}>
 				<div className={styles.text}>
 					<h2>

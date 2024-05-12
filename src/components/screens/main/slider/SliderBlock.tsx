@@ -10,7 +10,7 @@ import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 
 export interface ICard {
 	icon: React.ReactNode
-	title: string
+	title: React.ReactNode
 	image: React.ReactNode
 }
 
@@ -27,20 +27,18 @@ const SliderBlock: FC = () => {
 	}
 
 	const cardDisc = propoData?.map((item, i) => (
-		<SliderItem item={item} key={i} />
+		<SliderItem item={item} key={i} index={i} />
 	))
 	return (
 		<div className={cn(styles.base, 'wrapper')}>
 			<div className={styles.main_container}>
 				<div className={styles.text}>
-					<h2>
-						Для кого
-						<br /> <span>идеально подходит</span>
-					</h2>
+					<h2>Идеально подходит</h2>
 					<div className={styles.tp}>
 						<p>
-							Программа для компаний и частных
-							<br /> специалистов в любой сфере услуг
+							Для специалистов и компаний в сфере услуг. Платформа Telebon
+							поддерживает запись на
+							<br /> индивидуальные и групповые услуги.
 						</p>
 						<div
 							className={styles.switch}

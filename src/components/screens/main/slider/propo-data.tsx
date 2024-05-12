@@ -14,52 +14,86 @@ import Slider10 from '../../../../assets/icons/slider/Slider10.png'
 export const propoData = [
 	{
 		icon: <IconInstance name={EIcons.brush} />,
-		title: 'Бровистам и лешмейкерам',
+		title: (
+			<>
+				Бровистам и<br />
+				лешмейкерам
+			</>
+		),
 		image: <Image src={Slider1} alt={''} />,
 	},
 	{
 		icon: <IconInstance name={EIcons.barber} />,
-		title: 'Барберам',
+		title: <>Барберам</>,
 		image: <Image src={Slider2} alt={''} />,
 	},
 	{
 		icon: <IconInstance name={EIcons.cosmetic} />,
-		title: 'Косметологам',
+		title: <>Косметологам</>,
 		image: <Image src={Slider3} alt={''} />,
 	},
 	{
 		icon: <IconInstance name={EIcons.manicure} />,
-		title: 'Мастерам маникюра и педикюра',
+		title: (
+			<>
+				Мастерам
+				<br />
+				маникюра
+			</>
+		),
 		image: <Image src={Slider4} alt={''} />,
 	},
 	{
 		icon: <IconInstance name={EIcons.massage} />,
-		title: 'Студиям массажа и эпиляции',
+		title: (
+			<>
+				Студиям
+				<br />
+				массажа
+			</>
+		),
 		image: <Image src={Slider5} alt={''} />,
 	},
 	{
 		icon: <IconInstance name={EIcons.mirror} />,
-		title: 'Визажистам и парикмахерам',
+		title: (
+			<>
+				Визажистам и <br />
+				парикмахерам
+			</>
+		),
 		image: <Image src={Slider6} alt={''} />,
 	},
 	{
 		icon: <IconInstance name={EIcons.tatoo} />,
-		title: 'Тату студиям',
+		title: <>Тату студиям</>,
 		image: <Image src={Slider7} alt={''} />,
 	},
 	{
 		icon: <IconInstance name={EIcons.towel} />,
-		title: 'Спортивным объектам',
+		title: (
+			<>
+				Спортивным
+				<br />
+				объектам
+			</>
+		),
 		image: <Image src={Slider8} alt={''} />,
 	},
 	{
 		icon: <IconInstance name={EIcons.soap} />,
-		title: 'Преподавателям',
+		title: <>Преподавателям</>,
 		image: <Image src={Slider9} alt={''} />,
 	},
 	{
 		icon: <IconInstance name={EIcons.spa} />,
-		title: 'SPA и фитнес центрам',
+		title: (
+			<>
+				SPA и фитнес
+				<br />
+				центрам
+			</>
+		),
 		image: <Image src={Slider10} alt={''} />,
 	},
 ]

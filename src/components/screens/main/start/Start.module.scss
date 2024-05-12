@@ -1,0 +1,105 @@
+.base {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	width: 71.04vw;
+	p {
+		margin: 2.8125vw 0 0.83vw;
+		font-size: 1.67vw;
+		font-weight: 800;
+		line-height: 2.29vw;
+		text-align: left;
+		color: #0e131f;
+	}
+	.main_container {
+		width: 100%;
+		height: 20.05vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		.card {
+			display: flex;
+			flex-direction: column;
+			gap: 0.52vw;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 23.07vw;
+			height: 15.05vw;
+			background: #f2f2f6;
+			border-radius: 0.83vw;
+			padding: 1.67vw 1.04vw;
+			position: relative;
+			.text {
+				display: flex;
+				flex-direction: column;
+				gap: 0.89vw;
+				p {
+					margin: 0;
+					font-size: 1.25vw;
+					font-weight: 600;
+					line-height: 1.41vw;
+					text-align: left;
+					color: #0e131f;
+				}
+				span {
+					font-size: 0.78vw;
+					font-weight: 400;
+					line-height: 1.04vw;
+					text-align: left;
+					color: #0e131f;
+				}
+			}
+			.num {
+				position: absolute;
+				bottom: 0;
+				right: 1.41vw;
+				user-select: none;
+				p {
+					margin: 0;
+					font-size: 11.89vw;
+					font-weight: 600;
+					line-height: 11.51vw;
+					text-align: right;
+					color: #ffffff;
+				}
+			}
+			button {
+				font-size: 0.78vw;
+				font-weight: 600;
+				line-height: 1.35vw;
+				text-align: left;
+				color: #fe803c;
+			}
+			&:nth-child(2) {
+				background: #88949c;
+				position: relative;
+			}
+			&:nth-child(3) {
+				background: #2b3134;
+				p {
+					color: #ffffff;
+				}
+				span {
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}
+
+.circle {
+	position: absolute;
+	right: 16.17vw;
+	bottom: 2.5vw;
+	width: 14.53vw;
+	height: 14.53vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+	background: url('../../../../assets/icons/Circle.png') no-repeat;
+	background-size: cover;
+}

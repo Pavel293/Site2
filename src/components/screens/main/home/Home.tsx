@@ -3,10 +3,12 @@ import Meta from '@/utils/meta/Meta'
 import Hero from '@/screens/main/hero/Hero'
 import styles from './Home.module.scss'
 import Description from '@/screens/main/description/Description'
-import DescriptionA from '@/screens/main/descriptiona/DescriptionA'
+import DescriptionA from '@/screens/main/recording/descriptiona/DescriptionA'
 import Recording from '@/screens/main/recording/Recording'
 import SliderBlock from '@/screens/main/slider/SliderBlock'
 import Professional from '@/screens/main/professional/Professional'
+import CenterButton from '@/screens/main/button/CenterButton'
+import Start from '@/screens/main/start/Start'
 
 const Home: FC = () => {
 	const nextBlockRef = useRef<HTMLDivElement>(null)
@@ -19,8 +21,11 @@ const Home: FC = () => {
 			<div className={styles.wrapper}>
 				<Description />
 				<Recording />
+				<CenterButton />
 				<Professional />
-				{/*<SliderBlock />*/}
+				<CenterButton />
+				<SliderBlock />
+				<Start />
 			</div>
 		</Meta>
 	)

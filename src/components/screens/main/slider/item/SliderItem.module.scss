@@ -3,24 +3,24 @@
 	user-select: none;
 	pointer-events: none;
 	.card {
-		width: 14.06vw;
-		height: 14.06vw;
-		background: #ffffff;
-		border-radius: 1.04vw;
-		box-shadow: 0 0.42vw 0.94vw 0 #cfcfcf1a;
+		width: 17.19vw;
+		height: 17.19vw;
+		border-radius: 1.67vw;
 		padding: 2.08vw 0 1.04vw 1.56vw;
+		border: 0.3125vw solid #ededed;
 		.icon {
-			width: 2.81vw;
-			height: 2.81vw;
+			width: 3.4375vw;
+			height: 3.4375vw;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background: #f9f8f8;
+			background: #f9f8f848;
 			border-radius: 0.625vw;
 			margin-bottom: 1.56vw;
 			svg {
 				width: 2.81vw;
 				height: 2.81vw;
+				color: #ffffff;
 			}
 		}
 		.image {
@@ -34,9 +34,39 @@
 			font-weight: 600;
 			line-height: 1.25vw;
 			text-align: left;
-			color: #262626;
+			color: #ffffff;
 			margin-bottom: 0.42vw;
 			height: 2.5vw;
 		}
 	}
+}
+.card0 {
+	background: #bac0f8;
+}
+.card1 {
+	background: #2d2d34;
+}
+.card2 {
+	background: #6bbbed;
+}
+.card3 {
+	background: #ce92ef;
+}
+.card4 {
+	background: #eb9f7a;
+}
+.card5 {
+	background: #d9d5b5;
+}
+.card6 {
+	background: #7d8570;
+}
+.card7 {
+	background: #a6dcfc;
+}
+.card8 {
+	background: #022b3a;
+}
+.card9 {
+	background: #6bbbed;
 }

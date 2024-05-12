@@ -6,7 +6,10 @@
 	background: #ffffff;
 	width: 100%;
 	gap: 1.67vw;
-	height: 123.49vw;
+	img {
+		user-select: none;
+		pointer-events: none;
+	}
 	.circle {
 		display: flex;
 		align-items: center;
@@ -48,7 +51,7 @@
 				}
 				h2 {
 					font-size: 1.67vw;
-					font-weight: 800;
+					font-weight: 700;
 					line-height: 1.67vw;
 					text-align: left;
 					color: #0e131f;
@@ -220,6 +223,7 @@
 						top: 1.3vw;
 						left: 0;
 						width: 16vw;
+						height: 12.5vw;
 					}
 					&:hover {
 						.circle {

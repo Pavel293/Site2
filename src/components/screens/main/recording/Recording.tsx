@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import styles from './Recording.module.scss'
 import cn from 'classnames'
 import RecordingPhone from '../../../../assets/icons/recording/RecordingPhone.png'
@@ -7,10 +7,12 @@ import Click from '../../../../assets/icons/recording/Click.png'
 import Image from 'next/image'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import Cards from '@/screens/main/recording/cards/Cards'
-import DescriptionA from '@/screens/main/descriptiona/DescriptionA'
+import DescriptionA from '@/screens/main/recording/descriptiona/DescriptionA'
+import TelegramGif from '../../../../assets/icons/recording/TelegramGif.gif'
 import RecordingTelegram from '../../../../assets/icons/recording/RecordingTelegram.png'
 
 const Recording: FC = () => {
+	const [hover, setHover] = useState(false)
 	return (
 		<div className={cn(styles.base, `wrapper`)}>
 			<DescriptionA />
@@ -54,12 +56,20 @@ const Recording: FC = () => {
 						</div>
 					</div>
 					<div className={styles.row}>
-						<div className={styles.telegram_block}>
+						<div
+							className={styles.telegram_block}
+							onMouseEnter={() => {
+								setHover(true)
+								setTimeout(() => {
+									setHover(false)
+								}, 1500)
+							}}
+						>
 							<div className={styles.circle}>
 								<IconInstance name={EIcons.linkarrow} />
 							</div>
 							<p>ПОДРОБНЕЕ</p>
-							<Image src={RecordingTelegram} alt={''} />
+							<Image src={hover ? TelegramGif : RecordingTelegram} alt="" />
 						</div>
 						<div className={styles.phone_block}>
 							<div className={styles.circle}>

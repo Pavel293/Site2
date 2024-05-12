@@ -3,15 +3,15 @@
 	justify-content: flex-end;
 	align-items: center;
 	width: 100%;
-	height: 39.17vw;
+	height: 29.9vw;
 	background: #ffffff;
 
 	h2 {
-		font-size: 2.29vw;
-		font-weight: 500;
+		font-size: 1.67vw;
+		font-weight: 800;
 		line-height: 2.5vw;
 		text-align: left;
-		color: #161616;
+		color: #0e131f;
 	}
 	span {
 		color: #161616b2;
@@ -30,27 +30,30 @@
 	}
 	p {
 		font-size: 0.78vw;
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 1.25vw;
 		text-align: left;
-		color: #161616b2;
+		color: #0e131fb2;
 	}
 	.main_container {
 		display: flex;
 		flex-direction: column;
 		border-radius: 0.83vw;
 		position: relative;
-		gap: 3.7vw;
-		width: 88.7vw;
+		width: 85vw;
 		overflow-x: hidden;
 		.text {
 			display: flex;
 			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
 			gap: 1.67vw;
+			height: 7.71vw;
 		}
 		.slider_container {
-			max-height: 14.06vw;
-			width: 96vw;
+			max-height: 22.19vw;
+			width: 110vw;
+			margin: 2.5vw 0;
 		}
 	}
 }
