@@ -1,0 +1,136 @@
+.footer {
+	width: 100%;
+	height: 24.58vw;
+	background: #2a2c32;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 0.52vw;
+	position: relative;
+	.title {
+		font-size: 0.89vw;
+		font-weight: 700;
+		line-height: 1.25vw;
+		letter-spacing: 0.05vw;
+		text-align: left;
+		color: #ffffff;
+	}
+	p {
+		font-size: 0.68vw;
+		font-weight: 600;
+		line-height: 1.04vw;
+		text-align: left;
+		color: #d4d5d6;
+	}
+	.main_container {
+		width: 71.04vw;
+		height: 100%;
+		.row {
+			display: flex;
+			flex-direction: row;
+			height: 100%;
+			.contact {
+				display: flex;
+				flex-direction: column;
+				.logo {
+					margin-top: 2.45vw;
+					margin-bottom: 0.57vw;
+					svg {
+						width: 2.604vw;
+						height: 2.604vw;
+					}
+				}
+				.main {
+					margin-top: 0.9375vw;
+					display: flex;
+					flex-direction: column;
+					gap: 0.52vw;
+					svg {
+						align-self: flex-start;
+						height: 0.88vw;
+					}
+				}
+				.download {
+					margin-top: 0.78125vw;
+					display: flex;
+					flex-direction: column;
+					gap: 0.625vw;
+					svg {
+						width: 5.83vw;
+					}
+				}
+			}
+			.phone {
+				align-self: flex-end;
+				margin-left: 3.91vw;
+				margin-right: 2.94vw;
+				img {
+					user-select: none;
+					pointer-events: none;
+					width: 12.92vw;
+				}
+			}
+			.column {
+				display: flex;
+				flex-direction: column;
+				gap: 0.83vw;
+				margin: 3.75vw 1.5625vw 0;
+				width: fit-content;
+				.line {
+					width: 100%;
+					border-bottom: 0.05vw solid #ffffff1a;
+				}
+				.social {
+					display: flex;
+					flex-direction: row;
+					gap: 0.42vw;
+				}
+			}
+		}
+	}
+	.presentation {
+		position: absolute;
+		bottom: 1.41vw;
+		right: 6.875vw;
+		width: 20.83vw;
+		height: 10.3125vw;
+		padding: 0.83vw;
+		background: #212329;
+		border-radius: 0.83vw;
+		display: flex;
+		flex-direction: column;
+		.title {
+			font-size: 0.89vw;
+			font-weight: 500;
+			line-height: 1.25vw;
+			letter-spacing: 0.05vw;
+			text-align: left;
+			color: #ffffff;
+		}
+		p {
+			font-size: 13px;
+			font-weight: 500;
+			line-height: 24px;
+			letter-spacing: -0.3199999928474426px;
+			text-align: left;
+			color: #ffffff;
+			margin-top: 0.3125vw;
+		}
+		button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 1.5625vw;
+			width: 9.53125vw;
+			height: 1.77vw;
+			background: #007aff;
+			border-radius: 0.21vw;
+			font-size: 0.73vw;
+			font-weight: 600;
+			line-height: 1.04;
+			letter-spacing: -0.007vw;
+			text-align: center;
+			color: #ffffff;
+		}
+	}
+}

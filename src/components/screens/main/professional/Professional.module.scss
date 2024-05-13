@@ -4,6 +4,10 @@
 	align-items: center;
 	justify-content: center;
 	margin: 2.8125vw 0;
+	img {
+		user-select: none;
+		pointer-events: none;
+	}
 	.circle {
 		display: flex;
 		align-items: center;

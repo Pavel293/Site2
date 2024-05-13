@@ -1,0 +1,144 @@
+.base {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: 0.83vw 0;
+}
+
+.main_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 71.04vw;
+	height: 45.26vw;
+	background: #f7f7f9;
+	border-radius: 1.67vw;
+	padding: 4.167vw;
+	.row {
+		display: flex;
+		flex-direction: row;
+		gap: 0.83vw;
+		.grid {
+			padding: 0.52vw 0.625vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: 1.67vw;
+			.text {
+				padding: 0.52vw 0;
+				h3 {
+					font-size: 1.67vw;
+					font-weight: 800;
+					line-height: 2.5vw;
+					text-align: left;
+					color: #0e131f;
+				}
+			}
+			.column {
+				display: flex;
+				flex-direction: column;
+				gap: 0.83vw;
+				.rows {
+					display: flex;
+					flex-direction: row;
+					gap: 0.83vw;
+					.card {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+						gap: 0.42vw;
+						width: 8.85vw;
+						height: 6.26vw;
+						border-radius: 0.625vw;
+						box-shadow: 0 0 1.25vw 0 #fe803c1a;
+						transition: box-shadow 0.5s;
+						.icon {
+							width: 2.604vw;
+							height: 2.604vw;
+							border-radius: 100%;
+							background: #ecf2f9;
+						}
+						.text {
+							padding: 0;
+							height: 1.82vw;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							p {
+								font-size: 0.729vw;
+								font-weight: 600;
+								line-height: 0.78vw;
+								letter-spacing: -0.02vw;
+								text-align: center;
+								color: #2a2c32;
+							}
+						}
+						&:hover {
+							box-shadow: 0 0.21vw 1.25vw 0 #ff80404d;
+						}
+						.checkbox {
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+							justify-content: flex-start;
+							width: 2.97vw;
+							height: 1.67vw;
+							border-radius: 0.83vw;
+							background: #e90147bf;
+							padding: 0.14vw;
+							transition: background 0.5s;
+							.circle {
+								transition: margin-left 0.5s;
+								width: 1.35vw;
+								height: 1.35vw;
+								border-radius: 100%;
+								background: #ffffff;
+							}
+						}
+					}
+					.active {
+						.checkbox {
+							background: #23cb62;
+							.circle {
+								margin-left: 1.26vw;
+							}
+						}
+					}
+					&:nth-child(4) {
+						.card {
+							&:nth-child(2) {
+								display: flex;
+								flex-direction: row;
+								justify-content: space-between;
+								align-items: center;
+								width: 18.59vw;
+								padding: 0 1.04vw 0 0.83vw;
+								.text {
+									p {
+										font-size: 0.78vw;
+										line-height: 1.04vw;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.image {
+			margin-right: -2.1875vw;
+			margin-top: 0.52vw;
+			img {
+				user-select: none;
+				pointer-events: none;
+				width: 34.375vw;
+				height: 36.61vw;
+			}
+		}
+	}
+}

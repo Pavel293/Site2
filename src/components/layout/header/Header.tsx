@@ -87,10 +87,10 @@ const Header: FC = () => {
 									</div>
 								</Link>
 								<Link href="/">
-									<div className={styles.item}>Ценовая политика</div>
+									<div className={styles.item}>Тарифы</div>
 								</Link>
 								<Link href="/">
-									<div className={styles.item}>Бот для онлайн-записи</div>
+									<div className={styles.item}>Бот для записи</div>
 								</Link>
 							</div>
 						</div>

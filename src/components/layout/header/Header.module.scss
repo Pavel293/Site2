@@ -13,7 +13,7 @@ $menuItems: 7;
 }
 
 .indent {
-	height: 40px;
+	height: 2.08vw;
 }
 .header {
 	position: fixed;
@@ -23,7 +23,7 @@ $menuItems: 7;
 	width: 100vw;
 	background-color: #fafafccc;
 	.headerContent {
-		@apply max-w-[64.24vw] flex justify-between items-center;
+		@apply max-w-[71.04vw] flex justify-between items-center;
 		margin: 0 auto;
 
 		.navmenu {
@@ -32,8 +32,8 @@ $menuItems: 7;
 			align-items: center;
 			font-weight: 600;
 			font-size: 0.758vw;
-			line-height: 25px;
-			gap: 24px;
+			line-height: 1.3vw;
+			gap: 1.25vw;
 
 			.tabs {
 				display: flex;
@@ -49,6 +49,10 @@ $menuItems: 7;
 					height: fit-content;
 					color: #000000cc;
 					transition: color 0.3s ease;
+					svg {
+						width: 0.57vw;
+						height: 0.57vw;
+					}
 				}
 
 				&:hover .item {
@@ -84,15 +88,16 @@ $menuItems: 7;
 
 			.auth {
 				> a {
-					@apply flex justify-center items-center px-[1.768vw] border border-white rounded-full bg-white h-[2.4vw];
-					color: #000000;
+					@apply flex justify-center items-center px-[1.768vw] border border-white rounded-full h-[2.92vw];
+					color: #ffffff;
+					background: #246bfd;
 					border-radius: 0.4vw;
 					font-weight: 700;
 					font-size: 0.758vw;
 					user-select: none;
 
 					&:hover {
-						background: #313131;
+						background: #1f5ad3;
 						color: white;
 					}
 

@@ -72,6 +72,26 @@ import { LinkArrow } from './LinkArrow'
 import { LogoMark } from './professional/LogoMark'
 import { PlusOne } from './professional/PlusOne'
 import { Calendar } from './professional/Calendar'
+import { TarifTelegram } from './tarif/TarifTelegram'
+import { TarifClients } from './tarif/TarifClients'
+import { TarifBell } from './tarif/TarifBell'
+import { TarifChair } from './tarif/TarifСhair'
+import { TarifCalc } from './tarif/TarifCalc'
+import { TarifCalendar } from './tarif/TarifCalendar'
+import { TarifPhone } from './tarif/TarifPhone'
+import { TarifPlanet } from './tarif/TarifPlanet'
+import { TarifSale } from './tarif/TarifSale'
+import { TarifStatistic } from './tarif/TarifStatistic'
+import { RightArrow } from './RightArrow'
+import { FooterAppStore } from './footeri/FooterAppStore'
+import { FooterEmail } from './footeri/FooterEmail'
+import { FooterGooglePlay } from './footeri/FooterGooglePlay'
+import { FooterPhone } from './footeri/FooterPhone'
+import { FooterRuStore } from './footeri/FooterRuStore'
+import { FooterWhatsUp } from './footeri/FooterWhatsUp'
+import { FooterLogomark } from './footeri/FooterLogomark'
+import { FooterVKIcon } from './footeri/FooterVKIcon'
+import { FooterTelegramIcon } from './footeri/FooterTelegramIcon'
 
 export enum EIcons {
 	walletoutline,
@@ -148,6 +168,26 @@ export enum EIcons {
 	logomark,
 	plusone,
 	calendar,
+	tariftelegram,
+	tarifclients,
+	tarifbell,
+	tarifchair,
+	tarifcalc,
+	tarifcalendar,
+	tarifphone,
+	tarifplanet,
+	tarifsale,
+	tarifstatistic,
+	rightarrow,
+	footerappstore,
+	footeremail,
+	footergoogleplay,
+	footerphone,
+	footerrustore,
+	footerwhatsup,
+	footerlogomark,
+	footertelegramicon,
+	footervkicon,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -225,6 +265,26 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.logomark]: LogoMark,
 	[EIcons.plusone]: PlusOne,
 	[EIcons.calendar]: Calendar,
+	[EIcons.tariftelegram]: TarifTelegram,
+	[EIcons.tarifclients]: TarifClients,
+	[EIcons.tarifbell]: TarifBell,
+	[EIcons.tarifchair]: TarifChair,
+	[EIcons.tarifcalc]: TarifCalc,
+	[EIcons.tarifcalendar]: TarifCalendar,
+	[EIcons.tarifphone]: TarifPhone,
+	[EIcons.tarifplanet]: TarifPlanet,
+	[EIcons.tarifsale]: TarifSale,
+	[EIcons.tarifstatistic]: TarifStatistic,
+	[EIcons.rightarrow]: RightArrow,
+	[EIcons.footerappstore]: FooterAppStore,
+	[EIcons.footeremail]: FooterEmail,
+	[EIcons.footergoogleplay]: FooterGooglePlay,
+	[EIcons.footerphone]: FooterPhone,
+	[EIcons.footerrustore]: FooterRuStore,
+	[EIcons.footerwhatsup]: FooterWhatsUp,
+	[EIcons.footerlogomark]: FooterLogomark,
+	[EIcons.footervkicon]: FooterVKIcon,
+	[EIcons.footertelegramicon]: FooterTelegramIcon,
 }
 
 interface IIconProps {

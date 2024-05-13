@@ -9,6 +9,9 @@ import SliderBlock from '@/screens/main/slider/SliderBlock'
 import Professional from '@/screens/main/professional/Professional'
 import CenterButton from '@/screens/main/button/CenterButton'
 import Start from '@/screens/main/start/Start'
+import Tarif from '@/screens/main/tarif/Tarif'
+import TryTelebon from '@/screens/main/try_telebon/TryTelebon'
+import Contact from '@/screens/main/contact/Contact'
 
 const Home: FC = () => {
 	const nextBlockRef = useRef<HTMLDivElement>(null)
@@ -26,6 +29,9 @@ const Home: FC = () => {
 				<CenterButton />
 				<SliderBlock />
 				<Start />
+				<Tarif />
+				<TryTelebon />
+				<Contact />
 			</div>
 		</Meta>
 	)

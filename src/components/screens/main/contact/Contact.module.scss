@@ -1,0 +1,71 @@
+.base {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: 3.125vw 0;
+	.main_container {
+		width: 71.04vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		p {
+			font-size: 0.78vw;
+			font-weight: 500;
+			line-height: 1.25vw;
+			text-align: left;
+			color: #ffffff;
+		}
+		.card {
+			width: 23.125vw;
+			height: 12.08vw;
+			border-radius: 0.83vw;
+			display: flex;
+			flex-direction: column;
+			gap: 0.57vw;
+			padding: 2.08vw 1.146vw;
+			.title {
+				p {
+					font-size: 1.25vw;
+					font-weight: 600;
+					line-height: 1.67vw;
+					text-align: left;
+					color: #ffffff;
+				}
+			}
+			.text {
+				height: 3.8vw;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+			}
+			button {
+				display: flex;
+				flex-direction: row;
+				gap: 0.625vw;
+				align-items: center;
+				justify-content: center;
+				background: transparent;
+				width: fit-content;
+				height: 1.25vw;
+			}
+			&:nth-child(1) {
+				background: url('../../../../assets/icons/contact/ContactBackground1.png')
+					no-repeat;
+				background-size: cover;
+			}
+			&:nth-child(2) {
+				background: url('../../../../assets/icons/contact/ContactBackground2.png')
+					no-repeat;
+				background-size: cover;
+			}
+			&:nth-child(3) {
+				background: url('../../../../assets/icons/contact/ContactBackground3.png')
+					no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+}

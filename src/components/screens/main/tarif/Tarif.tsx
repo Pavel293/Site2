@@ -1,0 +1,166 @@
+import React, { FC, useState } from 'react'
+import styles from './Tarif.module.scss'
+import cn from 'classnames'
+import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
+import Image from 'next/image'
+import Circle from '../../../../assets/icons/tarif/TarifCircle.png'
+import Link from 'next/link'
+
+const Tarif: FC = () => {
+	const [isActive, setIsActive] = useState(false)
+	const [isFirstClick, setIsFirstClick] = useState(true)
+
+	const toggleActive = () => {
+		setIsActive(true)
+		if (isFirstClick) {
+			setTimeout(() => {
+				window.open('https://lk.telebon.ru/registration', '_blank')
+			}, 700)
+			setIsFirstClick(false)
+		} else {
+			window.open('https://lk.telebon.ru/registration', '_blank')
+		}
+	}
+	return (
+		<div className={cn(styles.base, 'wrapper')}>
+			<div className={styles.main_container}>
+				<div className={styles.row}>
+					<div className={styles.grid}>
+						<div className={styles.text}>
+							<h3>
+								А всё самое необходимое <br />
+								уже включено
+							</h3>
+						</div>
+						<div className={styles.column}>
+							<div className={styles.rows}>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tariftelegram} />
+									</div>
+									<div className={styles.text}>
+										<p>
+											Онлайн-запись <br />
+											через Telegram
+										</p>
+									</div>
+								</div>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifclients} />
+									</div>
+									<div className={styles.text}>
+										<p>Клиентская база</p>
+									</div>
+								</div>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifbell} />
+									</div>
+									<div className={styles.text}>
+										<p>Уведомления</p>
+									</div>
+								</div>
+							</div>
+							<div className={styles.rows}>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifphone} />
+									</div>
+									<div className={styles.text}>
+										<p>
+											Доступ <br />с мобильного
+										</p>
+									</div>
+								</div>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifcalendar} />
+									</div>
+									<div className={styles.text}>
+										<p>
+											Электронный
+											<br />
+											журнал
+										</p>
+									</div>
+								</div>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifplanet} />
+									</div>
+									<div className={styles.text}>
+										<p>
+											Управление сетью • <br />
+											франчайзи
+										</p>
+									</div>
+								</div>
+							</div>
+							<div className={styles.rows}>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifcalc} />
+									</div>
+									<div className={styles.text}>
+										<p>
+											Финансовый <br />
+											учет
+										</p>
+									</div>
+								</div>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifstatistic} />
+									</div>
+									<div className={styles.text}>
+										<p>
+											Статистика
+											<br />• Аналитика
+										</p>
+									</div>
+								</div>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifchair} />
+									</div>
+									<div className={styles.text}>
+										<p>Ресурсы</p>
+									</div>
+								</div>
+							</div>
+							<div className={styles.rows}>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifsale} />
+									</div>
+									<div className={styles.text}>
+										<p>Продажи</p>
+									</div>
+								</div>
+								<div
+									className={
+										isActive ? cn(styles.card, styles.active) : styles.card
+									}
+									onClick={toggleActive}
+								>
+									<div className={styles.text}>
+										<p>АКТИВИРОВАТЬ ПЛАТФОРМУ</p>
+									</div>
+									<div className={styles.checkbox}>
+										<div className={styles.circle}></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className={styles.image}>
+						<Image src={Circle} alt={''} />
+					</div>
+				</div>
+			</div>
+		</div>
+	)
+}
+
+export default Tarif
