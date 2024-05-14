@@ -97,12 +97,12 @@ const Header: FC = () => {
 						<ul className={cn(isOpen && styles.active)}>
 							<li className={cn(styles.auth, styles.reg)}>
 								<Link href="https://lk.telebon.ru/registration">
-									Зарегистрироваться
+									ЗАРЕГИСТРИРОВАТЬСЯ
 								</Link>
 							</li>
 							<li className={styles.auth}>
 								<Link href="https://lk.telebon.ru/auth">
-									<span>Войти</span>
+									<span>ВОЙТИ</span>
 								</Link>
 							</li>
 							{isMobile ? (

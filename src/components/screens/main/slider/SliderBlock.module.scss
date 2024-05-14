@@ -40,7 +40,7 @@
 		flex-direction: column;
 		border-radius: 0.83vw;
 		position: relative;
-		width: 85vw;
+		width: 100%;
 		overflow-x: hidden;
 		.text {
 			display: flex;
@@ -49,11 +49,31 @@
 			justify-content: center;
 			gap: 1.67vw;
 			height: 7.71vw;
+			margin-left: 14.4792vw;
 		}
 		.slider_container {
 			max-height: 22.19vw;
 			width: 110vw;
-			margin: 2.5vw 0;
+			margin: 2.5vw 0 2.5vw -3.6979vw;
+			position: relative;
+		}
+		.gradient_left {
+			height: 100%;
+			width: 17.1875vw;
+			background: linear-gradient(to right, #ffffff, transparent);
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 3;
+		}
+		.gradient_right {
+			height: 100%;
+			width: 17.1875vw;
+			background: linear-gradient(to left, #ffffff, transparent);
+			position: absolute;
+			right: 1vw;
+			top: 0;
+			z-index: 3;
 		}
 	}
 }

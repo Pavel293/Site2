@@ -105,7 +105,19 @@ const Professional: FC = () => {
 								</div>
 							</div>
 						</div>
-						<div className={styles.fourth}></div>
+						<div className={styles.fourth}>
+							<div className={styles.text}>
+								<p className={styles.name}>
+									Сергей
+									<br />
+									<span>Барбер</span>
+								</p>
+								<p>
+									”Всё просто и очень удобно, <br />
+									рекомендую. ”
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -30,7 +30,7 @@ const SliderBlock: FC = () => {
 		<SliderItem item={item} key={i} index={i} />
 	))
 	return (
-		<div className={cn(styles.base, 'wrapper')}>
+		<div className={cn(styles.base)}>
 			<div className={styles.main_container}>
 				<div className={styles.text}>
 					<h2>Идеально подходит</h2>
@@ -54,9 +54,11 @@ const SliderBlock: FC = () => {
 					</div>
 				</div>
 				<div className={styles.slider_container}>
+					<div className={styles.gradient_left}></div>
 					<Slider {...settings} ref={arrowRef}>
 						{cardDisc}
 					</Slider>
+					<div className={styles.gradient_right}></div>
 				</div>
 			</div>
 		</div>
