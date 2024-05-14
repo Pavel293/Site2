@@ -92,6 +92,8 @@ import { FooterWhatsUp } from './footeri/FooterWhatsUp'
 import { FooterLogomark } from './footeri/FooterLogomark'
 import { FooterVKIcon } from './footeri/FooterVKIcon'
 import { FooterTelegramIcon } from './footeri/FooterTelegramIcon'
+import { FooterMail } from './footeri/FooterMail'
+import { FooterPhoneNumber } from './footeri/FooterPhoneNumber'
 
 export enum EIcons {
 	walletoutline,
@@ -188,6 +190,8 @@ export enum EIcons {
 	footerlogomark,
 	footertelegramicon,
 	footervkicon,
+	footermail,
+	footerphonenumber,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -285,6 +289,8 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.footerlogomark]: FooterLogomark,
 	[EIcons.footervkicon]: FooterVKIcon,
 	[EIcons.footertelegramicon]: FooterTelegramIcon,
+	[EIcons.footermail]: FooterMail,
+	[EIcons.footerphonenumber]: FooterPhoneNumber,
 }
 
 interface IIconProps {

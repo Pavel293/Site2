@@ -105,13 +105,13 @@ const Header: FC = () => {
 									<span>ВОЙТИ</span>
 								</Link>
 							</li>
-							{isMobile ? (
-								<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
-									<Link href="/telegram-bot">
-										<span>Бот для онлайн-записи</span>
-									</Link>
-								</li>
-							) : null}
+							{/*{isMobile ? (*/}
+							{/*	<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>*/}
+							{/*		<Link href="/telegram-bot">*/}
+							{/*			<span>Бот для онлайн-записи</span>*/}
+							{/*		</Link>*/}
+							{/*	</li>*/}
+							{/*) : null}*/}
 							{/*{isMobile ? (*/}
 							{/*	<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>*/}
 							{/*		<Link href="/solution/journal">*/}
@@ -119,13 +119,13 @@ const Header: FC = () => {
 							{/*		</Link>*/}
 							{/*	</li>*/}
 							{/*) : null}*/}
-							{isMobile ? (
-								<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
-									<Link href="/price">
-										<span>Ценовая политика</span>
-									</Link>
-								</li>
-							) : null}
+							{/*{isMobile ? (*/}
+							{/*	<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>*/}
+							{/*		<Link href="/price">*/}
+							{/*			<span>Ценовая политика</span>*/}
+							{/*		</Link>*/}
+							{/*	</li>*/}
+							{/*) : null}*/}
 						</ul>
 						<button
 							onClick={() => setIsOpen(!isOpen)}

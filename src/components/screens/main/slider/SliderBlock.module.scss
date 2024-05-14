@@ -12,6 +12,7 @@
 		line-height: 2.5vw;
 		text-align: left;
 		color: #0e131f;
+		width: 71.04vw;
 	}
 	span {
 		color: #161616b2;
@@ -20,7 +21,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		width: 80.83vw;
+		width: 71.04vw;
 		.switch {
 			svg {
 				width: 2.34vw;
@@ -45,11 +46,10 @@
 		.text {
 			display: flex;
 			flex-direction: column;
-			align-items: flex-start;
+			align-items: center;
 			justify-content: center;
 			gap: 1.67vw;
 			height: 7.71vw;
-			margin-left: 14.4792vw;
 		}
 		.slider_container {
 			max-height: 22.19vw;
@@ -60,7 +60,7 @@
 		.gradient_left {
 			height: 100%;
 			width: 17.1875vw;
-			background: linear-gradient(to right, #ffffff, transparent);
+			background: linear-gradient(to right, #ffffff90, transparent);
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -69,9 +69,9 @@
 		.gradient_right {
 			height: 100%;
 			width: 17.1875vw;
-			background: linear-gradient(to left, #ffffff, transparent);
+			background: linear-gradient(to left, #ffffff90, transparent);
 			position: absolute;
-			right: 1vw;
+			right: 4vw;
 			top: 0;
 			z-index: 3;
 		}

@@ -15,9 +15,18 @@ const Footer: FC = () => {
 						</div>
 						<p className={styles.title}>Контакты</p>
 						<div className={styles.main}>
-							<IconInstance name={EIcons.footerphone} />
-							<IconInstance name={EIcons.footeremail} />
-							<IconInstance name={EIcons.footerwhatsup} />
+							<div className={styles.card}>
+								<IconInstance name={EIcons.footerphone} />
+								<IconInstance name={EIcons.footerphonenumber} />
+							</div>
+							<div className={styles.card}>
+								<IconInstance name={EIcons.footermail} />
+								<IconInstance name={EIcons.footeremail} />
+							</div>
+							<div className={styles.card}>
+								<IconInstance name={EIcons.footermail} />
+								<IconInstance name={EIcons.footerwhatsup} />
+							</div>
 						</div>
 						<div className={styles.download}>
 							<IconInstance name={EIcons.footerappstore} />

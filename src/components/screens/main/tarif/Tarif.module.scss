@@ -62,6 +62,10 @@
 							height: 2.604vw;
 							border-radius: 100%;
 							background: #ecf2f9;
+							svg {
+								width: 2.604vw;
+								height: 2.604vw;
+							}
 						}
 						.text {
 							padding: 0;
@@ -90,7 +94,7 @@
 							height: 1.67vw;
 							border-radius: 0.83vw;
 							background: #e90147bf;
-							padding: 0.14vw;
+							padding: 0.16vw;
 							transition: background 0.5s;
 							.circle {
 								transition: margin-left 0.5s;

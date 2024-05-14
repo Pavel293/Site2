@@ -45,18 +45,40 @@
 					display: flex;
 					flex-direction: column;
 					gap: 0.52vw;
-					svg {
-						align-self: flex-start;
-						height: 0.88vw;
+					align-items: flex-start;
+					justify-content: flex-start;
+					.card {
+						display: flex;
+						flex-direction: row;
+						width: fit-content;
+						align-items: center;
+						justify-content: center;
+						gap: 0.678vw;
+						svg {
+							&:nth-child(1) {
+								width: 0.678vw;
+								height: 0.678vw;
+							}
+							&:nth-child(2) {
+								height: 0.88vw;
+								width: fit-content;
+							}
+						}
 					}
 				}
 				.download {
 					margin-top: 0.78125vw;
 					display: flex;
 					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
 					gap: 0.625vw;
 					svg {
 						width: 5.83vw;
+						height: 1.7494vw;
+						&:nth-child(3) {
+							height: 1.963vw;
+						}
 					}
 				}
 			}
@@ -84,6 +106,10 @@
 					display: flex;
 					flex-direction: row;
 					gap: 0.42vw;
+					svg {
+						width: 1.67vw;
+						height: 1.67vw;
+					}
 				}
 			}
 		}
@@ -108,10 +134,10 @@
 			color: #ffffff;
 		}
 		p {
-			font-size: 13px;
+			font-size: 0.68vw;
 			font-weight: 500;
-			line-height: 24px;
-			letter-spacing: -0.3199999928474426px;
+			line-height: 1.25vw;
+			letter-spacing: -0.016vw;
 			text-align: left;
 			color: #ffffff;
 			margin-top: 0.3125vw;

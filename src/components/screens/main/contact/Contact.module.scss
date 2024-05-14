@@ -50,6 +50,10 @@
 				background: transparent;
 				width: fit-content;
 				height: 1.25vw;
+				svg {
+					width: 0.83vw;
+					height: 0.83vw;
+				}
 			}
 			&:nth-child(1) {
 				background: url('../../../../assets/icons/contact/ContactBackground1.png')

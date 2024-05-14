@@ -5,10 +5,3 @@
 	flex-direction: column;
 	margin: 0 auto;
 }
-
-@media (max-width: 768px) {
-	.wrapper {
-		max-width: 92vw;
-		gap: 17vw;
-	}
-}
