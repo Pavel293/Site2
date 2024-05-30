@@ -17,7 +17,7 @@ const HeadProvider: FC<IType> = ({ children }) => {
 			/>
 
 			<Head>
-				{/* <!-- Top.Mail.Ru counter --> */}
+				{/* <!-- Top.Mail.Ru counter -->  */}
 				<noscript>6zk0syi22z79zb81</noscript>
 				<script
 					type="text/javascript"
