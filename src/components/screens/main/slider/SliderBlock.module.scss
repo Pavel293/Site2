@@ -4,14 +4,14 @@
 	align-items: center;
 	width: 100%;
 	height: 29.9vw;
-	background: #ffffff;
+	background: #09101c;
 
 	h2 {
 		font-size: 1.67vw;
 		font-weight: 800;
 		line-height: 2.5vw;
-		text-align: left;
-		color: #0e131f;
+		text-align: center;
+		color: #ffffff;
 		width: 71.04vw;
 	}
 	span {
@@ -33,8 +33,8 @@
 		font-size: 0.78vw;
 		font-weight: 500;
 		line-height: 1.25vw;
-		text-align: left;
-		color: #0e131fb2;
+		text-align: center;
+		color: #ffffff;
 	}
 	.main_container {
 		display: flex;
@@ -60,7 +60,7 @@
 		.gradient_left {
 			height: 100%;
 			width: 17.1875vw;
-			background: linear-gradient(to right, #ffffff90, transparent);
+			background: linear-gradient(to right, #09101c90, transparent);
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -69,7 +69,7 @@
 		.gradient_right {
 			height: 100%;
 			width: 17.1875vw;
-			background: linear-gradient(to left, #ffffff90, transparent);
+			background: linear-gradient(to left, #09101c90, transparent);
 			position: absolute;
 			right: 4vw;
 			top: 0;

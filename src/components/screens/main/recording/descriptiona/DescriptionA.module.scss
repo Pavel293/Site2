@@ -63,12 +63,13 @@
 			gap: 2.5vw;
 			button {
 				margin-top: 2.5vw;
-				width: 17.97vw;
-				height: 2.92vw;
-				background: #007aff;
-				color: white;
+				width: 13.125vw;
+				height: 2.5vw;
+				background: #2a2c32;
+				border: 1px solid #c7cbd4;
+				color: #ffffff;
 				border-radius: 0.42vw;
-				font-size: 0.78125vw;
+				font-size: 0.73vw;
 				font-weight: 600;
 				line-height: 1.04vw;
 				letter-spacing: 0.021vw;
@@ -100,6 +101,7 @@
 						svg {
 							width: 1.25vw;
 							height: 1.25vw;
+							color: #0ba3ad;
 						}
 					}
 					p {
@@ -153,11 +155,11 @@
 				}
 				.active {
 					.circle {
-						border: 0.15vw dashed #007aff;
+						border: 0.15vw dashed #0ba3ad;
 					}
 					p {
-						color: #007aff;
-						border-bottom: 0.05vw dashed #007aff;
+						color: #0ba3ad;
+						border-bottom: 0.05vw dashed #0ba3ad;
 					}
 				}
 			}

@@ -33,12 +33,11 @@ const SliderBlock: FC = () => {
 		<div className={cn(styles.base)}>
 			<div className={styles.main_container}>
 				<div className={styles.text}>
-					<h2>Идеально подходит</h2>
+					<h2>Платформа Telebon идеально подходит</h2>
 					<div className={styles.tp}>
 						<p>
-							Для специалистов и компаний в сфере услуг. Платформа Telebon
-							поддерживает запись на
-							<br /> индивидуальные и групповые услуги.
+							Для специалистов и компаний в сфере услуг. Платформа поддерживает
+							запись на индивидуальные и групповые услуги.
 						</p>
 						<div
 							className={styles.switch}
@@ -49,7 +48,7 @@ const SliderBlock: FC = () => {
 								}
 							}}
 						>
-							<IconInstance name={EIcons.buttonarrowright} />
+							<IconInstance name={EIcons.buttonarrowrightwhite} />
 						</div>
 					</div>
 				</div>

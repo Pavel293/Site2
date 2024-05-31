@@ -22,16 +22,21 @@ const Home: FC = () => {
 			image="logo_preview.png"
 		>
 			<div className={styles.wrapper}>
-				<Description />
-				<Recording />
-				<CenterButton />
-				<Professional />
-				<CenterButton />
+				<div style={{ height: '5vw' }}></div>
+				<div className={styles.block}>
+					<Description />
+					<Recording />
+					<CenterButton />
+					<Professional />
+					<CenterButton />
+				</div>
 				<SliderBlock />
-				<Start />
-				<Tarif />
-				<TryTelebon />
-				<Contact />
+				<div className={styles.block}>
+					<Start />
+					<Tarif />
+					<TryTelebon />
+					<Contact />
+				</div>
 			</div>
 		</Meta>
 	)

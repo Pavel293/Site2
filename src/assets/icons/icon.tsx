@@ -94,6 +94,7 @@ import { FooterVKIcon } from './footeri/FooterVKIcon'
 import { FooterTelegramIcon } from './footeri/FooterTelegramIcon'
 import { FooterMail } from './footeri/FooterMail'
 import { FooterPhoneNumber } from './footeri/FooterPhoneNumber'
+import { ButtonArrowRightWhite } from './ButtonArrowRightWhite'
 
 export enum EIcons {
 	walletoutline,
@@ -192,6 +193,7 @@ export enum EIcons {
 	footervkicon,
 	footermail,
 	footerphonenumber,
+	buttonarrowrightwhite,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -255,6 +257,7 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.settings]: Settings,
 	[EIcons.userprofilestar]: UserProfileStar,
 	[EIcons.buttonarrowright]: ButtonArrowRight,
+	[EIcons.buttonarrowrightwhite]: ButtonArrowRightWhite,
 	[EIcons.brush]: Brush,
 	[EIcons.barber]: Barber,
 	[EIcons.cosmetic]: Cosmetic,

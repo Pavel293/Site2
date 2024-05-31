@@ -2,7 +2,7 @@ import React, { FC, useEffect, useRef, useState } from 'react'
 import styles from './Header.module.scss'
 import cn from 'classnames'
 import Image from 'next/image'
-import LogoImageNew from '../../../assets/icons/LogoImageNew.svg'
+import LogoImageNewWhite from '../../../assets/icons/LogoImageNewWhite.svg'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import useMatchMedia from '@/hooks/useMatchMedia'
@@ -59,8 +59,8 @@ const Header: FC = () => {
 				<motion.nav
 					className={cn('wrapper', styles.header)}
 					variants={{
-						visible: { background: '#ffffff' },
-						hidden: { background: '#fafafccc' },
+						visible: { background: '#09101c' },
+						hidden: { background: '#09101ccc' },
 					}}
 					animate={hidden ? 'hidden' : 'visible'}
 					transition={{ duration: 0.35, ease: 'easeInOut' }}
@@ -75,7 +75,7 @@ const Header: FC = () => {
 					<div className={styles.headerContent} ref={menuRef}>
 						<Link href="/">
 							<div className={styles.logo} onClick={() => setIsOpen(false)}>
-								<Image src={LogoImageNew} alt="logotext" />
+								<Image src={LogoImageNewWhite} alt="logotext" />
 							</div>
 						</Link>
 						<div className={styles.navmenu}>
