@@ -29,7 +29,6 @@ const Header: FC = () => {
 				setHidden(false)
 			}
 			setScrollY(window.scrollY)
-			console.log(window.scrollY, scrollY)
 		}
 
 		window.addEventListener('scroll', handleScroll)
