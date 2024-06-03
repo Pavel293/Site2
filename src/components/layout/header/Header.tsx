@@ -12,18 +12,24 @@ const Header: FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
 	const [hidden, setHidden] = useState<boolean>(false)
 	const [scrollStarted, setScrollStarted] = useState<boolean>(false)
+	const [scrollY, setScrollY] = useState(0)
 	const isMobile = useMatchMedia('768')
 	const menuRef = useRef<HTMLDivElement>(null)
 
 	useEffect(() => {
 		const handleScroll = () => {
-			if (window.scrollY > 0 && !scrollStarted) {
+			if (window.scrollY > scrollY && !scrollStarted) {
 				setScrollStarted(true)
 				setHidden(true)
+			} else if (window.scrollY < scrollY && scrollStarted) {
+				setScrollStarted(false)
+				setHidden(false)
 			} else if (window.scrollY === 0 && scrollStarted) {
 				setScrollStarted(false)
 				setHidden(false)
 			}
+			setScrollY(window.scrollY)
+			console.log(window.scrollY, scrollY)
 		}
 
 		window.addEventListener('scroll', handleScroll)
@@ -31,7 +37,7 @@ const Header: FC = () => {
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
-	}, [scrollStarted])
+	}, [scrollStarted, scrollY])
 
 	useEffect(() => {
 		const closeMenuOnClickOutside = (event: MouseEvent | TouchEvent) => {
