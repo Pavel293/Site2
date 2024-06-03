@@ -59,8 +59,8 @@ const Header: FC = () => {
 				<motion.nav
 					className={cn('wrapper', styles.header)}
 					variants={{
-						visible: { background: '#09101c' },
-						hidden: { background: '#09101ccc' },
+						visible: { background: '#09101c', translateY: '0vw' },
+						hidden: { background: '#09101ccc', translateY: '-4.6875vw' },
 					}}
 					animate={hidden ? 'hidden' : 'visible'}
 					transition={{ duration: 0.35, ease: 'easeInOut' }}
