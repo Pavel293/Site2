@@ -1,11 +1,14 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import styles from './Footer.module.scss'
 import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 import Image from 'next/image'
 import FooterPhone from '../../../assets/icons/footeri/FooterPhone.png'
 import Link from 'next/link'
+import ModalSupport from '@/ui/modal/ModalSupport/ModalSupport'
 
 const Footer: FC = () => {
+	const [isModalOpen, setIsModalOpen] = useState(false)
+
 	return (
 		<div className={styles.footer}>
 			<div className={styles.main_container}>
@@ -80,7 +83,9 @@ const Footer: FC = () => {
 							<p className={styles.title}>Презентация Telebon</p>
 							<p>Покажем систему в деле, ответим на все интересующие вопросы</p>
 						</div>
-						<button>Запросить презентацию</button>
+						<button onClick={() => setIsModalOpen(true)}>
+							Запросить презентацию
+						</button>
 					</div>
 				</div>
 				<div className={styles.bottom}>
@@ -97,6 +102,13 @@ const Footer: FC = () => {
 					<span>1154345004582</span>
 				</div>
 			</div>
+			{isModalOpen ? (
+				<ModalSupport
+					isOpen={isModalOpen}
+					setIsModalOpen={setIsModalOpen}
+					onClose={() => setIsModalOpen(false)}
+				/>
+			) : null}
 		</div>
 	)
 }
