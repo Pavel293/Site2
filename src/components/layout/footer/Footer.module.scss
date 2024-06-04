@@ -1,12 +1,13 @@
 .footer {
 	width: 100%;
-	height: 24.58vw;
+	height: 46.41vw;
 	background: #09101c;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding-top: 0.52vw;
 	position: relative;
+
 	.title {
 		font-size: 0.89vw;
 		font-weight: 700;
@@ -15,6 +16,7 @@
 		text-align: left;
 		color: #ffffff;
 	}
+
 	p {
 		font-size: 0.68vw;
 		font-weight: 600;
@@ -22,24 +24,95 @@
 		text-align: left;
 		color: #d4d5d6;
 	}
+
 	.main_container {
-		width: 71.04vw;
+		width: 100vw;
 		height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		.common {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 28.4375vw;
+
+			svg {
+				width: 4.167vw;
+				height: 4.167vw;
+			}
+
+			p {
+				font-size: 0.78125vw;
+				font-weight: 400;
+				line-height: 1.25;
+				text-align: center;
+				color: #ffffff;
+				a {
+					text-decoration: underline;
+				}
+			}
+
+			.title {
+				height: 5.417vw;
+				font-size: 2.5vw;
+				font-weight: 700;
+				line-height: 3.33vw;
+				letter-spacing: -0.0417vw;
+				text-align: center;
+				color: #ffffff;
+			}
+
+			.buttons {
+				height: 3.4375vw;
+				width: 15.78125vw;
+				border: 0.1042vw dashed #1b273d;
+				padding: 0.3646vw;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				border-radius: 0.83vw;
+				margin-top: 1.67vw;
+				svg {
+					&:nth-child(1) {
+						width: 6.823vw;
+						height: 2.5vw;
+					}
+
+					&:nth-child(2) {
+						width: 7.604vw;
+						height: 2.5vw;
+					}
+				}
+			}
+		}
+
+		.links {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
 		.row {
 			display: flex;
 			flex-direction: row;
-			height: 100%;
+			padding: 1.25vw 0;
+			justify-content: space-between;
+			align-items: center;
+			width: 71.458vw;
+			.title {
+				font-size: 0.885vw;
+				font-weight: 700;
+				line-height: 1.3vw;
+				letter-spacing: 0.052vw;
+				text-align: left;
+				color: #647084;
+			}
 			.contact {
 				display: flex;
 				flex-direction: column;
-				.logo {
-					margin-top: 2.45vw;
-					margin-bottom: 0.57vw;
-					svg {
-						width: 2.604vw;
-						height: 2.604vw;
-					}
-				}
 				.main {
 					margin-top: 0.9375vw;
 					display: flex;
@@ -47,6 +120,7 @@
 					gap: 0.52vw;
 					align-items: flex-start;
 					justify-content: flex-start;
+
 					.card {
 						display: flex;
 						flex-direction: row;
@@ -54,11 +128,13 @@
 						align-items: center;
 						justify-content: center;
 						gap: 0.678vw;
+
 						svg {
 							&:nth-child(1) {
 								width: 0.678vw;
 								height: 0.678vw;
 							}
+
 							&:nth-child(2) {
 								height: 0.88vw;
 								width: fit-content;
@@ -66,97 +142,114 @@
 						}
 					}
 				}
-				.download {
-					margin-top: 0.78125vw;
-					display: flex;
-					flex-direction: column;
-					align-items: flex-start;
-					justify-content: flex-start;
-					gap: 0.625vw;
-					svg {
-						width: 5.83vw;
-						height: 1.7494vw;
-						&:nth-child(3) {
-							height: 1.963vw;
-						}
-					}
-				}
 			}
-			.phone {
-				align-self: flex-end;
-				margin-left: 3.91vw;
-				margin-right: 2.94vw;
-				img {
-					user-select: none;
-					pointer-events: none;
-					width: 12.92vw;
-				}
-			}
+
 			.column {
 				display: flex;
 				flex-direction: column;
 				gap: 0.83vw;
-				margin: 3.75vw 1.5625vw 0;
 				width: fit-content;
+				height: 100%;
 				.line {
 					width: 100%;
 					border-bottom: 0.05vw solid #ffffff1a;
 				}
+
 				.social {
 					display: flex;
 					flex-direction: row;
 					gap: 0.42vw;
+
 					svg {
 						width: 1.67vw;
 						height: 1.67vw;
 					}
 				}
+				p {
+					font-size: 0.677vw;
+					font-weight: 600;
+					line-height: 1.042vw;
+					text-align: left;
+				}
+				.title {
+					font-size: 0.885vw;
+					font-weight: 600;
+					line-height: 1.25vw;
+					text-align: left;
+					color: #647084;
+				}
 			}
 		}
-	}
-	.presentation {
-		position: absolute;
-		bottom: 1.41vw;
-		right: 6.875vw;
-		width: 20.83vw;
-		height: 10.3125vw;
-		padding: 0.83vw;
-		background: #212329;
-		border-radius: 0.83vw;
-		display: flex;
-		flex-direction: column;
-		.title {
-			font-size: 0.89vw;
-			font-weight: 500;
-			line-height: 1.25vw;
-			letter-spacing: 0.05vw;
-			text-align: left;
-			color: #ffffff;
-		}
-		p {
-			font-size: 0.68vw;
-			font-weight: 500;
-			line-height: 1.25vw;
-			letter-spacing: -0.016vw;
-			text-align: left;
-			color: #ffffff;
-			margin-top: 0.3125vw;
-		}
-		button {
+
+		.present {
 			display: flex;
+			flex-direction: row;
+			height: 3.958vw;
+			width: 100vw;
+			background: #0d1625;
+			border-radius: 1.042vw;
+			border: 0.052vw solid #131d2f;
 			align-items: center;
 			justify-content: center;
-			margin-top: 1.5625vw;
-			width: 9.53125vw;
-			height: 1.77vw;
-			background: #007aff;
-			border-radius: 0.21vw;
-			font-size: 0.73vw;
-			font-weight: 600;
-			line-height: 1.04;
-			letter-spacing: -0.007vw;
-			text-align: center;
-			color: #ffffff;
+			.box {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				width: 71.458vw;
+			}
+			p {
+				font-size: 0.78125vw;
+				font-weight: 400;
+				line-height: 1.146vw;
+				text-align: left;
+				color: #ffffff;
+			}
+			.title {
+				font-size: 0.9896vw;
+				font-weight: 600;
+				line-height: 1.458vw;
+				letter-spacing: -0.0158vw;
+				text-align: left;
+			}
+			button {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: #131d2f;
+				width: 10.83vw;
+				height: 1.67vw;
+				border-radius: 0.52vw;
+				font-size: 0.78125vw;
+				font-weight: 500;
+				line-height: 1.1456vw;
+				text-align: center;
+				color: #ffffff;
+			}
+		}
+		.bottom {
+			display: flex;
+			flex-direction: row;
+			gap: 0.625vw;
+			align-items: center;
+			justify-content: center;
+			padding: 1.25vw 0;
+			p {
+				font-size: 0.677vw;
+				font-weight: 400;
+				line-height: 0.9375vw;
+				letter-spacing: -0.0203vw;
+				text-align: center;
+				color: #647084;
+			}
+			span {
+				font-size: 0.677vw;
+				font-weight: 400;
+				line-height: 0.9375vw;
+				letter-spacing: -0.0203vw;
+				text-align: center;
+				color: #a1abbd;
+			}
 		}
 	}
 }
