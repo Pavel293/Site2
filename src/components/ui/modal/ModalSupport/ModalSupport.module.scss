@@ -91,10 +91,10 @@
 		color: #0e131fb2;
 	}
 	.title {
-		font-size: 32px;
+		font-size: 1.67vw;
 		font-weight: 600;
-		line-height: 32px;
-		letter-spacing: -0.6000000238418579px;
+		line-height: 1.67vw;
+		letter-spacing: -0.03125vw;
 		text-align: left;
 		color: #0e131f;
 	}
@@ -165,6 +165,13 @@
 			font-weight: 500;
 			line-height: 27.32px;
 			text-align: left;
+			p {
+				font-size: 0.78125vw;
+				font-weight: 500;
+				line-height: 1.25vw;
+				text-align: left;
+				color: #0e131fb2;
+			}
 			span {
 				text-decoration: underline;
 			}

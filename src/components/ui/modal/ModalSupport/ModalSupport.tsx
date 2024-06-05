@@ -147,7 +147,7 @@ const ModalSupport: React.FC<ModalProps> = ({
 							<IconInstance name={EIcons.close} />
 							<p className={styles.title}>Презентация Telebon</p>
 						</div>
-						<p>
+						<p style={{ width: '100%' }}>
 							Покажем систему в деле, поможем с переездом и ответим
 							<br /> на вопросы. Перед оформлением подписки можно
 							<br /> протестировать бесплатно
@@ -157,7 +157,7 @@ const ModalSupport: React.FC<ModalProps> = ({
 								<input
 									type="text"
 									name="name"
-									placeholder="Введите Ваше Имя"
+									placeholder="Укажите Ваше Имя"
 									className={styles.custom_input}
 									value={formik.values.name}
 									onChange={formik.handleChange}
