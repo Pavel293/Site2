@@ -30,20 +30,13 @@ const DescriptionA: FC = () => {
 			{/*	</h1>*/}
 			{/*	<h1>запись клиентов</h1>*/}
 			{/*</div>*/}
-			<div className={styles.text}>
-				<h2>
-					Ознакомьтесь с основными
-					<br /> функциями платформы
-				</h2>
-				<p>
-					Собрали всё самое необходимое, разработали с учётом пожеланий мастеров
-					и сотрудников
-					<br /> компаний, из более чем 20-ти сфер услуг.
-				</p>
-			</div>
 			<div className={styles.box}>
 				<div className={styles.row}>
 					<div className={styles.column}>
+						<div className={styles.text}>
+							<h2>Ознакомьтесь с функциями</h2>
+							<p>Все самое необходимое, без лишних настроек</p>
+						</div>
 						{propoData?.map((item: PropoData, index) => (
 							<div
 								className={cn(styles.card, {

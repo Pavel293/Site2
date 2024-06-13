@@ -98,6 +98,12 @@ import { ButtonArrowRightWhite } from './ButtonArrowRightWhite'
 import { FooterWhatsUpIcon } from './footeri/FooterWhatsUpIcon'
 import { Close } from './Close'
 import { Success } from './Success'
+import { HeroLogo } from './hero/HeroLogo'
+import { RecordingBell } from './recording/RecordingBell'
+import { RecordingTelegramBlock } from './recording/RecordingTelegramBlock'
+import { DescriptionStars } from './recording/DescriptionStars'
+import { ButtonIcon } from './ButtonIcon'
+import { ButtonArrowLeftWhite } from './ButtonArrowLeftWhite'
 
 export enum EIcons {
 	walletoutline,
@@ -200,6 +206,12 @@ export enum EIcons {
 	footerwhatsupicon,
 	close,
 	success,
+	herologo,
+	recordingbell,
+	recordingtelegramblock,
+	descriptionstars,
+	buttonicon,
+	buttonarrowleftwhite,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -264,6 +276,7 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.userprofilestar]: UserProfileStar,
 	[EIcons.buttonarrowright]: ButtonArrowRight,
 	[EIcons.buttonarrowrightwhite]: ButtonArrowRightWhite,
+	[EIcons.buttonarrowleftwhite]: ButtonArrowLeftWhite,
 	[EIcons.brush]: Brush,
 	[EIcons.barber]: Barber,
 	[EIcons.cosmetic]: Cosmetic,
@@ -303,6 +316,11 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.footerphonenumber]: FooterPhoneNumber,
 	[EIcons.close]: Close,
 	[EIcons.success]: Success,
+	[EIcons.herologo]: HeroLogo,
+	[EIcons.recordingbell]: RecordingBell,
+	[EIcons.recordingtelegramblock]: RecordingTelegramBlock,
+	[EIcons.descriptionstars]: DescriptionStars,
+	[EIcons.buttonicon]: ButtonIcon,
 }
 
 interface IIconProps {

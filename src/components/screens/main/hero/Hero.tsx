@@ -1,92 +1,141 @@
-import React, { FC, useEffect, useRef } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import styles from './Hero.module.scss'
 import cn from 'classnames'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
+import Image from 'next/image'
+import Coursor from '../../../../assets/icons/hero/HeroCoursor.png'
+import Pin from '../../../../assets/icons/hero/HeroPin.png'
+import HeroIcons from '../../../../assets/icons/hero/HeroIcons.png'
+import InputMask from 'react-input-mask'
+import { useFormik } from 'formik'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+
+export interface FormValues {
+	email: string
+	isValidForm: boolean
+}
 
 const Hero: FC = () => {
+	const [scrollStarted, setScrollStarted] = useState<boolean>(false)
+	const [hidden, setHidden] = useState<boolean>(false)
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 0 && !scrollStarted) {
+				setScrollStarted(true)
+				setHidden(true)
+			} else if (window.scrollY === 0 && scrollStarted) {
+				setScrollStarted(false)
+				setHidden(false)
+			}
+		}
+
+		window.addEventListener('scroll', handleScroll)
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [scrollStarted])
+
+	const initialValues = {
+		email: '',
+		isValidForm: false,
+	}
+
+	const validate = (values: any) => {
+		const errors: any = {}
+		if (!values.email) {
+			errors.email = 'Введите корректную почту'
+		}
+		return errors
+	}
+
+	const onSubmit = async (values: FormValues) => {
+		try {
+			console.log('1')
+		} catch (error) {
+			console.error('Ошибка при отправке данных:', error)
+		}
+	}
+
+	const formik = useFormik({
+		initialValues,
+		onSubmit,
+		validate,
+	})
+
+	const onSubmitHandler: React.MouseEventHandler<HTMLButtonElement> = event => {
+		event.preventDefault()
+		onSubmit(formik.values)
+	}
+
 	return (
-		<div className={cn(styles.fuck, 'wrapper')}>
-			<div className={styles.row}>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img1} />
+		<div className={cn(styles.body, 'wrapper')}>
+			<motion.div
+				className={styles.images}
+				variants={{
+					visible: { translateX: '0vw' },
+					hidden: { translateX: '-10vw' },
+				}}
+				animate={hidden ? 'hidden' : 'visible'}
+				transition={{ duration: 0.35, ease: 'easeInOut' }}
+			>
+				<Image src={Pin} alt={''} />
+			</motion.div>
+			<motion.div
+				className={styles.images}
+				variants={{
+					visible: { translateY: '0vw' },
+					hidden: { translateY: '-10vw' },
+				}}
+				animate={hidden ? 'hidden' : 'visible'}
+				transition={{ duration: 0.35, ease: 'easeInOut' }}
+			>
+				<Image src={HeroIcons} alt={''} />
+			</motion.div>
+			<motion.div
+				className={styles.images}
+				variants={{
+					visible: { translateY: '0vw' },
+					hidden: { translateY: '-10vw' },
+				}}
+				animate={hidden ? 'hidden' : 'visible'}
+				transition={{ duration: 0.35, ease: 'easeInOut' }}
+			>
+				<Image src={Coursor} alt={''} />
+			</motion.div>
+			<div className={styles.container}>
+				<IconInstance name={EIcons.herologo} />
+				<p>
+					Простая запись клиентов
+					<br /> для профессионалов
+				</p>
+				<div className={styles.common_input}>
+					<input
+						type="text"
+						name="email"
+						placeholder="Укажите рабочий email"
+						value={formik.values.email}
+						onChange={formik.handleChange}
+					/>
+					<button
+						type={'button'}
+						disabled={!formik.isValid || formik.values.email === ''}
+						onClick={onSubmitHandler}
+					>
+						НАЧАТЬ
+					</button>
 				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img2} />
-					<IconInstance name={EIcons.img3} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img4} />
-					<IconInstance name={EIcons.img5} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img6} />
-					<IconInstance name={EIcons.img7} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img8} />
-					<IconInstance name={EIcons.img9} />
-					<IconInstance name={EIcons.img10} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img11} />
-					<IconInstance name={EIcons.img12} />
-					<IconInstance name={EIcons.img13} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img14} />
-					<IconInstance name={EIcons.img15} />
-					<IconInstance name={EIcons.img16} />
-					<IconInstance name={EIcons.img17} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img18} />
-					<IconInstance name={EIcons.img19} />
-					<IconInstance name={EIcons.img20} />
-					<IconInstance name={EIcons.img28} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img21} />
-					<IconInstance name={EIcons.img22} />
-					<IconInstance name={EIcons.img23} />
-					<IconInstance name={EIcons.img26} />
-					<div style={{ width: '5vw', height: '5vw' }}></div>
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img24} />
-					<IconInstance name={EIcons.img25} />
-					<IconInstance name={EIcons.img27} />
-					<IconInstance name={EIcons.img32} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img29} />
-					<IconInstance name={EIcons.img30} />
-					<IconInstance name={EIcons.img31} />
-					<IconInstance name={EIcons.img33} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img34} />
-					<IconInstance name={EIcons.img35} />
-					<IconInstance name={EIcons.img36} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img37} />
-					<IconInstance name={EIcons.img38} />
-					<IconInstance name={EIcons.img39} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img40} />
-					<IconInstance name={EIcons.img41} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img42} />
-					<IconInstance name={EIcons.img43} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img44} />
-					<IconInstance name={EIcons.img45} />
-				</div>
-				<div className={styles.column}>
-					<IconInstance name={EIcons.img46} />
+				<div className={styles.buttons}>
+					<Link
+						href={'https://apps.apple.com/ru/app/telebon/id6502614961'}
+						target={'_blank'}
+					>
+						<IconInstance name={EIcons.footerappstore} />
+					</Link>
+					<Link href={'/'}>
+						<IconInstance name={EIcons.footergoogleplay} />
+					</Link>
 				</div>
 			</div>
 		</div>

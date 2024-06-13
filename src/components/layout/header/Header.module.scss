@@ -15,6 +15,18 @@ $menuItems: 7;
 .indent {
 	height: 2.08vw;
 }
+
+.shadows {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	img {
+		width: 100vw;
+		height: 100vh;
+	}
+}
+
 .header {
 	position: fixed;
 	top: 0;
@@ -79,24 +91,16 @@ $menuItems: 7;
 
 		ul {
 			@apply flex  gap-[0.8vw] items-center py-[0.9vw];
-			li {
-				a {
-					transition: 0.5s ease;
-					@apply hover:text-text;
-				}
-			}
 
 			.auth {
 				> a {
-					@apply flex justify-center items-center px-[1.768vw] rounded-full h-[2.92vw];
-					color: #2a2c32;
-					width: 5.46875vw;
-					background: #ffffff;
-					border: 1px solid #c7cbd4;
+					@apply flex justify-center items-center px-[1.768vw] rounded-full h-[2.5vw];
+					color: #ffffff;
+					width: 5.625vw;
+					background: #131d2f;
 					border-radius: 0.4vw;
-					font-weight: 700;
+					font-weight: 600;
 					font-size: 0.78125vw;
-					letter-spacing: 0.02vw;
 					user-select: none;
 
 					//&:hover {
@@ -110,11 +114,22 @@ $menuItems: 7;
 				}
 
 				&.reg {
+					.icon_button {
+						display: flex;
+						flex-direction: row;
+						gap: 0.208vw;
+						align-items: center;
+						justify-content: center;
+						svg {
+							width: 1.04167vw;
+							height: 1.04167vw;
+						}
+					}
 					a {
-						@apply px-[1.21vw];
-						background: #ffffff;
-						color: #2a2c32;
-						width: 13.28125vw;
+						background: #09101c;
+						color: #ffffff;
+						border: 1px solid #202c42;
+						width: 13.177vw;
 
 						//&:hover {
 						//	background: #1f5ad3;

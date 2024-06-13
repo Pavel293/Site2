@@ -1,16 +1,75 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import styles from './Footer.module.scss'
 import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 import Image from 'next/image'
 import FooterPhone from '../../../assets/icons/footeri/FooterPhone.png'
 import Link from 'next/link'
 import ModalSupport from '@/ui/modal/ModalSupport/ModalSupport'
+import FooterImageLeft from '../../../assets/icons/footeri/FooterImageLeft.png'
+import FooterImageRight from '../../../assets/icons/footeri/FooterImageRight.png'
+import { motion } from 'framer-motion'
 
 const Footer: FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
+	const [hidden, setHidden] = useState<boolean>(false)
+	const [scrollStarted, setScrollStarted] = useState<boolean>(false)
+
+	useEffect(() => {
+		const handleScroll = () => {
+			console.log(
+				document.documentElement.scrollHeight - window.innerHeight,
+				document.documentElement.scrollHeight,
+				window.innerHeight,
+				window.scrollY,
+			)
+			if (
+				window.scrollY <
+					document.documentElement.scrollHeight - window.innerHeight &&
+				!scrollStarted
+			) {
+				setScrollStarted(true)
+				setHidden(true)
+			} else if (
+				window.scrollY ===
+					document.documentElement.scrollHeight - window.innerHeight &&
+				scrollStarted
+			) {
+				setScrollStarted(false)
+				setHidden(false)
+			}
+		}
+
+		window.addEventListener('scroll', handleScroll)
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [scrollStarted])
 
 	return (
 		<div className={styles.footer}>
+			<motion.div
+				className={styles.image}
+				variants={{
+					visible: { translateX: '0vw' },
+					hidden: { translateX: '-10vw' },
+				}}
+				animate={hidden ? 'hidden' : 'visible'}
+				transition={{ duration: 0.35, ease: 'easeInOut' }}
+			>
+				<Image src={FooterImageLeft} alt={''} />
+			</motion.div>
+			<motion.div
+				className={styles.image}
+				variants={{
+					visible: { translateX: '0vw' },
+					hidden: { translateX: '10vw' },
+				}}
+				animate={hidden ? 'hidden' : 'visible'}
+				transition={{ duration: 0.35, ease: 'easeInOut' }}
+			>
+				<Image src={FooterImageRight} alt={''} />
+			</motion.div>
 			<div className={styles.main_container}>
 				<div className={styles.common}>
 					<IconInstance name={EIcons.footerlogomark} />
@@ -60,15 +119,26 @@ const Footer: FC = () => {
 							<div className={styles.column}>
 								<p className={styles.title}>КАРТА САЙТА</p>
 								<div className={styles.line}></div>
-								<p>Тарифы</p>
-								<p>Бот для записи</p>
+								<Link href={'/'}>
+									<p>Тарифы</p>
+								</Link>
+								<Link href={'/'}>
+									<p>Бот для записи</p>
+								</Link>
 							</div>
 							<div className={styles.column}>
 								<p className={styles.title}>ДОКУМЕНТЫ</p>
 								<div className={styles.line}></div>
-								<p>Пользовательское соглашение</p>
-								<p>Лицензионный договор</p>
-								<p>Конфиденциальность</p>
+
+								<Link href={'/'}>
+									<p>Пользовательское соглашение</p>
+								</Link>
+								<Link href={'/'}>
+									<p>Лицензионный договор</p>
+								</Link>
+								<Link href={'/'}>
+									<p>Конфиденциальность</p>
+								</Link>
 								{/*<div className={styles.social}>*/}
 								{/*	<IconInstance name={EIcons.footertelegramicon} />*/}
 								{/*	<IconInstance name={EIcons.footervkicon} />*/}

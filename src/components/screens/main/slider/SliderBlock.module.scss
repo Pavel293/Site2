@@ -7,10 +7,11 @@
 	background: #09101c;
 
 	h2 {
-		font-size: 1.67vw;
+		font-size: 2.083vw;
 		font-weight: 800;
 		line-height: 2.5vw;
 		text-align: center;
+		letter-spacing: -0.03125vw;
 		color: #ffffff;
 		width: 71.04vw;
 	}
@@ -30,7 +31,7 @@
 		}
 	}
 	p {
-		font-size: 0.78vw;
+		font-size: 0.78125vw;
 		font-weight: 500;
 		line-height: 1.25vw;
 		text-align: center;
@@ -48,7 +49,7 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			gap: 1.67vw;
+			gap: 0.521vw;
 			height: 7.71vw;
 		}
 		.slider_container {

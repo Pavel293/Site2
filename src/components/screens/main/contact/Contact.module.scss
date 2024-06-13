@@ -1,10 +1,31 @@
+.container {
+	display: flex;
+	flex-direction: column;
+}
+.back_text {
+	margin-bottom: -4.167vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 4.167vw;
+	p {
+		font-size: 240px;
+		font-weight: 700;
+		line-height: 212px;
+		letter-spacing: -9.600000381469727px;
+		text-align: left;
+		color: #1b273d0d;
+	}
+}
 .base {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	margin: 3.125vw 0;
+	padding: 1.25vw 0 2.083vw;
+	background: #ffffff;
 	.main_container {
 		width: 71.04vw;
 		display: flex;

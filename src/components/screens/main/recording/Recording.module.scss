@@ -27,48 +27,52 @@
 			color: #747474;
 		}
 	}
+	.up_text {
+		display: flex;
+		flex-direction: row;
+		align-self: flex-start;
+		padding-left: 14.27vw;
+		gap: 3.9583vw;
+		margin-top: 5vw;
+		svg {
+			width: 4.25vw;
+			height: 3.51vw;
+			color: #29a9ea;
+			transition: color 0.5s;
+			margin-top: 0.5208vw;
+		}
+		h2 {
+			font-size: 2.083vw;
+			font-weight: 800;
+			line-height: 2.5vw;
+			letter-spacing: -0.03125vw;
+			text-align: left;
+			color: #000000;
+		}
+		p {
+			font-size: 0.78125vw;
+			font-weight: 400;
+			line-height: 1.25vw;
+			text-align: left;
+			color: #535764;
+		}
+	}
 	.main_container {
 		display: flex;
 		flex-direction: row;
-		gap: 0.83vw;
+		gap: 1.25vw;
 		.left {
 			display: flex;
 			flex-direction: column;
 			gap: 1.67vw;
-			background: #f7f7f9;
-			border-radius: 1.67vw;
+			background: url('../../../../assets/icons/recording/RecordingLeftBackground.png')
+				no-repeat;
+			background-size: cover;
+			border-radius: 1.25vw;
 			width: 35vw;
-			height: 35vw;
+			height: 39.0625vw;
 			padding: 1.67vw 1.67vw 0 1.67vw;
-			.left_head {
-				display: flex;
-				flex-direction: column;
-				gap: 0.83vw;
-				.hrow {
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-				}
-				h2 {
-					font-size: 1.67vw;
-					font-weight: 700;
-					line-height: 1.67vw;
-					text-align: left;
-					color: #0e131f;
-				}
-				p {
-					font-size: 1.04vw;
-					font-weight: 400;
-					line-height: 1.04vw;
-					text-align: left;
-					color: #747474;
-				}
-				.line {
-					height: 0.49vw;
-					width: 100%;
-					background: #00000017;
-				}
-			}
+			overflow: hidden;
 			.image {
 				display: flex;
 				flex-direction: row;
@@ -76,17 +80,19 @@
 				justify-content: center;
 				gap: 1.09vw;
 				position: relative;
+				margin-top: 9vw;
+				transition: margin-top 0.5s;
 				.phone {
 					img {
 						user-select: none;
 						pointer-events: none;
-						width: 17.34vw;
+						width: 21.3542vw;
 					}
 				}
 				.click {
 					position: absolute;
-					bottom: -2.19vw;
-					left: 1.77vw;
+					bottom: 8vw;
+					left: 0;
 					img {
 						width: 14.68vw;
 						height: 14.68vw;
@@ -94,59 +100,59 @@
 				}
 			}
 			&:hover {
-				.circle {
-					background: #29a9ea;
-					svg {
-						color: #ffffff;
-					}
+				.image {
+					margin-top: 2vw;
 				}
 			}
 		}
 		.right {
 			display: flex;
 			flex-direction: column;
-			gap: 0.83vw;
-			width: 35.21vw;
-			height: 35vw;
-			background: #ffffff;
+			gap: 6.458vw;
+			width: 35vw;
+			height: 39.0625vw;
+			background: #2997ff;
+			border-radius: 1.25vw;
+			padding: 2.604vw;
+			transition: background 0.5s;
 			.right_head {
 				display: flex;
 				flex-direction: row;
-				gap: 1.15vw;
-				padding: 2.6vw 2.6vw 2.395vw 2.71vw;
-				height: 17.08vw;
-				background: #f7f7f9;
+				gap: 1.771vw;
 				border-radius: 1.67vw;
 				position: relative;
-				transition: background 0.5s;
 				.text {
 					display: flex;
 					flex-direction: column;
 					gap: 0.83vw;
 					h3 {
 						transition: color 0.5s;
-						font-size: 1.66vw;
-						font-weight: 800;
-						line-height: 2.29vw;
+						font-size: 1.67vw;
+						font-weight: 700;
+						line-height: 2.083vw;
 						text-align: left;
-						color: #0e131f;
+						color: #ffffff;
 						letter-spacing: -0.031vw;
 					}
 					p {
 						transition: color 0.5s;
-						font-size: 0.93vw;
+						font-size: 1.042vw;
 						font-weight: 500;
 						line-height: 1.46vw;
 						letter-spacing: -0.021vw;
 						text-align: left;
-						color: #535764;
+						color: #ffffff;
 					}
 				}
 				svg {
 					width: 4.25vw;
 					height: 3.51vw;
-					color: #29a9ea;
+					color: #ffffff;
 					transition: color 0.5s;
+				}
+				img {
+					width: 3.33vw;
+					height: 3.33vw;
 				}
 				.circle {
 					position: absolute;
@@ -162,24 +168,51 @@
 						color: #747474;
 					}
 				}
-				&:hover {
-					background: #29a9ea;
+			}
+			.telegram_block {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				svg {
+					transition: color 0.5s;
+					width: 23.802vw;
+					height: 11.146vw;
+					color: #ffffff;
+				}
+				p {
+					top: 2.08vw;
+					left: 9.5vw;
+					transition: color 0.5s;
+					font-size: 1.09375vw;
+					font-weight: 500;
+					line-height: 1.5625vw;
+					text-align: left;
+					color: #0e131f;
+					position: absolute;
+				}
+			}
+			&:hover {
+				background: #f2f2f8;
+				.right_head {
 					.text {
 						h3 {
-							color: #ffffff;
+							color: #000000;
 						}
 						p {
-							color: #ffffff;
+							color: #000000;
 						}
 					}
 					svg {
+						color: #2997ff;
+					}
+				}
+				.telegram_block {
+					p {
 						color: #ffffff;
 					}
-					.circle {
-						background: #ffffff;
-						svg {
-							color: #747474;
-						}
+					svg {
+						color: #2997ff;
 					}
 				}
 			}
@@ -195,43 +228,6 @@
 					svg {
 						width: 1.25vw;
 						height: 1.25vw;
-					}
-				}
-				.telegram_block {
-					width: 17.19vw;
-					height: 17.08vw;
-					background: #f7f7f9;
-					border-radius: 1.67vw;
-					position: relative;
-					padding: 1.09vw;
-					display: flex;
-					flex-direction: row;
-					gap: 0.73vw;
-					align-items: flex-end;
-					justify-content: flex-start;
-					p {
-						font-size: 0.78vw;
-						font-weight: 600;
-						line-height: 1.875vw;
-						letter-spacing: 0.02vw;
-						text-align: center;
-						color: #44b4ed;
-						width: 9.11vw;
-					}
-					img {
-						position: absolute;
-						top: 1.3vw;
-						left: 0;
-						width: 16vw;
-						height: 12.5vw;
-					}
-					&:hover {
-						.circle {
-							background: #29a9ea;
-							svg {
-								color: #ffffff;
-							}
-						}
 					}
 				}
 				.phone_block {

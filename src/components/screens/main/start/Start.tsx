@@ -4,12 +4,18 @@ import cn from 'classnames'
 const Start: FC = () => {
 	return (
 		<div className={cn(styles.base, 'wrapper')}>
-			<p>Легко начать, поможем с первыми шагами </p>
+			<div className={styles.text}>
+				<p>Служба поддержки</p>
+				<span>
+					Помогают решить любой возникший вопрос по <br />
+					работе с системой
+				</span>
+			</div>
 			<div className={styles.main_container}>
 				<div className={styles.card}>
 					<div className={styles.text}>
 						<p>
-							Узнаем <br />
+							Узнают <br />
 							потребности
 						</p>
 						<span>
@@ -24,11 +30,11 @@ const Start: FC = () => {
 				<div className={styles.card}>
 					<div className={styles.text}>
 						<p>
-							Перенесем <br />
-							данные
+							Перенесут <br />
+							все данные
 						</p>
 						<span>
-							Возьмем на себя все трудности <br />с базой клиентов
+							Возьмут на себя все трудности с<br /> переездом
 						</span>
 					</div>
 					<div className={styles.num}>
@@ -38,15 +44,14 @@ const Start: FC = () => {
 				<div className={styles.card}>
 					<div className={styles.text}>
 						<p>
-							Настроим <br />
-							сервис
+							Согласуют
+							<br /> бесплатный период
 						</p>
 						<span>
-							Настроим все необходимое <br />
-							для работы
+							Компенсируем лицензии
+							<br /> других систем
 						</span>
 					</div>
-					<button>Узнать больше</button>
 					<div className={styles.num}>
 						<p>3</p>
 					</div>

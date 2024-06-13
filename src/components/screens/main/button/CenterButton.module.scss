@@ -1,19 +1,19 @@
 .base {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	margin: 0.83vw 0;
+	margin: 0.83vw 0 6.25vw;
 	button {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		width: 13.125vw;
+		width: 20.3125vw;
 		height: 2.5vw;
 		background: #2a2c32;
-		border: 1px solid #c7cbd4;
+		border: 0.0521vw solid #c7cbd4;
 		border-radius: 0.42vw;
 		font-size: 0.78125vw;
 		font-weight: 600;
@@ -22,5 +22,10 @@
 		text-align: center;
 		color: #ffffff;
 		user-select: none;
+		gap: 0.208vw;
+		svg {
+			width: 1.0417vw;
+			height: 1.0417vw;
+		}
 	}
 }

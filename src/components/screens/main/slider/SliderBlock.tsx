@@ -33,22 +33,38 @@ const SliderBlock: FC = () => {
 		<div className={cn(styles.base)}>
 			<div className={styles.main_container}>
 				<div className={styles.text}>
-					<h2>Платформа Telebon идеально подходит</h2>
+					<h2>Telebon идеально подходит</h2>
 					<div className={styles.tp}>
-						<p>
-							Для специалистов и компаний в сфере услуг. Платформа поддерживает
-							запись на индивидуальные и групповые услуги.
+						<p style={{ marginLeft: '23vw' }}>
+							Для специалистов и компаний в сфере услуг.
+							<br />
+							Поддерживается запись на индивидуальные и групповыхе услуги
 						</p>
 						<div
-							className={styles.switch}
-							onClick={() => {
-								if (arrowRef && arrowRef.current) {
-									//@ts-ignore
-									arrowRef.current.slickNext()
-								}
-							}}
+							style={{ display: 'flex', flexDirection: 'row', gap: '0.4167vw' }}
 						>
-							<IconInstance name={EIcons.buttonarrowrightwhite} />
+							<div
+								className={styles.switch}
+								onClick={() => {
+									if (arrowRef && arrowRef.current) {
+										//@ts-ignore
+										arrowRef.current.slickPrev()
+									}
+								}}
+							>
+								<IconInstance name={EIcons.buttonarrowleftwhite} />
+							</div>
+							<div
+								className={styles.switch}
+								onClick={() => {
+									if (arrowRef && arrowRef.current) {
+										//@ts-ignore
+										arrowRef.current.slickNext()
+									}
+								}}
+							>
+								<IconInstance name={EIcons.buttonarrowrightwhite} />
+							</div>
 						</div>
 					</div>
 				</div>

@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import useMatchMedia from '@/hooks/useMatchMedia'
 import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
+import BackgroundShadows from '../../../assets/BackgroundShadows.png'
 
 const Header: FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -61,6 +62,9 @@ const Header: FC = () => {
 	return (
 		<noindex>
 			<div className={isOpen ? styles.darken : undefined}>
+				<div className={styles.shadows} style={{ pointerEvents: 'none' }}>
+					<Image src={BackgroundShadows} alt={''} />
+				</div>
 				<motion.nav
 					className={cn('wrapper', styles.header)}
 					variants={{
@@ -102,7 +106,10 @@ const Header: FC = () => {
 						<ul className={cn(isOpen && styles.active)}>
 							<li className={cn(styles.auth, styles.reg)}>
 								<Link href="https://lk.telebon.ru/registration">
-									ЗАРЕГИСТРИРОВАТЬСЯ
+									<div className={styles.icon_button}>
+										<IconInstance name={EIcons.buttonicon} />
+										ЗАРЕГИСТРИРОВАТЬСЯ
+									</div>
 								</Link>
 							</li>
 							<li className={styles.auth}>

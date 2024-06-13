@@ -3,13 +3,13 @@
 		transform: translateY(-2%);
 	}
 	100% {
-		transform: translateY(-49%);
+		transform: translateY(-50.2%);
 	}
 }
 
 @keyframes moveDown {
 	0% {
-		transform: translateY(calc(-47%));
+		transform: translateY(calc(-48.2%));
 	}
 	100% {
 		transform: translateY(0);
@@ -21,41 +21,53 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	//height: 47.81vw;
-	height: 42.8125vw;
+	height: fit-content;
+	margin-top: -0.625vw;
 	img {
 		pointer-events: none;
 		user-select: none;
 	}
 	h2 {
-		font-size: 2.5vw;
+		font-size: 2.083vw;
 		font-weight: 700;
-		line-height: 2.98vw;
+		line-height: 2.083vw;
+		letter-spacing: -0.04167vw;
 		text-align: left;
-		color: #0e131f;
+		color: #000000;
 	}
 	p {
-		font-size: 0.78125vw;
+		font-size: 0.833vw;
 		font-weight: 400;
-		line-height: 1.25vw;
-		color: #161616b2;
+		line-height: 1.4583vw;
+		color: #000000;
 		text-align: left;
+		span {
+			font-weight: 600;
+		}
 	}
 	.main_container {
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 		width: 71.04vw;
 		height: 31.25vw;
 		background: #f5f5f7;
 		border-radius: 0.83vw;
 		position: relative;
 		overflow: hidden;
+		padding: 2.604vw 1.5625vw;
 		.text {
-			margin: auto auto auto 4.17vw;
 			width: 33.96vw;
 			display: flex;
 			flex-direction: column;
-			gap: 1.04vw;
+			gap: 0.833vw;
+			img {
+				width: 3.33vw;
+				height: 3.33vw;
+			}
+			svg {
+				margin-top: 0.83vw;
+				height: 2.29167vw;
+			}
 		}
 		.gradient {
 			z-index: 2;
@@ -82,47 +94,36 @@
 			overflow: hidden;
 			border-radius: 0 0.83vw 0.83vw 0;
 			.box {
-				rotate: 7grad;
 				position: absolute;
 				top: -5vw;
 				right: 0;
 				.row {
 					display: flex;
 					flex-direction: row;
-					gap: 0.26vw;
+					gap: 0.625vw;
 					.column {
 						display: flex;
 						flex-direction: column;
-						gap: 0.26vw;
+						gap: 0.625vw;
 						img {
-							min-width: 6.15vw;
-							min-height: 6.15vw;
+							min-width: 9.281vw;
+							min-height: 9.281vw;
+							max-width: 9.281vw;
+							max-height: 9.281vw;
 						}
 						svg {
-							width: 6.15vw;
-							height: 6.15vw;
+							width: 9.281vw;
+							height: 9.281vw;
 						}
 						&:nth-child(1) {
 							padding-top: 5vw;
 							padding-bottom: 1vw;
 						}
-						&:nth-child(3) {
-							padding-top: 3vw;
-							padding-bottom: 3vw;
-						}
-						&:nth-child(5) {
-							padding-top: 1vw;
-							padding-bottom: 5vw;
-						}
 						&:nth-child(2) {
-							padding-top: 5vw;
-							padding-bottom: 1vw;
-						}
-						&:nth-child(4) {
 							padding-top: 3vw;
 							padding-bottom: 3vw;
 						}
-						&:nth-child(6) {
+						&:nth-child(3) {
 							padding-top: 1vw;
 							padding-bottom: 5vw;
 						}

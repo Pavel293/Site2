@@ -1,9 +1,6 @@
-import React, { FC, useRef } from 'react'
+import React, { FC } from 'react'
 import Meta from '@/utils/meta/Meta'
-import Hero from '@/screens/main/hero/Hero'
 import styles from './Home.module.scss'
-import Description from '@/screens/main/description/Description'
-import DescriptionA from '@/screens/main/recording/descriptiona/DescriptionA'
 import Recording from '@/screens/main/recording/Recording'
 import SliderBlock from '@/screens/main/slider/SliderBlock'
 import Professional from '@/screens/main/professional/Professional'
@@ -12,9 +9,10 @@ import Start from '@/screens/main/start/Start'
 import Tarif from '@/screens/main/tarif/Tarif'
 import TryTelebon from '@/screens/main/try_telebon/TryTelebon'
 import Contact from '@/screens/main/contact/Contact'
+import Hero from '@/screens/main/hero/Hero'
+import { EIcons, Icon } from '../../../../assets/icons/icon'
 
 const Home: FC = () => {
-	const nextBlockRef = useRef<HTMLDivElement>(null)
 	return (
 		<Meta
 			title="Telebon CRM"
@@ -24,17 +22,19 @@ const Home: FC = () => {
 			<div className={styles.wrapper}>
 				<div style={{ height: '5vw' }}></div>
 				<div className={styles.block}>
-					<Description />
+					<Hero />
 					<Recording />
-					<CenterButton />
+					<CenterButton
+						icon={<Icon name={EIcons.buttonicon} />}
+						text={'ПОПРОБОВАТЬ'}
+					/>
 					<Professional />
-					<CenterButton />
+					<CenterButton text={'ПОПРОБОВАТЬ'} />
 				</div>
 				<SliderBlock />
 				<div className={styles.block}>
 					<Start />
 					<Tarif />
-					<TryTelebon />
 					<Contact />
 				</div>
 			</div>

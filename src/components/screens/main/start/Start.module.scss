@@ -4,17 +4,32 @@
 	align-items: flex-start;
 	justify-content: center;
 	width: 71.04vw;
-	p {
-		margin: 2.8125vw 0 0.83vw;
-		font-size: 1.67vw;
-		font-weight: 800;
-		line-height: 2.29vw;
-		text-align: left;
-		color: #0e131f;
+	margin-bottom: -1.25vw;
+	.text {
+		display: flex;
+		flex-direction: column;
+		gap: 0.83vw;
+		margin-top: 6.667vw;
+		margin-bottom: 1.25vw;
+		p {
+			font-size: 2.08vw;
+			font-weight: 800;
+			line-height: 2.5vw;
+			letter-spacing: -0.03125vw;
+			text-align: left;
+			color: #000000;
+		}
+		span {
+			font-size: 0.78125vw;
+			font-weight: 500;
+			line-height: 1.25vw;
+			text-align: left;
+			color: #535764;
+		}
 	}
 	.main_container {
 		width: 100%;
-		height: 20.05vw;
+		height: 28.33vw;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -27,29 +42,30 @@
 			justify-content: flex-start;
 			align-items: flex-start;
 			width: 23.07vw;
-			height: 15.05vw;
-			background: #f0f0f0;
-			border-radius: 0.83vw;
-			padding: 1.67vw 1.04vw;
+			height: 25.52vw;
+			background: #09101c4d;
+			border-radius: 1.25vw;
+			padding: 1.67vw;
 			position: relative;
 			.text {
 				display: flex;
 				flex-direction: column;
 				gap: 0.89vw;
+				margin: 0;
 				p {
 					margin: 0;
-					font-size: 1.25vw;
+					font-size: 1.67vw;
 					font-weight: 600;
-					line-height: 1.41vw;
+					line-height: 2.1875vw;
 					text-align: left;
-					color: #0e131f;
+					color: #ffffff;
 				}
 				span {
-					font-size: 0.78vw;
-					font-weight: 400;
+					font-size: 0.78125vw;
+					font-weight: 500;
 					line-height: 1.04vw;
 					text-align: left;
-					color: #0e131f;
+					color: #ffffff;
 				}
 			}
 			.num {
@@ -74,11 +90,11 @@
 				color: #fe803c;
 			}
 			&:nth-child(2) {
-				background: #88949c;
+				background: #09101c80;
 				position: relative;
 			}
 			&:nth-child(3) {
-				background: #2b3134;
+				background: #09101c;
 				p {
 					color: #ffffff;
 				}
@@ -93,7 +109,7 @@
 .circle {
 	position: absolute;
 	right: 16.17vw;
-	bottom: 2.5vw;
+	top: 2.5vw;
 	width: 14.53vw;
 	height: 14.53vw;
 	display: flex;

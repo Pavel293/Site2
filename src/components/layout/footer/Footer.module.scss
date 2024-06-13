@@ -8,6 +8,30 @@
 	padding-top: 0.52vw;
 	position: relative;
 
+	.image {
+		position: absolute;
+		img {
+			pointer-events: none;
+			user-select: none;
+		}
+		&:nth-child(1) {
+			bottom: 4.53125vw;
+			left: 0.521vw;
+			img {
+				width: 4.167vw;
+				height: 6.25vw;
+			}
+		}
+		&:nth-child(2) {
+			bottom: 0;
+			right: 0;
+			img {
+				width: 10.5208vw;
+				height: 12.65625vw;
+			}
+		}
+	}
+
 	.title {
 		font-size: 0.89vw;
 		font-weight: 700;

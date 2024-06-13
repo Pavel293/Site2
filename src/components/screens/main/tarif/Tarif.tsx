@@ -27,22 +27,28 @@ const Tarif: FC = () => {
 				<div className={styles.row}>
 					<div className={styles.grid}>
 						<div className={styles.text}>
-							<h3>
-								А всё самое необходимое <br />
-								уже включено
-							</h3>
+							<h3>Попробуйте бесплатно</h3>
+							<p>
+								Telebon предоставляет бесплатный пробный период
+								<br /> в течении первых 14 дней после регистрации
+							</p>
 						</div>
 						<div className={styles.column}>
 							<div className={styles.rows}>
 								<div className={styles.card}>
 									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifcalendar} />
+									</div>
+									<div className={styles.text}>
+										<p>Журнал записи</p>
+									</div>
+								</div>
+								<div className={styles.card}>
+									<div className={styles.icon}>
 										<IconInstance name={EIcons.tariftelegram} />
 									</div>
 									<div className={styles.text}>
-										<p>
-											Онлайн-запись <br />
-											через Telegram
-										</p>
+										<p>Онлайн-запись</p>
 									</div>
 								</div>
 								<div className={styles.card}>
@@ -53,71 +59,14 @@ const Tarif: FC = () => {
 										<p>Клиентская база</p>
 									</div>
 								</div>
-								<div className={styles.card}>
-									<div className={styles.icon}>
-										<IconInstance name={EIcons.tarifbell} />
-									</div>
-									<div className={styles.text}>
-										<p>Уведомления</p>
-									</div>
-								</div>
 							</div>
 							<div className={styles.rows}>
 								<div className={styles.card}>
 									<div className={styles.icon}>
-										<IconInstance name={EIcons.tarifphone} />
+										<IconInstance name={EIcons.tarifsale} />
 									</div>
 									<div className={styles.text}>
-										<p>
-											Доступ <br />с мобильного
-										</p>
-									</div>
-								</div>
-								<div className={styles.card}>
-									<div className={styles.icon}>
-										<IconInstance name={EIcons.tarifcalendar} />
-									</div>
-									<div className={styles.text}>
-										<p>
-											Электронный
-											<br />
-											журнал
-										</p>
-									</div>
-								</div>
-								<div className={styles.card}>
-									<div className={styles.icon}>
-										<IconInstance name={EIcons.tarifplanet} />
-									</div>
-									<div className={styles.text}>
-										<p>
-											Управление сетью • <br />
-											франчайзи
-										</p>
-									</div>
-								</div>
-							</div>
-							<div className={styles.rows}>
-								<div className={styles.card}>
-									<div className={styles.icon}>
-										<IconInstance name={EIcons.tarifcalc} />
-									</div>
-									<div className={styles.text}>
-										<p>
-											Финансовый <br />
-											учет
-										</p>
-									</div>
-								</div>
-								<div className={styles.card}>
-									<div className={styles.icon}>
-										<IconInstance name={EIcons.tarifstatistic} />
-									</div>
-									<div className={styles.text}>
-										<p>
-											Статистика
-											<br />• Аналитика
-										</p>
+										<p>Продажи</p>
 									</div>
 								</div>
 								<div className={styles.card}>
@@ -128,14 +77,49 @@ const Tarif: FC = () => {
 										<p>Ресурсы</p>
 									</div>
 								</div>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifplanet} />
+									</div>
+									<div className={styles.text}>
+										<p>Управление сетью</p>
+									</div>
+								</div>
 							</div>
 							<div className={styles.rows}>
 								<div className={styles.card}>
 									<div className={styles.icon}>
-										<IconInstance name={EIcons.tarifsale} />
+										<IconInstance name={EIcons.tarifstatistic} />
 									</div>
 									<div className={styles.text}>
-										<p>Продажи</p>
+										<p>Аналитика и учёт</p>
+									</div>
+								</div>
+
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifphone} />
+									</div>
+									<div className={styles.text}>
+										<p>Доступ с мобильного</p>
+									</div>
+								</div>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifcalc} />
+									</div>
+									<div className={styles.text}>
+										<p>Финасы и кассы</p>
+									</div>
+								</div>
+							</div>
+							<div className={styles.rows}>
+								<div className={styles.card}>
+									<div className={styles.icon}>
+										<IconInstance name={EIcons.tarifbell} />
+									</div>
+									<div className={styles.text}>
+										<p>Уведомления</p>
 									</div>
 								</div>
 								<div
