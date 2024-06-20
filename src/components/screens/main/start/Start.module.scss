@@ -119,3 +119,141 @@
 	background: url('../../../../assets/icons/Circle.png') no-repeat;
 	background-size: cover;
 }
+
+@media (max-width: 768px) {
+	.base {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100vw;
+		margin-bottom: 0;
+		.text {
+			display: flex;
+			flex-direction: column;
+			gap: 6.1538vw;
+			margin-top: 5.1282vw;
+			margin-bottom: 10.2564vw;
+			width: 89.7436vw;
+			p {
+				font-size: 7.1795vw;
+				font-weight: 800;
+				line-height: 8.2051vw;
+				letter-spacing: -0.1462vw;
+				text-align: left;
+				color: #000000;
+			}
+			span {
+				font-size: 4.3589vw;
+				font-weight: 500;
+				line-height: 7.1795vw;
+				letter-spacing: -0.0769vw;
+				text-align: left;
+				color: #535764;
+			}
+		}
+		.main_container {
+			width: 100vw;
+			height: 145.1282vw;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			margin-bottom: 30.2564vw;
+			overflow: hidden;
+			.card {
+				align-self: center;
+				display: flex;
+				flex-direction: column;
+				gap: 0.52vw;
+				justify-content: flex-start;
+				align-items: flex-start;
+				min-width: 86.67vw;
+				max-width: 86.67vw;
+				width: 86.67vw;
+				height: 145.1282vw;
+				margin: 0 1.0256vw;
+				padding: 6.4103vw 4.3589vw;
+				background: #ffffff;
+				border-radius: 3.0769vw;
+				position: relative;
+				border: 0.2564vw solid #1b273d1a;
+				.text {
+					display: flex;
+					flex-direction: column;
+					gap: 4.1026vw;
+					margin: 0;
+					width: 55.3846vw;
+					p {
+						margin: 0;
+						font-size: 6.9231vw;
+						font-weight: 600;
+						line-height: 10.7692vw;
+						text-align: left;
+						color: #ffffff;
+					}
+					span {
+						font-size: 3.8462vw;
+						font-weight: 500;
+						line-height: 5.1282vw;
+						text-align: left;
+						color: #ffffff;
+					}
+				}
+				.num {
+					position: relative;
+					user-select: none;
+					margin: 0 -3vw -16vw 0;
+					p {
+						margin: 0;
+						font-size: 58.4615vw;
+						font-weight: 600;
+						line-height: 60vw;
+						text-align: right;
+						color: #ffffff;
+					}
+				}
+				button {
+					font-size: 0.78vw;
+					font-weight: 600;
+					line-height: 1.35vw;
+					text-align: left;
+					color: #fe803c;
+				}
+				&:nth-child(2) {
+					background: #09101c80;
+					position: relative;
+				}
+				&:nth-child(3) {
+					background: #09101c;
+					p {
+						color: #ffffff;
+					}
+					span {
+						color: #ffffff;
+					}
+				}
+			}
+		}
+		.slider_container {
+			width: 266.1636vw;
+			height: 145.1282vw;
+		}
+	}
+
+	.circle {
+		position: absolute;
+		right: -47.1795vw;
+		top: 5.1282vw;
+		z-index: 5;
+		width: 71.5385vw;
+		height: 71.5385vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 100%;
+		background: url('../../../../assets/icons/Circle.png') no-repeat;
+		background-size: cover;
+	}
+}

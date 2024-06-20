@@ -15,8 +15,9 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 100vw;
 	background: #ffffff;
+	overflow: hidden;
 	.text {
 		display: flex;
 		flex-direction: column;
@@ -185,5 +186,194 @@
 	}
 }
 
+.slider_container {
+	max-height: 147.9487vw;
+	width: 300vw;
+	margin: 0;
+	position: relative;
+	.switch {
+		position: absolute;
+		top: 37vw;
+		left: 81.3077vw;
+		padding: 1vw;
+		svg {
+			width: 11.2821vw;
+			height: 11.2821vw;
+			color: #f2f2f8;
+		}
+	}
+	.image_mobile {
+		position: absolute;
+		top: 0;
+		left: 6vw;
+		img {
+			width: 87.1795vw;
+			height: fit-content;
+		}
+	}
+}
+
 @media (max-width: 768px) {
+	.base {
+		.text {
+			gap: 4.1026vw;
+			width: 100vw;
+			height: 62.5641vw;
+			padding: 8.2051vw 5.1282vw;
+			h2 {
+				font-size: 8.2051vw;
+				line-height: 11.2821vw;
+				width: 89.7436vw;
+			}
+			p {
+				font-size: 3.8462vw;
+				line-height: 7.1794vw;
+			}
+		}
+		span {
+			color: #007affcc;
+		}
+		.box {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #ffffff;
+			width: 100vw;
+			height: 235.641vw;
+			border-radius: 0;
+			.row {
+				display: flex;
+				flex-direction: row;
+				align-self: center;
+				align-items: center;
+				justify-content: flex-start;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				position: relative;
+				gap: 2.5vw;
+				button {
+					margin-top: 2.5vw;
+					width: 13.125vw;
+					height: 2.5vw;
+					background: #2a2c32;
+					border: 1px solid #c7cbd4;
+					color: #ffffff;
+					border-radius: 0.42vw;
+					font-size: 0.73vw;
+					font-weight: 600;
+					line-height: 1.04vw;
+					letter-spacing: 0.021vw;
+					text-align: center;
+				}
+				.column {
+					display: flex;
+					flex-direction: column;
+					align-self: flex-start;
+					gap: 1.25vw;
+					width: fit-content;
+					transition: all 0.5s;
+					.card {
+						transition: all 0.5s;
+						display: flex;
+						flex-direction: row;
+						gap: 1.25vw;
+						align-items: center;
+						position: relative;
+						.circle {
+							transition: all 0.5s;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							border-radius: 100%;
+							background: white;
+							width: 2.5vw;
+							height: 2.5vw;
+							border: 0.15vw dashed transparent;
+							svg {
+								width: 1.25vw;
+								height: 1.25vw;
+								color: #0ba3ad;
+							}
+						}
+						p {
+							transition: border-bottom-color 0.5s;
+							font-size: 0.78vw;
+							font-weight: 600;
+							line-height: 1.04vw;
+							letter-spacing: 0.021vw;
+							text-align: left;
+							pointer-events: none;
+							user-select: none;
+							color: #0e131f;
+							border-bottom: 0.05vw dashed #0ba3ad52;
+						}
+						.additional_text {
+							visibility: hidden;
+							position: absolute;
+							width: 19.27vw;
+							height: 8.59vw;
+							background: #ffffff;
+							align-items: flex-start;
+							padding: 1.3vw 1.25vw 1.04vw;
+							left: 13vw;
+							z-index: 4;
+							border-radius: 1.04vw;
+							box-shadow: 0 0.42vw 0.9375vw 0 #cfcfcf1a;
+							.container {
+								display: flex;
+								flex-direction: column;
+								justify-content: space-between;
+								width: 100%;
+								height: 100%;
+								p {
+									font-size: 0.78vw;
+									color: black;
+									border-bottom: none;
+								}
+								.additional_button {
+									background: transparent;
+									width: fit-content;
+									color: #246bfd;
+									margin-top: 0;
+								}
+							}
+						}
+						&:hover {
+							.additional_text {
+								visibility: visible;
+							}
+						}
+					}
+					.active {
+						.circle {
+							border: 0.15vw dashed #0ba3ad;
+						}
+						p {
+							color: #0ba3ad;
+							border-bottom: 0.05vw dashed #0ba3ad;
+						}
+					}
+				}
+				.image {
+					img {
+						width: 19.27vw;
+						height: 38.9vw;
+						top: 0.72px;
+						right: 8.54vw;
+						position: absolute;
+						opacity: 1;
+						transition: opacity 0.25s ease;
+					}
+					.background {
+						width: 37.1vw;
+						height: 36.6vw;
+						top: -1.04vw;
+						right: -2.6vw;
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
 }

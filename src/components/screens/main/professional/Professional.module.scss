@@ -287,3 +287,116 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.base {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		.main_container {
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+			margin-bottom: -10.2564vw;
+			.text {
+				align-self: flex-start;
+				h3 {
+					font-size: 2.083vw;
+					font-weight: 800;
+					line-height: 2.5vw;
+					text-align: left;
+					letter-spacing: -0.03125vw;
+				}
+			}
+			.row {
+				display: flex;
+				flex-direction: row;
+				gap: 1.25vw;
+			}
+			.column {
+				gap: 0;
+				.first {
+					width: 100vw;
+					height: fit-content;
+					padding: 10.2564vw 5.1282vw;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-between;
+					border-radius: 6.1538vw;
+					background: transparent;
+					gap: 4.1026vw;
+					.image {
+						background: url('../../../../assets/icons/professional/ProfessionalBackgroundFirstMobile.png')
+							no-repeat;
+						background-size: cover;
+						width: 89.3436vw;
+						height: 81.6513vw;
+						padding: 0.2vw;
+					}
+					.text {
+						display: flex;
+						flex-direction: column;
+						gap: 0;
+						padding: 0;
+						.name {
+							font-size: 3.5897vw;
+							font-weight: 700;
+							line-height: 5.1282vw;
+							letter-spacing: 0.1026vw;
+							text-align: left;
+							color: #0ba3ad;
+							width: 100%;
+						}
+						span {
+							font-size: 7.1795vw;
+							font-weight: 700;
+							line-height: 10.2564vw;
+							letter-spacing: -0.1538vw;
+							text-align: left;
+
+							color: #000000e5;
+						}
+						.row_item {
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+							justify-content: flex-start;
+							gap: 4.1026vw;
+							padding-top: 6.1538vw;
+							.point {
+								width: 2.0513vw;
+								height: 2.0513vw;
+								border-radius: 100%;
+								background: #0ba3ad;
+							}
+							p {
+								font-size: 3.8462vw;
+								font-weight: 500;
+								line-height: 5.128vw;
+								text-align: left;
+								color: #10121e;
+							}
+						}
+					}
+				}
+				.second {
+					display: none;
+				}
+				.third {
+					@extend .first;
+					.image {
+						background: url('../../../../assets/icons/professional/ProfessionalBackgroundThirdBottomMobile.png')
+							no-repeat;
+						background-size: cover;
+					}
+				}
+				.fourth {
+					display: none;
+				}
+			}
+		}
+	}
+}

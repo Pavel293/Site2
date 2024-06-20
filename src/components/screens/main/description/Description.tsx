@@ -25,75 +25,97 @@ import img19 from '../../../../assets/icons/main/png/img19.png'
 import img20 from '../../../../assets/icons/main/png/img20.png'
 import img21 from '../../../../assets/icons/main/png/img21.png'
 import DescriptionFire from '../../../../assets/icons/description/DescriptionFire.png'
+import DescriptionPhoneMobile from '../../../../assets/icons/description/DescriptionPhoneMobile.png'
+import DescriptionGlasses from '../../../../assets/icons/description/DescriptionGlasses.png'
+import useMatchMedia from '@/hooks/useMatchMedia'
 
 const Description: FC = () => {
+	const isMobile = useMatchMedia('768')
 	return (
 		<div className={cn(styles.base, 'wrapper')}>
 			<div className={styles.main_container}>
+				{isMobile ? (
+					<div className={styles.image}>
+						<Image src={DescriptionGlasses} alt={''} />
+					</div>
+				) : null}
 				<div className={styles.text}>
-					<Image src={DescriptionFire} alt={''} />
-					<h2>Это революция в Онлайн записи</h2>
-					<p>
-						Стоимость модуля и хостинг: <span>0 ₽</span>
-						<br />
-						Подключение: <span>~7 минут</span>
-					</p>
-					<IconInstance name={EIcons.descriptionstars} />
+					{isMobile ? null : <Image src={DescriptionFire} alt={''} />}
+					{isMobile ? (
+						<h2>
+							Это революция в<br /> Онлайн записи
+							<br /> для клиентов
+						</h2>
+					) : (
+						<h2>Это революция в Онлайн записи</h2>
+					)}
+					{isMobile ? null : (
+						<p>
+							Стоимость модуля и хостинг: <span>0 ₽</span>
+							<br />
+							Подключение: <span>~7 минут</span>
+						</p>
+					)}
+					{isMobile ? null : <IconInstance name={EIcons.descriptionstars} />}
 				</div>
-				<div className={styles.anim_container}>
-					<div className={styles.box}>
-						<div className={styles.row}>
-							<div className={styles.column}>
-								<Image src={img1} alt={''} />
-								<Image src={img2} alt={''} />
-								<Image src={img3} alt={''} />
-								<Image src={img4} alt={''} />
-								<Image src={img5} alt={''} />
-								<Image src={img6} alt={''} />
-								<Image src={img7} alt={''} />
-								<Image src={img1} alt={''} />
-								<Image src={img2} alt={''} />
-								<Image src={img3} alt={''} />
-								<Image src={img4} alt={''} />
-								<Image src={img5} alt={''} />
-								<Image src={img6} alt={''} />
-								<Image src={img7} alt={''} />
-							</div>
-							<div className={styles.column}>
-								<Image src={img8} alt={''} />
-								<Image src={img9} alt={''} />
-								<Image src={img10} alt={''} />
-								<Image src={img11} alt={''} />
-								<Image src={img12} alt={''} />
-								<Image src={img13} alt={''} />
-								<Image src={img14} alt={''} />
-								<Image src={img8} alt={''} />
-								<Image src={img9} alt={''} />
-								<Image src={img10} alt={''} />
-								<Image src={img11} alt={''} />
-								<Image src={img12} alt={''} />
-								<Image src={img13} alt={''} />
-								<Image src={img14} alt={''} />
-							</div>
-							<div className={styles.column}>
-								<Image src={img15} alt={''} />
-								<Image src={img16} alt={''} />
-								<Image src={img17} alt={''} />
-								<Image src={img18} alt={''} />
-								<Image src={img19} alt={''} />
-								<Image src={img20} alt={''} />
-								<Image src={img21} alt={''} />
-								<Image src={img15} alt={''} />
-								<Image src={img16} alt={''} />
-								<Image src={img17} alt={''} />
-								<Image src={img18} alt={''} />
-								<Image src={img19} alt={''} />
-								<Image src={img20} alt={''} />
-								<Image src={img21} alt={''} />
+				{isMobile ? (
+					<Image src={DescriptionPhoneMobile} alt={''} />
+				) : (
+					<div className={styles.anim_container}>
+						<div className={styles.box}>
+							<div className={styles.row}>
+								<div className={styles.column}>
+									<Image src={img1} alt={''} />
+									<Image src={img2} alt={''} />
+									<Image src={img3} alt={''} />
+									<Image src={img4} alt={''} />
+									<Image src={img5} alt={''} />
+									<Image src={img6} alt={''} />
+									<Image src={img7} alt={''} />
+									<Image src={img1} alt={''} />
+									<Image src={img2} alt={''} />
+									<Image src={img3} alt={''} />
+									<Image src={img4} alt={''} />
+									<Image src={img5} alt={''} />
+									<Image src={img6} alt={''} />
+									<Image src={img7} alt={''} />
+								</div>
+								<div className={styles.column}>
+									<Image src={img8} alt={''} />
+									<Image src={img9} alt={''} />
+									<Image src={img10} alt={''} />
+									<Image src={img11} alt={''} />
+									<Image src={img12} alt={''} />
+									<Image src={img13} alt={''} />
+									<Image src={img14} alt={''} />
+									<Image src={img8} alt={''} />
+									<Image src={img9} alt={''} />
+									<Image src={img10} alt={''} />
+									<Image src={img11} alt={''} />
+									<Image src={img12} alt={''} />
+									<Image src={img13} alt={''} />
+									<Image src={img14} alt={''} />
+								</div>
+								<div className={styles.column}>
+									<Image src={img15} alt={''} />
+									<Image src={img16} alt={''} />
+									<Image src={img17} alt={''} />
+									<Image src={img18} alt={''} />
+									<Image src={img19} alt={''} />
+									<Image src={img20} alt={''} />
+									<Image src={img21} alt={''} />
+									<Image src={img15} alt={''} />
+									<Image src={img16} alt={''} />
+									<Image src={img17} alt={''} />
+									<Image src={img18} alt={''} />
+									<Image src={img19} alt={''} />
+									<Image src={img20} alt={''} />
+									<Image src={img21} alt={''} />
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				)}
 			</div>
 		</div>
 	)

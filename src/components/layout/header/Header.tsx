@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 import useMatchMedia from '@/hooks/useMatchMedia'
 import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 import BackgroundShadows from '../../../assets/BackgroundShadows.png'
+import BackgroundShadowsMobile from '../../../assets/BackgroundShadowsMobile.png'
 
 const Header: FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -63,13 +64,17 @@ const Header: FC = () => {
 		<noindex>
 			<div className={isOpen ? styles.darken : undefined}>
 				<div className={styles.shadows} style={{ pointerEvents: 'none' }}>
-					<Image src={BackgroundShadows} alt={''} />
+					{isMobile ? (
+						<Image src={BackgroundShadowsMobile} alt={''} />
+					) : (
+						<Image src={BackgroundShadows} alt={''} />
+					)}
 				</div>
 				<motion.nav
 					className={cn('wrapper', styles.header)}
 					variants={{
 						visible: { background: '#09101c', translateY: '0vw' },
-						hidden: { background: '#09101ccc', translateY: '-4.6875vw' },
+						hidden: { background: '#09101ccc', translateY: '-14.3589vw' },
 					}}
 					animate={hidden ? 'hidden' : 'visible'}
 					transition={{ duration: 0.35, ease: 'easeInOut' }}
@@ -105,7 +110,10 @@ const Header: FC = () => {
 						</div>
 						<ul className={cn(isOpen && styles.active)}>
 							<li className={cn(styles.auth, styles.reg)}>
-								<Link href="https://lk.telebon.ru/registration">
+								<Link
+									href="https://lk.telebon.ru/registration"
+									target={'_blank'}
+								>
 									<div className={styles.icon_button}>
 										<IconInstance name={EIcons.buttonicon} />
 										ЗАРЕГИСТРИРОВАТЬСЯ
@@ -113,31 +121,31 @@ const Header: FC = () => {
 								</Link>
 							</li>
 							<li className={styles.auth}>
-								<Link href="https://lk.telebon.ru/auth">
+								<Link href="https://lk.telebon.ru/auth" target={'_blank'}>
 									<span>ВОЙТИ</span>
 								</Link>
 							</li>
-							{/*{isMobile ? (*/}
-							{/*	<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>*/}
-							{/*		<Link href="/telegram-bot">*/}
-							{/*			<span>Бот для онлайн-записи</span>*/}
-							{/*		</Link>*/}
-							{/*	</li>*/}
-							{/*) : null}*/}
-							{/*{isMobile ? (*/}
-							{/*	<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>*/}
-							{/*		<Link href="/solution/journal">*/}
-							{/*			<span>Возможности</span>*/}
-							{/*		</Link>*/}
-							{/*	</li>*/}
-							{/*) : null}*/}
-							{/*{isMobile ? (*/}
-							{/*	<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>*/}
-							{/*		<Link href="/price">*/}
-							{/*			<span>Ценовая политика</span>*/}
-							{/*		</Link>*/}
-							{/*	</li>*/}
-							{/*) : null}*/}
+							{isMobile ? (
+								<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
+									<Link href="/telegram-bot">
+										<span>Бот для онлайн-записи</span>
+									</Link>
+								</li>
+							) : null}
+							{isMobile ? (
+								<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
+									<Link href="/solution/journal">
+										<span>Возможности</span>
+									</Link>
+								</li>
+							) : null}
+							{isMobile ? (
+								<li className={styles.auth} onClick={() => setIsOpen(!isOpen)}>
+									<Link href="/price">
+										<span>Ценовая политика</span>
+									</Link>
+								</li>
+							) : null}
 						</ul>
 						<button
 							onClick={() => setIsOpen(!isOpen)}

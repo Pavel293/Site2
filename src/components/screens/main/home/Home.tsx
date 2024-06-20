@@ -11,8 +11,11 @@ import TryTelebon from '@/screens/main/try_telebon/TryTelebon'
 import Contact from '@/screens/main/contact/Contact'
 import Hero from '@/screens/main/hero/Hero'
 import { EIcons, Icon } from '../../../../assets/icons/icon'
+import useMatchMedia from '@/hooks/useMatchMedia'
 
 const Home: FC = () => {
+	const isMobile = useMatchMedia('768')
+
 	return (
 		<Meta
 			title="Telebon CRM"
@@ -20,7 +23,7 @@ const Home: FC = () => {
 			image="logo_preview.png"
 		>
 			<div className={styles.wrapper}>
-				<div style={{ height: '5vw' }}></div>
+				<div style={{ height: isMobile ? '14.3589vw' : '5vw' }}></div>
 				<div className={styles.block}>
 					<Hero />
 					<Recording />
@@ -30,6 +33,7 @@ const Home: FC = () => {
 					/>
 					<Professional />
 					<CenterButton text={'ПОПРОБОВАТЬ'} />
+					{isMobile ? <div style={{ height: '10.2564vw' }}></div> : null}
 				</div>
 				<SliderBlock />
 				<div className={styles.block}>

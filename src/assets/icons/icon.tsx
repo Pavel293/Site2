@@ -104,6 +104,10 @@ import { RecordingTelegramBlock } from './recording/RecordingTelegramBlock'
 import { DescriptionStars } from './recording/DescriptionStars'
 import { ButtonIcon } from './ButtonIcon'
 import { ButtonArrowLeftWhite } from './ButtonArrowLeftWhite'
+import { ContactPhoneNumber } from './contact/ContactPhoneNumber'
+import { RecordingTelegramBlockMobile } from './recording/RecordingTelegramBlockMobile'
+import { FooterVK } from './footeri/FooterVK'
+import { FooterTG } from './footeri/FooterTG'
 
 export enum EIcons {
 	walletoutline,
@@ -212,6 +216,10 @@ export enum EIcons {
 	descriptionstars,
 	buttonicon,
 	buttonarrowleftwhite,
+	contactphonenumber,
+	recordingtelegramblockmobile,
+	footervk,
+	footertg,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -319,8 +327,12 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.herologo]: HeroLogo,
 	[EIcons.recordingbell]: RecordingBell,
 	[EIcons.recordingtelegramblock]: RecordingTelegramBlock,
+	[EIcons.recordingtelegramblockmobile]: RecordingTelegramBlockMobile,
 	[EIcons.descriptionstars]: DescriptionStars,
 	[EIcons.buttonicon]: ButtonIcon,
+	[EIcons.contactphonenumber]: ContactPhoneNumber,
+	[EIcons.footervk]: FooterVK,
+	[EIcons.footertg]: FooterTG,
 }
 
 interface IIconProps {

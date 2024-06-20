@@ -26,6 +26,40 @@
 		svg {
 			width: 1.0417vw;
 			height: 1.0417vw;
+			color: #ffffff;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.base {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin: 8.2051vw 0 10.2564vw;
+		button {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			width: 89.7436vw;
+			height: 14.3589vw;
+			border: 0.2564vw solid #c7cbd4;
+			border-radius: 2.0513vw;
+			font-size: 3.8462vw;
+			font-weight: 600;
+			line-height: 5.1282vw;
+			letter-spacing: 0;
+			text-align: center;
+			color: #ffffff;
+			user-select: none;
+			gap: 0.208vw;
+			svg {
+				width: 5.1282vw;
+				height: 5.1282vw;
+			}
 		}
 	}
 }

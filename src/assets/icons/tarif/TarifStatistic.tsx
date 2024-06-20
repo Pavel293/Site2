@@ -21,7 +21,7 @@ export function TarifStatistic() {
 					y2="23.8291"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset="1" stopColor="#0E131F" stopOpacity="0.5" />
+					<stop offset="1" stopColor="currentColor" stopOpacity="0.5" />
 				</linearGradient>
 				<linearGradient
 					id="paint1_linear_594_2546"
@@ -31,7 +31,7 @@ export function TarifStatistic() {
 					y2="20.8032"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset="1" stopColor="#0E131F" />
+					<stop offset="1" stopColor="currentColor" />
 				</linearGradient>
 				<linearGradient
 					id="paint2_linear_594_2546"
@@ -41,7 +41,7 @@ export function TarifStatistic() {
 					y2="14.5063"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset="1" stopColor="#0E131F" />
+					<stop offset="1" stopColor="currentColor" />
 				</linearGradient>
 			</defs>
 		</svg>

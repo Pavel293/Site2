@@ -11,7 +11,7 @@ export function ButtonArrowRightWhite() {
 		>
 			<path
 				d="M44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44C34.1503 44 44 34.1503 44 22Z"
-				fill="white"
+				fill="currentColor"
 			/>
 			<path
 				d="M16.5898 12.5L27.0936 22L16.5898 31.5"

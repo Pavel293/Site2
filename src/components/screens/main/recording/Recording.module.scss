@@ -270,5 +270,115 @@
 	}
 }
 
+.telegram_mobile {
+	border-radius: 6.1538vw;
+	background: #2997ff;
+	width: 89.7436vw;
+	height: fit-content;
+	padding: 24.6154vw 5.1282vw 12.8205vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 4.1026vw;
+	p {
+		font-size: 4.3589vw;
+		font-weight: 400;
+		line-height: 7.1795vw;
+		color: #ffffff;
+		text-align: left;
+		width: 100%;
+		padding-left: 5.1282vw;
+	}
+	.title {
+		font-size: 8.2051vw;
+		font-weight: 700;
+		line-height: 10.2564vw;
+		color: #ffffff;
+		text-align: left;
+	}
+	.cards {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 70.2564vw;
+		gap: 2.0513vw;
+		padding-top: 2.0513vw;
+		padding-bottom: 19.2308vw;
+		p {
+			color: #09101c;
+			background: #ffffff;
+			border-radius: 3.0769vw;
+			border: 0.2564vw solid #dce0e5;
+			padding: 2.8205vw;
+			font-weight: 500;
+			font-size: 3.5897vw;
+			line-height: 4.6154vw;
+			text-align: center;
+			&:nth-child(1) {
+				width: 35.1282vw;
+			}
+			&:nth-child(2) {
+				width: 19.7436vw;
+			}
+			&:nth-child(3) {
+				width: 11.2821vw;
+			}
+		}
+	}
+	svg {
+		width: 79.4872vw;
+		height: 27.4359vw;
+		color: #ffffff;
+	}
+}
+
 @media (max-width: 768px) {
+	.base {
+		width: 100%;
+		gap: 20.5128vw;
+
+		img {
+			user-select: none;
+			pointer-events: none;
+		}
+
+		.up_text {
+			display: flex;
+			flex-direction: row;
+			align-self: flex-start;
+			padding-left: 3.5897vw;
+			padding-right: 3.5897vw;
+			max-width: 100%;
+			gap: 3.9583vw;
+			margin-top: 0;
+
+			svg {
+				width: 4.25vw;
+				height: 3.51vw;
+				color: #29a9ea;
+				transition: color 0.5s;
+				margin-top: 0.5208vw;
+			}
+
+			h2 {
+				font-size: 8.2051vw;
+				font-weight: 800;
+				line-height: 11.2821vw;
+				letter-spacing: -0.2051vw;
+				text-align: left;
+				color: #000000;
+			}
+
+			p {
+				font-size: 3.8462vw;
+				font-weight: 400;
+				line-height: 7.1795vw;
+				text-align: left;
+				color: #535764;
+				padding-left: 1.5385vw;
+			}
+		}
+	}
 }

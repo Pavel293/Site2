@@ -3,8 +3,9 @@
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
-	height: 93.0556vh;
+	height: calc(100vh - 14.3589vw);
 	position: relative;
+	overflow: hidden;
 }
 
 .images {
@@ -33,6 +34,14 @@
 		img {
 			width: 8.33vw;
 			height: 9.167vw;
+		}
+	}
+	&:nth-child(4) {
+		bottom: 0;
+		left: 8.4615vw;
+		img {
+			width: 31.5384vw;
+			height: 13.0769vw;
 		}
 	}
 }
@@ -116,6 +125,75 @@
 				width: 7.604vw;
 				height: 2.5vw;
 			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.images {
+		&:nth-child(1) {
+			top: 14.8717vw;
+			left: 1.282vw;
+			img {
+				width: 35.3846vw;
+				height: 20.2564vw;
+			}
+		}
+		&:nth-child(3) {
+			top: 65vh;
+			right: 0;
+			height: fit-content;
+			img {
+				width: 41.0256vw;
+				height: 45.1282vw;
+			}
+		}
+		&:nth-child(4) {
+			bottom: 0;
+			left: 8.4615vw;
+			img {
+				width: 31.5384vw;
+				height: 13.0769vw;
+			}
+		}
+	}
+	.container {
+		svg {
+			width: fit-content;
+			height: 8.9744vw;
+			margin-bottom: 8.4615vw;
+		}
+		p {
+			font-size: 8.2vw;
+			line-height: 11.2821vw;
+			letter-spacing: -0.21vw;
+			margin-bottom: 16.67vw;
+		}
+		.common_input {
+			border: 0.052vw solid #ebebeb;
+			border-radius: 2.0513vw;
+			padding: 1.2821vw;
+			margin-bottom: 5.7292vw;
+			width: 87.6923vw;
+			height: 13.333vw;
+			input {
+				width: 55vw;
+				padding: 2.3077vw 4.3589vw;
+				font-size: 4.1026vw;
+				font-weight: 400;
+				line-height: 6.1538vw;
+			}
+			button {
+				width: 29.7436vw;
+				height: 100%;
+				border: 0.2564vw solid #c7cbd4;
+				font-size: 3.8462vw;
+				line-height: 3.8462vw;
+				border-radius: 2.0513vw;
+			}
+		}
+		.buttons {
+			display: none;
 		}
 	}
 }

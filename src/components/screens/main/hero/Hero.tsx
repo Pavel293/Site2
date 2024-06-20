@@ -6,10 +6,12 @@ import Image from 'next/image'
 import Coursor from '../../../../assets/icons/hero/HeroCoursor.png'
 import Pin from '../../../../assets/icons/hero/HeroPin.png'
 import HeroIcons from '../../../../assets/icons/hero/HeroIcons.png'
+import Clip from '../../../../assets/icons/hero/Clip.png'
 import InputMask from 'react-input-mask'
 import { useFormik } from 'formik'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import useMatchMedia from '@/hooks/useMatchMedia'
 
 export interface FormValues {
 	email: string
@@ -19,6 +21,7 @@ export interface FormValues {
 const Hero: FC = () => {
 	const [scrollStarted, setScrollStarted] = useState<boolean>(false)
 	const [hidden, setHidden] = useState<boolean>(false)
+	const isMobile = useMatchMedia('768')
 	useEffect(() => {
 		const handleScroll = () => {
 			if (window.scrollY > 0 && !scrollStarted) {
@@ -75,7 +78,7 @@ const Hero: FC = () => {
 				className={styles.images}
 				variants={{
 					visible: { translateX: '0vw' },
-					hidden: { translateX: '-10vw' },
+					hidden: { translateX: isMobile ? '-50vw' : '-10vw' },
 				}}
 				animate={hidden ? 'hidden' : 'visible'}
 				transition={{ duration: 0.35, ease: 'easeInOut' }}
@@ -91,30 +94,58 @@ const Hero: FC = () => {
 				animate={hidden ? 'hidden' : 'visible'}
 				transition={{ duration: 0.35, ease: 'easeInOut' }}
 			>
-				<Image src={HeroIcons} alt={''} />
+				{isMobile ? null : <Image src={HeroIcons} alt={''} />}
 			</motion.div>
 			<motion.div
 				className={styles.images}
-				variants={{
-					visible: { translateY: '0vw' },
-					hidden: { translateY: '-10vw' },
-				}}
+				variants={
+					isMobile
+						? {
+								visible: { translateX: '0vw' },
+								hidden: { translateX: '50vw' },
+							}
+						: {
+								visible: { translateY: '0vw' },
+								hidden: { translateY: '-10vw' },
+							}
+				}
 				animate={hidden ? 'hidden' : 'visible'}
 				transition={{ duration: 0.35, ease: 'easeInOut' }}
 			>
 				<Image src={Coursor} alt={''} />
 			</motion.div>
+
+			<motion.div
+				className={styles.images}
+				variants={{
+					visible: { translateX: '0vw' },
+					hidden: { translateX: isMobile ? '-50vw' : '-10vw' },
+				}}
+				animate={hidden ? 'hidden' : 'visible'}
+				transition={{ duration: 0.35, ease: 'easeInOut' }}
+			>
+				{isMobile ? <Image src={Clip} alt={''} /> : null}
+			</motion.div>
 			<div className={styles.container}>
 				<IconInstance name={EIcons.herologo} />
-				<p>
-					Простая запись клиентов
-					<br /> для профессионалов
-				</p>
+				{isMobile ? (
+					<p>
+						Запись клиентов для
+						<br />
+						профессионалов
+					</p>
+				) : (
+					<p>
+						Простая запись клиентов
+						<br /> для профессионалов
+					</p>
+				)}
+
 				<div className={styles.common_input}>
 					<input
 						type="text"
 						name="email"
-						placeholder="Укажите рабочий email"
+						placeholder={isMobile ? 'Укажите email' : 'Укажите рабочий email'}
 						value={formik.values.email}
 						onChange={formik.handleChange}
 					/>
