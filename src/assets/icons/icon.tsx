@@ -108,6 +108,8 @@ import { ContactPhoneNumber } from './contact/ContactPhoneNumber'
 import { RecordingTelegramBlockMobile } from './recording/RecordingTelegramBlockMobile'
 import { FooterVK } from './footeri/FooterVK'
 import { FooterTG } from './footeri/FooterTG'
+import { GooglePlayIcon } from './GooglePlayIcon'
+import { AppStoreIcon } from './AppStoreIcon'
 
 export enum EIcons {
 	walletoutline,
@@ -220,6 +222,8 @@ export enum EIcons {
 	recordingtelegramblockmobile,
 	footervk,
 	footertg,
+	googleplayicon,
+	appstoreicon,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -333,6 +337,8 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.contactphonenumber]: ContactPhoneNumber,
 	[EIcons.footervk]: FooterVK,
 	[EIcons.footertg]: FooterTG,
+	[EIcons.googleplayicon]: GooglePlayIcon,
+	[EIcons.appstoreicon]: AppStoreIcon,
 }
 
 interface IIconProps {
