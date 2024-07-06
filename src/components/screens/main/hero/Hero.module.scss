@@ -1,199 +1,233 @@
 .body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
-	height: calc(100vh - 14.3589vw);
-	position: relative;
-	overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 59.8958vw;
+    position: relative;
+    overflow: hidden;
 }
 
-.images {
-	position: absolute;
-	user-select: none;
-	pointer-events: none;
-	&:nth-child(1) {
-		top: 4.167vw;
-		left: 2.292vw;
-		img {
-			width: 7.1875vw;
-			height: 4.114vw;
-		}
-	}
-	&:nth-child(2) {
-		top: 0;
-		right: 12vw;
-		img {
-			width: 6.927vw;
-			height: 6.09375vw;
-		}
-	}
-	&:nth-child(3) {
-		top: 0;
-		right: 1.5vw;
-		img {
-			width: 8.33vw;
-			height: 9.167vw;
-		}
-	}
-	&:nth-child(4) {
-		bottom: 0;
-		left: 8.4615vw;
-		img {
-			width: 31.5384vw;
-			height: 13.0769vw;
-		}
-	}
+.gradient {
+    position: absolute;
+    width: 100vw;
+    height: 38.8021vw;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #2A2C32 5%, #F9C9C4 100%);
+    z-index: 1;
+}
+
+.background {
+    position: absolute;
+    width: 90.625vw;
+    height: 43.75vw;
+    background: url('../../../../assets/icons/hero/HeroBackground.png') no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 4.6875vw;
+    z-index: 2;
 }
 
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	svg {
-		width: 7.65625vw;
-		height: 1.8229vw;
-		margin-bottom: 0.833vw;
-	}
-	p {
-		font-size: 2.5vw;
-		font-weight: 600;
-		line-height: 3.33vw;
-		letter-spacing: -0.04vw;
-		text-align: center;
-		margin-bottom: 3.6979vw;
-	}
-	.common_input {
-		border: 0.052vw solid #ebebeb;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		border-radius: 0.4167vw;
-		padding: 0.208vw 0.15625vw;
-		margin-bottom: 5.7292vw;
-		width: 20.104vw;
-		height: 2.9167vw;
-		outline: none;
-		input {
-			border: none;
-			outline: none;
-			padding: 0.46875vw 0.8854vw;
-			font-size: 0.833vw;
-			font-weight: 400;
-			line-height: 1.25vw;
-			text-align: left;
-			color: #8c8b88;
-			&:focus {
-				outline: none !important;
-				border: none !important;
-				box-shadow: none;
-			}
-		}
-		button {
-			width: 6.0417vw;
-			height: 2.5vw;
-			border: 0.052vw solid #c7cbd4;
-			background: #2a2c32;
-			font-size: 0.78125vw;
-			font-weight: 700;
-			line-height: 0.729vw;
-			text-align: center;
-			color: #ffffff;
-			border-radius: 0.4167vw;
-			cursor: pointer;
-		}
-	}
-	.buttons {
-		height: 3.4375vw;
-		width: 15.78125vw;
-		border: 0.1042vw dashed #1b273d33;
-		padding: 0.3646vw;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		border-radius: 0.83vw;
-		margin-top: 1.67vw;
-		svg {
-			&:nth-child(1) {
-				width: 6.823vw;
-				height: 2.5vw;
-			}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 3;
+    width: 100%;
+    height: 62.5vw;
 
-			&:nth-child(2) {
-				width: 7.604vw;
-				height: 2.5vw;
-			}
-		}
-	}
+    .row {
+        display: flex;
+        flex-direction: row;
+        gap: 6.5625vw;
+        padding: 7.8vw 9.0625vw 0 2.0833vw;
+        width: 67.7083vw;
+        height: 32.8125vw;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5vw;
+
+            .text {
+                width: 32.8125vw;
+                display: flex;
+                flex-direction: column;
+                gap: 2.5vw;
+                padding-top: 2.083vw;
+
+                h1 {
+                    font-size: 3.0208vw;
+                    font-weight: 700;
+                    line-height: 3.33vw;
+                    text-align: left;
+                    color: #FFFFFF;
+                }
+
+                p {
+                    font-size: 0.833vw;
+                    font-weight: 400;
+                    line-height: 1.33vw;
+                    text-align: left;
+                    color: #FFFFFF;
+                }
+
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            button {
+                background: #FFFFFF;
+                color: #2A2C32;
+                padding: 1.0417vw 2.1875vw;
+                font-size: 0.833vw;
+                font-weight: 600;
+                line-height: 1.1458vw;
+                text-align: center;
+                width: fit-content;
+                border-radius: 0.4167vw;
+            }
+        }
+
+        img {
+            width: 16.67vw;
+            height: 34.0104vw;
+            padding-top: 1.25vw;
+        }
+    }
+
+    .sponsors {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2.5vw;
+        padding-top: 13.125vw;
+        border-bottom: 0.0521vw solid #EEEEEE;
+        img {
+            width: 50vw;
+            height: fit-content;
+        }
+    }
 }
 
 @media (max-width: 768px) {
-	.images {
-		&:nth-child(1) {
-			top: 14.8717vw;
-			left: 1.282vw;
-			img {
-				width: 35.3846vw;
-				height: 20.2564vw;
-			}
-		}
-		&:nth-child(3) {
-			top: 65vh;
-			right: 0;
-			height: fit-content;
-			img {
-				width: 41.0256vw;
-				height: 45.1282vw;
-			}
-		}
-		&:nth-child(4) {
-			bottom: 0;
-			left: 8.4615vw;
-			img {
-				width: 31.5384vw;
-				height: 13.0769vw;
-			}
-		}
-	}
-	.container {
-		svg {
-			width: fit-content;
-			height: 8.9744vw;
-			margin-bottom: 8.4615vw;
-		}
-		p {
-			font-size: 8.2vw;
-			line-height: 11.2821vw;
-			letter-spacing: -0.21vw;
-			margin-bottom: 16.67vw;
-		}
-		.common_input {
-			border: 0.052vw solid #ebebeb;
-			border-radius: 2.0513vw;
-			padding: 1.2821vw;
-			margin-bottom: 5.7292vw;
-			width: 87.6923vw;
-			height: 13.333vw;
-			input {
-				width: 55vw;
-				padding: 2.3077vw 4.3589vw;
-				font-size: 4.1026vw;
-				font-weight: 400;
-				line-height: 6.1538vw;
-			}
-			button {
-				width: 29.7436vw;
-				height: 100%;
-				border: 0.2564vw solid #c7cbd4;
-				font-size: 3.8462vw;
-				line-height: 3.8462vw;
-				border-radius: 2.0513vw;
-			}
-		}
-		.buttons {
-			display: none;
-		}
-	}
+    .body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 320.6061vw;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gradient {
+        position: absolute;
+        width: 100vw;
+        height: 233.8462vw;
+        top: 0;
+        left: 0;
+        background: linear-gradient(180deg, #2A2C32 65%, #F9C9C4 100%);
+        z-index: 1;
+    }
+
+    .background {
+        position: absolute;
+        width: 90vw;
+        height: 254.3589vw;
+        background: url('../../../../assets/icons/hero/HeroBackgroundMobile.png') no-repeat;
+        background-size: cover;
+        top: 0;
+        left: 5vw;
+        z-index: 2;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 3;
+        width: 100%;
+        height: 320.6061vw;
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            gap: 6.5625vw;
+            padding: 0;
+            margin: 8.0769vw auto 0;
+            width: 85.5897vw;
+            height: 87.6923vw;
+
+            .column {
+                display: flex;
+                flex-direction: column;
+                gap: 2.5vw;
+
+                .text {
+                    width: 85.5897vw;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4.1026vw;
+                    padding-top: 2.083vw;
+
+                    h1 {
+                        font-size: 9.2308vw;
+                        font-weight: 700;
+                        line-height: 11.2821vw;
+                        text-align: center;
+                        color: #FFFFFF;
+                    }
+
+                    p {
+                        font-size: 4.1026vw;
+                        font-weight: 400;
+                        line-height: 6.5641vw;
+                        text-align: center;
+                        color: #FFFFFF;
+                    }
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+
+                button {
+                    background: #FFFFFF;
+                    color: #2A2C32;
+                    padding: 3.5897vw 17.3077vw;
+                    font-size: 4.1026vw;
+                    font-weight: 600;
+                    line-height: 5.641vw;
+                    text-align: center;
+                    width: fit-content;
+                    border-radius: 2.0513vw;
+                    align-self: center;
+                }
+            }
+
+            img {
+                display: none;
+            }
+        }
+
+        .sponsors {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 0;
+            padding-top: 148.9744vw;
+            border-bottom: 0.2564vw solid #EEEEEE;
+            img {
+                width: 100vw;
+                height: 42.5641vw;
+            }
+        }
+    }
 }

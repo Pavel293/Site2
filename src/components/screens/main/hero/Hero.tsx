@@ -3,15 +3,12 @@ import styles from './Hero.module.scss'
 import cn from 'classnames'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import Image from 'next/image'
-import Coursor from '../../../../assets/icons/hero/HeroCoursor.png'
-import Pin from '../../../../assets/icons/hero/HeroPin.png'
-import HeroIcons from '../../../../assets/icons/hero/HeroIcons.png'
-import Clip from '../../../../assets/icons/hero/Clip.png'
-import InputMask from 'react-input-mask'
 import { useFormik } from 'formik'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import useMatchMedia from '@/hooks/useMatchMedia'
+import Phone from '../../../../assets/icons/hero/HeroPhone.png'
+import Sponsors from '../../../../assets/icons/hero/Sponsors.png'
+import SponsorsMobile from '../../../../assets/icons/hero/SponsorsMobile.png'
 
 export interface FormValues {
 	email: string
@@ -22,23 +19,6 @@ const Hero: FC = () => {
 	const [scrollStarted, setScrollStarted] = useState<boolean>(false)
 	const [hidden, setHidden] = useState<boolean>(false)
 	const isMobile = useMatchMedia('768')
-	useEffect(() => {
-		const handleScroll = () => {
-			if (window.scrollY > 0 && !scrollStarted) {
-				setScrollStarted(true)
-				setHidden(true)
-			} else if (window.scrollY === 0 && scrollStarted) {
-				setScrollStarted(false)
-				setHidden(false)
-			}
-		}
-
-		window.addEventListener('scroll', handleScroll)
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll)
-		}
-	}, [scrollStarted])
 
 	const initialValues = {
 		email: '',
@@ -74,99 +54,26 @@ const Hero: FC = () => {
 
 	return (
 		<div className={cn(styles.body, 'wrapper')}>
-			<motion.div
-				className={styles.images}
-				variants={{
-					visible: { translateX: '0vw' },
-					hidden: { translateX: isMobile ? '-50vw' : '-10vw' },
-				}}
-				animate={hidden ? 'hidden' : 'visible'}
-				transition={{ duration: 0.35, ease: 'easeInOut' }}
-			>
-				<Image src={Pin} alt={''} />
-			</motion.div>
-			<motion.div
-				className={styles.images}
-				variants={{
-					visible: { translateY: '0vw' },
-					hidden: { translateY: '-10vw' },
-				}}
-				animate={hidden ? 'hidden' : 'visible'}
-				transition={{ duration: 0.35, ease: 'easeInOut' }}
-			>
-				{isMobile ? null : <Image src={HeroIcons} alt={''} />}
-			</motion.div>
-			<motion.div
-				className={styles.images}
-				variants={
-					isMobile
-						? {
-								visible: { translateX: '0vw' },
-								hidden: { translateX: '50vw' },
-							}
-						: {
-								visible: { translateY: '0vw' },
-								hidden: { translateY: '-10vw' },
-							}
-				}
-				animate={hidden ? 'hidden' : 'visible'}
-				transition={{ duration: 0.35, ease: 'easeInOut' }}
-			>
-				<Image src={Coursor} alt={''} />
-			</motion.div>
-
-			<motion.div
-				className={styles.images}
-				variants={{
-					visible: { translateX: '0vw' },
-					hidden: { translateX: isMobile ? '-50vw' : '-10vw' },
-				}}
-				animate={hidden ? 'hidden' : 'visible'}
-				transition={{ duration: 0.35, ease: 'easeInOut' }}
-			>
-				{isMobile ? <Image src={Clip} alt={''} /> : null}
-			</motion.div>
+			<div className={styles.gradient}></div>
+			<div className={styles.background}></div>
 			<div className={styles.container}>
-				<IconInstance name={EIcons.herologo} />
-				{isMobile ? (
-					<p>
-						Запись клиентов для
-						<br />
-						профессионалов
-					</p>
-				) : (
-					<p>
-						Простая запись клиентов
-						<br /> для профессионалов
-					</p>
-				)}
-
-				<div className={styles.common_input}>
-					<input
-						type="text"
-						name="email"
-						placeholder={isMobile ? 'Укажите email' : 'Укажите рабочий email'}
-						value={formik.values.email}
-						onChange={formik.handleChange}
-					/>
-					<button
-						type={'button'}
-						disabled={!formik.isValid || formik.values.email === ''}
-						onClick={onSubmitHandler}
-					>
-						НАЧАТЬ
-					</button>
+				<div style={{ height: '6.9792vw' }}></div>
+				<div className={styles.row}>
+					<div className={styles.column}>
+						<div className={styles.text}>
+							<h1>Простая запись клиентов для профессионалов</h1>
+							<p>Система для бронирования, учета финансов и клиентской базы.
+								Нам доверяют<br />
+								<span>более 3000 специалистов по всей России</span>
+								– Telebon это CRM система<br />
+								для сферы услуг.</p>
+						</div>
+						{isMobile ? <button>Начать</button> : <button>Попробовать сейчас</button>}
+					</div>
+					<Image src={Phone} alt={''} />
 				</div>
-				<div className={styles.buttons}>
-					<Link
-						href={'https://apps.apple.com/ru/app/telebon/id6502614961'}
-						target={'_blank'}
-					>
-						<IconInstance name={EIcons.footerappstore} />
-					</Link>
-					<Link href={'/'}>
-						<IconInstance name={EIcons.footergoogleplay} />
-					</Link>
+				<div className={styles.sponsors}>
+					{isMobile ? <Image src={SponsorsMobile} alt={''} /> : <Image src={Sponsors} alt={''} />}
 				</div>
 			</div>
 		</div>

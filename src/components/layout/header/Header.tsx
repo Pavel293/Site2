@@ -2,7 +2,7 @@ import React, { FC, useEffect, useRef, useState } from 'react'
 import styles from './Header.module.scss'
 import cn from 'classnames'
 import Image from 'next/image'
-import LogoImageNewWhite from '../../../assets/icons/LogoImageNewWhite.svg'
+import LogoImageWhite from '../../../assets/icons/LogoImageWhite.svg'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import useMatchMedia from '@/hooks/useMatchMedia'
@@ -21,7 +21,6 @@ const Header: FC = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			console.log(hidden, second)
 			if (isMobile) {
 				if (window.scrollY > 0 && !scrollStarted) {
 					setScrollStarted(true)
@@ -45,9 +44,6 @@ const Header: FC = () => {
 				if (window.scrollY > scrollY && !scrollStarted) {
 					setScrollStarted(true)
 					setHidden(true)
-				} else if (window.scrollY < scrollY && scrollStarted) {
-					setScrollStarted(false)
-					setHidden(false)
 				} else if (window.scrollY === 0 && scrollStarted) {
 					setScrollStarted(false)
 					setHidden(false)
@@ -63,6 +59,50 @@ const Header: FC = () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
 	}, [scrollStarted, scrollY])
+
+	// useEffect(() => {
+	// 	const handleScroll = () => {
+	// 		if (isMobile) {
+	// 			if (window.scrollY > 0 && !scrollStarted) {
+	// 				setScrollStarted(true)
+	// 				setHidden(true)
+	// 			} else if (window.scrollY === 0 && scrollStarted) {
+	// 				setScrollStarted(false)
+	// 				setHidden(false)
+	// 			} else if (window.scrollY !== 0 && window.scrollY > scrollY) {
+	// 				setIsOpen(false)
+	// 				setHidden(true)
+	// 			} else if (window.scrollY !== 0 && window.scrollY < scrollY) {
+	// 				setIsOpen(false)
+	// 				setHidden(false)
+	// 			}
+	// 			if (window.scrollY !== 0) {
+	// 				setSecond(true)
+	// 			} else {
+	// 				setSecond(false)
+	// 			}
+	// 		} else {
+	// 			if (window.scrollY > scrollY && !scrollStarted) {
+	// 				setScrollStarted(true)
+	// 				setHidden(true)
+	// 			} else if (window.scrollY < scrollY && scrollStarted) {
+	// 				setScrollStarted(false)
+	// 				setHidden(false)
+	// 			} else if (window.scrollY === 0 && scrollStarted) {
+	// 				setScrollStarted(false)
+	// 				setHidden(false)
+	// 			}
+	// 		}
+	//
+	// 		setScrollY(window.scrollY)
+	// 	}
+	//
+	// 	window.addEventListener('scroll', handleScroll)
+	//
+	// 	return () => {
+	// 		window.removeEventListener('scroll', handleScroll)
+	// 	}
+	// }, [scrollStarted, scrollY])
 
 	useEffect(() => {
 		const closeMenuOnClickOutside = (event: MouseEvent | TouchEvent) => {
@@ -101,13 +141,13 @@ const Header: FC = () => {
 					)}
 					variants={{
 						visible: {
-							background: second ? 'transparent' : '#09101c',
+							background: 'transparent',
 							translateY: '0vw',
 							marginTop: '0',
 						},
 						hidden: {
-							background: second ? 'transparent' : '#09101ccc',
-							translateY: isMobile ? '-14.3589vw' : '-4.6875vw',
+							background: isMobile ? 'transparent' : '#2A2C32',
+							translateY: isMobile ? '-14.3589vw' : '-1.9271vw',
 							marginTop: isMobile ? '-14.3589vw' : '0',
 						},
 					}}
@@ -121,24 +161,42 @@ const Header: FC = () => {
 					{/*>*/}
 					{/*	<div className={styles.indent}></div>*/}
 					{/*</motion.nav>*/}
+					{isMobile ? null : (
+						<div className={styles.up}>
+							<Link href={'/'} target={'_blank'}>
+								<div className={styles.help}>
+									Помощь
+								</div>
+							</Link>
+							<Link href={'https://lk.telebon.ru/auth'} target={'_blank'}>
+								<div className={styles.help}>
+									Войти
+									<IconInstance name={EIcons.usericon} />
+								</div>
+							</Link>
+						</div>
+					)}
 					<div className={styles.headerContent} ref={menuRef}>
-						<Link href="/">
+						<Link href='/'>
 							<div className={styles.logo} onClick={() => setIsOpen(false)}>
-								<Image src={LogoImageNewWhite} alt="logotext" />
+								<Image src={LogoImageWhite} alt='logotext' />
 							</div>
 						</Link>
 						<div className={styles.navmenu}>
 							<div className={styles.tabs}>
-								<Link href="/">
+								<Link href='/'>
+									<div className={styles.item}>Почему Telebon</div>
+								</Link>
+								<Link href='/'>
+									<div className={styles.item}>Стоимость</div>
+								</Link>
+								<Link href='/'>
 									<div className={styles.item}>
 										Возможности
 										<IconInstance name={EIcons.arrowlist} />
 									</div>
 								</Link>
-								<Link href="/">
-									<div className={styles.item}>Тарифы</div>
-								</Link>
-								<Link href="/">
+								<Link href='/'>
 									<div className={styles.item}>Бот для записи</div>
 								</Link>
 							</div>
@@ -149,7 +207,7 @@ const Header: FC = () => {
 									className={cn(styles.auth, styles.links)}
 									onClick={() => setIsOpen(!isOpen)}
 								>
-									<Link href="/">
+									<Link href='/'>
 										<div className={styles.icon_button}>
 											<IconInstance name={EIcons.rightarrow} />
 											<span>Возможности</span>
@@ -162,7 +220,7 @@ const Header: FC = () => {
 									className={cn(styles.auth, styles.links)}
 									onClick={() => setIsOpen(!isOpen)}
 								>
-									<Link href="/">
+									<Link href='/'>
 										<div className={styles.icon_button}>
 											<IconInstance name={EIcons.rightarrow} />
 											<span>Тарифы</span>
@@ -175,7 +233,7 @@ const Header: FC = () => {
 									className={cn(styles.auth, styles.links)}
 									onClick={() => setIsOpen(!isOpen)}
 								>
-									<Link href="/">
+									<Link href='/'>
 										<div className={styles.icon_button}>
 											<IconInstance name={EIcons.rightarrow} />
 											<span>Бот для записи</span>
@@ -189,7 +247,7 @@ const Header: FC = () => {
 									onClick={() => setIsOpen(!isOpen)}
 								>
 									<Link
-										href="https://apps.apple.com/ru/app/telebon/id6502614961"
+										href='https://apps.apple.com/ru/app/telebon/id6502614961'
 										target={'_blank'}
 									>
 										<div className={styles.icon_button}>
@@ -204,7 +262,7 @@ const Header: FC = () => {
 									className={cn(styles.auth, styles.download)}
 									onClick={() => setIsOpen(!isOpen)}
 								>
-									<Link href="/" target={'_blank'}>
+									<Link href='/' target={'_blank'}>
 										<div className={styles.icon_button}>
 											<IconInstance name={EIcons.googleplayicon} />
 											<span>Скачать Google Play</span>
@@ -212,20 +270,20 @@ const Header: FC = () => {
 									</Link>
 								</li>
 							) : null}
-							<li className={cn(styles.auth, styles.reg)}>
-								<Link
-									href="https://lk.telebon.ru/registration"
-									target={'_blank'}
-								>
-									<div className={styles.icon_button}>
-										<IconInstance name={EIcons.buttonicon} />
-										Зарегистрироваться
-									</div>
-								</Link>
-							</li>
+							{/*<li className={cn(styles.auth, styles.reg)}>*/}
+							{/*	<Link*/}
+							{/*		href='https://lk.telebon.ru/registration'*/}
+							{/*		target={'_blank'}*/}
+							{/*	>*/}
+							{/*		<div className={styles.icon_button}>*/}
+							{/*			<IconInstance name={EIcons.buttonicon} />*/}
+							{/*			Зарегистрироваться*/}
+							{/*		</div>*/}
+							{/*	</Link>*/}
+							{/*</li>*/}
 							<li className={styles.auth}>
-								<Link href="https://lk.telebon.ru/auth" target={'_blank'}>
-									<span>Войти</span>
+								<Link href='https://lk.telebon.ru/registration' target={'_blank'}>
+									<span>Начать</span>
 								</Link>
 							</li>
 						</ul>
