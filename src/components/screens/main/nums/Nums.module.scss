@@ -22,10 +22,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         margin: 7.5vw 0;
         gap: 2.9167vw;
-
+        padding: 0 1.0417vw;
         .row {
             display: flex;
             flex-direction: row;
@@ -44,6 +44,7 @@
             text-align: center;
             width: fit-content;
             border-radius: 0.4167vw;
+            align-self: center;
         }
         p {
             font-size: 1.7708vw;
@@ -52,6 +53,7 @@
             text-align: left;
             color: #2A2C32;
             align-self: flex-start;
+            width: 100%;
         }
         span {
             font-size: 0.8333vw;
@@ -94,6 +96,7 @@
             height: 304.6154vw;
             margin: 0 0 15.8974vw;
             gap: 14.359vw;
+            padding: 0;
             .row {
                 display: flex;
                 flex-direction: column;

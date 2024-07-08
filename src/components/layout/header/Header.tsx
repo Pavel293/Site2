@@ -22,24 +22,8 @@ const Header: FC = () => {
 	useEffect(() => {
 		const handleScroll = () => {
 			if (isMobile) {
-				if (window.scrollY > 0 && !scrollStarted) {
-					setScrollStarted(true)
-					setHidden(true)
-				} else if (window.scrollY === 0 && scrollStarted) {
-					setScrollStarted(false)
-					setHidden(false)
-				} else if (window.scrollY !== 0 && window.scrollY > scrollY) {
-					setIsOpen(false)
-					setHidden(true)
-				} else if (window.scrollY !== 0 && window.scrollY < scrollY) {
-					setIsOpen(false)
-					setHidden(false)
-				}
-				if (window.scrollY !== 0) {
-					setSecond(true)
-				} else {
-					setSecond(false)
-				}
+				setHidden(false)
+				setScrollStarted(false)
 			} else {
 				if (window.scrollY > scrollY && !scrollStarted) {
 					setScrollStarted(true)
@@ -58,7 +42,7 @@ const Header: FC = () => {
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
-	}, [scrollStarted, scrollY])
+	}, [scrollStarted, scrollY, isMobile])
 
 	// useEffect(() => {
 	// 	const handleScroll = () => {
@@ -137,7 +121,7 @@ const Header: FC = () => {
 				<motion.nav
 					className={cn(
 						'wrapper',
-						second ? styles.header_mobile : styles.header,
+						isMobile ? styles.header_mobile : styles.header,
 					)}
 					variants={{
 						visible: {

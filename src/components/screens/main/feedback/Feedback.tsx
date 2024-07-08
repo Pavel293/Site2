@@ -8,6 +8,7 @@ import Link from 'next/link'
 import useMatchMedia from '@/hooks/useMatchMedia'
 import FeedbackImage from '../../../../assets/icons/feedback/FeedbackImage.png'
 import FeedbackImageMobile from '../../../../assets/icons/feedback/FeedbackImageMobile.png'
+import { motion } from 'framer-motion'
 
 export interface FormValues {
 	email: string
@@ -21,14 +22,31 @@ const Feedback: FC = () => {
 		<div className={cn(styles.body, 'wrapper')}>
 			<div className={styles.container}>
 				<div className={styles.card}>
-					{isMobile ? <Image src={FeedbackImageMobile} alt={''} /> : <Image src={FeedbackImage} alt={''} />}
-					<div className={styles.text}>
-						<h3>“Телебон это не просто хорошо.
-							Это великолепно, я рекомендую.”</h3>
-						<div className={styles.minus}></div>
-						<p>Сергей Фадеев, Киров</p>
-						<span>Владелец и преподаватель, абсолютный чемпион России</span>
-					</div>
+					<motion.div initial='hidden'
+											whileInView='visible'
+											viewport={{ once: true }}
+											transition={{ duration: 0.45 }}
+											variants={{
+												visible: { opacity: 1, y: 0 },
+												hidden: { opacity: 0, y: '5vw' },
+											}}>
+						{isMobile ? <Image src={FeedbackImageMobile} alt={''} /> : <Image src={FeedbackImage} alt={''} />}
+					</motion.div>
+					<motion.div initial='hidden'
+											whileInView='visible'
+											viewport={{ once: true }}
+											transition={{ duration: 0.5 }}
+											variants={{
+												visible: { opacity: 1, y: 0 },
+												hidden: { opacity: 0, y: '5vw' },
+											}}
+											className={styles.text}>
+							<h3>“Телебон это не просто хорошо.
+								Это великолепно, я рекомендую.”</h3>
+							<div className={styles.minus}></div>
+							<p>Сергей Фадеев, Киров</p>
+							<span>Владелец и преподаватель, абсолютный чемпион России</span>
+					</motion.div>
 				</div>
 			</div>
 		</div>

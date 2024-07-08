@@ -12,11 +12,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import SliderItem from '@/screens/main/functions/item/SliderItem'
 import Slider1 from '../../../../assets/icons/functions/Function1.png'
-
-export interface FormValues {
-	email: string
-	isValidForm: boolean
-}
+import { motion } from 'framer-motion'
 
 export interface ICard {
 	description: React.ReactNode
@@ -28,7 +24,7 @@ const Functions: FC = () => {
 	const isMobile = useMatchMedia('768')
 	const arrowRef = useRef(null)
 	const settings = {
-		dots: false,
+		dots: true,
 		infinite: true,
 		speed: 350,
 		slidesToShow: 2,
@@ -38,6 +34,28 @@ const Functions: FC = () => {
 	}
 
 	const propoData = [
+		{
+			title: (
+				<>
+					Календарь <br />и Записи
+				</>
+			),
+			description: (isMobile ? (<>Оптимизируйте ваше рабочее время, контролируйте поступающие записи от клиентов. Журнал
+				записи, который подстроится под вас.</>) : (<>Оптимизируйте ваше рабочее время, сохраняйте полный контроль над
+				расписанием. Контролируйте поступающие записи от клиентов. Журнал записи, который подстроится под вас.</>)),
+			image: <Image src={Slider1} alt={''} />,
+		},
+		{
+			title: (
+				<>
+					Календарь <br />и Записи
+				</>
+			),
+			description: (isMobile ? (<>Оптимизируйте ваше рабочее время, контролируйте поступающие записи от клиентов. Журнал
+				записи, который подстроится под вас.</>) : (<>Оптимизируйте ваше рабочее время, сохраняйте полный контроль над
+				расписанием. Контролируйте поступающие записи от клиентов. Журнал записи, который подстроится под вас.</>)),
+			image: <Image src={Slider1} alt={''} />,
+		},
 		{
 			title: (
 				<>
@@ -70,12 +88,28 @@ const Functions: FC = () => {
 	return (
 		<div className={cn(styles.body, 'wrapper')}>
 			<div className={styles.container}>
-				<div className={styles.text}>
+				<motion.div initial='hidden'
+										whileInView='visible'
+										viewport={{ once: true }}
+										transition={{ duration: 0.5 }}
+										variants={{
+											visible: { opacity: 1, y: 0 },
+											hidden: { opacity: 0, y: '5vw' },
+										}}
+										className={styles.text}>
 					<p>Основные функции</p>
 					<span>Запись на услуги, финансовый учёт, аналитика по посещениям
 						клиентов. Отчеты и инструменты для роста вашего бизнеса</span>
-				</div>
-				<div className={styles.slider_container}>
+				</motion.div>
+				<motion.div initial='hidden'
+										whileInView='visible'
+										viewport={{ once: true }}
+										transition={{ duration: 0.45 }}
+										variants={{
+											visible: { opacity: 1, y: 0 },
+											hidden: { opacity: 0, y: '5vw' },
+										}}
+										className={styles.slider_container}>
 					<Slider {...settings} ref={arrowRef}>
 						{cardDisc}
 					</Slider>
@@ -91,7 +125,7 @@ const Functions: FC = () => {
 						<IconInstance name={EIcons.buttonarrowrightblack} />
 					</div>
 					<div className={styles.gradient}></div>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	)
