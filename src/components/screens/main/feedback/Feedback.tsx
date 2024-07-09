@@ -28,7 +28,7 @@ const Feedback: FC = () => {
 											transition={{ duration: 0.45 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: '5vw' },
+												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 											}}>
 						{isMobile ? <Image src={FeedbackImageMobile} alt={''} /> : <Image src={FeedbackImage} alt={''} />}
 					</motion.div>
@@ -38,7 +38,7 @@ const Feedback: FC = () => {
 											transition={{ duration: 0.5 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: '5vw' },
+												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 											}}
 											className={styles.text}>
 							<h3>“Телебон это не просто хорошо.

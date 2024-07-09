@@ -84,10 +84,10 @@ const Hero: FC = () => {
 					<motion.div initial='hidden'
 											whileInView='visible'
 											viewport={{ once: true }}
-											transition={{ duration: 0.5 }}
+											transition={{ duration: 0.5, delay: 0.3 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '15vw' : '5vw' },
+												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 											}}>
 						<Image src={Phone} alt={''} />
 					</motion.div>
@@ -98,7 +98,7 @@ const Hero: FC = () => {
 										transition={{ duration: 0.5 }}
 										variants={{
 											visible: { opacity: 1, y: 0 },
-											hidden: { opacity: 0, y: isMobile ? '15vw' : '5vw' },
+											hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 										}}
 										className={styles.sponsors}>
 					{isMobile ? <Image src={SponsorsMobile} alt={''} /> : <Image src={Sponsors} alt={''} />}

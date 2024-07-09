@@ -94,7 +94,7 @@ const Functions: FC = () => {
 										transition={{ duration: 0.5 }}
 										variants={{
 											visible: { opacity: 1, y: 0 },
-											hidden: { opacity: 0, y: '5vw' },
+											hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 										}}
 										className={styles.text}>
 					<p>Основные функции</p>
@@ -107,7 +107,7 @@ const Functions: FC = () => {
 										transition={{ duration: 0.45 }}
 										variants={{
 											visible: { opacity: 1, y: 0 },
-											hidden: { opacity: 0, y: '5vw' },
+											hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 										}}
 										className={styles.slider_container}>
 					<Slider {...settings} ref={arrowRef}>

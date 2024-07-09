@@ -29,7 +29,7 @@ const Description: FC = () => {
 											transition={{ duration: 0.5 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '25vw' : '5vw' },
+												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 											}}>
 						<Image src={DescriptionCard1} alt={''} />
 					</motion.div>
@@ -39,7 +39,7 @@ const Description: FC = () => {
 											transition={{ duration: 0.5 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '25vw' : '5vw' },
+												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 											}}
 											className={styles.text}>
 						<h3>Записывайте без лишних сложностей</h3>
@@ -57,7 +57,7 @@ const Description: FC = () => {
 											transition={{ duration: 0.5 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '25vw' : '5vw' },
+												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 											}}
 											className={styles.text}>
 						<h3>Забудьте о рутине, сфокусируйтесь на клиентах</h3>
@@ -72,7 +72,7 @@ const Description: FC = () => {
 											transition={{ duration: 0.5 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '25vw' : '5vw' },
+												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 											}}>
 						<Image src={DescriptionCard2} alt={''} />
 					</motion.div>
@@ -84,7 +84,7 @@ const Description: FC = () => {
 											transition={{ duration: 0.5 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '25vw' : '5vw' },
+												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 											}}>
 						<Image src={DescriptionCard3} alt={''} />
 					</motion.div>
@@ -94,7 +94,7 @@ const Description: FC = () => {
 											transition={{ duration: 0.5 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '25vw' : '5vw' },
+												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 											}}
 											className={styles.text}>
 						<h3>Постройте бизнес, которым будете гордиться</h3>

@@ -25,7 +25,7 @@ const Nums: FC = () => {
 											transition={{ duration: 0.5 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: '5vw' },
+												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 											}}>
 						<p style={{paddingLeft: isMobile ? '5.1282vw' : '0'}}>В цифрах</p>
 					</motion.div>
@@ -36,7 +36,7 @@ const Nums: FC = () => {
 												transition={{ duration: 0.45 }}
 												variants={{
 													visible: { opacity: 1, y: 0 },
-													hidden: { opacity: 0, y: '5vw' },
+													hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 												}}
 												className={styles.card}>
 							<Image src={Card1} alt={''} />
@@ -52,7 +52,7 @@ const Nums: FC = () => {
 												transition={{ duration: 0.5 }}
 												variants={{
 													visible: { opacity: 1, y: 0 },
-													hidden: { opacity: 0, y: '5vw' },
+													hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 												}}
 												className={styles.card}>
 							<Image src={Card2} alt={''} />
@@ -70,7 +70,7 @@ const Nums: FC = () => {
 												transition={{ duration: 0.45 }}
 												variants={{
 													visible: { opacity: 1, y: 0 },
-													hidden: { opacity: 0, y: '5vw' },
+													hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 												}}
 												className={styles.card}>
 							<Image src={Card3} alt={''} />
@@ -86,7 +86,7 @@ const Nums: FC = () => {
 												transition={{ duration: 0.5 }}
 												variants={{
 													visible: { opacity: 1, y: 0 },
-													hidden: { opacity: 0, y: '5vw' },
+													hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 												}}
 												className={styles.card}>
 							<Image src={Card4} alt={''} />
@@ -103,7 +103,7 @@ const Nums: FC = () => {
 											transition={{ duration: 0.5 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: '5vw' },
+												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 											}}
 											style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
 						<button>Начать бесплатно</button>

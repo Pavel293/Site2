@@ -37,11 +37,13 @@ body {
 }
 
 .slick-dots {
+	display: block !important;
 	bottom: -7.8125vw;
 	margin-left: -27.6823vw !important;
 	@media (max-width: 768px) {
-		margin-left: -35.641vw !important;
+		margin-left: -37.641vw !important;
 		bottom: -6.4vw !important;
+		margin-top: 24.358vw !important;
 	}
 }
 .slick-dots li {
@@ -49,35 +51,35 @@ body {
 	width: 16.9792vw !important;
 	height: 0.2083vw !important;
 	@media (max-width: 768px) {
-		width: 4.7917vw !important;
-		height: 0.2083vw !important;
+		width: 23.4359vw !important;
+		height: 1.0256vw !important;
 	}
 }
 .slick-dots li button:before {
 	margin-top: 3.125vw !important;
 	content: '' !important;
-	background: #EEEEEE;
+	background: #EEEEEE !important;
 	width: 16.9792vw !important;
 	height: 0.2083vw !important;
 	border-radius: 1.0417vw;
 	@media (max-width: 768px) {
-		border-radius: 1.0256vw;
+		border-radius: 5.1282vw;
 		margin-top: 24.358vw !important;
-		width: 4.7917vw !important;
-		height: 0.2083vw !important;
+		width: 23.4359vw !important;
+		height: 1.0256vw !important;
 	}
 }
 
 .slick-dots li.slick-active button:before {
 	content: '';
-	background: #0BA3AD;
+	background: #0BA3AD !important;
 	border-radius: 1.0417vw;
 	width: 16.9792vw !important;
 	height: 0.2083vw !important;
 	margin: 0;
 	@media (max-width: 768px) {
-		border-radius: 1.0256vw;
-		width: 4.7917vw !important;
-		height: 0.2083vw !important;
+		border-radius: 5.1282vw;
+		width: 23.4359vw !important;
+		height: 1.0256vw !important;
 	}
 }
