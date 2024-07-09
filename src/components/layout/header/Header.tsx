@@ -194,6 +194,32 @@ const Header: FC = () => {
 									<Link href='/'>
 										<div className={styles.icon_button}>
 											<IconInstance name={EIcons.rightarrow} />
+											<span>Почему Telebon</span>
+										</div>
+									</Link>
+								</li>
+							) : null}
+							{isMobile ? (
+								<li
+									className={cn(styles.auth, styles.links)}
+									onClick={() => setIsOpen(!isOpen)}
+								>
+									<Link href='/'>
+										<div className={styles.icon_button}>
+											<IconInstance name={EIcons.rightarrow} />
+											<span>Стоимость</span>
+										</div>
+									</Link>
+								</li>
+							) : null}
+							{isMobile ? (
+								<li
+									className={cn(styles.auth, styles.links)}
+									onClick={() => setIsOpen(!isOpen)}
+								>
+									<Link href='/'>
+										<div className={styles.icon_button}>
+											<IconInstance name={EIcons.rightarrow} />
 											<span>Возможности</span>
 										</div>
 									</Link>
@@ -207,7 +233,7 @@ const Header: FC = () => {
 									<Link href='/'>
 										<div className={styles.icon_button}>
 											<IconInstance name={EIcons.rightarrow} />
-											<span>Тарифы</span>
+											<span>Бот для записи</span>
 										</div>
 									</Link>
 								</li>
@@ -220,7 +246,7 @@ const Header: FC = () => {
 									<Link href='/'>
 										<div className={styles.icon_button}>
 											<IconInstance name={EIcons.rightarrow} />
-											<span>Бот для записи</span>
+											<span>Помощь</span>
 										</div>
 									</Link>
 								</li>
@@ -267,7 +293,7 @@ const Header: FC = () => {
 							{/*</li>*/}
 							<li className={styles.auth}>
 								<Link href='https://lk.telebon.ru/registration' target={'_blank'}>
-									<span>Начать</span>
+									<span>Войти</span>
 								</Link>
 							</li>
 						</ul>
