@@ -5,7 +5,7 @@
     width: 100vw;
     height: 59.8958vw;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .gradient {
@@ -105,7 +105,7 @@
         align-items: center;
         justify-content: center;
         padding-bottom: 2.5vw;
-        padding-top: 13.125vw;
+        margin-top: 13.125vw;
         border-bottom: 0.0521vw solid #EEEEEE;
         img {
             width: 50vw;
@@ -221,7 +221,7 @@
             align-items: center;
             justify-content: center;
             padding-bottom: 0;
-            padding-top: 148.9744vw;
+            margin-top: 148.9744vw;
             border-bottom: 0.2564vw solid #EEEEEE;
             img {
                 width: 100vw;

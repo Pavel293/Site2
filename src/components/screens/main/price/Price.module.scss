@@ -19,13 +19,13 @@
     .card {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
+        justify-content: space-between;
+        align-items: flex-end;
         width: 83.33vw;
         height: 31.25vw;
         background: url('../../../../assets/icons/price/PriceBackground.png') no-repeat;
         background-size: cover;
-        padding: 2.6042vw 8.4375vw 0 0;
+        padding: 2.6042vw 8.4375vw 0 8.4375vw;
         margin-top: 5.6771vw;
 
         .text {
@@ -78,8 +78,8 @@
         }
 
         img {
-            width: 25.9375vw;
-            height: 30vw;
+            width: 28.75vw;
+            height: 31.25vw;
             user-select: none;
             pointer-events: none;
         }
@@ -91,12 +91,14 @@
         width: 100%;
         .card {
             flex-direction: column;
+            align-items: center;
             width: 100vw;
             height: 227.6923vw;
             background: url('../../../../assets/icons/price/PriceBackgroundMobile.png') no-repeat;
             background-size: cover;
-            padding: 18.7179vw 0;
+            padding: 0 0 18.8462vw;
             margin-top: 44.8718vw;
+            gap: 16.2821vw;
             .text {
                 display: flex;
                 flex-direction: column;
@@ -135,6 +137,11 @@
                     font-size: 3.0769vw;
                     line-height: 5.1282vw;
                 }
+            }
+            img {
+                align-self: center;
+                width: 80.9744vw;
+                height: 104.5385vw;
             }
         }
     }

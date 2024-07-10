@@ -21,7 +21,7 @@ const Nums: FC = () => {
 				<div className={styles.column}>
 					<motion.div initial='hidden'
 											whileInView='visible'
-											viewport={{ once: true }}
+											viewport={{ once: true, amount: 0.3 }}
 											transition={{ duration: 0.5 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
@@ -32,7 +32,7 @@ const Nums: FC = () => {
 					<div className={styles.row}>
 						<motion.div initial='hidden'
 												whileInView='visible'
-												viewport={{ once: true }}
+												viewport={{ once: true, amount: 0.3 }}
 												transition={{ duration: 0.45 }}
 												variants={{
 													visible: { opacity: 1, y: 0 },
@@ -48,7 +48,7 @@ const Nums: FC = () => {
 						</motion.div>
 						<motion.div initial='hidden'
 												whileInView='visible'
-												viewport={{ once: true }}
+												viewport={{ once: true, amount: 0.3 }}
 												transition={{ duration: 0.5 }}
 												variants={{
 													visible: { opacity: 1, y: 0 },
@@ -66,7 +66,7 @@ const Nums: FC = () => {
 					<div className={styles.row}>
 						<motion.div initial='hidden'
 												whileInView='visible'
-												viewport={{ once: true }}
+												viewport={{ once: true, amount: 0.3 }}
 												transition={{ duration: 0.45 }}
 												variants={{
 													visible: { opacity: 1, y: 0 },
@@ -82,7 +82,7 @@ const Nums: FC = () => {
 						</motion.div>
 						<motion.div initial='hidden'
 												whileInView='visible'
-												viewport={{ once: true }}
+												viewport={{ once: true, amount: 0.3 }}
 												transition={{ duration: 0.5 }}
 												variants={{
 													visible: { opacity: 1, y: 0 },
@@ -99,7 +99,7 @@ const Nums: FC = () => {
 					</div>
 					<motion.div initial='hidden'
 											whileInView='visible'
-											viewport={{ once: true }}
+											viewport={{ once: true, amount: 0.3 }}
 											transition={{ duration: 0.5 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },

@@ -9,15 +9,30 @@ import useMatchMedia from '@/hooks/useMatchMedia'
 import { EIcons, Icon as IconInstance } from '../../../assets/icons/icon'
 import BackgroundShadows from '../../../assets/BackgroundShadows.png'
 import BackgroundShadowsMobile from '../../../assets/BackgroundShadowsMobile.png'
+import AppleIcon from '../../../assets/icons/AppleIcon.png'
 
 const Header: FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
+	const [isOpenDownload, setIsOpenDownload] = useState<boolean>(true)
 	const [hidden, setHidden] = useState<boolean>(false)
 	const [scrollStarted, setScrollStarted] = useState<boolean>(false)
 	const [scrollY, setScrollY] = useState(0)
 	const isMobile = useMatchMedia('768')
 	const menuRef = useRef<HTMLDivElement>(null)
 	const [second, setSecond] = useState<boolean>(false)
+	const [platformLink, setPlatformLink] = useState('')
+
+	useEffect(() => {
+		const userAgent = navigator.userAgent || navigator.vendor;
+
+		if(/android/i.test(userAgent)) {
+			setPlatformLink('/')
+		} else if (/iPad|iPhone|iPod/i.test(userAgent)) {
+			setPlatformLink('https://apps.apple.com/ru/app/telebon/id6502614961')
+		} else {
+			setPlatformLink('/')
+		}
+	}, [])
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -118,6 +133,32 @@ const Header: FC = () => {
 						<Image src={BackgroundShadows} alt={''} />
 					)}
 				</div>
+				{isMobile ? (<motion.div
+					className={styles.download_link}
+					variants={{
+						visible: {
+							translateY: '0',
+							marginTop: '0',
+						},
+						hidden: {
+							translateY: isMobile ? '-14.3589vw' : '-1.9271vw',
+							marginTop: isMobile ? '-14.3589vw' : '0',
+						},
+					}}
+					animate={isOpenDownload ? 'visible' : 'hidden'}
+					transition={{ duration: 0.35, ease: 'easeInOut' }}>
+					<div className={styles.row}>
+						<div onClick={() => setIsOpenDownload(false)}><IconInstance name={EIcons.x} /></div>
+						<Image src={AppleIcon} alt={''} />
+						<div className={styles.text}>
+							<p>Telebon</p>
+							<span>Mobile app</span>
+						</div>
+					</div>
+					<Link href={platformLink} target={'_blank'}>
+						<button>Открыть</button>
+					</Link>
+				</motion.div>) : null}
 				<motion.nav
 					className={cn(
 						'wrapper',

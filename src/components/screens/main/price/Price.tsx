@@ -6,10 +6,9 @@ import Image from 'next/image'
 import { useFormik } from 'formik'
 import Link from 'next/link'
 import useMatchMedia from '@/hooks/useMatchMedia'
-import DescriptionCard1 from '../../../../assets/icons/description/DescriptionCard1.png'
-import DescriptionCard2 from '../../../../assets/icons/description/DescriptionCard2.png'
-import DescriptionCard3 from '../../../../assets/icons/description/DescriptionCard3.png'
-import Sponsors from '../../../../assets/icons/hero/Sponsors.png'
+import PriceImage from '../../../../assets/icons/price/PriceImage.png'
+import PriceImageMobile from '../../../../assets/icons/price/PriceImageMobile.png'
+import { motion } from 'framer-motion'
 
 export interface FormValues {
 	email: string
@@ -23,14 +22,51 @@ const Price: FC = () => {
 		<div className={cn(styles.body, 'wrapper')}>
 			<div className={styles.container}>
 				<div className={styles.card}>
+					<motion.div initial='hidden'
+											whileInView='visible'
+											viewport={{ once: true }}
+											transition={{ duration: 0.5, delay: 0.3 }}
+											variants={{
+												visible: { opacity: 1, y: 0 },
+												hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
+											}}>
+						{isMobile ? <Image src={PriceImageMobile} alt={''} /> : <Image src={PriceImage} alt={''} />}
+					</motion.div>
 					<div className={styles.text}>
-						<h3>Все функции включены</h3>
-						<p className={styles.price}>300 ₽</p>
-						<button>Попробовать сейчас</button>
-						<p>+300 ₽ за каждого дополнительного<br/>
-							пользователя в месяц.<br/>
-							Все функции включены.<br/>
-							Бесплатный пробный период 14 дней.<br/>
+						<motion.div initial='hidden'
+												whileInView='visible'
+												viewport={{ once: true }}
+												transition={{ duration: 0.5, delay: 0.3 }}
+												variants={{
+													visible: { opacity: 1, y: 0 },
+													hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
+												}}>
+							<h3>Все функции включены</h3>
+						</motion.div>
+						<motion.div initial='hidden'
+												whileInView='visible'
+												viewport={{ once: true }}
+												transition={{ duration: 0.5, delay: 0.3 }}
+												variants={{
+													visible: { opacity: 1, y: 0 },
+													hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
+												}}>
+							<p className={styles.price}>300 ₽</p>
+						</motion.div>
+						<motion.div initial='hidden'
+												whileInView='visible'
+												viewport={{ once: true }}
+												transition={{ duration: 0.5, delay: 0.5 }}
+												variants={{
+													visible: { opacity: 1 },
+													hidden: { opacity: 0 },
+												}}>
+							<button>Попробовать сейчас</button>
+						</motion.div>
+						<p>+300 ₽ за каждого дополнительного<br />
+							пользователя в месяц.<br />
+							Все функции включены.<br />
+							Бесплатный пробный период 14 дней.<br />
 							<span>*Подключение Telegram бота, бесплатно до 01.09.2024</span>
 						</p>
 					</div>

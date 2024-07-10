@@ -12,6 +12,7 @@ import { AppStoreIcon } from './AppStoreIcon'
 import { ButtonArrowRightWhite } from './ButtonArrowRightWhite'
 import { ButtonArrowRightBlack } from './functions/ButtonArrowRightBlack'
 import { UserIcon } from './UserIcon'
+import { X } from './X'
 
 export enum EIcons {
 	walletoutline,
@@ -28,6 +29,7 @@ export enum EIcons {
 	appstoreicon,
 	buttonarrowrightblack,
 	usericon,
+	x,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -45,6 +47,7 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.appstoreicon]: AppStoreIcon,
 	[EIcons.buttonarrowrightblack]: ButtonArrowRightBlack,
 	[EIcons.usericon]: UserIcon,
+	[EIcons.x]: X,
 }
 
 interface IIconProps {

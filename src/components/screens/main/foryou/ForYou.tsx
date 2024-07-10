@@ -19,64 +19,13 @@ import { motion } from 'framer-motion'
 const ForYou: FC = () => {
 	const isMobile = useMatchMedia('768')
 
-	const propoData = [
-		{
-			title: (
-				<>
-					Барберы
-				</>
-			),
-			image: <Image src={Card1} alt={''} />,
-		},
-		{
-			title: (
-				<>
-					Барберы
-				</>
-			),
-			image: <Image src={Card2} alt={''} />,
-		},
-		{
-			title: (
-				<>
-					Барберы
-				</>
-			),
-			image: <Image src={Card3} alt={''} />,
-		},
-		{
-			title: (
-				<>
-					Барберы
-				</>
-			),
-			image: <Image src={Card4} alt={''} />,
-		},
-		{
-			title: (
-				<>
-					Барберы
-				</>
-			),
-			image: <Image src={Card5} alt={''} />,
-		},
-		{
-			title: (
-				<>
-					Барберы
-				</>
-			),
-			image: <Image src={Card6} alt={''} />,
-		},
-	]
-
 	return (
 		<div className={cn(styles.body, 'wrapper')}>
 			<div className={styles.container}>
 				<div className={styles.card}>
 					<motion.div initial='hidden'
 											whileInView='visible'
-											viewport={{ once: true }}
+											viewport={{ once: true, amount: 0.3 }}
 											transition={{ duration: 0.5 }}
 											variants={{
 												visible: { opacity: 1, y: 0 },
@@ -90,7 +39,7 @@ const ForYou: FC = () => {
 						<div className={styles.column}>
 							<motion.div initial='hidden'
 													whileInView='visible'
-													viewport={{ once: true }}
+													viewport={{ once: true, amount: 0.3 }}
 													transition={{ duration: 0.5 }}
 													variants={{
 														visible: { opacity: 1, y: 0 },
@@ -108,7 +57,7 @@ const ForYou: FC = () => {
 							</motion.div>
 							<motion.div initial='hidden'
 													whileInView='visible'
-													viewport={{ once: true }}
+													viewport={{ once: true, amount: 0.3 }}
 													transition={{ duration: 0.5 }}
 													variants={{
 														visible: { opacity: 1, y: 0 },
@@ -126,7 +75,7 @@ const ForYou: FC = () => {
 							</motion.div>
 							<motion.div initial='hidden'
 													whileInView='visible'
-													viewport={{ once: true }}
+													viewport={{ once: true, amount: 0.3 }}
 													transition={{ duration: 0.5 }}
 													variants={{
 														visible: { opacity: 1, y: 0 },
@@ -138,7 +87,7 @@ const ForYou: FC = () => {
 							</motion.div>
 							<motion.div initial='hidden'
 													whileInView='visible'
-													viewport={{ once: true }}
+													viewport={{ once: true, amount: 0.3 }}
 													transition={{ duration: 0.5 }}
 													variants={{
 														visible: { opacity: 1, y: 0 },
@@ -153,7 +102,7 @@ const ForYou: FC = () => {
 						<div className={styles.column}>
 							<motion.div initial='hidden'
 													whileInView='visible'
-													viewport={{ once: true }}
+													viewport={{ once: true, amount: 0.3 }}
 													transition={{ duration: 0.5 }}
 													variants={{
 														visible: { opacity: 1, y: 0 },
@@ -175,7 +124,7 @@ const ForYou: FC = () => {
 							</motion.div>
 							<motion.div initial='hidden'
 													whileInView='visible'
-													viewport={{ once: true }}
+													viewport={{ once: true, amount: 0.3 }}
 													transition={{ duration: 0.5 }}
 													variants={{
 														visible: { opacity: 1, y: 0 },
