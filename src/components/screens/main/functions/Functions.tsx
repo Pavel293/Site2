@@ -34,6 +34,7 @@ const Functions: FC = () => {
 		slidesToScroll: 1,
 		swipeToSlide: true,
 		arrows: false,
+		touchThreshold: 1000
 	}
 
 	const propoData = [
