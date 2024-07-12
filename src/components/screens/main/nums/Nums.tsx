@@ -10,6 +10,10 @@ import Card1 from '../../../../assets/icons/nums/NumsCard1.png'
 import Card2 from '../../../../assets/icons/nums/NumsCard2.png'
 import Card3 from '../../../../assets/icons/nums/NumsCard3.png'
 import Card4 from '../../../../assets/icons/nums/NumsCard4.png'
+import CardMobile1 from '../../../../assets/icons/nums/NumsCardMobile1.png'
+import CardMobile2 from '../../../../assets/icons/nums/NumsCardMobile2.png'
+import CardMobile3 from '../../../../assets/icons/nums/NumsCardMobile3.png'
+import CardMobile4 from '../../../../assets/icons/nums/NumsCardMobile4.png'
 import { motion } from 'framer-motion'
 
 const Nums: FC = () => {
@@ -39,7 +43,7 @@ const Nums: FC = () => {
 													hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 												}}
 												className={styles.card}>
-							<Image src={Card1} alt={''} />
+							{isMobile ? <Image src={CardMobile1} alt={''} /> : <Image src={Card1} alt={''} />}
 							<div className={styles.text}>
 								<p>Более 3000+<br />
 									мастеров</p>
@@ -55,7 +59,7 @@ const Nums: FC = () => {
 													hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 												}}
 												className={styles.card}>
-							<Image src={Card2} alt={''} />
+							{isMobile ? <Image src={CardMobile2} alt={''} /> : <Image src={Card2} alt={''} />}
 							<div className={styles.text}>
 								<p>10 млн +<br />
 									записей</p>
@@ -73,7 +77,7 @@ const Nums: FC = () => {
 													hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 												}}
 												className={styles.card}>
-							<Image src={Card3} alt={''} />
+							{isMobile ? <Image src={CardMobile3} alt={''} /> : <Image src={Card3} alt={''} />}
 							<div className={styles.text}>
 								<p>33% создано<br />
 									онлайн</p>
@@ -89,7 +93,7 @@ const Nums: FC = () => {
 													hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
 												}}
 												className={styles.card}>
-							<Image src={Card4} alt={''} />
+							{isMobile ? <Image src={CardMobile4} alt={''} /> : <Image src={Card4} alt={''} />}
 							<div className={styles.text}>
 								<p>25% рост<br />
 									конверсии</p>

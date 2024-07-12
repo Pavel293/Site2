@@ -10,6 +10,7 @@ import Phone from '../../../../assets/icons/hero/HeroPhone.png'
 import Sponsors from '../../../../assets/icons/hero/Sponsors.png'
 import SponsorsMobile from '../../../../assets/icons/hero/SponsorsMobile.png'
 import { motion } from 'framer-motion'
+import AppleIcon from '../../../../assets/icons/AppleIcon.png'
 
 
 export interface FormValues {
@@ -21,6 +22,20 @@ const Hero: FC = () => {
 	const [scrollStarted, setScrollStarted] = useState<boolean>(false)
 	const [hidden, setHidden] = useState<boolean>(false)
 	const isMobile = useMatchMedia('768')
+	const [platformLink, setPlatformLink] = useState('')
+	const [isOpenDownload, setIsOpenDownload] = useState<boolean>(true)
+
+	useEffect(() => {
+		const userAgent = navigator.userAgent || navigator.vendor;
+
+		if(/android/i.test(userAgent)) {
+			setPlatformLink('/')
+		} else if (/iPad|iPhone|iPod/i.test(userAgent)) {
+			setPlatformLink('https://apps.apple.com/ru/app/telebon/id6502614961')
+		} else {
+			setPlatformLink('/')
+		}
+	}, [])
 
 	const initialValues = {
 		email: '',
@@ -58,6 +73,20 @@ const Hero: FC = () => {
 		<div className={cn(styles.body, 'wrapper')}>
 			<div className={styles.gradient}></div>
 			<div className={styles.background}></div>
+			{isMobile && isOpenDownload ? (
+				<div className={styles.download_link}>
+					<div className={styles.row}>
+						<div onClick={() => setIsOpenDownload(false)}><IconInstance name={EIcons.x} /></div>
+						<Image src={AppleIcon} alt={''} />
+						<div className={styles.text}>
+							<p>Telebon</p>
+							<span>Mobile app</span>
+						</div>
+					</div>
+					<Link href={platformLink} target={'_blank'}>
+						<button>Открыть</button>
+					</Link>
+				</div>) : null}
 			<div className={styles.container}>
 				<div style={{ height: isMobile ? '30.7692vw' : '6.9792vw' }}></div>
 				<div className={styles.row}>
@@ -67,7 +96,7 @@ const Hero: FC = () => {
 							{isMobile ?
 								<p>
 									Система для бронирования, учета<br /> финансов и клиентов.
-									<span>Нам доверяют<br />
+									<span> Нам доверяют<br />
 									более 3000 бьюти специалистов<br />
 										в России</span>
 									– Telebon это CRM система<br />

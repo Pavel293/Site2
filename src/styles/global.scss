@@ -72,8 +72,8 @@ body {
 
 .slick-dots li.slick-active button:before {
 	content: '';
+	border-radius: 0 !important;
 	background: #0BA3AD !important;
-	border-radius: 1.0417vw;
 	width: 16.9792vw !important;
 	height: 0.2083vw !important;
 	margin: 0;
@@ -82,4 +82,12 @@ body {
 		width: 23.4359vw !important;
 		height: 1.0256vw !important;
 	}
+}
+
+.slick-dots li.slick-active:first-child button:before{
+	border-radius: 1.0417vw 0 0 1.0417vw;
+}
+
+.slick-dots li.slick-active:last-child button:before{
+	border-radius: 0 1.0417vw 1.0417vw 0;
 }

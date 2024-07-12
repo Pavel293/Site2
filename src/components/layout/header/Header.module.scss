@@ -169,65 +169,6 @@ $menuItems: 7;
 }
 
 @media (max-width: 768px) {
-    .download_link {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        background: #FFFFFF;
-        width: 100vw;
-        height: 16.2vw;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 11;
-        .row {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-        }
-        button {
-            background: #2A2C32;
-            color: #FFFFFF;
-            padding: 0 8vw;
-            font-size: 4.1026vw;
-            font-weight: 600;
-            line-height: 5.641vw;
-            text-align: center;
-            width: fit-content;
-            border-radius: 2.0513vw;
-            height: 10vw;
-            margin-right: 4vw;
-        }
-        .text {
-            display: flex;
-            flex-direction: column;
-            margin-left: 4vw;
-            p{
-                text-align: left;
-                font-weight: 700;
-                font-size: 3.5897vw;
-                line-height: 4.1026vw;
-            }
-            span {
-                text-align: left;
-                font-weight: 400;
-                font-size: 3.5897vw;
-                line-height: 4.1026vw;
-            }
-        }
-        svg {
-            width: 3vw;
-            height: 3vw;
-            margin: 4vw;
-        }
-        img {
-            width: 12vw;
-            height: 12vw;
-            border-radius: 2.0513vw;
-        }
-    }
     .header {
         margin-top: 0;
         @apply fixed bg-white w-full z-10;

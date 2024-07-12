@@ -10,6 +10,9 @@ import Nums from '@/screens/main/nums/Nums'
 import Feedback from '@/screens/main/feedback/Feedback'
 import ForYou from '@/screens/main/foryou/ForYou'
 import Functions from '@/screens/main/functions/Functions'
+import Start from '@/screens/main/start/Start'
+import HelpBusines from '@/screens/main/help_busines/HelpBusines'
+import Accordion from '@/screens/main/accordion/Accordion'
 
 const Home: FC = () => {
 	const isMobile = useMatchMedia('768')
@@ -28,6 +31,9 @@ const Home: FC = () => {
 				<Feedback />
 				<Functions />
 				<ForYou />
+				<Start />
+				<HelpBusines />
+				<Accordion />
 			</div>
 		</Meta>
 	)

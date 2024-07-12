@@ -86,13 +86,15 @@
         gap: 6.1538vw;
         .card {
             flex-direction: column;
-            width: 89.7436vw;
+            width: 100vw;
             gap: 12.3077vw;
             padding: 6.1538vw 5.1282vw;
             .text {
                 gap: 6.1538vw;
                 width: 89.7436vw;
                 height: 53.3333vw;
+                display: flex;
+                justify-content: flex-start;
                 h3 {
                     font-size: 6.1538vw;
                     line-height: 7.1795vw;

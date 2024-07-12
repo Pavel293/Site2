@@ -1,14 +1,13 @@
 .footer {
 	width: 100%;
-	height: 46.41vw;
-	background: #09101c;
+	height: 42.96875vw;
+	background: url('../../../assets/icons/footeri/FooterBackground.png') no-repeat;
+	background-size: cover;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding-top: 0.52vw;
 	position: relative;
 	overflow: hidden;
-
 	.image {
 		position: absolute;
 		img {
@@ -49,25 +48,22 @@
 		text-align: left;
 		color: #d4d5d6;
 	}
-
 	.main_container {
 		width: 100vw;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-
 		.common {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: center;
-			height: 28.4375vw;
-
+			justify-content: flex-end;
+			height: 20.9375vw;
+			margin-bottom: 2.5vw;
 			svg {
 				width: 4.167vw;
 				height: 4.167vw;
 			}
-
 			p {
 				font-size: 0.78125vw;
 				font-weight: 400;
@@ -78,7 +74,6 @@
 					text-decoration: underline;
 				}
 			}
-
 			.title {
 				height: 5.417vw;
 				font-size: 2.5vw;
@@ -211,9 +206,9 @@
 			flex-direction: row;
 			height: 3.958vw;
 			width: 100vw;
-			background: #0d1625;
+			background: #2A2C32;
 			border-radius: 1.042vw;
-			border: 0.052vw solid #131d2f;
+			border: 0.052vw solid #2A2C32;
 			align-items: center;
 			justify-content: center;
 			.box {
@@ -241,8 +236,8 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				background: #131d2f;
-				width: 10.83vw;
+				background: transparent;
+				width: 10.2604vw;
 				height: 1.67vw;
 				border-radius: 0.52vw;
 				font-size: 0.78125vw;
@@ -250,6 +245,7 @@
 				line-height: 1.1456vw;
 				text-align: center;
 				color: #ffffff;
+				border: 0.0521vw solid #FFFFFF;
 			}
 		}
 		.bottom {
@@ -265,7 +261,7 @@
 				line-height: 0.9375vw;
 				letter-spacing: -0.0203vw;
 				text-align: center;
-				color: #647084;
+				color: #a1abbd;
 			}
 			span {
 				font-size: 0.677vw;
@@ -290,10 +286,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding-top: 0.52vw;
+		padding-top: 6.1538vw;
 		position: relative;
 		overflow: hidden;
-
+		background: url('../../../assets/icons/footeri/FooterBackgroundMobile.png') no-repeat;
+		background-size: cover;
 		.image {
 			position: absolute;
 			img {
@@ -420,10 +417,11 @@
 				align-items: flex-start;
 				justify-content: center;
 				width: 89.7436vw;
+				gap: 3.0769vw;
 				img {
 					height: 8.2052vw;
 					width: fit-content;
-					margin-bottom: 6.1538vw;
+					margin-bottom: 3.0769vw;
 				}
 			}
 
@@ -445,7 +443,6 @@
 					gap: 2.5641vw;
 					align-items: flex-start;
 					justify-content: flex-start;
-
 					.card {
 						display: flex;
 						flex-direction: row;
@@ -468,7 +465,6 @@
 					}
 				}
 			}
-
 			.title {
 				font-size: 4.3589vw;
 				font-weight: 700;
@@ -476,7 +472,6 @@
 				letter-spacing: 0.2564vw;
 				text-align: left;
 				color: #647084;
-				margin-top: 2.5641vw;
 				margin-bottom: 4.1026vw;
 			}
 
@@ -506,9 +501,9 @@
 				flex-direction: column;
 				height: 38.4615vw;
 				width: 100vw;
-				background: #0d1625;
+				background: transparent;
 				border-radius: 5.1282vw;
-				border: 0.2564vw solid #131d2f;
+				border: none;
 				align-items: center;
 				justify-content: center;
 				margin: 6.1538vw 0;
@@ -527,7 +522,7 @@
 					line-height: 5.641vw;
 					letter-spacing: -0.0359vw;
 					text-align: left;
-					color: #ffffff;
+					color: #A1ABBD;
 				}
 				.title {
 					font-size: 4.8718vw;
@@ -536,21 +531,23 @@
 					letter-spacing: -0.0769vw;
 					text-align: left;
 					margin: 0;
+					color: #FFFFFF;
 				}
 				button {
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					background: #131d2f;
+					background: #2A2C32;
 					width: 40.7692vw;
 					height: 8.2051vw;
-					border-radius: 2.5641vw;
+					border-radius: 1.2821vw;
 					font-size: 3.8462vw;
 					font-weight: 400;
 					line-height: 5.641vw;
 					letter-spacing: -0.0359vw;
 					text-align: left;
 					color: #ffffff;
+					border: none;
 				}
 			}
 			.bottom {
