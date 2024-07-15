@@ -19,7 +19,7 @@ const Home: FC = () => {
 
 	return (
 		<Meta
-			title='Telebon CRM'
+			title='Система записи клиентов. Telebon - CRM для салонов красоты и других типов бизнеса'
 			description='Новый сервис онлайн-записи с возможностью записи Клиентов в Telegram'
 			image='logo_preview.png'
 		>
