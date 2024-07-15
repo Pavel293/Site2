@@ -169,7 +169,7 @@ const Header: FC = () => {
 						</Link>
 						<div className={styles.navmenu}>
 							<div className={styles.tabs}>
-								<Link href='/'>
+								<Link href='/aboutus'>
 									<div className={styles.item}>Почему Telebon</div>
 								</Link>
 								<Link href='/'>
@@ -192,7 +192,7 @@ const Header: FC = () => {
 									className={cn(styles.auth, styles.links)}
 									onClick={() => setIsOpen(!isOpen)}
 								>
-									<Link href='/'>
+									<Link href='/aboutus'>
 										<div className={styles.icon_button}>
 											<IconInstance name={EIcons.rightarrow} />
 											<span>Почему Telebon</span>

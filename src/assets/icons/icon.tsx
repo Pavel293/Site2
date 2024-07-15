@@ -10,24 +10,27 @@ import { ButtonArrowLeftWhite } from './ButtonArrowLeftWhite'
 import { GooglePlayIcon } from './GooglePlayIcon'
 import { AppStoreIcon } from './AppStoreIcon'
 import { ButtonArrowRightWhite } from './ButtonArrowRightWhite'
-import { ButtonArrowRightBlack } from './functions/ButtonArrowRightBlack'
+import { ButtonArrowRightBlack } from './main/functions/ButtonArrowRightBlack'
 import { UserIcon } from './UserIcon'
 import { X } from './X'
-import { FooterLogomark } from './footeri/FooterLogomark'
-import { FooterAppStore } from './footeri/FooterAppStore'
-import { FooterEmail } from './footeri/FooterEmail'
-import { FooterGooglePlay } from './footeri/FooterGooglePlay'
-import { FooterPhone } from './footeri/FooterPhone'
-import { FooterRuStore } from './footeri/FooterRuStore'
-import { FooterWhatsUp } from './footeri/FooterWhatsUp'
-import { FooterWhatsUpIcon } from './footeri/FooterWhatsUpIcon'
-import { FooterVKIcon } from './footeri/FooterVKIcon'
-import { FooterTelegramIcon } from './footeri/FooterTelegramIcon'
-import { FooterMail } from './footeri/FooterMail'
-import { FooterPhoneNumber } from './footeri/FooterPhoneNumber'
-import { FooterVK } from './footeri/FooterVK'
-import { FooterTG } from './footeri/FooterTG'
+import { FooterLogomark } from './main/footeri/FooterLogomark'
+import { FooterAppStore } from './main/footeri/FooterAppStore'
+import { FooterEmail } from './main/footeri/FooterEmail'
+import { FooterGooglePlay } from './main/footeri/FooterGooglePlay'
+import { FooterPhone } from './main/footeri/FooterPhone'
+import { FooterRuStore } from './main/footeri/FooterRuStore'
+import { FooterWhatsUp } from './main/footeri/FooterWhatsUp'
+import { FooterWhatsUpIcon } from './main/footeri/FooterWhatsUpIcon'
+import { FooterVKIcon } from './main/footeri/FooterVKIcon'
+import { FooterTelegramIcon } from './main/footeri/FooterTelegramIcon'
+import { FooterMail } from './main/footeri/FooterMail'
+import { FooterPhoneNumber } from './main/footeri/FooterPhoneNumber'
+import { FooterVK } from './main/footeri/FooterVK'
+import { FooterTG } from './main/footeri/FooterTG'
 import { Triangle } from './Triangle'
+import { MapPoint } from './aboutus/map/MapPoint'
+import { ListMark } from './aboutus/list/ListMark'
+import { AssistantPlus } from './aboutus/hero/AssistantPlus'
 
 export enum EIcons {
 	walletoutline,
@@ -60,6 +63,9 @@ export enum EIcons {
 	footervk,
 	footertg,
 	triangle,
+	mappoint,
+	listmark,
+	assistantplus,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -93,6 +99,9 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.footervk]: FooterVK,
 	[EIcons.footertg]: FooterTG,
 	[EIcons.triangle]: Triangle,
+	[EIcons.mappoint]: MapPoint,
+	[EIcons.listmark]: ListMark,
+	[EIcons.assistantplus]: AssistantPlus,
 }
 
 interface IIconProps {
