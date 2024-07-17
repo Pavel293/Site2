@@ -31,7 +31,7 @@ import { Triangle } from './Triangle'
 import { MapPoint } from './aboutus/map/MapPoint'
 import { ListMark } from './aboutus/list/ListMark'
 import { AssistantPlus } from './aboutus/hero/AssistantPlus'
-import { Scissors } from './price/All/Scissors'
+import { Scissors } from './price/all/Scissors'
 
 export enum EIcons {
 	walletoutline,
