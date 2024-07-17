@@ -6,7 +6,7 @@
 	height: fit-content;
 	position: relative;
 	overflow: hidden;
-	margin-top: 7.5vw;
+	margin-top: 4.1667vw;
 }
 
 .container {
@@ -16,14 +16,17 @@
 	justify-content: center;
 	width: 100%;
 	height: fit-content;
-	gap: 2.5vw;
-	padding-bottom: 4.9479vw;
-	border-bottom: 0.0521vw solid #90909080;
+	gap: 2.0833vw;
 	.text {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		gap: 0.8333vw;
+		img {
+			width: 12.5vw;
+			height: 3.8021vw;
+		}
 		h3 {
 			font-size: 1.7708vw;
 			font-weight: 700;
@@ -31,13 +34,23 @@
 			text-align: center;
 			color: #2a2c32;
 		}
+		p {
+			font-size: 0.8333vw;
+			font-weight: 400;
+			line-height: 1.3333vw;
+			text-align: center;
+			color: #2a2c32;
+		}
 	}
 	.row {
 		display: flex;
 		flex-direction: row;
-		gap: 8.5417vw;
+		gap: 11.875vw;
 		align-items: center;
 		justify-content: center;
+		padding: 2.5vw 16.901vw 5vw 13.5417vw;
+		background: #eeeeee;
+		border-radius: 0.625vw;
 		.column {
 			display: flex;
 			flex-direction: column;
@@ -63,7 +76,7 @@
 				gap: 0.3125vw;
 				border-bottom: 1px solid #90909080;
 				height: 5.0521vw;
-				width: 18.0729vw;
+				width: 16.6667vw;
 				p {
 					font-size: 0.8333vw;
 					font-weight: 600;
@@ -82,8 +95,9 @@
 			}
 		}
 		img {
-			width: 28.125vw;
-			height: 28.5823vw;
+			width: 24.2708vw;
+			height: 26.09375vw;
+			margin-top: 1.40625vw;
 		}
 	}
 }
@@ -107,17 +121,29 @@
 		justify-content: center;
 		width: 100%;
 		height: fit-content;
-		padding-bottom: 24.6154vw;
-		border-bottom: 0.2564vw solid #90909080;
+		gap: 12.3077vw;
 		.text {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			gap: 2.0513vw;
+			img {
+				width: 72.3077vw;
+				height: 22.0513vw;
+				margin-bottom: 2.0513vw;
+			}
 			h3 {
 				font-size: 6.1538vw;
 				font-weight: 700;
 				line-height: 7.1795vw;
+				text-align: center;
+				color: #2a2c32;
+			}
+			p {
+				font-size: 4.1026vw;
+				font-weight: 400;
+				line-height: 6.5641vw;
 				text-align: center;
 				color: #2a2c32;
 			}
@@ -127,7 +153,10 @@
 			flex-direction: column-reverse;
 			align-items: center;
 			justify-content: center;
-			gap: 4.1026vw;
+			gap: 9.8205vw;
+			border-radius: 3.0769vw;
+			padding: 12.3077vw 5.1282vw;
+			width: 100vw;
 			.column {
 				display: flex;
 				flex-direction: column;
@@ -144,7 +173,7 @@
 					text-align: center;
 					width: fit-content;
 					border-radius: 2.0513vw;
-					margin-top: 6.1538vw;
+					margin-top: 10.2564vw;
 				}
 				.item {
 					display: flex;
@@ -172,8 +201,9 @@
 				}
 			}
 			img {
-				width: 89.7436vw;
-				height: 91.1769vw;
+				width: 85.8974vw;
+				height: 90.7692vw;
+				margin-top: 0;
 			}
 		}
 	}

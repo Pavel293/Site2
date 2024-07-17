@@ -31,6 +31,7 @@ import { Triangle } from './Triangle'
 import { MapPoint } from './aboutus/map/MapPoint'
 import { ListMark } from './aboutus/list/ListMark'
 import { AssistantPlus } from './aboutus/hero/AssistantPlus'
+import { Scissors } from './price/All/Scissors'
 
 export enum EIcons {
 	walletoutline,
@@ -66,6 +67,7 @@ export enum EIcons {
 	mappoint,
 	listmark,
 	assistantplus,
+	scissors,
 }
 
 const ICONS: Record<EIcons, any> = {
@@ -102,6 +104,7 @@ const ICONS: Record<EIcons, any> = {
 	[EIcons.mappoint]: MapPoint,
 	[EIcons.listmark]: ListMark,
 	[EIcons.assistantplus]: AssistantPlus,
+	[EIcons.scissors]: Scissors,
 }
 
 interface IIconProps {

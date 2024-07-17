@@ -5,7 +5,7 @@
 	width: 100vw;
 	height: fit-content;
 	position: relative;
-	overflow: hidden;
+	overflow: visible;
 	margin-top: 7.5vw;
 }
 
@@ -16,26 +16,32 @@
 	justify-content: center;
 	width: 100%;
 	height: fit-content;
-	gap: 2.5vw;
-	padding-bottom: 4.9479vw;
-	border-bottom: 0.0521vw solid #90909080;
+	gap: 2.0833vw;
 	.text {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
+		gap: 2.0833vw;
 		h3 {
 			font-size: 1.7708vw;
 			font-weight: 700;
 			line-height: 2.0833vw;
-			text-align: center;
+			text-align: left;
+			color: #2a2c32;
+		}
+		p {
+			font-size: 0.8333vw;
+			font-weight: 400;
+			line-height: 1.3333vw;
+			text-align: left;
 			color: #2a2c32;
 		}
 	}
 	.row {
 		display: flex;
 		flex-direction: row;
-		gap: 8.5417vw;
+		gap: 14.1146vw;
 		align-items: center;
 		justify-content: center;
 		.column {
@@ -43,27 +49,16 @@
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: center;
-			button {
-				background: #2a2c32;
-				color: #ffffff;
-				padding: 1.0417vw 2.1875vw;
-				font-size: 0.833vw;
-				font-weight: 600;
-				line-height: 1.1458vw;
-				text-align: center;
-				width: fit-content;
-				border-radius: 0.4167vw;
-				margin-top: 2.0833vw;
-			}
+			gap: 2.0833vw;
 			.item {
 				display: flex;
 				flex-direction: row;
-				align-items: center;
-				justify-content: flex-start;
+				align-items: flex-start;
+				justify-content: space-between;
 				gap: 0.3125vw;
-				border-bottom: 1px solid #90909080;
-				height: 5.0521vw;
-				width: 18.0729vw;
+				border-bottom: 0.0521vw solid #90909080;
+				height: 2.4479vw;
+				width: 21.0467vw;
 				p {
 					font-size: 0.8333vw;
 					font-weight: 600;
@@ -71,10 +66,13 @@
 					text-align: left;
 					color: #333333;
 				}
-				svg {
-					width: 1.7708vw;
-					height: 1.7708vw;
-					color: #2a2c32;
+				span {
+					font-size: 0.8333vw;
+					font-weight: 400;
+					line-height: 0.9896vw;
+					text-align: left;
+					color: #333333;
+					width: 8.8542vw;
 				}
 				&:nth-last-child {
 					border: none;
@@ -107,8 +105,7 @@
 		justify-content: center;
 		width: 100%;
 		height: fit-content;
-		padding-bottom: 24.6154vw;
-		border-bottom: 0.2564vw solid #90909080;
+		padding-bottom: 12.3077vw;
 		.text {
 			display: flex;
 			flex-direction: column;
@@ -118,6 +115,13 @@
 				font-size: 6.1538vw;
 				font-weight: 700;
 				line-height: 7.1795vw;
+				text-align: center;
+				color: #2a2c32;
+			}
+			p {
+				font-size: 4.1026vw;
+				font-weight: 400;
+				line-height: 6.5641vw;
 				text-align: center;
 				color: #2a2c32;
 			}
@@ -134,27 +138,17 @@
 				align-items: flex-start;
 				justify-content: flex-start;
 				width: 100%;
-				button {
-					background: #2a2c32;
-					color: #ffffff;
-					padding: 3.5897vw 10.5128vw;
-					font-size: 4.1026vw;
-					font-weight: 600;
-					line-height: 5.641vw;
-					text-align: center;
-					width: fit-content;
-					border-radius: 2.0513vw;
-					margin-top: 6.1538vw;
-				}
+				gap: 4.1026vw;
 				.item {
 					display: flex;
 					flex-direction: row;
-					align-items: center;
-					justify-content: flex-start;
+					align-items: flex-start;
+					justify-content: space-between;
 					gap: 4.1026vw;
 					border-bottom: 1px solid #90909080;
-					height: 13.3333vw;
+					height: 21.7949vw;
 					width: 100%;
+					padding: 6.1538vw 0 0;
 					p {
 						font-size: 4.1026vw;
 						font-weight: 600;
@@ -162,9 +156,13 @@
 						text-align: left;
 						color: #333333;
 					}
-					svg {
-						width: 8.7179vw;
-						height: 8.7179vw;
+					span {
+						font-size: 4.1026vw;
+						font-weight: 400;
+						line-height: 6.5641vw;
+						text-align: left;
+						color: #333333;
+						width: 44.8718vw;
 					}
 					&:nth-last-child {
 						border: none;
