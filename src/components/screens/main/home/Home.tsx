@@ -17,23 +17,12 @@ import Icon from '../../../../assets/icons/AppleIcon.png'
 const Home: FC = () => {
 	const isMobile = useMatchMedia('768')
 
-	const schemaOrgMarkup = {
-		'@context': 'http://schema.org',
-		'@type': 'Organization',
-		name: 'Telebon',
-		url: 'https://telebon.ru',
-		logo: Icon,
-	}
-
 	return (
 		<Meta
 			title="Система записи клиентов. Telebon - CRM для салонов красоты и других типов бизнеса"
 			description="Новый сервис онлайн-записи с возможностью записи Клиентов в Telegram"
 			image="logo_preview.png"
 		>
-			<script type="application/ld+json">
-				{JSON.stringify(schemaOrgMarkup)}
-			</script>
 			<div className={styles.wrapper}>
 				<Hero />
 				<Description />

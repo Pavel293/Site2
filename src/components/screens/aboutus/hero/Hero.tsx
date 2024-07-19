@@ -23,16 +23,19 @@ import Img14 from '../../../../assets/icons/aboutus/hero/HeroImg14.png'
 import { motion } from 'framer-motion'
 import AppleIcon from '../../../../assets/icons/AppleIcon.png'
 
-
-export interface FormValues {
-	email: string
-	isValidForm: boolean
-}
-
 const Hero: FC = () => {
 	const isMobile = useMatchMedia('768')
 	const [platformLink, setPlatformLink] = useState('')
 	const [isOpenDownload, setIsOpenDownload] = useState<boolean>(true)
+
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			const storedState = sessionStorage.getItem('isOpenDownload')
+			if (storedState !== null && storedState !== 'undefined') {
+				setIsOpenDownload(JSON.parse(storedState))
+			}
+		}
+	}, [])
 
 	useEffect(() => {
 		const userAgent = navigator.userAgent || navigator.vendor
@@ -46,37 +49,11 @@ const Hero: FC = () => {
 		}
 	}, [])
 
-	const initialValues = {
-		email: '',
-		isValidForm: false,
-	}
-
-	const validate = (values: any) => {
-		const errors: any = {}
-		if (!values.email) {
-			errors.email = 'Введите корректную почту'
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			sessionStorage.setItem('isOpenDownload', JSON.stringify(isOpenDownload))
 		}
-		return errors
-	}
-
-	const onSubmit = async (values: FormValues) => {
-		try {
-			console.log('1')
-		} catch (error) {
-			console.error('Ошибка при отправке данных:', error)
-		}
-	}
-
-	const formik = useFormik({
-		initialValues,
-		onSubmit,
-		validate,
-	})
-
-	const onSubmitHandler: React.MouseEventHandler<HTMLButtonElement> = event => {
-		event.preventDefault()
-		onSubmit(formik.values)
-	}
+	}, [isOpenDownload])
 
 	return (
 		<div className={cn(styles.body, 'wrapper')}>
@@ -84,7 +61,9 @@ const Hero: FC = () => {
 			{isMobile && isOpenDownload ? (
 				<div className={styles.download_link}>
 					<div className={styles.row}>
-						<div onClick={() => setIsOpenDownload(false)}><IconInstance name={EIcons.x} /></div>
+						<div onClick={() => setIsOpenDownload(false)}>
+							<IconInstance name={EIcons.x} />
+						</div>
 						<Image src={AppleIcon} alt={''} />
 						<div className={styles.text}>
 							<p>Telebon</p>
@@ -94,147 +73,162 @@ const Hero: FC = () => {
 					<Link href={platformLink} target={'_blank'}>
 						<button>Открыть</button>
 					</Link>
-				</div>) : null}
+				</div>
+			) : null}
 			<div className={styles.container}>
 				<motion.div
-							initial='hidden'
-							whileInView='visible'
-							viewport={{ once: true }}
-							transition={{ duration: 0.5 }}
-							variants={{
-								visible: { opacity: 1, y: 0 },
-								hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
-							}}
-							className={styles.text}>
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					transition={{ duration: 0.5 }}
+					variants={{
+						visible: { opacity: 1, y: 0 },
+						hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
+					}}
+					className={styles.text}
+				>
 					<h3>Всё начинается {isMobile ? <br /> : null}с записи.</h3>
-					<p>Телебон познакомит вас с вашими {isMobile ? <br /> : null}
-						идеальными инструментами для работы</p>
+					<p>
+						Телебон познакомит вас с вашими {isMobile ? <br /> : null}
+						идеальными инструментами для работы
+					</p>
 				</motion.div>
 				{isMobile ? (
 					<div className={styles.row}>
 						<motion.div
-							initial='hidden'
-							whileInView='visible'
+							initial="hidden"
+							whileInView="visible"
 							viewport={{ once: true }}
 							transition={{ duration: 0.5 }}
 							variants={{
 								visible: { opacity: 1, y: 0 },
 								hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
-							}}>
+							}}
+						>
 							<Image src={Img5} alt={''} />
 						</motion.div>
 						<motion.div
-							initial='hidden'
-							whileInView='visible'
-							viewport={{ once: true }}
-							transition={{ duration: 0.5, delay: 0.2 }}
-							variants={{
-								visible: { opacity: 1, y: 0 },
-								hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
-							}}>
-							<Image src={Img7} alt={''} />
-						</motion.div><motion.div
-						initial='hidden'
-						whileInView='visible'
-						viewport={{ once: true }}
-						transition={{ duration: 0.5 }}
-						variants={{
-							visible: { opacity: 1, y: 0 },
-							hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
-						}}>
-						<Image src={Img9} alt={''} />
-					</motion.div>
-					</div>
-				) : (
-					<div className={styles.row}>
-						<motion.div
-							initial='hidden'
-							whileInView='visible'
+							initial="hidden"
+							whileInView="visible"
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: 0.2 }}
 							variants={{
 								visible: { opacity: 1, y: 0 },
 								hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
 							}}
-							className={styles.column}>
+						>
+							<Image src={Img7} alt={''} />
+						</motion.div>
+						<motion.div
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true }}
+							transition={{ duration: 0.5 }}
+							variants={{
+								visible: { opacity: 1, y: 0 },
+								hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
+							}}
+						>
+							<Image src={Img9} alt={''} />
+						</motion.div>
+					</div>
+				) : (
+					<div className={styles.row}>
+						<motion.div
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true }}
+							transition={{ duration: 0.5, delay: 0.2 }}
+							variants={{
+								visible: { opacity: 1, y: 0 },
+								hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
+							}}
+							className={styles.column}
+						>
 							<Image src={Img1} alt={''} />
 							<Image src={Img2} alt={''} />
 						</motion.div>
 						<motion.div
-							initial='hidden'
-							whileInView='visible'
+							initial="hidden"
+							whileInView="visible"
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: 0.3 }}
 							variants={{
 								visible: { opacity: 1, y: 0 },
 								hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
 							}}
-							className={styles.column}>
+							className={styles.column}
+						>
 							<Image src={Img3} alt={''} />
 							<Image src={Img4} alt={''} />
 						</motion.div>
 						<motion.div
-							initial='hidden'
-							whileInView='visible'
+							initial="hidden"
+							whileInView="visible"
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: 0.4 }}
 							variants={{
 								visible: { opacity: 1, y: 0 },
 								hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
 							}}
-							className={styles.column}>
+							className={styles.column}
+						>
 							<Image src={Img5} alt={''} />
 							<Image src={Img6} alt={''} />
 						</motion.div>
 						<motion.div
-							initial='hidden'
-							whileInView='visible'
+							initial="hidden"
+							whileInView="visible"
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: 0.5 }}
 							variants={{
 								visible: { opacity: 1, y: 0 },
 								hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
 							}}
-							className={styles.column}>
+							className={styles.column}
+						>
 							<Image src={Img7} alt={''} />
 							<Image src={Img8} alt={''} />
 						</motion.div>
 						<motion.div
-							initial='hidden'
-							whileInView='visible'
-							viewport={{ once: true}}
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: 0.4 }}
 							variants={{
 								visible: { opacity: 1, y: 0 },
 								hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
 							}}
-							className={styles.column}>
+							className={styles.column}
+						>
 							<Image src={Img9} alt={''} />
 							<Image src={Img10} alt={''} />
 						</motion.div>
 						<motion.div
-							initial='hidden'
-							whileInView='visible'
+							initial="hidden"
+							whileInView="visible"
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: 0.3 }}
 							variants={{
 								visible: { opacity: 1, y: 0 },
 								hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
 							}}
-							className={styles.column}>
+							className={styles.column}
+						>
 							<Image src={Img11} alt={''} />
 							<Image src={Img12} alt={''} />
 						</motion.div>
 						<motion.div
-							initial='hidden'
-							whileInView='visible'
+							initial="hidden"
+							whileInView="visible"
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: 0.2 }}
 							variants={{
 								visible: { opacity: 1, y: 0 },
 								hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
 							}}
-							className={styles.column}>
+							className={styles.column}
+						>
 							<Image src={Img13} alt={''} />
 							<Image src={Img14} alt={''} />
 						</motion.div>

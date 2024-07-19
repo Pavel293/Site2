@@ -11,15 +11,19 @@ import HeroImageMobile from '../../../../assets/icons/price/hero/HeroImageMobile
 import { motion } from 'framer-motion'
 import AppleIcon from '../../../../assets/icons/AppleIcon.png'
 
-export interface FormValues {
-	email: string
-	isValidForm: boolean
-}
-
 const Hero: FC = () => {
 	const isMobile = useMatchMedia('768')
 	const [platformLink, setPlatformLink] = useState('')
 	const [isOpenDownload, setIsOpenDownload] = useState<boolean>(true)
+
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			const storedState = sessionStorage.getItem('isOpenDownload')
+			if (storedState !== null && storedState !== 'undefined') {
+				setIsOpenDownload(JSON.parse(storedState))
+			}
+		}
+	}, [])
 
 	useEffect(() => {
 		const userAgent = navigator.userAgent || navigator.vendor
@@ -33,37 +37,11 @@ const Hero: FC = () => {
 		}
 	}, [])
 
-	const initialValues = {
-		email: '',
-		isValidForm: false,
-	}
-
-	const validate = (values: any) => {
-		const errors: any = {}
-		if (!values.email) {
-			errors.email = 'Введите корректную почту'
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			sessionStorage.setItem('isOpenDownload', JSON.stringify(isOpenDownload))
 		}
-		return errors
-	}
-
-	const onSubmit = async (values: FormValues) => {
-		try {
-			console.log('1')
-		} catch (error) {
-			console.error('Ошибка при отправке данных:', error)
-		}
-	}
-
-	const formik = useFormik({
-		initialValues,
-		onSubmit,
-		validate,
-	})
-
-	const onSubmitHandler: React.MouseEventHandler<HTMLButtonElement> = event => {
-		event.preventDefault()
-		onSubmit(formik.values)
-	}
+	}, [isOpenDownload])
 
 	return (
 		<div className={cn(styles.body, 'wrapper')}>
