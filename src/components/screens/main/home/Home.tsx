@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import Meta from '@/utils/meta/Meta'
 import styles from './Home.module.scss'
 import Hero from '@/screens/main/hero/Hero'
-import { EIcons, Icon } from '../../../../assets/icons/icon'
 import useMatchMedia from '@/hooks/useMatchMedia'
 import Description from '@/screens/main/description/Description'
 import Price from '@/screens/main/price/Price'
@@ -13,16 +12,28 @@ import Functions from '@/screens/main/functions/Functions'
 import Start from '@/screens/main/start/Start'
 import HelpBusines from '@/screens/main/help_busines/HelpBusines'
 import Accordion from '@/screens/main/accordion/Accordion'
+import Icon from '../../../../assets/icons/AppleIcon.png'
 
 const Home: FC = () => {
 	const isMobile = useMatchMedia('768')
 
+	const schemaOrgMarkup = {
+		'@context': 'http://schema.org',
+		'@type': 'Organization',
+		name: 'Telebon',
+		url: 'https://telebon.ru',
+		logo: Icon,
+	}
+
 	return (
 		<Meta
-			title='Система записи клиентов. Telebon - CRM для салонов красоты и других типов бизнеса'
-			description='Новый сервис онлайн-записи с возможностью записи Клиентов в Telegram'
-			image='logo_preview.png'
+			title="Система записи клиентов. Telebon - CRM для салонов красоты и других типов бизнеса"
+			description="Новый сервис онлайн-записи с возможностью записи Клиентов в Telegram"
+			image="logo_preview.png"
 		>
+			<script type="application/ld+json">
+				{JSON.stringify(schemaOrgMarkup)}
+			</script>
 			<div className={styles.wrapper}>
 				<Hero />
 				<Description />

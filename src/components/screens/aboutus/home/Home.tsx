@@ -16,12 +16,23 @@ import Join from '@/screens/aboutus/join/Join'
 const Home: FC = () => {
 	const isMobile = useMatchMedia('768')
 
+	const schemaOrgMarkup = {
+		'@context': 'http://schema.org',
+		'@type': 'Organization',
+		name: 'Telebon',
+		url: 'https://telebon.ru',
+		logo: Icon,
+	}
+
 	return (
 		<Meta
-			title='Почему Telebon'
-			description='Новый сервис онлайн-записи с возможностью записи Клиентов в Telegram'
-			image='logo_preview.png'
+			title="Почему Telebon"
+			description="Новый сервис онлайн-записи с возможностью записи Клиентов в Telegram"
+			image="logo_preview.png"
 		>
+			<script type="application/ld+json">
+				{JSON.stringify(schemaOrgMarkup)}
+			</script>
 			<div className={styles.wrapper}>
 				<Hero />
 				<Map />

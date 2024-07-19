@@ -12,7 +12,6 @@ import SponsorsMobile from '../../../../assets/icons/main/hero/SponsorsMobile.pn
 import { motion } from 'framer-motion'
 import AppleIcon from '../../../../assets/icons/AppleIcon.png'
 
-
 export interface FormValues {
 	email: string
 	isValidForm: boolean
@@ -26,9 +25,9 @@ const Hero: FC = () => {
 	const [isOpenDownload, setIsOpenDownload] = useState<boolean>(true)
 
 	useEffect(() => {
-		const userAgent = navigator.userAgent || navigator.vendor;
+		const userAgent = navigator.userAgent || navigator.vendor
 
-		if(/android/i.test(userAgent)) {
+		if (/android/i.test(userAgent)) {
 			setPlatformLink('/')
 		} else if (/iPad|iPhone|iPod/i.test(userAgent)) {
 			setPlatformLink('https://apps.apple.com/ru/app/telebon/id6502614961')
@@ -70,13 +69,19 @@ const Hero: FC = () => {
 	}
 
 	return (
-		<div className={cn(styles.body, 'wrapper')}>
+		<div
+			className={cn(styles.body, 'wrapper')}
+			itemScope
+			itemType="http://schema.org/LocalBusiness"
+		>
 			<div className={styles.gradient}></div>
 			<div className={styles.background}></div>
 			{isMobile && isOpenDownload ? (
 				<div className={styles.download_link}>
 					<div className={styles.row}>
-						<div onClick={() => setIsOpenDownload(false)}><IconInstance name={EIcons.x} /></div>
+						<div onClick={() => setIsOpenDownload(false)}>
+							<IconInstance name={EIcons.x} />
+						</div>
 						<Image src={AppleIcon} alt={''} />
 						<div className={styles.text}>
 							<p>Telebon</p>
@@ -86,53 +91,77 @@ const Hero: FC = () => {
 					<Link href={platformLink} target={'_blank'}>
 						<button>Открыть</button>
 					</Link>
-				</div>) : null}
+				</div>
+			) : null}
 			<div className={styles.container}>
 				<div style={{ height: isMobile ? '30.7692vw' : '6.9792vw' }}></div>
 				<div className={styles.row}>
 					<div className={styles.column}>
 						<div className={styles.text}>
 							<h1>Простая запись клиентов для профессионалов</h1>
-							{isMobile ?
+							{isMobile ? (
 								<p>
-									Система для бронирования, учета<br /> финансов и клиентов.
-									<span> Нам доверяют<br />
-									более 3000 бьюти специалистов<br />
-										в России</span>
-									– Telebon это CRM система<br />
-									для сферы услуг.</p>
-								:
-								<p>Система для бронирования, учета финансов и клиентской базы.
-									Нам доверяют<br />
+									Система для бронирования, учета
+									<br /> финансов и клиентов.
+									<span>
+										{' '}
+										Нам доверяют
+										<br />
+										более 3000 бьюти специалистов
+										<br />в России
+									</span>
+									– Telebon это CRM система
+									<br />
+									для сферы услуг.
+								</p>
+							) : (
+								<p>
+									Система для бронирования, учета финансов и клиентской базы.
+									Нам доверяют
+									<br />
 									<span>более 3000 специалистов по всей России</span>
-									– Telebon это CRM система<br />
-									для сферы услуг.</p>}
+									– Telebon это CRM система
+									<br />
+									для сферы услуг.
+								</p>
+							)}
 						</div>
-						{isMobile ? <button>Начать</button> : <button>Попробовать сейчас</button>}
+						{isMobile ? (
+							<button>Начать</button>
+						) : (
+							<button>Попробовать сейчас</button>
+						)}
 					</div>
-					<motion.div initial='hidden'
-											whileInView='visible'
-											viewport={{ once: true }}
-											transition={{ duration: 0.5, delay: 0.3 }}
-											variants={{
-												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
-											}}>
+					<motion.div
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true }}
+						transition={{ duration: 0.5, delay: 0.3 }}
+						variants={{
+							visible: { opacity: 1, y: 0 },
+							hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
+						}}
+					>
 						<Image src={Phone} alt={''} />
 					</motion.div>
 				</div>
-				<motion.div initial='hidden'
-										whileInView='visible'
-										viewport={{ once: true, amount: 0.3 }}
-										transition={{ duration: 0.5 }}
-										variants={{
-											visible: { opacity: 1, y: 0 },
-											hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
-										}}
-										className={styles.sponsors}>
-					{isMobile ? <Image src={SponsorsMobile} alt={''} /> : <Image src={Sponsors} alt={''} />}
+				<motion.div
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true, amount: 0.3 }}
+					transition={{ duration: 0.5 }}
+					variants={{
+						visible: { opacity: 1, y: 0 },
+						hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
+					}}
+					className={styles.sponsors}
+				>
+					{isMobile ? (
+						<Image src={SponsorsMobile} alt={''} />
+					) : (
+						<Image src={Sponsors} alt={''} />
+					)}
 				</motion.div>
-
 			</div>
 		</div>
 	)

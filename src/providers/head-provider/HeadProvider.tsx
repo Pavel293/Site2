@@ -9,12 +9,12 @@ import { accessColor } from '@/config/constants'
 const HeadProvider: FC<IType> = ({ children }) => {
 	return (
 		<>
-			<NextProgressBar
-				color={accessColor}
-				startPosition={0.3}
-				stopDelayMs={200}
-				height={3}
-			/>
+			{/*<NextProgressBar*/}
+			{/*	color={accessColor}*/}
+			{/*	startPosition={0.3}*/}
+			{/*	stopDelayMs={200}*/}
+			{/*	height={3}*/}
+			{/*/>*/}
 
 			<Head>
 				{/* <!-- Top.Mail.Ru counter --> */}
