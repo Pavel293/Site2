@@ -134,18 +134,18 @@ const Footer: FC = () => {
 				{isMobile ? (
 					<div className={styles.links}>
 						<Image src={LogoImageNewWhite} alt="logotext" />
-						<div className={styles.card}>
-							<IconInstance name={EIcons.rightarrow} />
-							<p>Возможности</p>
-						</div>
-						<div className={styles.card}>
-							<IconInstance name={EIcons.rightarrow} />
-							<p>Тарифы</p>
-						</div>
-						<div className={styles.card}>
-							<IconInstance name={EIcons.rightarrow} />
-							<p>Бот для записи</p>
-						</div>
+						{/*<div className={styles.card}>*/}
+						{/*	<IconInstance name={EIcons.rightarrow} />*/}
+						{/*	<p>Возможности</p>*/}
+						{/*</div>*/}
+						{/*<div className={styles.card}>*/}
+						{/*	<IconInstance name={EIcons.rightarrow} />*/}
+						{/*	<p>Тарифы</p>*/}
+						{/*</div>*/}
+						{/*<div className={styles.card}>*/}
+						{/*	<IconInstance name={EIcons.rightarrow} />*/}
+						{/*	<p>Бот для записи</p>*/}
+						{/*</div>*/}
 						<div className={styles.card}>
 							<IconInstance name={EIcons.rightarrow} />
 							<p>Лицензионный договор</p>

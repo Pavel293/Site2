@@ -112,13 +112,13 @@ const Header: FC = () => {
 	return (
 		<noindex>
 			<div className={isOpen ? styles.darken : undefined}>
-				<div className={styles.shadows} style={{ pointerEvents: 'none' }}>
-					{isMobile ? (
-						<Image src={BackgroundShadowsMobile} alt={''} />
-					) : (
-						<Image src={BackgroundShadows} alt={''} />
-					)}
-				</div>
+				{/*<div className={styles.shadows} style={{ pointerEvents: 'none' }}>*/}
+				{/*	{isMobile ? (*/}
+				{/*		<Image src={BackgroundShadowsMobile} alt={''} />*/}
+				{/*	) : (*/}
+				{/*		<Image src={BackgroundShadows} alt={''} />*/}
+				{/*	)}*/}
+				{/*</div>*/}
 				<motion.nav
 					className={cn(
 						'wrapper',
@@ -148,9 +148,9 @@ const Header: FC = () => {
 					{/*</motion.nav>*/}
 					{isMobile ? null : (
 						<div className={styles.up}>
-							<Link href={'/'} target={'_blank'}>
-								<div className={styles.help}>Помощь</div>
-							</Link>
+							{/*<Link href={'/'} target={'_blank'}>*/}
+							{/*	<div className={styles.help}>Помощь</div>*/}
+							{/*</Link>*/}
 							<Link href={'https://lk.telebon.ru/auth'} target={'_blank'}>
 								<div className={styles.help}>
 									Войти
@@ -173,15 +173,15 @@ const Header: FC = () => {
 								<Link href="/price">
 									<div className={styles.item}>Стоимость</div>
 								</Link>
-								<Link href="/">
-									<div className={styles.item}>
-										Возможности
-										<IconInstance name={EIcons.arrowlist} />
-									</div>
-								</Link>
-								<Link href="/">
-									<div className={styles.item}>Бот для записи</div>
-								</Link>
+								{/*<Link href="/">*/}
+								{/*	<div className={styles.item}>*/}
+								{/*		Возможности*/}
+								{/*		<IconInstance name={EIcons.arrowlist} />*/}
+								{/*	</div>*/}
+								{/*</Link>*/}
+								{/*<Link href="/">*/}
+								{/*	<div className={styles.item}>Бот для записи</div>*/}
+								{/*</Link>*/}
 							</div>
 						</div>
 						<ul className={cn(isOpen && styles.active)}>
@@ -211,45 +211,45 @@ const Header: FC = () => {
 									</Link>
 								</li>
 							) : null}
-							{isMobile ? (
-								<li
-									className={cn(styles.auth, styles.links)}
-									onClick={() => setIsOpen(!isOpen)}
-								>
-									<Link href="/">
-										<div className={styles.icon_button}>
-											<IconInstance name={EIcons.rightarrow} />
-											<span>Возможности</span>
-										</div>
-									</Link>
-								</li>
-							) : null}
-							{isMobile ? (
-								<li
-									className={cn(styles.auth, styles.links)}
-									onClick={() => setIsOpen(!isOpen)}
-								>
-									<Link href="/">
-										<div className={styles.icon_button}>
-											<IconInstance name={EIcons.rightarrow} />
-											<span>Бот для записи</span>
-										</div>
-									</Link>
-								</li>
-							) : null}
-							{isMobile ? (
-								<li
-									className={cn(styles.auth, styles.links)}
-									onClick={() => setIsOpen(!isOpen)}
-								>
-									<Link href="/">
-										<div className={styles.icon_button}>
-											<IconInstance name={EIcons.rightarrow} />
-											<span>Помощь</span>
-										</div>
-									</Link>
-								</li>
-							) : null}
+							{/*{isMobile ? (*/}
+							{/*	<li*/}
+							{/*		className={cn(styles.auth, styles.links)}*/}
+							{/*		onClick={() => setIsOpen(!isOpen)}*/}
+							{/*	>*/}
+							{/*		<Link href="/">*/}
+							{/*			<div className={styles.icon_button}>*/}
+							{/*				<IconInstance name={EIcons.rightarrow} />*/}
+							{/*				<span>Возможности</span>*/}
+							{/*			</div>*/}
+							{/*		</Link>*/}
+							{/*	</li>*/}
+							{/*) : null}*/}
+							{/*{isMobile ? (*/}
+							{/*	<li*/}
+							{/*		className={cn(styles.auth, styles.links)}*/}
+							{/*		onClick={() => setIsOpen(!isOpen)}*/}
+							{/*	>*/}
+							{/*		<Link href="/">*/}
+							{/*			<div className={styles.icon_button}>*/}
+							{/*				<IconInstance name={EIcons.rightarrow} />*/}
+							{/*				<span>Бот для записи</span>*/}
+							{/*			</div>*/}
+							{/*		</Link>*/}
+							{/*	</li>*/}
+							{/*) : null}*/}
+							{/*{isMobile ? (*/}
+							{/*	<li*/}
+							{/*		className={cn(styles.auth, styles.links)}*/}
+							{/*		onClick={() => setIsOpen(!isOpen)}*/}
+							{/*	>*/}
+							{/*		<Link href="/">*/}
+							{/*			<div className={styles.icon_button}>*/}
+							{/*				<IconInstance name={EIcons.rightarrow} />*/}
+							{/*				<span>Помощь</span>*/}
+							{/*			</div>*/}
+							{/*		</Link>*/}
+							{/*	</li>*/}
+							{/*) : null}*/}
 							{isMobile ? (
 								<li
 									className={cn(styles.auth, styles.download)}
