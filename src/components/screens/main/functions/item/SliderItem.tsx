@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import styles from './SliderItem.module.scss'
 import cn from 'classnames'
 import { ICard } from '@/screens/main/functions/Functions'
+import Link from 'next/link'
 
 interface IProps {
 	item: ICard
@@ -16,7 +17,9 @@ const SliderItem: FC<IProps> = props => {
 				<div className={styles.text}>
 					<p>{item.title}</p>
 					<span>{item.description}</span>
-					<button>Подробнее</button>
+					<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
+						<button>Подробнее</button>
+					</Link>
 				</div>
 				{item.image}
 			</div>

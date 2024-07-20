@@ -23,95 +23,175 @@ const Nums: FC = () => {
 		<div className={cn(styles.body, 'wrapper')}>
 			<div className={styles.container}>
 				<div className={styles.column}>
-					<motion.div initial='hidden'
-											whileInView='visible'
-											viewport={{ once: true, amount: 0.3 }}
-											transition={{ duration: 0.5 }}
-											variants={{
-												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
-											}}>
-						<p style={{ textAlign: 'center', marginBottom: isMobile ? '12.3077vw' : '7.5vw' }}>Говорят помогать
-							трудно.<br />
-							Мы делаем это легко.</p>
+					<motion.div
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.3 }}
+						transition={{ duration: 0.5 }}
+						variants={{
+							visible: { opacity: 1, y: 0 },
+							hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
+						}}
+					>
+						<p
+							style={{
+								textAlign: 'center',
+								marginBottom: isMobile ? '12.3077vw' : '7.5vw',
+							}}
+						>
+							Говорят помогать трудно.
+							<br />
+							Мы делаем это легко.
+						</p>
 					</motion.div>
 					<div className={styles.row}>
-						<motion.div initial='hidden'
-												whileInView='visible'
-												viewport={{ once: true, amount: 0.3 }}
-												transition={{ duration: 0.45 }}
-												variants={{
-													visible: { opacity: 1, y: 0 },
-													hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
-												}}
-												className={styles.card}>
-							{isMobile ? <Image src={CardMobile1} alt={''} /> : <Image src={Card1} alt={''} />}
+						<motion.div
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true, amount: 0.3 }}
+							transition={{ duration: 0.45 }}
+							variants={{
+								visible: { opacity: 1, y: 0 },
+								hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
+							}}
+							className={styles.card}
+						>
+							{isMobile ? (
+								<Image src={CardMobile1} alt={''} />
+							) : (
+								<Image
+									src={Card1}
+									alt={'Служба поддержки мастеров и салонов'}
+								/>
+							)}
 							<div className={styles.text}>
-								<p>24/7<br />живой чат</p>
-								<span>Служба поддержки {isMobile ? <br /> : null}ответит вам за 5 {isMobile ? null : <br />}минут</span>
+								<p>
+									24/7
+									<br />
+									живой чат
+								</p>
+								<span>
+									Служба поддержки {isMobile ? <br /> : null}ответит вам за 5{' '}
+									{isMobile ? null : <br />}минут
+								</span>
 							</div>
 						</motion.div>
-						<motion.div initial='hidden'
-												whileInView='visible'
-												viewport={{ once: true, amount: 0.3 }}
-												transition={{ duration: 0.5 }}
-												variants={{
-													visible: { opacity: 1, y: 0 },
-													hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
-												}}
-												className={styles.card}>
-							{isMobile ? <Image src={CardMobile2} alt={''} /> : <Image src={Card2} alt={''} />}
+						<motion.div
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true, amount: 0.3 }}
+							transition={{ duration: 0.5 }}
+							variants={{
+								visible: { opacity: 1, y: 0 },
+								hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
+							}}
+							className={styles.card}
+						>
+							{isMobile ? (
+								<Image src={CardMobile2} alt={''} />
+							) : (
+								<Image
+									src={Card2}
+									alt={'Помощь при работе с клиентами в бьюти-сфере'}
+								/>
+							)}
 							<div className={styles.text}>
-								<p>Поддержка в <br />мессенджерах</p>
-								<span>Отвечаем в WA, TG, VK {isMobile ? <br /> : null}и {isMobile ? null : <br />}даже по почте</span>
+								<p>
+									Поддержка в <br />
+									мессенджерах
+								</p>
+								<span>
+									Отвечаем в WA, TG, VK {isMobile ? <br /> : null}и{' '}
+									{isMobile ? null : <br />}даже по почте
+								</span>
 							</div>
 						</motion.div>
 					</div>
 					<div className={styles.row}>
-						<motion.div initial='hidden'
-												whileInView='visible'
-												viewport={{ once: true, amount: 0.3 }}
-												transition={{ duration: 0.45 }}
-												variants={{
-													visible: { opacity: 1, y: 0 },
-													hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
-												}}
-												className={styles.card}>
-							{isMobile ? <Image src={CardMobile3} alt={''} /> : <Image src={Card3} alt={''} />}
+						<motion.div
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true, amount: 0.3 }}
+							transition={{ duration: 0.45 }}
+							variants={{
+								visible: { opacity: 1, y: 0 },
+								hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
+							}}
+							className={styles.card}
+						>
+							{isMobile ? (
+								<Image src={CardMobile3} alt={''} />
+							) : (
+								<Image
+									src={Card3}
+									alt={'Внедрение CRM система для бьюти-сферы'}
+								/>
+							)}
 							<div className={styles.text}>
-								<p>Эксперт для <br />быстрого <br />внедрения</p>
-								<span>Настроит сервис {isMobile ? <br /> : null}под ваши задачи</span>
+								<p>
+									Эксперт для <br />
+									быстрого <br />
+									внедрения
+								</p>
+								<span>
+									Настроит сервис {isMobile ? <br /> : null}под ваши задачи
+								</span>
 							</div>
 						</motion.div>
-						<motion.div initial='hidden'
-												whileInView='visible'
-												viewport={{ once: true, amount: 0.3 }}
-												transition={{ duration: 0.5 }}
-												variants={{
-													visible: { opacity: 1, y: 0 },
-													hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
-												}}
-												className={styles.card}>
-							{isMobile ? <Image src={CardMobile4} alt={''} /> : <Image src={Card4} alt={''} />}
+						<motion.div
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true, amount: 0.3 }}
+							transition={{ duration: 0.5 }}
+							variants={{
+								visible: { opacity: 1, y: 0 },
+								hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
+							}}
+							className={styles.card}
+						>
+							{isMobile ? (
+								<Image src={CardMobile4} alt={''} />
+							) : (
+								<Image src={Card4} alt={'Перенос клиентской базы в Телебон'} />
+							)}
 							<div className={styles.text}>
-								<p>Перенос <br />данных</p>
-								<span>Бесплатно и абсолютно {isMobile ? <br /> : null}безопасно
-									{isMobile ? null : <br />}перенесем {isMobile ? <br /> : null}
-									все ваши данные в <br />аккаунт Телебон.</span>
+								<p>
+									Перенос <br />
+									данных
+								</p>
+								<span>
+									Бесплатно и абсолютно {isMobile ? <br /> : null}безопасно
+									{isMobile ? null : <br />} перенесем{' '}
+									{isMobile ? <br /> : null}
+									все ваши данные в <br />
+									аккаунт Телебон
+								</span>
 							</div>
 						</motion.div>
 					</div>
-					<motion.div initial='hidden'
-											whileInView='visible'
-											viewport={{ once: true }}
-											transition={{ duration: 0.5 }}
-											variants={{
-												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
-											}}
-											style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-						<button>Начать бесплатно</button>
-					</motion.div>
+					<Link
+						href={'https://lk.telebon.ru/registration'}
+						target={'_blank'}
+						style={{ zIndex: '2' }}
+					>
+						<motion.div
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true }}
+							transition={{ duration: 0.5 }}
+							variants={{
+								visible: { opacity: 1, y: 0 },
+								hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
+							}}
+							style={{
+								width: '100%',
+								display: 'flex',
+								justifyContent: 'center',
+							}}
+						>
+							<button>Начать бесплатно</button>
+						</motion.div>
+					</Link>
 				</div>
 			</div>
 		</div>

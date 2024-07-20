@@ -47,7 +47,9 @@ const HelpBusines: FC = () => {
 							- {isMobile ? <br /> : null}всего за {isMobile ? null : <br />}
 							10₽/день
 						</h3>
-						<button>Начать бесплатно</button>
+						<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
+							<button>Начать бесплатно</button>
+						</Link>
 					</motion.div>
 					<motion.div
 						initial="hidden"
@@ -59,7 +61,10 @@ const HelpBusines: FC = () => {
 							hidden: { opacity: 0 },
 						}}
 					>
-						<Image src={HelpBusinesTablet} alt={''} />
+						<Image
+							src={HelpBusinesTablet}
+							alt={'Онлайн-запись для сферы услуг'}
+						/>
 					</motion.div>
 				</div>
 			</div>

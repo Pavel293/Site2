@@ -34,7 +34,7 @@ const Functions: FC = () => {
 		slidesToScroll: 1,
 		swipeToSlide: true,
 		arrows: false,
-		touchThreshold: 1000
+		touchThreshold: 1000,
 	}
 
 	const propoData = [
@@ -44,46 +44,81 @@ const Functions: FC = () => {
 					Календарь <br />и Записи
 				</>
 			),
-			description: (isMobile ? (<>Оптимизируйте ваше рабочее время, контролируйте поступающие записи от клиентов. Журнал
-				записи, который подстроится под вас.</>) : (<>Оптимизируйте ваше рабочее время, сохраняйте полный контроль над
-				расписанием. Контролируйте поступающие записи от клиентов. Журнал записи, который подстроится под вас.</>)),
-			image: <Image src={Slider1} alt={''} />,
+			description: isMobile ? (
+				<>
+					Оптимизируйте ваше рабочее время, контролируйте поступающие записи от
+					клиентов. Журнал записи, который подстроится под вас.
+				</>
+			) : (
+				<>
+					Оптимизируйте ваше рабочее время, сохраняйте полный контроль над
+					расписанием. Контролируйте поступающие записи от клиентов. Журнал
+					записи, который подстроится под вас.
+				</>
+			),
+			image: <Image src={Slider1} alt={'Журнал записи Telebon'} />,
 		},
 		{
 			title: (
 				<>
-					Аналитика <br/>клиентов
+					Аналитика <br />
+					клиентов
 				</>
 			),
-			description: (isMobile ? (<>Карточка клиента всегда под рукой, аналитика и показатели по посещению клиента в
-				быстром доступе. Теги, вызов и сообщения.</>) : (<>Карточка клиента всегда под рукой, аналитика и показатели по
-				посещению клиента в быстром доступе. Теги, вызов и сообщения.</>)),
-			image: <Image src={Slider2} alt={''} />,
+			description: isMobile ? (
+				<>
+					Карточка клиента всегда под рукой, аналитика и показатели по посещению
+					клиента в быстром доступе. Теги, вызов и сообщения.
+				</>
+			) : (
+				<>
+					Карточка клиента всегда под рукой, аналитика и показатели по посещению
+					клиента в быстром доступе. Теги, вызов и сообщения.
+				</>
+			),
+			image: <Image src={Slider2} alt={'Учёт клиентов Telebon'} />,
+		},
+		{
+			title: <>Онлайн-запись</>,
+			description: isMobile ? (
+				<>
+					Ваша персональная страница, чтобы клиенты могли записываться
+					самостоятельно 24/7. Записи автоматически попадают в журнал
+				</>
+			) : (
+				<>
+					Ваша персональная страница, чтобы клиенты могли записываться
+					самостоятельно 24/7. Записи автоматически попадают в журнал.
+				</>
+			),
+			image: <Image src={Slider3} alt={'Онлайн-запись клиентов Телебон\n'} />,
 		},
 		{
 			title: (
 				<>
-					Онлайн-запись
+					Личный <br />
+					Телеграм Бот
 				</>
 			),
-			description: (isMobile ? (<>Ваша персональная страница, чтобы клиенты могли записываться самостоятельно 24/7.
-				Записи автоматически попадают в журнал</>) : (<>Ваша персональная страница, чтобы клиенты могли записываться
-				самостоятельно 24/7. Записи автоматически попадают в журнал</>)),
-			image: <Image src={Slider3} alt={''} />,
-		},
-		{
-			title: (
+			description: isMobile ? (
 				<>
-					Личный <br/>Телеграм Бот
+					Создайте персональный Telegram бот для записи клиентов, с вашим
+					уникальным дизайном. Создание и настройка займет 5 минут.
+				</>
+			) : (
+				<>
+					Создайте персональный Telegram бот для записи клиентов, с вашим
+					уникальным дизайном. Создание и настройка займет 5 минут.
 				</>
 			),
-			description: (isMobile ? (<>Создайте персональный Telegram бот для записи клиентов, с вашим уникальным дизайном.
-				Создание и настройка займет 5 минут.</>) : (<>Создайте персональный Telegram бот для записи клиентов, с вашим
-				уникальным дизайном. Создание и настройка займет 5 минут.</>)),
-			image: <Image src={Slider4} alt={''} />,
+			image: (
+				<Image
+					src={Slider4}
+					alt={'Telegram бот для записи клиентов на услуги от Telebon'}
+				/>
+			),
 		},
 	]
-
 
 	const cardDisc = propoData?.map((item, i) => (
 		<SliderItem item={item} key={i} index={i} />
@@ -92,28 +127,34 @@ const Functions: FC = () => {
 	return (
 		<div className={cn(styles.body, 'wrapper')}>
 			<div className={styles.container}>
-				<motion.div initial='hidden'
-										whileInView='visible'
-										viewport={{ once: true, amount: 0.3 }}
-										transition={{ duration: 0.5 }}
-										variants={{
-											visible: { opacity: 1, y: 0 },
-											hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
-										}}
-										className={styles.text}>
+				<motion.div
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true, amount: 0.3 }}
+					transition={{ duration: 0.5 }}
+					variants={{
+						visible: { opacity: 1, y: 0 },
+						hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
+					}}
+					className={styles.text}
+				>
 					<p>Основные функции</p>
-					<span>Запись на услуги, финансовый учёт, аналитика по посещениям
-						клиентов. Отчеты и инструменты для роста вашего бизнеса</span>
+					<span>
+						Запись на услуги, финансовый учёт, аналитика по посещениям клиентов.
+						Отчеты и инструменты для роста вашего бизнеса
+					</span>
 				</motion.div>
-				<motion.div initial='hidden'
-										whileInView='visible'
-										viewport={{ once: true, amount: 0.3 }}
-										transition={{ duration: 0.45 }}
-										variants={{
-											visible: { opacity: 1, y: 0 },
-											hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
-										}}
-										className={styles.slider_container}>
+				<motion.div
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true, amount: 0.3 }}
+					transition={{ duration: 0.45 }}
+					variants={{
+						visible: { opacity: 1, y: 0 },
+						hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
+					}}
+					className={styles.slider_container}
+				>
 					<Slider {...settings} ref={arrowRef}>
 						{cardDisc}
 					</Slider>

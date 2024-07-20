@@ -99,7 +99,12 @@ const Hero: FC = () => {
 								<span>300 ₽</span>
 							</h3>
 							{isMobile ? <p>в месяц</p> : <p>в месяц, за 1 пользователя</p>}
-							<button>Попробовать</button>
+							<Link
+								href={'https://lk.telebon.ru/registration'}
+								target={'_blank'}
+							>
+								<button>Попробовать</button>
+							</Link>
 						</motion.div>
 						<motion.div
 							initial="hidden"
@@ -163,7 +168,10 @@ const Hero: FC = () => {
 						{isMobile ? (
 							<Image src={HeroImageMobile} alt={''} />
 						) : (
-							<Image src={HeroImage} alt={''} />
+							<Image
+								src={HeroImage}
+								alt={'Запись клиентов онлайн. Система Telebon - тарифы'}
+							/>
 						)}
 					</motion.div>
 				</div>

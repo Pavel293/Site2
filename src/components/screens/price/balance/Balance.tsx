@@ -134,7 +134,10 @@ const Balance: FC = () => {
 							hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
 						}}
 					>
-						<Image src={BalanceImage} alt={''} />
+						<Image
+							src={BalanceImage}
+							alt={'Стоимость CRM для записи клиентов'}
+						/>
 					</motion.div>
 				</div>
 			</div>

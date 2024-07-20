@@ -1,7 +1,8 @@
 .footer {
 	width: 100%;
 	height: 42.96875vw;
-	background: url('../../../assets/icons/main/footeri/FooterBackground.png') no-repeat;
+	background: url('../../../assets/icons/main/footeri/FooterBackground.png')
+		no-repeat;
 	background-size: cover;
 	display: flex;
 	align-items: center;
@@ -206,9 +207,9 @@
 			flex-direction: row;
 			height: 3.958vw;
 			width: 100vw;
-			background: #2A2C32;
+			background: #2a2c32;
 			border-radius: 1.042vw;
-			border: 0.052vw solid #2A2C32;
+			border: 0.052vw solid #2a2c32;
 			align-items: center;
 			justify-content: center;
 			.box {
@@ -245,7 +246,7 @@
 				line-height: 1.1456vw;
 				text-align: center;
 				color: #ffffff;
-				border: 0.0521vw solid #FFFFFF;
+				border: 0.0521vw solid #ffffff;
 			}
 		}
 		.bottom {
@@ -289,7 +290,8 @@
 		padding-top: 6.1538vw;
 		position: relative;
 		overflow: hidden;
-		background: url('../../../assets/icons/main/footeri/FooterBackground.png') no-repeat;
+		background: url('../../../assets/icons/main/footeri/FooterBackground.png')
+			no-repeat;
 		background-size: cover;
 		.image {
 			position: absolute;
@@ -451,6 +453,12 @@
 						justify-content: center;
 						gap: 3.33vw;
 						cursor: pointer;
+						font-size: 4.1026vw;
+						font-weight: 500;
+						line-height: 7.1795vw;
+						text-align: left;
+						color: #ffffff;
+						height: 4.358vw;
 						svg {
 							&:nth-child(1) {
 								width: 3.33vw;
@@ -458,7 +466,7 @@
 							}
 
 							&:nth-child(2) {
-								height: 4.3589vw;
+								height: 3.8589vw;
 								width: fit-content;
 							}
 						}
@@ -471,7 +479,7 @@
 				line-height: 6.4103vw;
 				letter-spacing: 0.2564vw;
 				text-align: left;
-				color: #647084;
+				color: #a1abbd;
 				margin-bottom: 4.1026vw;
 			}
 
@@ -482,10 +490,10 @@
 				justify-content: center;
 				gap: 1.0256vw;
 				p {
-					font-size: 19px;
+					font-size: 4.1026vw;
 					font-weight: 500;
-					line-height: 28px;
-					letter-spacing: -0.30399999022483826px;
+					line-height: 7.1795vw;
+					letter-spacing: -0.0769vw;
 					text-align: center;
 					color: #ffffff;
 				}
@@ -522,7 +530,7 @@
 					line-height: 5.641vw;
 					letter-spacing: -0.0359vw;
 					text-align: left;
-					color: #A1ABBD;
+					color: #a1abbd;
 				}
 				.title {
 					font-size: 4.8718vw;
@@ -531,13 +539,13 @@
 					letter-spacing: -0.0769vw;
 					text-align: left;
 					margin: 0;
-					color: #FFFFFF;
+					color: #ffffffcc;
 				}
 				button {
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					background: #2A2C32;
+					background: #2a2c32;
 					width: 40.7692vw;
 					height: 8.2051vw;
 					border-radius: 1.2821vw;

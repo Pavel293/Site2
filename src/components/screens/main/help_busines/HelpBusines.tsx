@@ -19,39 +19,50 @@ const HelpBusines: FC = () => {
 				<div className={styles.card}>
 					<motion.div
 						className={styles.phone}
-						initial='hidden'
-						whileInView='visible'
+						initial="hidden"
+						whileInView="visible"
 						viewport={{ once: true }}
 						transition={{ duration: 0.5, delay: 0.3 }}
 						variants={{
 							visible: { opacity: 1, y: 0 },
 							hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
-						}}>
+						}}
+					>
 						<Image src={HelpBusinesPhone} alt={''} />
 					</motion.div>
 					<motion.div
 						className={styles.text}
-						initial='hidden'
-						whileInView='visible'
+						initial="hidden"
+						whileInView="visible"
 						viewport={{ once: true }}
 						transition={{ duration: 0.5, delay: 0.3 }}
 						variants={{
 							visible: { opacity: 1, y: 0 },
 							hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
-						}}>
-						<h3>Телебон помогает {isMobile ? null : <br />}вашему бизнесу{isMobile ? null : <br />} расти</h3>
-						<button>Начать бесплатно</button>
+						}}
+					>
+						<h3>
+							Телебон помогает {isMobile ? null : <br />}вашему бизнесу
+							{isMobile ? null : <br />} расти
+						</h3>
+						<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
+							<button>Начать бесплатно</button>
+						</Link>
 					</motion.div>
 					<motion.div
-						initial='hidden'
-						whileInView='visible'
+						initial="hidden"
+						whileInView="visible"
 						viewport={{ once: true }}
 						transition={{ duration: 0.5, delay: 0.3 }}
 						variants={{
 							visible: { opacity: 1 },
 							hidden: { opacity: 0 },
-						}}>
-						<Image src={HelpBusinesTablet} alt={''} />
+						}}
+					>
+						<Image
+							src={HelpBusinesTablet}
+							alt={'Онлайн-запись для сферы услуг'}
+						/>
 					</motion.div>
 				</div>
 			</div>

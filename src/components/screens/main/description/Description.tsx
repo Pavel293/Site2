@@ -33,7 +33,10 @@ const Description: FC = () => {
 							hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
 						}}
 					>
-						<Image src={DescriptionCard1} alt={''} />
+						<Image
+							src={DescriptionCard1}
+							alt={'Запись клиентов на маникюр онлайн'}
+						/>
 					</motion.div>
 					<motion.div
 						initial="hidden"
@@ -49,7 +52,7 @@ const Description: FC = () => {
 						<h2>Записывайте без лишних сложностей</h2>
 						<p>
 							Планируйте расписание и привлекайте клиентов через{' '}
-							<span>онлайн запись 24/7</span>, автоматизируйте рассылки, и
+							<span>Онлайн-запись 24/7</span>, автоматизируйте рассылки и
 							сделайте свой бизнес более комфортным.
 						</p>
 					</motion.div>
@@ -68,8 +71,8 @@ const Description: FC = () => {
 					>
 						<h2>Забудьте о рутине, сфокусируйтесь на клиентах</h2>
 						<p>
-							Не отвлекайтесь на мелочи, сосредоточтесь на важном.{' '}
-							<span>Оптмизируйте процессы</span> и сфокусируйтесь на создании
+							Не отвлекайтесь на мелочи, сосредоточьтесь на важном.{' '}
+							<span>Оптимизируйте процессы</span> и сфокусируйтесь на создании
 							впечатлений для ваших клиентов.
 						</p>
 					</motion.div>
@@ -83,7 +86,10 @@ const Description: FC = () => {
 							hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
 						}}
 					>
-						<Image src={DescriptionCard2} alt={''} />
+						<Image
+							src={DescriptionCard2}
+							alt={'Запись клиентов для мастера маникюра'}
+						/>
 					</motion.div>
 				</div>
 				<div className={styles.card}>
@@ -97,7 +103,10 @@ const Description: FC = () => {
 							hidden: { opacity: 0, y: isMobile ? '30vw' : '10vw' },
 						}}
 					>
-						<Image src={DescriptionCard3} alt={''} />
+						<Image
+							src={DescriptionCard3}
+							alt={'Аналитика бьюти бизнеса, как увеличить прибыль.'}
+						/>
 					</motion.div>
 					<motion.div
 						initial="hidden"

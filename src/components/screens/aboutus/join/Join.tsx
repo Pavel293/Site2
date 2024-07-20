@@ -17,32 +17,50 @@ const Join: FC = () => {
 		<div className={cn(styles.body, 'wrapper')}>
 			<div className={styles.container}>
 				<div className={styles.card}>
-					<motion.div initial='hidden'
-											whileInView='visible'
-											viewport={{ once: true, amount: 0.3 }}
-											transition={{ duration: 0.5 }}
-											variants={{
-												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
-											}}
-											className={styles.text}>
-						<h3>Присоединяйтесь к <br/>профессионалам</h3>
-						<p>Более 3000 специалистов по всей России уже <br/>
-							выбрали и используют Телебон повседневно. <br/>
-							Подключайтесь к нашему комьюнити и <br/>
-							давайте вместе строить и развивать бизнес в <br/>
-							сфере услуг в России.</p>
-						<button>Начать бесплатно</button>
+					<motion.div
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.3 }}
+						transition={{ duration: 0.5 }}
+						variants={{
+							visible: { opacity: 1, y: 0 },
+							hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
+						}}
+						className={styles.text}
+					>
+						<h3>
+							Присоединяйтесь к <br />
+							профессионалам
+						</h3>
+						<p>
+							Более 3000 специалистов по всей России уже <br />
+							выбрали и используют Телебон повседневно. <br />
+							Подключайтесь к нашему комьюнити и <br />
+							давайте вместе строить и развивать бизнес в <br />
+							сфере услуг в России.
+						</p>
+						<Link
+							href={'https://lk.telebon.ru/registration'}
+							target={'_blank'}
+							style={{ alignSelf: isMobile ? 'center' : 'flex-start' }}
+						>
+							<button>Начать бесплатно</button>
+						</Link>
 					</motion.div>
-					<motion.div initial='hidden'
-											whileInView='visible'
-											viewport={{ once: true, amount: 0.3 }}
-											transition={{ duration: 0.45 }}
-											variants={{
-												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
-											}}>
-						<Image src={JoinImage} alt={''} />
+					<motion.div
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true, amount: 0.3 }}
+						transition={{ duration: 0.45 }}
+						variants={{
+							visible: { opacity: 1, y: 0 },
+							hidden: { opacity: 0, y: isMobile ? '25vw' : '10vw' },
+						}}
+					>
+						<Image
+							src={JoinImage}
+							alt={'Онлайн-запись клиентов, система учёта "Telebon"'}
+						/>
 					</motion.div>
 				</div>
 			</div>

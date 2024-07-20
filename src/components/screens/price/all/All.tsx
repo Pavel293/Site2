@@ -7,6 +7,7 @@ import AllImage from '../../../../assets/icons/price/all/AllImage.png'
 import AllImageMobile from '../../../../assets/icons/price/all/AllImageMobile.png'
 import { motion } from 'framer-motion'
 import { EIcons, Icon } from '../../../../assets/icons/icon'
+import Link from 'next/link'
 
 const All: FC = () => {
 	const isMobile = useMatchMedia('768')
@@ -56,7 +57,7 @@ const All: FC = () => {
 				{isMobile ? (
 					<Image src={AllImageMobile} alt={''} />
 				) : (
-					<Image src={AllImage} alt={''} />
+					<Image src={AllImage} alt={'Тариф платформы Telebon'} />
 				)}
 			</div>
 			<div className={styles.container}>
@@ -83,7 +84,9 @@ const All: FC = () => {
 							))}
 					</div>
 				))}
-				<button>Начать бесплатно</button>
+				<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
+					<button>Начать бесплатно</button>
+				</Link>
 				<p>
 					* Подключение и хостинг Телеграм ботов за 0 руб на 2 года, доступно
 					для новых пользователей до 01.09.2024 г.

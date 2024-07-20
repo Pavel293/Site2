@@ -178,7 +178,8 @@ const Footer: FC = () => {
 								<Link href={'https://wa.me/79956780440'} target={'_blank'}>
 									<div className={styles.card}>
 										<IconInstance name={EIcons.footerwhatsupicon} />
-										<IconInstance name={EIcons.footerwhatsup} />
+										{/*<IconInstance name={EIcons.footerwhatsup} />*/}
+										Написать в WhatsApp
 									</div>
 								</Link>
 							</div>
@@ -308,8 +309,12 @@ const Footer: FC = () => {
 							gap: isMobile ? '4.1026vw' : '0.833vw',
 						}}
 					>
-						<IconInstance name={EIcons.footervk} />
-						<IconInstance name={EIcons.footertg} />
+						<Link href={'https://vk.com/teleboncrm'} target={'_blank'}>
+							<IconInstance name={EIcons.footervk} />
+						</Link>
+						<Link href={'https://t.me/telebon_channel'} target={'_blank'}>
+							<IconInstance name={EIcons.footertg} />
+						</Link>
 					</div>
 				</div>
 			</div>

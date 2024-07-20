@@ -8,6 +8,7 @@ import Start2 from '../../../../assets/icons/main/starti/Start2.png'
 import Start3 from '../../../../assets/icons/main/starti/Start3.png'
 import { motion } from 'framer-motion'
 import { EIcons, Icon } from '../../../../assets/icons/icon'
+import Link from 'next/link'
 
 const Accordion: FC = () => {
 	const isMobile = useMatchMedia('768')
@@ -73,11 +74,11 @@ const Accordion: FC = () => {
 			height: `${
 				index === 0
 					? isMobile
-						? '19.3'
+						? '20.3'
 						: '6.875'
 					: index === 1
 						? isMobile
-							? '40.9'
+							? '41.9'
 							: '9.4989'
 						: index === 2
 							? isMobile
@@ -106,7 +107,7 @@ const Accordion: FC = () => {
 						className={styles.accordionItem}
 						initial="hidden"
 						whileInView="visible"
-						viewport={{ once: true, amount: isMobile ? 0.3 : 0 }}
+						viewport={{ once: true }}
 						transition={{ duration: 0.5 }}
 						variants={{
 							visible: { opacity: 1, y: 0 },
@@ -142,8 +143,12 @@ const Accordion: FC = () => {
 					</motion.div>
 				))}
 				<div className={styles.buttons}>
-					<button className={styles.black}>Регистрация</button>
-					<button>Войти</button>
+					<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
+						<button className={styles.black}>Регистрация</button>
+					</Link>
+					<Link href={'https://lk.telebon.ru/auth'} target={'_blank'}>
+						<button>Войти</button>
+					</Link>
 				</div>
 			</div>
 		</div>

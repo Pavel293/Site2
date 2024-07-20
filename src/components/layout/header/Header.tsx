@@ -295,7 +295,7 @@ const Header: FC = () => {
 									href="https://lk.telebon.ru/registration"
 									target={'_blank'}
 								>
-									<span>Войти</span>
+									<span>Начать</span>
 								</Link>
 							</li>
 						</ul>

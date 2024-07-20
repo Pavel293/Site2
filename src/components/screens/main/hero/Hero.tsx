@@ -7,6 +7,7 @@ import { useFormik } from 'formik'
 import Link from 'next/link'
 import useMatchMedia from '@/hooks/useMatchMedia'
 import Phone from '../../../../assets/icons/main/hero/HeroPhone.png'
+import PhoneMobile from '../../../../assets/icons/main/hero/HeroPhoneMobile.png'
 import Sponsors from '../../../../assets/icons/main/hero/Sponsors.png'
 import SponsorsMobile from '../../../../assets/icons/main/hero/SponsorsMobile.png'
 import { motion } from 'framer-motion'
@@ -83,12 +84,8 @@ const Hero: FC = () => {
 										{' '}
 										Нам доверяют
 										<br />
-										более 3000 бьюти специалистов
-										<br />в России
+										более 3000 бьюти специалистов.
 									</span>
-									– Telebon это CRM система
-									<br />
-									для сферы услуг.
 								</p>
 							) : (
 								<p>
@@ -102,11 +99,20 @@ const Hero: FC = () => {
 								</p>
 							)}
 						</div>
-						{isMobile ? (
-							<button>Начать</button>
-						) : (
-							<button>Попробовать сейчас</button>
-						)}
+						<Link
+							href={'https://lk.telebon.ru/registration'}
+							target={'_blank'}
+							style={{
+								display: 'flex',
+								justifyContent: isMobile ? 'center' : 'flex-start',
+							}}
+						>
+							{isMobile ? (
+								<button>Начать</button>
+							) : (
+								<button>Попробовать сейчас</button>
+							)}
+						</Link>
 					</div>
 					<motion.div
 						initial="hidden"
@@ -118,7 +124,14 @@ const Hero: FC = () => {
 							hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
 						}}
 					>
-						<Image src={Phone} alt={''} />
+						{isMobile ? (
+							<Image src={PhoneMobile} alt={''} />
+						) : (
+							<Image
+								src={Phone}
+								alt={'Мобильное приложение Телебон (Telebon)'}
+							/>
+						)}
 					</motion.div>
 				</div>
 				<motion.div
@@ -135,7 +148,10 @@ const Hero: FC = () => {
 					{isMobile ? (
 						<Image src={SponsorsMobile} alt={''} />
 					) : (
-						<Image src={Sponsors} alt={''} />
+						<Image
+							src={Sponsors}
+							alt={'Партнёры системы записи клиентов Телебон (Telebon)'}
+						/>
 					)}
 				</motion.div>
 			</div>

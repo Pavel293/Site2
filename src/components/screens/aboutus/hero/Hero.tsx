@@ -145,8 +145,11 @@ const Hero: FC = () => {
 							}}
 							className={styles.column}
 						>
-							<Image src={Img1} alt={''} />
-							<Image src={Img2} alt={''} />
+							<Image
+								src={Img1}
+								alt={'Мастер маникюра, онлайн запись Telebon'}
+							/>
+							<Image src={Img2} alt={'Мастер Барбер, онлайн запись Telebon'} />
 						</motion.div>
 						<motion.div
 							initial="hidden"
@@ -159,8 +162,14 @@ const Hero: FC = () => {
 							}}
 							className={styles.column}
 						>
-							<Image src={Img3} alt={''} />
-							<Image src={Img4} alt={''} />
+							<Image
+								src={Img3}
+								alt={'Мастер педикюра, онлайн запись Telebon'}
+							/>
+							<Image
+								src={Img4}
+								alt={'Мастер визажист, онлайн запись Telebon'}
+							/>
 						</motion.div>
 						<motion.div
 							initial="hidden"
@@ -173,8 +182,11 @@ const Hero: FC = () => {
 							}}
 							className={styles.column}
 						>
-							<Image src={Img5} alt={''} />
-							<Image src={Img6} alt={''} />
+							<Image src={Img5} alt={'Мастер бровист, онлайн запись Telebon'} />
+							<Image
+								src={Img6}
+								alt={'Мастер маникюра, онлайн запись Telebon'}
+							/>
 						</motion.div>
 						<motion.div
 							initial="hidden"
@@ -187,8 +199,8 @@ const Hero: FC = () => {
 							}}
 							className={styles.column}
 						>
-							<Image src={Img7} alt={''} />
-							<Image src={Img8} alt={''} />
+							<Image src={Img7} alt={'Мастер бровист, онлайн запись Telebon'} />
+							<Image src={Img8} alt={'Мастер барбер, онлайн запись Telebon'} />
 						</motion.div>
 						<motion.div
 							initial="hidden"
@@ -201,8 +213,14 @@ const Hero: FC = () => {
 							}}
 							className={styles.column}
 						>
-							<Image src={Img9} alt={''} />
-							<Image src={Img10} alt={''} />
+							<Image
+								src={Img9}
+								alt={'Мастер визажист, онлайн запись Telebon'}
+							/>
+							<Image
+								src={Img10}
+								alt={'Мастер маникюра, онлайн запись Telebon'}
+							/>
 						</motion.div>
 						<motion.div
 							initial="hidden"
@@ -215,8 +233,11 @@ const Hero: FC = () => {
 							}}
 							className={styles.column}
 						>
-							<Image src={Img11} alt={''} />
-							<Image src={Img12} alt={''} />
+							<Image
+								src={Img11}
+								alt={'Мастер визажист, онлайн запись Telebon'}
+							/>
+							<Image src={Img12} alt={'Мастер барбер, онлайн запись Telebon'} />
 						</motion.div>
 						<motion.div
 							initial="hidden"
@@ -229,8 +250,14 @@ const Hero: FC = () => {
 							}}
 							className={styles.column}
 						>
-							<Image src={Img13} alt={''} />
-							<Image src={Img14} alt={''} />
+							<Image
+								src={Img13}
+								alt={'Мастер массажа, онлайн запись Telebon'}
+							/>
+							<Image
+								src={Img14}
+								alt={'Мастер бровист, онлайн запись Telebon'}
+							/>
 						</motion.div>
 					</div>
 				)}

@@ -8,6 +8,7 @@ import Start2 from '../../../../assets/icons/main/starti/Start2.png'
 import Start3 from '../../../../assets/icons/main/starti/Start3.png'
 import { motion } from 'framer-motion'
 import { EIcons, Icon } from '../../../../assets/icons/icon'
+import Link from 'next/link'
 
 const Accordion: FC = () => {
 	const isMobile = useMatchMedia('768')
@@ -111,23 +112,23 @@ const Accordion: FC = () => {
 			height: `${
 				index === 0
 					? isMobile
-						? '19.3'
+						? '37.5'
 						: '8.1771'
 					: index === 1
 						? isMobile
-							? '40.9'
+							? '38'
 							: '9.4792'
 						: index === 2
 							? isMobile
-								? '42'
+								? '60'
 								: '10.8333'
 							: index === 3
 								? isMobile
-									? '30.5'
+									? '55'
 									: '9.53125'
 								: index === 4
 									? isMobile
-										? '30.5'
+										? '31'
 										: '8.1771'
 									: index === 5
 										? isMobile
@@ -135,7 +136,7 @@ const Accordion: FC = () => {
 											: '7.1875'
 										: index === 6
 											? isMobile
-												? '30.5'
+												? '44'
 												: '8.1771'
 											: '10'
 			}vw`,
@@ -192,8 +193,12 @@ const Accordion: FC = () => {
 					</motion.div>
 				))}
 				<div className={styles.buttons}>
-					<button className={styles.black}>Регистрация</button>
-					<button>Войти</button>
+					<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
+						<button className={styles.black}>Регистрация</button>
+					</Link>
+					<Link href={'https://lk.telebon.ru/auth'} target={'_blank'}>
+						<button>Войти</button>
+					</Link>
 				</div>
 			</div>
 		</div>

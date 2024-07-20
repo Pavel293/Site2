@@ -22,51 +22,73 @@ const Price: FC = () => {
 		<div className={cn(styles.body, 'wrapper')}>
 			<div className={styles.container}>
 				<div className={styles.card}>
-					<motion.div initial='hidden'
-											whileInView='visible'
-											viewport={{ once: true }}
-											transition={{ duration: 0.5, delay: 0.3 }}
-											variants={{
-												visible: { opacity: 1, y: 0 },
-												hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
-											}}>
-						{isMobile ? <Image src={PriceImageMobile} alt={''} /> : <Image src={PriceImage} alt={''} />}
+					<motion.div
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true }}
+						transition={{ duration: 0.5, delay: 0.3 }}
+						variants={{
+							visible: { opacity: 1, y: 0 },
+							hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
+						}}
+					>
+						{isMobile ? (
+							<Image src={PriceImageMobile} alt={''} />
+						) : (
+							<Image
+								src={PriceImage}
+								alt={'Запись клиентов онлайн. Система Telebon - тарифы'}
+							/>
+						)}
 					</motion.div>
 					<div className={styles.text}>
-						<motion.div initial='hidden'
-												whileInView='visible'
-												viewport={{ once: true }}
-												transition={{ duration: 0.5, delay: 0.3 }}
-												variants={{
-													visible: { opacity: 1, y: 0 },
-													hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
-												}}>
+						<motion.div
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true }}
+							transition={{ duration: 0.5, delay: 0.3 }}
+							variants={{
+								visible: { opacity: 1, y: 0 },
+								hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
+							}}
+						>
 							<h3>Все функции включены</h3>
 						</motion.div>
-						<motion.div initial='hidden'
-												whileInView='visible'
-												viewport={{ once: true }}
-												transition={{ duration: 0.5, delay: 0.3 }}
-												variants={{
-													visible: { opacity: 1, y: 0 },
-													hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
-												}}>
+						<motion.div
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true }}
+							transition={{ duration: 0.5, delay: 0.3 }}
+							variants={{
+								visible: { opacity: 1, y: 0 },
+								hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
+							}}
+						>
 							<p className={styles.price}>300 ₽</p>
 						</motion.div>
-						<motion.div initial='hidden'
-												whileInView='visible'
-												viewport={{ once: true }}
-												transition={{ duration: 0.5, delay: 0.5 }}
-												variants={{
-													visible: { opacity: 1 },
-													hidden: { opacity: 0 },
-												}}>
-							<button>Попробовать сейчас</button>
-						</motion.div>
-						<p>+300 ₽ за каждого дополнительного<br />
-							пользователя в месяц.<br />
-							Все функции включены.<br />
-							Бесплатный пробный период 14 дней.<br />
+						<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
+							<motion.div
+								initial="hidden"
+								whileInView="visible"
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 0.5 }}
+								variants={{
+									visible: { opacity: 1 },
+									hidden: { opacity: 0 },
+								}}
+							>
+								<button>Попробовать сейчас</button>
+							</motion.div>
+						</Link>
+						<p>
+							+300 ₽ за каждого дополнительного
+							<br />
+							пользователя в месяц.
+							<br />
+							Все функции включены.
+							<br />
+							Бесплатный пробный период 14 дней.
+							<br />
 							<span>*Подключение Telegram бота, бесплатно до 01.09.2024</span>
 						</p>
 					</div>
