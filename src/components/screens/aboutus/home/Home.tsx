@@ -30,9 +30,7 @@ const Home: FC = () => {
 				<Feedback />
 				<Unique />
 				<Nums />
-				<div style={{ marginTop: isMobile ? '-26.2821vw' : '0' }}>
-					<Price />
-				</div>
+				<Price />
 				<Join />
 			</div>
 		</Meta>
