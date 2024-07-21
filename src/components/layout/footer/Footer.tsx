@@ -138,27 +138,34 @@ const Footer: FC = () => {
 						{/*	<IconInstance name={EIcons.rightarrow} />*/}
 						{/*	<p>Возможности</p>*/}
 						{/*</div>*/}
-						{/*<div className={styles.card}>*/}
-						{/*	<IconInstance name={EIcons.rightarrow} />*/}
-						{/*	<p>Тарифы</p>*/}
-						{/*</div>*/}
+						<Link href={'/price'}>
+							<div className={styles.card}>
+								<IconInstance name={EIcons.rightarrow} />
+								<p>Тарифы</p>
+							</div>
+						</Link>
 						{/*<div className={styles.card}>*/}
 						{/*	<IconInstance name={EIcons.rightarrow} />*/}
 						{/*	<p>Бот для записи</p>*/}
 						{/*</div>*/}
-						<div className={styles.card}>
-							<IconInstance name={EIcons.rightarrow} />
-							<p>Лицензионный договор</p>
-						</div>
-
-						<div className={styles.card}>
-							<IconInstance name={EIcons.rightarrow} />
-							<p>Соглашение</p>
-						</div>
-						<div className={styles.card}>
-							<IconInstance name={EIcons.rightarrow} />
-							<p>Конфиденциальность</p>
-						</div>
+						<Link href={'/document'}>
+							<div className={styles.card}>
+								<IconInstance name={EIcons.rightarrow} />
+								<p>Лицензионный договор</p>
+							</div>
+						</Link>
+						<Link href={'/document'}>
+							<div className={styles.card}>
+								<IconInstance name={EIcons.rightarrow} />
+								<p>Соглашение</p>
+							</div>
+						</Link>
+						<Link href={'/document'}>
+							<div className={styles.card}>
+								<IconInstance name={EIcons.rightarrow} />
+								<p>Конфиденциальность</p>
+							</div>
+						</Link>
 						<div className={styles.contact}>
 							<p className={styles.title}>КОНТАКТЫ</p>
 							<div className={styles.main}>
@@ -223,24 +230,23 @@ const Footer: FC = () => {
 								<div className={styles.column}>
 									<p className={styles.title}>КАРТА САЙТА</p>
 									<div className={styles.line}></div>
-									<Link href={'/'}>
+									<Link href={'/price'}>
 										<p>Тарифы</p>
 									</Link>
-									<Link href={'/'}>
-										<p>Бот для записи</p>
-									</Link>
+									{/*<Link href={'/'}>*/}
+									{/*	<p>Бот для записи</p>*/}
+									{/*</Link>*/}
 								</div>
 								<div className={styles.column}>
 									<p className={styles.title}>ДОКУМЕНТЫ</p>
 									<div className={styles.line}></div>
-
-									<Link href={'/'}>
+									<Link href={'/document'}>
 										<p>Пользовательское соглашение</p>
 									</Link>
-									<Link href={'/'}>
+									<Link href={'/document'}>
 										<p>Лицензионный договор</p>
 									</Link>
-									<Link href={'/'}>
+									<Link href={'/document'}>
 										<p>Конфиденциальность</p>
 									</Link>
 									{/*<div className={styles.social}>*/}

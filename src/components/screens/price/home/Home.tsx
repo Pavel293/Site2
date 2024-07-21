@@ -15,7 +15,7 @@ const Home: FC = () => {
 
 	return (
 		<Meta
-			title="Стоимость"
+			title="Стоимость Telebon - мобильное решение для вашего бизнеса"
 			description="Новый сервис онлайн-записи с возможностью записи Клиентов в Telegram"
 			image="logo_preview.png"
 		>

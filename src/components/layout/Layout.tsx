@@ -13,7 +13,10 @@ const Layout: FC<IType> = ({ children }) => {
 		const handleRouteChange = (url: string) => {
 			if (
 				url === '/404' ||
-				(url !== '/price' && url !== '/' && url !== '/aboutus')
+				(url !== '/price' &&
+					url !== '/' &&
+					url !== '/aboutus' &&
+					url !== '/document')
 			) {
 				setIs404Page(true)
 			} else {

@@ -5,6 +5,7 @@ import cn from 'classnames'
 import { useFormik } from 'formik'
 import InputMask from 'react-input-mask'
 import Link from 'next/link'
+import useMatchMedia from '@/hooks/useMatchMedia'
 
 interface ModalProps {
 	isOpen: boolean
@@ -24,6 +25,7 @@ const ModalSupport: React.FC<ModalProps> = ({
 	setIsModalOpen,
 	onClose,
 }) => {
+	const isMobile = useMatchMedia('768')
 	const modalOverlayRef = useRef(null)
 	const [isClosing, setIsClosing] = React.useState(false)
 	const [isSuccess, setIsSuccess] = React.useState(false)
@@ -145,12 +147,17 @@ const ModalSupport: React.FC<ModalProps> = ({
 					<div className={styles.modal}>
 						<div className={styles.header}>
 							<IconInstance name={EIcons.close} />
-							<p className={styles.title}>Презентация Telebon</p>
+							{isMobile ? (
+								<p className={styles.title}>Презентация</p>
+							) : (
+								<p className={styles.title}>Презентация Telebon</p>
+							)}
 						</div>
 						<p style={{ width: '100%' }}>
 							Покажем систему в деле, поможем с переездом и ответим
-							<br /> на вопросы. Перед оформлением подписки можно
-							<br /> протестировать бесплатно
+							{isMobile ? null : <br />} на вопросы. Перед оформлением подписки
+							можно
+							{isMobile ? null : <br />} протестировать бесплатно
 						</p>
 						<div className={styles.input_container}>
 							<div className={styles.input}>
