@@ -44,6 +44,15 @@ const Footer: FC = () => {
 		}
 	}
 
+	const handleEmailClick = () => {
+		const emailAddress = `hello@telebon.ru`
+		if (isMobile) {
+			window.location.href = `mailto:${emailAddress}`
+		} else {
+			copyToClipboard(emailAddress)
+		}
+	}
+
 	const copyToClipboard = async (text: string) => {
 		try {
 			if (window.isSecureContext && navigator.clipboard) {
@@ -179,12 +188,7 @@ const Footer: FC = () => {
 									<IconInstance name={EIcons.footerphone} />
 									<IconInstance name={EIcons.footerphonenumber} />
 								</div>
-								<div
-									className={styles.card}
-									onClick={() => {
-										copyToClipboard('hello@telebon.ru')
-									}}
-								>
+								<div className={styles.card} onClick={handleEmailClick}>
 									<IconInstance name={EIcons.footermail} />
 									<IconInstance name={EIcons.footeremail} />
 								</div>
