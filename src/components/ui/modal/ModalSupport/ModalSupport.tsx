@@ -162,7 +162,7 @@ const ModalSupport: React.FC<ModalProps> = ({
 								<p className={styles.title}>Презентация Telebon</p>
 							)}
 						</div>
-						<p style={{ width: '100%' }}>
+						<p style={{ width: '100%' }} className={styles.desc}>
 							Покажем систему в деле, поможем с переездом и ответим
 							{isMobile ? null : <br />} на вопросы. Перед оформлением подписки
 							можно

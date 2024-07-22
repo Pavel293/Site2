@@ -326,6 +326,7 @@ const Footer: FC = () => {
 							display: 'flex',
 							flexDirection: 'row',
 							gap: isMobile ? '4.1026vw' : '0.833vw',
+							maxWidth: isMobile ? '21.7949vw' : '4.4271vw',
 						}}
 					>
 						<Link href={'https://vk.com/teleboncrm'} target={'_blank'}>
