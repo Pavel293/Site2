@@ -200,7 +200,9 @@ const ModalSupport: React.FC<ModalProps> = ({
 								<p>
 									Согласие на обработку{' '}
 									<span>
-										<Link href={'/document'}>персональных данных</Link>
+										<Link href={'/document'} onClick={() => onClose()}>
+											персональных данных
+										</Link>
 									</span>
 								</p>
 							</label>
