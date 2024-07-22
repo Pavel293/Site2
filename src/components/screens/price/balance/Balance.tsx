@@ -56,9 +56,17 @@ const Balance: FC = () => {
 							style={{ marginTop: isMobile ? '10.2564vw' : '0' }}
 						>
 							<p>Сотрудники</p>
-							<span>
-								10₽/день за <br />1 пользователя
-							</span>
+							<div
+								style={{
+									height: isMobile ? '4.9231vw' : '0.9896vw',
+									display: 'flex',
+									alignItems: 'center',
+								}}
+							>
+								<span>
+									10₽/день за <br />1 пользователя
+								</span>
+							</div>
 						</motion.div>
 						<motion.div
 							initial="hidden"
@@ -71,11 +79,19 @@ const Balance: FC = () => {
 							}}
 							className={styles.item}
 						>
-							<p>
-								Модуль Онлайн-
-								<br />
-								записи
-							</p>
+							<div
+								style={{
+									height: isMobile ? '4.9231vw' : '0.9896vw',
+									display: 'flex',
+									alignItems: 'center',
+								}}
+							>
+								<p>
+									Модуль Онлайн-
+									<br />
+									записи
+								</p>
+							</div>
 							<span>БЕСПЛАТНО</span>
 						</motion.div>
 						<motion.div
@@ -103,10 +119,18 @@ const Balance: FC = () => {
 							}}
 							className={styles.item}
 						>
-							<p>
-								Персональный <br />
-								Телеграм бот
-							</p>
+							<div
+								style={{
+									height: isMobile ? '4.9231vw' : '0.9896vw',
+									display: 'flex',
+									alignItems: 'center',
+								}}
+							>
+								<p>
+									Персональный <br />
+									Телеграм бот
+								</p>
+							</div>
 							<span>БЕСПЛАТНО</span>
 						</motion.div>
 						<motion.div

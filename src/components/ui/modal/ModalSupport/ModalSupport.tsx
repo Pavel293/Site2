@@ -119,6 +119,13 @@ const ModalSupport: React.FC<ModalProps> = ({
 			>
 				{isSuccess ? (
 					<div className={styles.modal} style={{ background: '#00BE70' }}>
+						{isMobile ? (
+							<div
+								style={{
+									marginTop: '20vw',
+								}}
+							></div>
+						) : null}
 						<div className={styles.success}>
 							<IconInstance name={EIcons.success} />
 						</div>
@@ -146,7 +153,9 @@ const ModalSupport: React.FC<ModalProps> = ({
 				) : (
 					<div className={styles.modal}>
 						<div className={styles.header}>
-							<IconInstance name={EIcons.close} />
+							<div onClick={() => onClose()} style={{ cursor: 'pointer' }}>
+								<IconInstance name={EIcons.close} />
+							</div>
 							{isMobile ? (
 								<p className={styles.title}>Презентация</p>
 							) : (
@@ -191,7 +200,7 @@ const ModalSupport: React.FC<ModalProps> = ({
 								<p>
 									Согласие на обработку{' '}
 									<span>
-										<Link href={'/'}>персональных данных</Link>
+										<Link href={'/document'}>персональных данных</Link>
 									</span>
 								</p>
 							</label>

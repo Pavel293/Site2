@@ -144,6 +144,12 @@ const Footer: FC = () => {
 								<p>Тарифы</p>
 							</div>
 						</Link>
+						<Link href={'/aboutus'}>
+							<div className={styles.card}>
+								<IconInstance name={EIcons.rightarrow} />
+								<p>Почему Telebon</p>
+							</div>
+						</Link>
 						{/*<div className={styles.card}>*/}
 						{/*	<IconInstance name={EIcons.rightarrow} />*/}
 						{/*	<p>Бот для записи</p>*/}
@@ -232,6 +238,9 @@ const Footer: FC = () => {
 									<div className={styles.line}></div>
 									<Link href={'/price'}>
 										<p>Тарифы</p>
+									</Link>
+									<Link href={'/aboutus'}>
+										<p>Почему Telebon</p>
 									</Link>
 									{/*<Link href={'/'}>*/}
 									{/*	<p>Бот для записи</p>*/}
