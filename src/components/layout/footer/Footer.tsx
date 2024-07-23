@@ -163,19 +163,19 @@ const Footer: FC = () => {
 						{/*	<IconInstance name={EIcons.rightarrow} />*/}
 						{/*	<p>Бот для записи</p>*/}
 						{/*</div>*/}
-						<Link href={'/document'}>
+						<Link href={'/info/licence'}>
 							<div className={styles.card}>
 								<IconInstance name={EIcons.rightarrow} />
 								<p>Лицензионный договор</p>
 							</div>
 						</Link>
-						<Link href={'/document'}>
+						<Link href={'/info/agreement'}>
 							<div className={styles.card}>
 								<IconInstance name={EIcons.rightarrow} />
 								<p>Соглашение</p>
 							</div>
 						</Link>
-						<Link href={'/document'}>
+						<Link href={'/info/privacy-policy'}>
 							<div className={styles.card}>
 								<IconInstance name={EIcons.rightarrow} />
 								<p>Конфиденциальность</p>
@@ -253,13 +253,13 @@ const Footer: FC = () => {
 								<div className={styles.column}>
 									<p className={styles.title}>ДОКУМЕНТЫ</p>
 									<div className={styles.line}></div>
-									<Link href={'/document'}>
+									<Link href={'/info/licence'}>
 										<p>Пользовательское соглашение</p>
 									</Link>
-									<Link href={'/document'}>
+									<Link href={'/info/agreement'}>
 										<p>Лицензионный договор</p>
 									</Link>
-									<Link href={'/document'}>
+									<Link href={'/info/privacy-policy'}>
 										<p>Конфиденциальность</p>
 									</Link>
 									{/*<div className={styles.social}>*/}

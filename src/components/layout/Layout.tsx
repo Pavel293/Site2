@@ -16,7 +16,9 @@ const Layout: FC<IType> = ({ children }) => {
 				(url !== '/price' &&
 					url !== '/' &&
 					url !== '/aboutus' &&
-					url !== '/document')
+					url !== '/info/licence' &&
+					url !== '/info/agreement' &&
+					url !== '/info/privacy-policy')
 			) {
 				setIs404Page(true)
 			} else {
