@@ -3,9 +3,9 @@ import styles from './Start.module.scss'
 import cn from 'classnames'
 import Image from 'next/image'
 import useMatchMedia from '@/hooks/useMatchMedia'
-import Start1 from '../../../../assets/icons/main/starti/Start1.png'
-import Start2 from '../../../../assets/icons/main/starti/Start2.png'
-import Start3 from '../../../../assets/icons/main/starti/Start3.png'
+import Start1 from '../../../../assets/icons/main/starti/Start1.webp'
+import Start2 from '../../../../assets/icons/main/starti/Start2.webp'
+import Start3 from '../../../../assets/icons/main/starti/Start3.webp'
 import { motion } from 'framer-motion'
 
 const Start: FC = () => {
@@ -31,6 +31,7 @@ const Start: FC = () => {
 					<Image
 						src={Start1}
 						alt={'Профиль салона и мастера в система учета клиентов'}
+						loading="lazy"
 					/>
 					<div className={styles.text}>
 						<p>1. Заполните профиль</p>
@@ -53,7 +54,11 @@ const Start: FC = () => {
 					}}
 					className={styles.card}
 				>
-					<Image src={Start2} alt={'Ссылка на запись для клиентов'} />
+					<Image
+						src={Start2}
+						alt={'Ссылка на запись для клиентов'}
+						loading="lazy"
+					/>
 					<div className={styles.text}>
 						<p>2. Поделитесь ссылкой</p>
 						<span>
@@ -76,7 +81,11 @@ const Start: FC = () => {
 					}}
 					className={styles.card}
 				>
-					<Image src={Start3} alt={'Модуль Онлайн-записи клиентов на услуги'} />
+					<Image
+						src={Start3}
+						alt={'Модуль Онлайн-записи клиентов на услуги'}
+						loading="lazy"
+					/>
 					<div className={styles.text}>
 						<p>3. Начните получать записи</p>
 						<span>

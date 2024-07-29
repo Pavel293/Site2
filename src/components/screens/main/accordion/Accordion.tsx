@@ -1,11 +1,7 @@
 import React, { FC, useState } from 'react'
 import styles from './Accordion.module.scss'
 import cn from 'classnames'
-import Image from 'next/image'
 import useMatchMedia from '@/hooks/useMatchMedia'
-import Start1 from '../../../../assets/icons/main/starti/Start1.png'
-import Start2 from '../../../../assets/icons/main/starti/Start2.png'
-import Start3 from '../../../../assets/icons/main/starti/Start3.png'
 import { motion } from 'framer-motion'
 import { EIcons, Icon } from '../../../../assets/icons/icon'
 import Link from 'next/link'
@@ -144,10 +140,12 @@ const Accordion: FC = () => {
 				))}
 				<div className={styles.buttons}>
 					<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
-						<button className={styles.black}>Регистрация</button>
+						<button className={styles.black} aria-labelledby="Регистрация">
+							Регистрация
+						</button>
 					</Link>
 					<Link href={'https://lk.telebon.ru/auth'} target={'_blank'}>
-						<button>Войти</button>
+						<button aria-labelledby="Войти">Войти</button>
 					</Link>
 				</div>
 			</div>

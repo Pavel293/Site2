@@ -1,19 +1,17 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC } from 'react'
 import styles from './Nums.module.scss'
 import cn from 'classnames'
-import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import Image from 'next/image'
-import { useFormik } from 'formik'
 import Link from 'next/link'
 import useMatchMedia from '@/hooks/useMatchMedia'
-import Card1 from '../../../../assets/icons/main/nums/NumsCard1.png'
-import Card2 from '../../../../assets/icons/main/nums/NumsCard2.png'
-import Card3 from '../../../../assets/icons/main/nums/NumsCard3.png'
-import Card4 from '../../../../assets/icons/main/nums/NumsCard4.png'
-import CardMobile1 from '../../../../assets/icons/main/nums/NumsCardMobile1.png'
-import CardMobile2 from '../../../../assets/icons/main/nums/NumsCardMobile2.png'
-import CardMobile3 from '../../../../assets/icons/main/nums/NumsCardMobile3.png'
-import CardMobile4 from '../../../../assets/icons/main/nums/NumsCardMobile4.png'
+import Card1 from '../../../../assets/icons/main/nums/NumsCard1.webp'
+import Card2 from '../../../../assets/icons/main/nums/NumsCard2.webp'
+import Card3 from '../../../../assets/icons/main/nums/NumsCard3.webp'
+import Card4 from '../../../../assets/icons/main/nums/NumsCard4.webp'
+import CardMobile1 from '../../../../assets/icons/main/nums/NumsCardMobile1.webp'
+import CardMobile2 from '../../../../assets/icons/main/nums/NumsCardMobile2.webp'
+import CardMobile3 from '../../../../assets/icons/main/nums/NumsCardMobile3.webp'
+import CardMobile4 from '../../../../assets/icons/main/nums/NumsCardMobile4.webp'
 import { motion } from 'framer-motion'
 
 const Nums: FC = () => {
@@ -48,9 +46,13 @@ const Nums: FC = () => {
 							className={styles.card}
 						>
 							{isMobile ? (
-								<Image src={CardMobile1} alt={''} />
+								<Image src={CardMobile1} alt={''} loading="lazy" />
 							) : (
-								<Image src={Card1} alt={'Запись к мастеру маникюра Телебон'} />
+								<Image
+									src={Card1}
+									alt={'Запись к мастеру маникюра Телебон'}
+									loading="lazy"
+								/>
 							)}
 							<div className={styles.text}>
 								<p>
@@ -75,9 +77,13 @@ const Nums: FC = () => {
 							className={styles.card}
 						>
 							{isMobile ? (
-								<Image src={CardMobile2} alt={''} />
+								<Image src={CardMobile2} alt={''} loading="lazy" />
 							) : (
-								<Image src={Card2} alt={'Запись к мастеру бровисту Telebon'} />
+								<Image
+									src={Card2}
+									alt={'Запись к мастеру бровисту Telebon'}
+									loading="lazy"
+								/>
 							)}
 							<div className={styles.text}>
 								<p>
@@ -103,9 +109,13 @@ const Nums: FC = () => {
 							className={styles.card}
 						>
 							{isMobile ? (
-								<Image src={CardMobile3} alt={''} />
+								<Image src={CardMobile3} alt={''} loading="lazy" />
 							) : (
-								<Image src={Card3} alt={'Запись в барбершоп онлайн'} />
+								<Image
+									src={Card3}
+									alt={'Запись в барбершоп онлайн'}
+									loading="lazy"
+								/>
 							)}
 							<div className={styles.text}>
 								<p>
@@ -130,9 +140,13 @@ const Nums: FC = () => {
 							className={styles.card}
 						>
 							{isMobile ? (
-								<Image src={CardMobile4} alt={''} />
+								<Image src={CardMobile4} alt={''} loading="lazy" />
 							) : (
-								<Image src={Card4} alt={'Онлайн запись для парикмахера'} />
+								<Image
+									src={Card4}
+									alt={'Онлайн запись для парикмахера'}
+									loading="lazy"
+								/>
 							)}
 							<div className={styles.text}>
 								<p>
@@ -166,7 +180,9 @@ const Nums: FC = () => {
 								justifyContent: 'center',
 							}}
 						>
-							<button>Начать бесплатно</button>
+							<button aria-labelledby="Начать бесплатно">
+								Начать бесплатно
+							</button>
 						</motion.div>
 					</Link>
 				</div>

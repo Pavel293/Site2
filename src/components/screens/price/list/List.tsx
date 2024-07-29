@@ -130,9 +130,11 @@ const List: FC = () => {
 						</motion.div>
 						<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
 							{isMobile ? (
-								<button>Попробовать</button>
+								<button aria-labelledby="Попробовать">Попробовать</button>
 							) : (
-								<button>Попробовать бесплатно</button>
+								<button aria-labelledby="Попробовать бесплатно">
+									Попробовать бесплатно
+								</button>
 							)}
 						</Link>
 					</div>

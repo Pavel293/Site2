@@ -44,7 +44,9 @@ const Join: FC = () => {
 							target={'_blank'}
 							style={{ alignSelf: isMobile ? 'center' : 'flex-start' }}
 						>
-							<button>Начать бесплатно</button>
+							<button aria-labelledby="Начать бесплатно">
+								Начать бесплатно
+							</button>
 						</Link>
 					</motion.div>
 					<motion.div

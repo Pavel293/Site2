@@ -189,7 +189,9 @@ const Nums: FC = () => {
 								justifyContent: 'center',
 							}}
 						>
-							<button>Начать бесплатно</button>
+							<button aria-labelledby="Начать бесплатно">
+								Начать бесплатно
+							</button>
 						</motion.div>
 					</Link>
 				</div>

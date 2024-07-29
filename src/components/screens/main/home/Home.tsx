@@ -15,8 +15,6 @@ import Accordion from '@/screens/main/accordion/Accordion'
 import Icon from '../../../../assets/icons/AppleIcon.png'
 
 const Home: FC = () => {
-	const isMobile = useMatchMedia('768')
-
 	return (
 		<Meta
 			title="Система записи клиентов. Telebon - CRM для салонов красоты и других типов бизнеса"

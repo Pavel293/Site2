@@ -59,7 +59,7 @@ const Hero: FC = () => {
 						</div>
 					</div>
 					<Link href={platformLink} target={'_blank'}>
-						<button>Открыть</button>
+						<button aria-labelledby="Открыть">Открыть</button>
 					</Link>
 				</div>
 			) : null}
@@ -103,7 +103,7 @@ const Hero: FC = () => {
 								href={'https://lk.telebon.ru/registration'}
 								target={'_blank'}
 							>
-								<button>Попробовать</button>
+								<button aria-labelledby="Попробовать">Попробовать</button>
 							</Link>
 						</motion.div>
 						<motion.div

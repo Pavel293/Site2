@@ -1,20 +1,12 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC } from 'react'
 import styles from './Description.module.scss'
 import cn from 'classnames'
-import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import Image from 'next/image'
-import { useFormik } from 'formik'
-import Link from 'next/link'
 import useMatchMedia from '@/hooks/useMatchMedia'
-import DescriptionCard1 from '../../../../assets/icons/main/description/DescriptionCard1.png'
-import DescriptionCard2 from '../../../../assets/icons/main/description/DescriptionCard2.png'
-import DescriptionCard3 from '../../../../assets/icons/main/description/DescriptionCard3.png'
+import DescriptionCard1 from '../../../../assets/icons/main/description/DescriptionCard1.webp'
+import DescriptionCard2 from '../../../../assets/icons/main/description/DescriptionCard2.webp'
+import DescriptionCard3 from '../../../../assets/icons/main/description/DescriptionCard3.webp'
 import { motion } from 'framer-motion'
-
-export interface FormValues {
-	email: string
-	isValidForm: boolean
-}
 
 const Description: FC = () => {
 	const isMobile = useMatchMedia('768')
@@ -36,6 +28,7 @@ const Description: FC = () => {
 						<Image
 							src={DescriptionCard1}
 							alt={'Запись клиентов на маникюр онлайн'}
+							loading="lazy"
 						/>
 					</motion.div>
 					<motion.div
@@ -89,6 +82,7 @@ const Description: FC = () => {
 						<Image
 							src={DescriptionCard2}
 							alt={'Запись клиентов для мастера маникюра'}
+							loading="lazy"
 						/>
 					</motion.div>
 				</div>
@@ -106,6 +100,7 @@ const Description: FC = () => {
 						<Image
 							src={DescriptionCard3}
 							alt={'Аналитика бьюти бизнеса, как увеличить прибыль.'}
+							loading="lazy"
 						/>
 					</motion.div>
 					<motion.div

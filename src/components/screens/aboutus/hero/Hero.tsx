@@ -71,7 +71,7 @@ const Hero: FC = () => {
 						</div>
 					</div>
 					<Link href={platformLink} target={'_blank'}>
-						<button>Открыть</button>
+						<button aria-labelledby="Открыть">Открыть</button>
 					</Link>
 				</div>
 			) : null}

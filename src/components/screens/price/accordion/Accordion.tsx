@@ -194,10 +194,12 @@ const Accordion: FC = () => {
 				))}
 				<div className={styles.buttons}>
 					<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
-						<button className={styles.black}>Регистрация</button>
+						<button className={styles.black} aria-labelledby="Регистрация">
+							Регистрация
+						</button>
 					</Link>
 					<Link href={'https://lk.telebon.ru/auth'} target={'_blank'}>
-						<button>Войти</button>
+						<button aria-labelledby="Войти">Войти</button>
 					</Link>
 				</div>
 			</div>

@@ -1,19 +1,12 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC } from 'react'
 import styles from './Price.module.scss'
 import cn from 'classnames'
-import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import Image from 'next/image'
-import { useFormik } from 'formik'
 import Link from 'next/link'
 import useMatchMedia from '@/hooks/useMatchMedia'
-import PriceImage from '../../../../assets/icons/main/price/PriceImage.png'
-import PriceImageMobile from '../../../../assets/icons/main/price/PriceImageMobile.png'
+import PriceImage from '../../../../assets/icons/main/price/PriceImage.webp'
+import PriceImageMobile from '../../../../assets/icons/main/price/PriceImageMobile.webp'
 import { motion } from 'framer-motion'
-
-export interface FormValues {
-	email: string
-	isValidForm: boolean
-}
 
 const Price: FC = () => {
 	const isMobile = useMatchMedia('768')
@@ -33,11 +26,12 @@ const Price: FC = () => {
 						}}
 					>
 						{isMobile ? (
-							<Image src={PriceImageMobile} alt={''} />
+							<Image src={PriceImageMobile} alt={''} loading="lazy" />
 						) : (
 							<Image
 								src={PriceImage}
 								alt={'Запись клиентов онлайн. Система Telebon - тарифы'}
+								loading="lazy"
 							/>
 						)}
 					</motion.div>
@@ -77,7 +71,9 @@ const Price: FC = () => {
 									hidden: { opacity: 0 },
 								}}
 							>
-								<button>Попробовать сейчас</button>
+								<button aria-labelledby="Попробовать сейчас">
+									Попробовать сейчас
+								</button>
 							</motion.div>
 						</Link>
 						<p>

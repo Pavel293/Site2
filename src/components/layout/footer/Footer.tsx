@@ -163,19 +163,19 @@ const Footer: FC = () => {
 						{/*	<IconInstance name={EIcons.rightarrow} />*/}
 						{/*	<p>Бот для записи</p>*/}
 						{/*</div>*/}
-						<Link href={'/info/licence'}>
+						<Link href={'/info/licence'} target={'_blank'}>
 							<div className={styles.card}>
 								<IconInstance name={EIcons.rightarrow} />
 								<p>Лицензионный договор</p>
 							</div>
 						</Link>
-						<Link href={'/info/agreement'}>
+						<Link href={'/info/agreement'} target={'_blank'}>
 							<div className={styles.card}>
 								<IconInstance name={EIcons.rightarrow} />
 								<p>Соглашение</p>
 							</div>
 						</Link>
-						<Link href={'/info/privacy-policy'}>
+						<Link href={'/info/privacy-policy'} target={'_blank'}>
 							<div className={styles.card}>
 								<IconInstance name={EIcons.rightarrow} />
 								<p>Конфиденциальность</p>
@@ -253,13 +253,13 @@ const Footer: FC = () => {
 								<div className={styles.column}>
 									<p className={styles.title}>ДОКУМЕНТЫ</p>
 									<div className={styles.line}></div>
-									<Link href={'/info/licence'}>
+									<Link href={'/info/licence'} target={'_blank'}>
 										<p>Пользовательское соглашение</p>
 									</Link>
-									<Link href={'/info/agreement'}>
+									<Link href={'/info/agreement'} target={'_blank'}>
 										<p>Лицензионный договор</p>
 									</Link>
-									<Link href={'/info/privacy-policy'}>
+									<Link href={'/info/privacy-policy'} target={'_blank'}>
 										<p>Конфиденциальность</p>
 									</Link>
 									{/*<div className={styles.social}>*/}
@@ -329,10 +329,18 @@ const Footer: FC = () => {
 							maxWidth: isMobile ? '21.7949vw' : '4.4271vw',
 						}}
 					>
-						<Link href={'https://vk.com/teleboncrm'} target={'_blank'}>
+						<Link
+							href={'https://vk.com/teleboncrm'}
+							target={'_blank'}
+							aria-label="vk"
+						>
 							<IconInstance name={EIcons.footervk} />
 						</Link>
-						<Link href={'https://t.me/telebon_channel'} target={'_blank'}>
+						<Link
+							href={'https://t.me/telebon_channel'}
+							target={'_blank'}
+							aria-label="telegram"
+						>
 							<IconInstance name={EIcons.footertg} />
 						</Link>
 					</div>

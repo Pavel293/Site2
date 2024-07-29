@@ -302,6 +302,7 @@ const Header: FC = () => {
 						<button
 							onClick={() => setIsOpen(!isOpen)}
 							className={cn(isOpen && styles.activeMenu, styles.menu)}
+							aria-labelledby="Меню"
 						>
 							<span></span>
 							<span></span>

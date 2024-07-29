@@ -1,13 +1,11 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC } from 'react'
 import styles from './HelpBusines.module.scss'
 import cn from 'classnames'
-import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import Image from 'next/image'
-import { useFormik } from 'formik'
 import Link from 'next/link'
 import useMatchMedia from '@/hooks/useMatchMedia'
-import HelpBusinesPhone from '../../../../assets/icons/main/help_busines/HelpBusinesPhone.png'
-import HelpBusinesTablet from '../../../../assets/icons/main/help_busines/HelpBusinesTablet.png'
+import HelpBusinesPhone from '../../../../assets/icons/main/help_busines/HelpBusinesPhone.webp'
+import HelpBusinesTablet from '../../../../assets/icons/main/help_busines/HelpBusinesTablet.webp'
 import { motion } from 'framer-motion'
 
 const HelpBusines: FC = () => {
@@ -28,7 +26,7 @@ const HelpBusines: FC = () => {
 							hidden: { opacity: 0, y: isMobile ? '40vw' : '10vw' },
 						}}
 					>
-						<Image src={HelpBusinesPhone} alt={''} />
+						<Image src={HelpBusinesPhone} alt={''} loading="lazy" />
 					</motion.div>
 					<motion.div
 						className={styles.text}
@@ -46,7 +44,9 @@ const HelpBusines: FC = () => {
 							{isMobile ? null : <br />} расти
 						</h3>
 						<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
-							<button>Начать бесплатно</button>
+							<button aria-labelledby="Начать бесплатно">
+								Начать бесплатно
+							</button>
 						</Link>
 					</motion.div>
 					<motion.div
@@ -62,6 +62,7 @@ const HelpBusines: FC = () => {
 						<Image
 							src={HelpBusinesTablet}
 							alt={'Онлайн-запись для сферы услуг'}
+							loading="lazy"
 						/>
 					</motion.div>
 				</div>

@@ -1,20 +1,17 @@
-import React, { FC, useEffect, useRef, useState } from 'react'
+import React, { FC, useRef } from 'react'
 import styles from './Functions.module.scss'
 import cn from 'classnames'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import Image from 'next/image'
-import { useFormik } from 'formik'
-import Link from 'next/link'
 import useMatchMedia from '@/hooks/useMatchMedia'
-import FeedbackImage from '../../../../assets/icons/main/feedback/FeedbackImage.png'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import SliderItem from '@/screens/main/functions/item/SliderItem'
-import Slider1 from '../../../../assets/icons/main/functions/Function1.png'
-import Slider2 from '../../../../assets/icons/main/functions/Function2.png'
-import Slider3 from '../../../../assets/icons/main/functions/Function3.png'
-import Slider4 from '../../../../assets/icons/main/functions/Function4.png'
+import Slider1 from '../../../../assets/icons/main/functions/Function1.webp'
+import Slider2 from '../../../../assets/icons/main/functions/Function2.webp'
+import Slider3 from '../../../../assets/icons/main/functions/Function3.webp'
+import Slider4 from '../../../../assets/icons/main/functions/Function4.webp'
 import { motion } from 'framer-motion'
 
 export interface ICard {
@@ -56,7 +53,9 @@ const Functions: FC = () => {
 					записи, который подстроится под вас.
 				</>
 			),
-			image: <Image src={Slider1} alt={'Журнал записи Telebon'} />,
+			image: (
+				<Image src={Slider1} alt={'Журнал записи Telebon'} loading="lazy" />
+			),
 		},
 		{
 			title: (
@@ -76,7 +75,9 @@ const Functions: FC = () => {
 					клиента в быстром доступе. Теги, вызов и сообщения.
 				</>
 			),
-			image: <Image src={Slider2} alt={'Учёт клиентов Telebon'} />,
+			image: (
+				<Image src={Slider2} alt={'Учёт клиентов Telebon'} loading="lazy" />
+			),
 		},
 		{
 			title: <>Онлайн-запись</>,
@@ -91,7 +92,13 @@ const Functions: FC = () => {
 					самостоятельно 24/7. Записи автоматически попадают в журнал.
 				</>
 			),
-			image: <Image src={Slider3} alt={'Онлайн-запись клиентов Телебон\n'} />,
+			image: (
+				<Image
+					src={Slider3}
+					alt={'Онлайн-запись клиентов Телебон'}
+					loading="lazy"
+				/>
+			),
 		},
 		{
 			title: (
@@ -115,6 +122,7 @@ const Functions: FC = () => {
 				<Image
 					src={Slider4}
 					alt={'Telegram бот для записи клиентов на услуги от Telebon'}
+					loading="lazy"
 				/>
 			),
 		},

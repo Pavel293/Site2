@@ -48,7 +48,9 @@ const HelpBusines: FC = () => {
 							10₽/день
 						</h3>
 						<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
-							<button>Начать бесплатно</button>
+							<button aria-labelledby="Начать бесплатно">
+								Начать бесплатно
+							</button>
 						</Link>
 					</motion.div>
 					<motion.div

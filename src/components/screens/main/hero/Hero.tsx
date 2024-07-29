@@ -1,15 +1,14 @@
-import React, { FC, useEffect, useRef, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import styles from './Hero.module.scss'
 import cn from 'classnames'
 import { EIcons, Icon as IconInstance } from '../../../../assets/icons/icon'
 import Image from 'next/image'
-import { useFormik } from 'formik'
 import Link from 'next/link'
 import useMatchMedia from '@/hooks/useMatchMedia'
-import Phone from '../../../../assets/icons/main/hero/HeroPhone.png'
-import PhoneMobile from '../../../../assets/icons/main/hero/HeroPhoneMobile.png'
-import Sponsors from '../../../../assets/icons/main/hero/Sponsors.png'
-import SponsorsMobile from '../../../../assets/icons/main/hero/SponsorsMobile.png'
+import Phone from '../../../../assets/icons/main/hero/HeroPhone.webp'
+import PhoneMobile from '../../../../assets/icons/main/hero/HeroPhoneMobile.webp'
+import Sponsors from '../../../../assets/icons/main/hero/Sponsors.webp'
+import SponsorsMobile from '../../../../assets/icons/main/hero/SponsorsMobile.webp'
 import { motion } from 'framer-motion'
 import AppleIcon from '../../../../assets/icons/AppleIcon.png'
 
@@ -66,7 +65,7 @@ const Hero: FC = () => {
 						</div>
 					</div>
 					<Link href={platformLink} target={'_blank'}>
-						<button>Открыть</button>
+						<button aria-labelledby="Открыть">Открыть</button>
 					</Link>
 				</div>
 			) : null}
@@ -108,9 +107,11 @@ const Hero: FC = () => {
 							}}
 						>
 							{isMobile ? (
-								<button>Начать</button>
+								<button aria-labelledby="Начать">Начать</button>
 							) : (
-								<button>Попробовать сейчас</button>
+								<button aria-labelledby="Попробовать сейчас">
+									Попробовать сейчас
+								</button>
 							)}
 						</Link>
 					</div>
@@ -125,11 +126,12 @@ const Hero: FC = () => {
 						}}
 					>
 						{isMobile ? (
-							<Image src={PhoneMobile} alt={''} />
+							<Image src={PhoneMobile} alt={''} priority />
 						) : (
 							<Image
 								src={Phone}
 								alt={'Мобильное приложение Телебон (Telebon)'}
+								priority
 							/>
 						)}
 					</motion.div>

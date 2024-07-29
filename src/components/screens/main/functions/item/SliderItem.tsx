@@ -18,7 +18,7 @@ const SliderItem: FC<IProps> = props => {
 					<p>{item.title}</p>
 					<span>{item.description}</span>
 					<Link href={'https://lk.telebon.ru/registration'} target={'_blank'}>
-						<button>Подробнее</button>
+						<button aria-labelledby="Подробнее">Подробнее</button>
 					</Link>
 				</div>
 				{item.image}

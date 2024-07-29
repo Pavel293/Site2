@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react'
+import { FC, Suspense, useEffect, useState } from 'react'
 import { IType } from '@/shared/types/option.types'
 import Header from '@/components/layout/header/Header'
 import Footer from '@/components/layout/footer/Footer'
@@ -41,11 +41,11 @@ const Layout: FC<IType> = ({ children }) => {
 				{!is404Page ? (
 					<>
 						<Header />
-						{children}
+						<Suspense>{children}</Suspense>
 						<Footer />
 					</>
 				) : (
-					<>{children}</>
+					<Suspense>{children}</Suspense>
 				)}
 			</>
 		</div>
