@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://telebon.ru/</loc>
+        <lastmod>2024-07-21T06:37:58+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://telebon.ru/price</loc>
+        <lastmod>2024-07-21T06:37:58+03:00</lastmod>
+    </url>
+    <url>
+        <loc>https://telebon.ru/aboutus</loc>
+        <lastmod>2024-07-21T06:37:58+03:00</lastmod>
+    </url>
+<!--    <url>-->
+<!--        <loc>https://telebon.ru/info/licence</loc>-->
+<!--        <lastmod>2023-12-28T06:37:58+03:00</lastmod>-->
+<!--    </url>-->
+<!--    <url>-->
+<!--        <loc>https://telebon.ru/info/agreement</loc>-->
+<!--        <lastmod>2023-12-28T06:37:58+03:00</lastmod>-->
+<!--    </url>-->
+<!--    <url>-->
+<!--        <loc>https://telebon.ru/info/cookie</loc>-->
+<!--        <lastmod>2023-12-28T06:37:58+03:00</lastmod>-->
+<!--    </url>-->
+<!--    <url>-->
+<!--        <loc>https://telebon.ru/info/privacy-policy</loc>-->
+<!--        <lastmod>2023-12-28T06:37:58+03:00</lastmod>-->
+<!--    </url>-->
+    <url>
+        <loc>https://telebon.ru/404</loc>
+        <lastmod>2024-07-21T06:37:58+03:00</lastmod>
+    </url>
+</urlset>

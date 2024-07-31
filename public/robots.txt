@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /.next/
+Disallow: /api/
+Allow: /public/
+Allow: /aboutus
+Allow: /price
+Disallow: /node_modules/
+Disallow: /baza-znaniy
+Disallow: /info
+Host: telebon.ru
+Sitemap: https://telebon.ru/sitemap.xml
