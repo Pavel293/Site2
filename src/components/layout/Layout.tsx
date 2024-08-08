@@ -53,7 +53,7 @@ const Layout: FC<IType> = ({ children }) => {
 		return () => {
 			router.events.off('routeChangeComplete', handleRouteChange)
 		}
-	}, [router.pathname, postPaths, loading])
+	}, [router.pathname])
 
 	return (
 		<div className={styles.container}>
