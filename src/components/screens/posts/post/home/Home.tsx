@@ -53,10 +53,8 @@ const Home: React.FC<HomeProps> = ({ post }) => {
 	const [background, setBackground] = useState<any>(null)
 	const [cards, setCards] = useState<Card[]>([])
 	const [cardsFAQ, setCardsFAQ] = useState<CardFAQ[]>([])
-	const [isLoading, setIsLoading] = useState<boolean>(true)
 
 	useEffect(() => {
-		setIsLoading(true)
 		if (post) {
 			const backgroundImage =
 				post.attributes.content[2]?.children[0]?.text === 'null'
@@ -98,7 +96,6 @@ const Home: React.FC<HomeProps> = ({ post }) => {
 			}
 			setCardsFAQ(cardDataFAQ)
 		}
-		setIsLoading(false)
 	}, [post])
 
 	return (
@@ -109,19 +106,17 @@ const Home: React.FC<HomeProps> = ({ post }) => {
 				description={post.attributes.description}
 				image="logo_preview.png"
 			>
-				{isLoading ? null : (
-					<div className={styles.wrapper}>
-						<Hero
-							title={post.attributes.content[0]?.children[0]?.text}
-							description={post.attributes.content[1]?.children}
-							background={background}
-							phone={phone}
-						/>
-						<Description cards={cards} />
-						<Price image={priceImage} />
-						<Accordion faq={cardsFAQ} />
-					</div>
-				)}
+				<div className={styles.wrapper}>
+					<Hero
+						title={post.attributes.content[0]?.children[0]?.text}
+						description={post.attributes.content[1]?.children}
+						background={background}
+						phone={phone}
+					/>
+					<Description cards={cards} />
+					<Price image={priceImage} />
+					<Accordion faq={cardsFAQ} />
+				</div>
 			</Meta>
 			<Footer />
 		</>
