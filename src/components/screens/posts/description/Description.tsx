@@ -32,8 +32,8 @@ const Description: FC<DescriptionProps> = ({ cards }) => {
 							src={cards[0].image.url}
 							alt={cards[0].image.alternativeText}
 							loading="lazy"
-							width={1024}
-							height={1024}
+							width={cards[0].image.formats.large.width}
+							height={cards[0].image.formats.large.height}
 						/>
 					</motion.div>
 					<motion.div
@@ -80,8 +80,8 @@ const Description: FC<DescriptionProps> = ({ cards }) => {
 							src={cards[1].image.url}
 							alt={cards[1].image.alternativeText}
 							loading="lazy"
-							width={1024}
-							height={1024}
+							width={cards[1].image.formats.large.width}
+							height={cards[1].image.formats.large.height}
 						/>
 					</motion.div>
 				</div>
@@ -100,8 +100,8 @@ const Description: FC<DescriptionProps> = ({ cards }) => {
 							src={cards[2].image.url}
 							alt={cards[2].image.alternativeText}
 							loading="lazy"
-							width={1024}
-							height={1024}
+							width={cards[2].image.formats.large.width}
+							height={cards[2].image.formats.large.height}
 						/>
 					</motion.div>
 					<motion.div
@@ -148,8 +148,8 @@ const Description: FC<DescriptionProps> = ({ cards }) => {
 							src={cards[3].image.url}
 							alt={cards[3].image.alternativeText}
 							loading="lazy"
-							width={1024}
-							height={1024}
+							width={cards[3].image.formats.large.width}
+							height={cards[3].image.formats.large.height}
 						/>
 					</motion.div>
 				</div>
@@ -168,8 +168,8 @@ const Description: FC<DescriptionProps> = ({ cards }) => {
 							src={cards[4].image.url}
 							alt={cards[4].image.alternativeText}
 							loading="lazy"
-							width={1024}
-							height={1024}
+							width={cards[4].image.formats.large.width}
+							height={cards[4].image.formats.large.height}
 						/>
 					</motion.div>
 					<motion.div
@@ -216,8 +216,8 @@ const Description: FC<DescriptionProps> = ({ cards }) => {
 							src={cards[5].image.url}
 							alt={cards[5].image.alternativeText}
 							loading="lazy"
-							width={1024}
-							height={1024}
+							width={cards[5].image.formats.large.width}
+							height={cards[5].image.formats.large.height}
 						/>
 					</motion.div>
 				</div>

@@ -34,8 +34,8 @@ const Price: FC<PriceProps> = ({ image }) => {
 							src={image.url}
 							alt={image.alternativeText}
 							loading="lazy"
-							width={512}
-							height={512}
+							width={image.formats.large.width}
+							height={image.formats.large.height}
 						/>
 					</motion.div>
 					<div className={styles.text}>
