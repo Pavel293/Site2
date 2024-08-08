@@ -24,7 +24,7 @@ export interface CardFAQ {
 	answer: any
 }
 
-interface TextNode {
+export interface TextNode {
 	text: string
 	type: 'text'
 	bold?: boolean
@@ -33,9 +33,15 @@ interface TextNode {
 export const formatDescription = (content: TextNode[]): JSX.Element => {
 	return (
 		<p>
-			{content.map((child, index) =>
-				child.bold ? <span key={index}>{child.text}</span> : child.text,
-			)}
+			{content.map((child, index) => {
+				const parts = child.text.split('\n')
+				return parts.map((part, partIndex) => (
+					<React.Fragment key={`${index}-${partIndex}`}>
+						{child.bold ? <span>{part}</span> : part}
+						{partIndex < parts.length - 1 && <br />}{' '}
+					</React.Fragment>
+				))
+			})}
 		</p>
 	)
 }

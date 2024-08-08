@@ -32,8 +32,8 @@ const Description: FC<DescriptionProps> = ({ cards }) => {
 							src={cards[0].image.url}
 							alt={cards[0].image.alternativeText}
 							loading="lazy"
-							width={512}
-							height={512}
+							width={1024}
+							height={1024}
 						/>
 					</motion.div>
 					<motion.div
@@ -80,8 +80,8 @@ const Description: FC<DescriptionProps> = ({ cards }) => {
 							src={cards[1].image.url}
 							alt={cards[1].image.alternativeText}
 							loading="lazy"
-							width={512}
-							height={512}
+							width={1024}
+							height={1024}
 						/>
 					</motion.div>
 				</div>
@@ -100,8 +100,8 @@ const Description: FC<DescriptionProps> = ({ cards }) => {
 							src={cards[2].image.url}
 							alt={cards[2].image.alternativeText}
 							loading="lazy"
-							width={512}
-							height={512}
+							width={1024}
+							height={1024}
 						/>
 					</motion.div>
 					<motion.div
@@ -148,8 +148,8 @@ const Description: FC<DescriptionProps> = ({ cards }) => {
 							src={cards[3].image.url}
 							alt={cards[3].image.alternativeText}
 							loading="lazy"
-							width={512}
-							height={512}
+							width={1024}
+							height={1024}
 						/>
 					</motion.div>
 				</div>
@@ -168,8 +168,8 @@ const Description: FC<DescriptionProps> = ({ cards }) => {
 							src={cards[4].image.url}
 							alt={cards[4].image.alternativeText}
 							loading="lazy"
-							width={512}
-							height={512}
+							width={1024}
+							height={1024}
 						/>
 					</motion.div>
 					<motion.div
@@ -216,8 +216,8 @@ const Description: FC<DescriptionProps> = ({ cards }) => {
 							src={cards[5].image.url}
 							alt={cards[5].image.alternativeText}
 							loading="lazy"
-							width={512}
-							height={512}
+							width={1024}
+							height={1024}
 						/>
 					</motion.div>
 				</div>

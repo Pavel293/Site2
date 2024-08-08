@@ -128,8 +128,8 @@ const Hero: FC<HeroProps> = ({ title, description, background, phone }) => {
 								src={phone?.url}
 								alt={phone?.alternativeText}
 								priority
-								width={512}
-								height={512}
+								width={1024}
+								height={1024}
 							/>
 						</motion.div>
 					)}
