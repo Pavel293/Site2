@@ -4,8 +4,6 @@ import cn from 'classnames'
 import Image from 'next/image'
 import Link from 'next/link'
 import useMatchMedia from '@/hooks/useMatchMedia'
-import PriceImage from '../../../../../assets/icons/main/price/PriceImage.webp'
-import PriceImageMobile from '../../../../../assets/icons/main/price/PriceImageMobile.webp'
 import { motion } from 'framer-motion'
 import { ImagePost } from '@/screens/posts/list/Home'
 
