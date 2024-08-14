@@ -5,7 +5,6 @@ import Footer from '@/components/layout/footer/Footer'
 import styles from './Layout.module.scss'
 import { useRouter } from 'next/router'
 import { fetchPosts } from '../../lib/api'
-import { getPostById } from '../../lib/queries'
 
 const Layout: FC<IType> = ({ children }) => {
 	const [is404Page, setIs404Page] = useState(false)
@@ -20,6 +19,8 @@ const Layout: FC<IType> = ({ children }) => {
 		)
 		setPostPaths(paths)
 		setLoading(false)
+
+		console.log('All added paths:', paths)
 	}
 
 	useEffect(() => {
