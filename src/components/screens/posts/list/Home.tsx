@@ -71,7 +71,7 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
 			<div className={styles.wrapper}>
 				<div className={styles.up}></div>
 				{validPosts.map(post => (
-					<Link href={`/posts/${post.attributes.url}`} key={post.id}>
+					<Link href={`/blog/${post.attributes.url}`} key={post.id}>
 						<div className={styles.card}>
 							<h2>{post.attributes.title}</h2>
 							<p>{post.attributes.description}</p>
