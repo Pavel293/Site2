@@ -13,11 +13,6 @@ const Layout: FC<IType> = ({ children }) => {
 	const [loading, setLoading] = useState(true)
 	const router = useRouter()
 
-	useEffect(() => {
-		const res = getPostById('5')
-		console.log(res)
-	}, [])
-
 	const getPostPaths = async () => {
 		const posts = await fetchPosts()
 		const paths = posts.map(
