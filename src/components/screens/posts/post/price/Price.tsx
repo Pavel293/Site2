@@ -6,12 +6,13 @@ import Link from 'next/link'
 import useMatchMedia from '@/hooks/useMatchMedia'
 import { motion } from 'framer-motion'
 import { ImagePost } from '@/screens/posts/list/Home'
+import { ComponentPageAllInclusive } from '@/screens/posts/interfaces'
 
 interface PriceProps {
-	image: ImagePost
+	data: ComponentPageAllInclusive
 }
 
-const Price: FC<PriceProps> = ({ image }) => {
+const Price: FC<PriceProps> = ({ data }) => {
 	const isMobile = useMatchMedia('768')
 
 	return (
@@ -29,11 +30,13 @@ const Price: FC<PriceProps> = ({ image }) => {
 						}}
 					>
 						<Image
-							src={image.url}
-							alt={image.alternativeText}
+							src={
+								process.env.NEXT_PUBLIC_API_URL + data.image.data.attributes.url
+							}
+							alt={data.image.data.attributes.alternativeText}
 							loading="lazy"
-							width={image.formats.large.width}
-							height={image.formats.large.height}
+							width={data.image.data.attributes.width}
+							height={data.image.data.attributes.height}
 						/>
 					</motion.div>
 					<div className={styles.text}>

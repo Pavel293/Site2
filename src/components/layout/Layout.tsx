@@ -5,6 +5,7 @@ import Footer from '@/components/layout/footer/Footer'
 import styles from './Layout.module.scss'
 import { useRouter } from 'next/router'
 import { fetchPosts } from '../../lib/api'
+import { getPostById } from '../../lib/queries'
 
 const Layout: FC<IType> = ({ children }) => {
 	const [is404Page, setIs404Page] = useState(false)
@@ -12,11 +13,15 @@ const Layout: FC<IType> = ({ children }) => {
 	const [loading, setLoading] = useState(true)
 	const router = useRouter()
 
+	useEffect(() => {
+		const res = getPostById('5')
+		console.log(res)
+	}, [])
+
 	const getPostPaths = async () => {
 		const posts = await fetchPosts()
 		const paths = posts.map(
-			(post: { attributes: { url: string } }) =>
-				`/posts/${post.attributes.url}`,
+			(post: { attributes: { url: string } }) => `/blog/${post.attributes.url}`,
 		)
 		setPostPaths(paths)
 		setLoading(false)
@@ -33,7 +38,7 @@ const Layout: FC<IType> = ({ children }) => {
 				'/info/licence',
 				'/info/agreement',
 				'/info/privacy-policy',
-				'/posts',
+				'/blog',
 				'/admin',
 				...postPaths,
 			]

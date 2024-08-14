@@ -2,9 +2,11 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Home from '@/screens/posts/post/home/Home'
 import { Post } from '@/screens/posts/list/Home'
 import { fetchOnePost, fetchPosts } from '../../src/lib/api'
+import { getPostById } from '../../src/lib/queries'
+import { PostResponse } from '@/screens/posts/interfaces'
 
 interface PostPageProps {
-	post: Post
+	post: PostResponse
 }
 
 export default function PostPage({ post }: PostPageProps) {
@@ -34,9 +36,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			notFound: true,
 		}
 	}
-	const fetchedPost = await fetchOnePost(post.id.toString())
-
+	const fetchedPost = await getPostById(post.id.toString())
 	return {
-		props: { post: fetchedPost },
+		props: {
+			post: fetchedPost,
+		},
 	}
 }

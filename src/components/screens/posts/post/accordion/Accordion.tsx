@@ -6,14 +6,15 @@ import { motion } from 'framer-motion'
 import { EIcons, Icon } from '../../../../../assets/icons/icon'
 import Link from 'next/link'
 import { CardFAQ, formatDescription } from '@/screens/posts/post/home/Home'
+import { ComponentPageFaq } from '@/screens/posts/interfaces'
 
 interface AccordionProps {
-	faq: CardFAQ[]
+	data: ComponentPageFaq
 }
 
 export type Height = 'auto' | number | `${number}%`
 
-const Accordion: FC<AccordionProps> = ({ faq }) => {
+const Accordion: FC<AccordionProps> = ({ data }) => {
 	const isMobile = useMatchMedia('768')
 	const [activeIndices, setActiveIndices] = useState<Height[]>([])
 	const [heights, setHeights] = useState<number[]>([])
@@ -46,9 +47,9 @@ const Accordion: FC<AccordionProps> = ({ faq }) => {
 		return () => {
 			resizeObservers.forEach(observer => observer.disconnect())
 		}
-	}, [faq])
+	}, [data])
 
-	const heightVariants = faq.map((_, index) => ({
+	const heightVariants = data.Faq_card.map((_, index) => ({
 		visible: {
 			height: heights[index] || 'auto',
 			padding: '3.125vw 0 1.0417vw',
@@ -62,7 +63,7 @@ const Accordion: FC<AccordionProps> = ({ faq }) => {
 				<h3>Часто задаваемые {isMobile ? null : <br />}вопросы</h3>
 			</div>
 			<div className={styles.container}>
-				{faq.map((item, index) => (
+				{data.Faq_card.map((item, index) => (
 					<motion.div
 						key={index}
 						className={styles.accordionItem}
@@ -79,7 +80,7 @@ const Accordion: FC<AccordionProps> = ({ faq }) => {
 							className={styles.accordionHeader}
 							onClick={() => toggleAccordion(index)}
 						>
-							<h4>{item.question}</h4>
+							<h4>{item.Question}</h4>
 							<motion.div
 								initial="hidden"
 								animate={activeIndices.includes(index) ? 'visible' : 'hidden'}
@@ -100,7 +101,7 @@ const Accordion: FC<AccordionProps> = ({ faq }) => {
 							className={styles.accordionContent}
 							ref={el => (contentRefs.current[index] = el)}
 						>
-							<div>{formatDescription(item.answer)}</div>
+							<div>{formatDescription(item.Answer)}</div>
 						</motion.div>
 					</motion.div>
 				))}

@@ -109,15 +109,9 @@
 				width: 89.7436vw;
 				height: fit-content;
 			}
-			&:nth-child(2) {
-				flex-direction: column-reverse;
-			}
-			&:nth-child(4) {
-				flex-direction: column-reverse;
-			}
-			&:nth-child(6) {
-				flex-direction: column-reverse;
-			}
+		}
+		.right {
+			flex-direction: column-reverse;
 		}
 	}
 }

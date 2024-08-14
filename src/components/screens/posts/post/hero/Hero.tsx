@@ -12,15 +12,13 @@ import AppleIcon from '../../../../../assets/icons/AppleIcon.png'
 import { ImagePost } from '@/screens/posts/list/Home'
 import Preview from '../../../../../../public/preview/logo_preview.webp'
 import { formatDescription } from '@/screens/posts/post/home/Home'
+import { ComponentPageHero } from '@/screens/posts/interfaces'
 
 interface HeroProps {
-	title: string
-	description: any
-	background: ImagePost
-	phone: ImagePost | null
+	data: ComponentPageHero
 }
 
-const Hero: FC<HeroProps> = ({ title, description, background, phone }) => {
+const Hero: FC<HeroProps> = ({ data }) => {
 	const isMobile = useMatchMedia('768')
 	const [platformLink, setPlatformLink] = useState('')
 	const [isOpenDownload, setIsOpenDownload] = useState<boolean>(true)
@@ -62,8 +60,8 @@ const Hero: FC<HeroProps> = ({ title, description, background, phone }) => {
 			<div
 				className={styles.background}
 				style={{
-					backgroundImage: background?.url
-						? `url(${background.url})`
+					backgroundImage: data.background.data.attributes.url
+						? `url(${process.env.NEXT_PUBLIC_API_URL}${data.background.data.attributes.url})`
 						: `url(${Preview})`,
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
@@ -91,8 +89,8 @@ const Hero: FC<HeroProps> = ({ title, description, background, phone }) => {
 				<div className={styles.row}>
 					<div className={styles.column}>
 						<div className={styles.text}>
-							<h1>{title}</h1>
-							{formatDescription(description)}
+							<h1>{data.title}</h1>
+							{formatDescription(data.description)}
 						</div>
 						<Link
 							href={'https://lk.telebon.ru/registration'}
@@ -111,7 +109,7 @@ const Hero: FC<HeroProps> = ({ title, description, background, phone }) => {
 							)}
 						</Link>
 					</div>
-					{phone == null ? (
+					{data.phone == null ? (
 						<div style={{ width: '23.8542vw' }}></div>
 					) : (
 						<motion.div
@@ -125,11 +123,14 @@ const Hero: FC<HeroProps> = ({ title, description, background, phone }) => {
 							}}
 						>
 							<Image
-								src={phone?.url}
-								alt={phone?.alternativeText}
+								src={
+									process.env.NEXT_PUBLIC_API_URL +
+									data.phone.data.attributes.url
+								}
+								alt={data.phone.data.attributes.alternativeText || ''}
 								priority
-								width={phone?.formats.large.width}
-								height={phone?.formats.large.height}
+								width={data.phone.data.attributes.width}
+								height={data.phone.data.attributes.height}
 							/>
 						</motion.div>
 					)}
