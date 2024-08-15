@@ -23,7 +23,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 		params: { post: post.attributes.url.toString() },
 	}))
 
-	return { paths, fallback: false }
+	console.log('1', paths)
+
+	return { paths, fallback: true } //поменять потом на false
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

@@ -35,6 +35,7 @@ const Layout: FC<IType> = ({ children }) => {
 				'/info/agreement',
 				'/info/privacy-policy',
 				'/blog',
+				'/posts',
 				'/admin',
 				...postPaths,
 			]
